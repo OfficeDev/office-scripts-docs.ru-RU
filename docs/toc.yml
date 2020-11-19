@@ -28,6 +28,8 @@
           href: resources/add-ins-differences.md
         - name: Поддержка внешнего вызова API в сценариях Office
           href: develop/external-calls.md
+        - name: Хранилище файлов и владение ими
+          href: overview/script-storage.md
         - name: Выполнение сценариев с помощью Power Automate
           href: develop/power-automate-integration.md
     - name: Устранение неполадок
