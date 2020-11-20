@@ -1,14 +1,14 @@
 ---
 title: Устранение неполадок в сценариях Office
 description: Советы и методы отладки сценариев Office, а также справочные ресурсы.
-ms.date: 10/08/2020
+ms.date: 10/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 9b3f4be778f3cdb4711d1e41d4d68f87ebca8152
-ms.sourcegitcommit: 42fa3b629c93930b4e73e9c4c01d0c8bdf6d7487
+ms.openlocfilehash: b45957bd336edce527397253cacec8cb09df715a
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "48411550"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49342880"
 ---
 # <a name="troubleshooting-office-scripts"></a>Устранение неполадок в сценариях Office
 
@@ -36,15 +36,15 @@ console.log(myRange.getAddress());
 Выполните следующие действия, чтобы устранить все неполадки, связанные с вкладкой **Автоматизация** , в Excel в Интернете.
 
 1. [Убедитесь, что лицензия microsoft 365 включает сценарии Office](../overview/excel.md#requirements).
-1. [Попросите администратора включить эту функцию](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. [Убедитесь, что ваш браузер поддерживается](platform-limits.md#browser-support).
 1. [Убедитесь, что сторонние файлы Cookie включены](platform-limits.md#third-party-cookies).
+1. [Убедитесь, что администратор не отключил сценарии Office в центре администрирования Microsoft 365](/microsoft-365/admin/manage/manage-office-scripts-settings).
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ## <a name="help-resources"></a>Справочные материалы
 
-[Переполнение стека](https://stackoverflow.com/questions/tagged/office-scripts) — это сообщество разработчиков, которые могут помочь при возникновении проблем с написанием кода. Часто вы сможете найти решение проблемы с помощью быстрого поиска переполнения стека. Если это не так, задайте свой вопрос и пометьте его тегом "Office – Scripts". Запомните, что вы создаете *сценарий*Office, а не *надстройку*Office.
+[Переполнение стека](https://stackoverflow.com/questions/tagged/office-scripts) — это сообщество разработчиков, которые могут помочь при возникновении проблем с написанием кода. Часто вы сможете найти решение проблемы с помощью быстрого поиска переполнения стека. Если это не так, задайте свой вопрос и пометьте его тегом "Office – Scripts". Запомните, что вы создаете *сценарий* Office, а не *надстройку* Office.
 
 Если возникла проблема с API JavaScript для Office, создайте проблему в репозитории GitHub [OfficeDev/Office-JS](https://github.com/OfficeDev/office-js) . Участники группы продукта будут отвечать на проблемы и предоставлять дальнейшую помощь. Создание ошибки в репозитории **OfficeDev/Office-JS** свидетельствует о том, что в библиотеке API JavaScript для Office обнаружен изъян, который должен быть адрес группой разработки продуктов.
 
