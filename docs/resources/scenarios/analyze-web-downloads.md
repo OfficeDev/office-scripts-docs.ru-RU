@@ -3,12 +3,12 @@ title: 'Сценарий примера сценариев Office: анализ 
 description: Пример, который принимает необработанные данные из Интернета в книгу Excel и определяет исходное расположение, прежде чем упорядочивать эту информацию в таблице.
 ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 20c52c4f26b5939fb5de5e04df504e6672dd4200
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: adc2cb401830b66b245c0dfcc4441b7ac9c8c61f
+ms.sourcegitcommit: 009935c5773761c5833e5857491af47e2c95d851
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160455"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49408968"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Сценарий примера сценариев Office: анализ загружаемых веб-файлов
 
@@ -182,8 +182,8 @@ ms.locfileid: "45160455"
         formula1: "=TRUE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
-      conditionalFormatTrue.getCellValue().getFormat().getFill().setColor("#F8CCAD");
-      conditionalFormatTrue.getCellValue().setRule({
+      conditionalFormatFalse.getCellValue().getFormat().getFill().setColor("#F8CCAD");
+      conditionalFormatFalse.getCellValue().setRule({
         formula1: "=FALSE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
@@ -224,7 +224,7 @@ ms.locfileid: "45160455"
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
-Перейдите к любому листу **недели \* \* ** и запустите скрипт **анализа веб-загрузки** . Сценарий применит условное форматирование и расположение лабеллинг к текущему листу. Кроме того, будет обновлен лист **сводки** .
+Перейдите к любому листу **недели \* \*** и запустите скрипт **анализа веб-загрузки** . Сценарий применит условное форматирование и расположение лабеллинг к текущему листу. Кроме того, будет обновлен лист **сводки** .
 
 ### <a name="before-running-the-script"></a>Перед выполнением скрипта
 
