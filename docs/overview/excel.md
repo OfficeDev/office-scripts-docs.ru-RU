@@ -1,14 +1,14 @@
 ---
 title: Сценарии Office в Excel в Интернете
 description: Краткое введение в регистратор действий и редактор кода для сценариев Office.
-ms.date: 09/29/2020
+ms.date: 11/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 965e28be285d59d79d46fe005ab16f29b271041f
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: a065c8eb5fc52c7525383927b7e1490e703eb179
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319674"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49571464"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Сценарии Office в Excel в Интернете (предварительный просмотр)
 
@@ -28,7 +28,6 @@ ms.locfileid: "48319674"
 
 1. [Excel в Интернете](https://www.office.com/launch/excel) (другие платформы, например классическая версия, не поддерживаются).
 1. OneDrive для бизнеса.
-1. Сценарии Office, [включенные администратором](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. Любая коммерческая или образовательная лицензия Microsoft 365 с доступом к классическим приложениям Microsoft 365 Office, таким как:
 
     - Office 365 бизнес
@@ -40,7 +39,10 @@ ms.locfileid: "48319674"
     - Office 365 A3
     - Office 365 A5
 
-## <a name="when-to-use-office-scripts"></a>Когда использовать офисные сценарии
+> [!NOTE]
+> Если вы соответствуете этим требованиям и по-прежнему не видите вкладку **Автоматизировать**, возможно, ваш администратор отключил эту функцию или возникла другая проблема с вашей средой. Выполните инструкции из раздела [Не отображается вкладка "Автоматизировать" или недоступны сценарии Office](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable), чтоб начать использовать сценарии Office.
+
+## <a name="when-to-use-office-scripts"></a>Когда использовать сценарии Office
 
 Скрипты позволяют записывать и воспроизводить ваши действия Excel в различных рабочих книгах и таблицах. Если вы замечаете, что раз за разом повторяете одинаковые действия, вы можете превратить их в простой сценарий Office. Запускайте свой сценарий нажатием кнопки в Excel или объедините его с Power Automate, чтобы ускорить весь свой рабочий процесс.
 
@@ -66,10 +68,10 @@ ms.locfileid: "48319674"
 
 Сценариями Office можно поделиться с другими пользователям книги Excel. Когда вы делитесь сценарием с другими пользователями в книге, он прикрепляется к книге. Ваши сценарии хранятся в вашем хранилище OneDrive, а когда вы делитесь сценарием, в книге, которую вы открыли, создается ссылка на него.
 
-Дополнительные сведения об общем доступе и отмене общего доступа к сценариям см. в статье [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
+Дополнительные сведения об общем доступе и отмене общего доступа к сценариям см. в статье [Общий доступ к сценариям Office в Excel в Интернете](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 > [!NOTE]
-> Так как сценарии Office хранятся в OneDrive пользователя, на них распространяются такие же политики хранения и удаления. Сведения о том, как обрабатывать сценарии, созданные и предоставленные пользователем, удаляемым из вашей организации, см. в статье [Хранение и удаление в OneDrive](/onedrive/retention-and-deletion).
+> Дополнительные сведения о том, как сценарии сохраняются в OneDrive, см. в статье [Хранение файлов сценариев Office и владение ими](script-storage.md).
 
 ## <a name="connecting-office-scripts-to-power-automate"></a>Подключение сценариев Office к Power Automate
 
@@ -86,4 +88,4 @@ ms.locfileid: "48319674"
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)
 - [Параметры сценариев Office в M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Общие сведения о сценариях Office в Excel (на сайте support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
+- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)

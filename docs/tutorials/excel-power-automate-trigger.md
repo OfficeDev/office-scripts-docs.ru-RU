@@ -1,14 +1,14 @@
 ---
 title: Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate
 description: Учебное руководство, посвященное запуску сценариев Office для Excel в Интернете с помощью Power Automate при получении электронной почты с дальнейшей передачей данных рабочего процесса в сценарий.
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f6842e27686909bad92138e6d2f9ac1892cac891
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: b73f40c70669fedbe8a0adcf346995cb20b62d37
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319681"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571481"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate (предварительная версия)
 
@@ -183,8 +183,8 @@ function main(
 
     - **Расположение**: OneDrive для бизнеса
     - **Библиотека документов**: OneDrive
-    - **Файл**: MyWorkbook.xlsx
-    - **Сценарий**: Запись электронной почты
+    - **Файл**: MyWorkbook.xlsx *(выбран с помощью браузера файлов)*
+    - **Сценарий**: запись электронной почты
     - **от**: От *(динамическое содержимое из Outlook)*
     - **dateReceived**: Время получения *(динамическое содержимое из Outlook)*
     - **тема**: Тема *(динамическое содержимое из Outlook)*
