@@ -1,14 +1,14 @@
 ---
 title: Чтение данных книги с помощью сценариев Office в Excel в Интернете
 description: Учебник по сценариям Office о чтении данных из книг и их оценке в сценарии.
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: cdd09f13bb53cfff8c051360f2306cdb6956d86d
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 0848a24e7333842b5b3b1f82ec8f270514c34d2f
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616711"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772973"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Чтение данных книги с помощью сценариев Office в Excel в Интернете
 
@@ -42,7 +42,7 @@ ms.locfileid: "46616711"
     |25.10.2019 |Чековый |Органическая компания "Лучшее для вас" | –85,64 | |
     |01.11.2019 |Чековый |Внешний депозит | |1000 |
 
-3. Откройте **Редактор кода** и выберите **Создать сценарий**.
+3. Откройте **Все сценарии** и выберите **Создать сценарий**.
 4. Давайте очистим форматирование. Это финансовый документ, поэтому изменим числовой формат в столбцах **Дебет** и **Кредит**, чтобы отобразить значения в долларах. Также настроим ширину столбца по данным.
 
     Замените содержимое сценария следующим кодом:
@@ -73,21 +73,22 @@ ms.locfileid: "46616711"
 8. Когда двухмерный массив регистрируется в консоли, она группирует значения столбцов под каждой строкой. Разверните журнал массива, нажав синий треугольник.
 9. Разверните второй уровень массива, нажав появившийся синий треугольник. Должно отобразиться следующее:
 
-    ![Журнал консоли, отображающий результат "–20,05", размещенный под двумя массивами.](../images/tutorial-4.png)
+    ![Журнал консоли, отображающий результат "–20,05", размещенный под двумя массивами](../images/tutorial-4.png)
 
 ## <a name="modify-the-value-of-a-cell"></a>Изменение значения ячейки
 
 Теперь, когда мы можем читать данные, воспользуемся ими, чтобы изменить книгу. Мы сделаем значение ячейки **D2** положительным с помощью функции `Math.abs`. Объект [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) содержит множество функций, к которым имеют доступ сценарии. Дополнительные сведения о `Math` и других встроенных объектах можно найти в статье [Использование встроенных объектов JavaScript в сценариях Office](../develop/javascript-objects.md).
 
-1. Добавьте следующий код в конце сценария:
+1. Мы будем использовать методы `getValue` и `setValue`, чтобы изменить значение ячейки. Эти методы применимы к одной ячейке. При обработке диапазонов, включающих несколько ячеек, нужно использовать `getValues` и `setValues`. Добавьте следующий код в конце сценария:
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.getValue());
+    let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
 
-    Обратите внимание на то, что мы используем `getValue` и `setValue`. Эти методы применимы к одной ячейке. При обработке диапазонов, включающих несколько ячеек, нужно использовать `getValues` и `setValues`.
+    > [!NOTE]
+    > Мы [приводим](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) возвращаемое значение `range.getValue()` к `number`, используя ключевое слово `as`. Это необходимо, так как диапазон может включать строки, числа или логические значения. В данном случае нам явно нужно число.
 
 2. Значение ячейки **D2** теперь должно быть положительным.
 
@@ -124,13 +125,13 @@ ms.locfileid: "46616711"
     for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][3]);
+            let positiveValue = Math.abs(rangeValues[i][3] as number);
             selectedSheet.getCell(i, 3).setValue(positiveValue);
         }
 
         // The column at index 4 is column "5" in the worksheet.
         if (rangeValues[i][4] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][4]);
+            let positiveValue = Math.abs(rangeValues[i][4] as number);
             selectedSheet.getCell(i, 4).setValue(positiveValue);
         }
     }
@@ -142,7 +143,7 @@ ms.locfileid: "46616711"
 
     Теперь банковская выписка должна выглядеть следующим образом:
 
-    ![Банковская выписка в виде отформатированной таблицы только с положительными значениями.](../images/tutorial-5.png)
+    ![Банковская выписка в виде отформатированной таблицы только с положительными значениями](../images/tutorial-5.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
