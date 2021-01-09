@@ -1,60 +1,67 @@
-- name: Документация по сценариям Office
-  href: index.md
-- name: Сценарии Office в Excel в Интернете
-  items:
-    - name: Обзор
-      href: overview/excel.md
-    - name: Учебные материалы
-      items:
-        - name: Изучение основ сценариев Office
-          href: tutorials/excel-tutorial.md
-        - name: Чтение данных книги с помощью сценария
-          href: tutorials/excel-read-tutorial.md
-        - name: Вызов сценариев из активированного вручную потока Power Automate
-          href: tutorials/excel-power-automate-manual.md
-        - name: Передача данных в автоматически запускаемых рабочих процессах Power Automate
-          href: tutorials/excel-power-automate-trigger.md
-    - name: Основы сценариев
-      href: develop/scripting-fundamentals.md
-    - name: Концепции
-      items:
-        - name: Встроенные объекты JavaScript
-          href: develop/javascript-objects.md
-        - name: Среда редактора кода
-          href: overview/code-editor-environment.md
-        - name: Различия между сценариями Office и макросами VBA
-          href: resources/vba-differences.md
-        - name: Различия между сценариями Office и надстройками Office
-          href: resources/add-ins-differences.md
-        - name: Поддержка внешнего вызова API в сценариях Office
-          href: develop/external-calls.md
-        - name: Хранилище файлов и владение ими
-          href: overview/script-storage.md
-        - name: Выполнение сценариев с помощью Power Automate
-          href: develop/power-automate-integration.md
-    - name: Устранение неполадок
-      items:
-        - name: Основы устранения неполадок
-          href: testing/troubleshooting.md
-        - name: Повышение производительности сценария
-          href: develop/web-client-performance.md
-        - name: Ограничения платформы
-          href: testing/platform-limits.md
-        - name: Отмена эффектов сценария Office
-          href: testing/undo.md
-        - name: Поддержка более ранних версий сценариев Office
-          href: develop/excel-async-model.md
-    - name: Примеры
-      items:
-        - name: Примеры сценариев
-          href: resources/excel-samples.md
-        - name: Сценарии
-          items:
-            - name: Обзор
-              href: resources/scenarios/sample-scenario-overview.md
-            - name: Анализ загруженного из Интернета
-              href: resources/scenarios/analyze-web-downloads.md
-            - name: Калькулятор оценок
-              href: resources/scenarios/grade-calculator.md
-            - name: Напоминания о задачах (с помощью Power Automate)
-              href: resources/scenarios/task-reminders.md
+items:
+  - name: Документация по сценариям Office
+    href: index.md
+  - name: Сценарии Office в Excel в Интернете
+    items:
+      - name: Обзор
+        href: overview/excel.md
+      - name: Учебные материалы
+        items:
+          - name: Изучение основ сценариев Office
+            href: tutorials/excel-tutorial.md
+          - name: Чтение данных книги с помощью сценария
+            href: tutorials/excel-read-tutorial.md
+          - name: Вызов сценариев из активированного вручную потока Power Automate
+            href: tutorials/excel-power-automate-manual.md
+          - name: Использование данных в сценариях из автоматически запускаемых потоков Power Automate
+            href: tutorials/excel-power-automate-trigger.md
+          - name: Передача данных из сценария в поток Power Automate
+            href: tutorials/excel-power-automate-returns.md
+      - name: Основы сценариев
+        href: develop/scripting-fundamentals.md
+      - name: Концепции
+        items:
+          - name: Встроенные объекты JavaScript
+            href: develop/javascript-objects.md
+          - name: Среда редактора кода
+            href: overview/code-editor-environment.md
+          - name: Различия между сценариями Office и макросами VBA
+            href: resources/vba-differences.md
+          - name: Различия между сценариями Office и надстройками Office
+            href: resources/add-ins-differences.md
+          - name: Поддержка внешнего вызова API в сценариях Office
+            href: develop/external-calls.md
+          - name: Хранилище файлов и владение ими
+            href: overview/script-storage.md
+          - name: Выполнение сценариев с помощью Power Automate
+            href: develop/power-automate-integration.md
+      - name: Устранение неполадок
+        items:
+          - name: Основы устранения неполадок
+            href: testing/troubleshooting.md
+          - name: Устранение неполадок с Power Automate
+            href: testing/power-automate-troubleshooting.md
+          - name: Повышение производительности сценария
+            href: develop/web-client-performance.md
+          - name: Ограничения платформы
+            href: testing/platform-limits.md
+          - name: Отмена эффектов сценария Office
+            href: testing/undo.md
+          - name: Поддержка более ранних версий сценариев Office
+            href: develop/excel-async-model.md
+      - name: Примеры
+        items:
+          - name: Примеры сценариев
+            href: resources/excel-samples.md
+          - name: Сценарии
+            items:
+              - name: Обзор
+                href: resources/scenarios/sample-scenario-overview.md
+              - name: Анализ загруженного из Интернета
+                href: resources/scenarios/analyze-web-downloads.md
+              - name: Калькулятор оценок
+                href: resources/scenarios/grade-calculator.md
+              - name: График данных об уровне воды от NOAA
+                href: resources/scenarios/noaa-data-fetch.md
+              - name: Напоминания о задачах (с помощью Power Automate)
+                href: resources/scenarios/task-reminders.md
