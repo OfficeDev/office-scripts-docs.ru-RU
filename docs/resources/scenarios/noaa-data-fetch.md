@@ -1,18 +1,18 @@
 ---
 title: 'Пример сценария сценариев Office: данные на уровне ватерли Graph из NOAA'
 description: Пример, который получает данные JSON из базы данных NOAA и использует их для создания диаграммы.
-ms.date: 01/05/2021
+ms.date: 01/11/2021
 localization_priority: Normal
-ms.openlocfilehash: d2afcd05125ea66c028d8e21bcc878371c20fcc3
-ms.sourcegitcommit: 30c4b731dc8d18fca5aa74ce59e18a4a63eb4ffc
+ms.openlocfilehash: 5b0b4e3675cbe053368f63123d819f0dab626e60
+ms.sourcegitcommit: 7580dcb8f2f97974c2a9cce25ea30d6526730e28
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "49784192"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "49867879"
 ---
-# <a name="office-scripts-sample-scenario-graph-water-level-data-from-noaa"></a>Пример сценария сценариев Office: данные на уровне ватерли Graph из NOAA
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Пример сценария сценариев Office: извлечение и график данных на уровне ватерли от NOAA
 
-В этом сценарии необходимо выровнеть уровень вод на станции ["National Wateric and Seattle Administration" в Сиэтле.](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130) Внешние данные используются для заполнения таблицы и создания диаграммы.
+В этом сценарии необходимо выровнеть уровень вехи на станции ["National Wateric and Seattle Administration" в Сиэтле.](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130) Внешние данные используются для заполнения таблицы и создания диаграммы.
 
 Вы разработайте сценарий, использующий команду для запроса базы данных `fetch` [noAA — "Подмайки" и "Currents".](https://tidesandcurrents.noaa.gov/) Это позволит фиксировать уровень в течение заданного периода времени. Сведения будут возвращены в качестве JSON, поэтому часть скрипта преобразует их в значения диапазона. После того как данные посетят электронные таблицы, они будут использоваться для начертки диаграммы.
 
@@ -100,7 +100,7 @@ ms.locfileid: "49784192"
     }
     ```
 
-1. Переименуем сценарий в **диаграмму уровня подкатки NOAA** и сохраните его.
+1. Переименуем сценарий в **диаграмму уровня ватерли NOAA** и сохраните его.
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
