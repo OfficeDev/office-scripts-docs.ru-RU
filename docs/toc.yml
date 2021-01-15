@@ -59,9 +59,9 @@ items:
                 href: resources/scenarios/sample-scenario-overview.md
               - name: Анализ загруженного из Интернета
                 href: resources/scenarios/analyze-web-downloads.md
+              - name: Извлечение и построение графика данных об уровне воды от NOAA
+                href: resources/scenarios/noaa-data-fetch.md
               - name: Калькулятор оценок
                 href: resources/scenarios/grade-calculator.md
-              - name: График данных об уровне воды от NOAA
-                href: resources/scenarios/noaa-data-fetch.md
               - name: Напоминания о задачах (с помощью Power Automate)
                 href: resources/scenarios/task-reminders.md
