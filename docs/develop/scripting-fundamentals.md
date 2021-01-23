@@ -3,12 +3,12 @@ title: Основы сценариев для сценариев Office в Excel
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 6c02f4fb986e6a0ed1dd7afb099aaa1c9d1ea276
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: acbeec69a5d9ae9e3ebfa95c9070033d1cca2265
+ms.sourcegitcommit: e7e019ba36c2f49451ec08c71a1679eb6dba4268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160476"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "49933275"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
 
@@ -18,7 +18,7 @@ ms.locfileid: "45160476"
 
 ## <a name="main-function"></a>Функция `main`
 
-Каждый сценарий Office должен содержать функцию `main` с типом `ExcelScript.Workbook` в качестве первого параметра. При выполнении этой функции приложение Excel вызывает эту функцию `main`, предоставляя книгу в качестве ее первого параметра. Поэтому важно не изменять базовую подпись функции `main` после записи сценария или создания нового сценария в редакторе кода.
+Каждый сценарий Office должен содержать функцию `main` с типом `ExcelScript.Workbook` в качестве первого параметра. При выполнении `main` приложение Excel вызывает эту функцию, предоставляя книгу в качестве ее первого параметра. Поэтому важно не изменять базовую подпись функции `main` после записи сценария или создания нового сценария в редакторе кода.
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
