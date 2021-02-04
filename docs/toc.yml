@@ -45,6 +45,8 @@ items:
             href: develop/web-client-performance.md
           - name: Ограничения платформы
             href: testing/platform-limits.md
+          - name: Ограничения TypeScript
+            href: develop/typescript-restrictions.md
           - name: Отмена эффектов сценария Office
             href: testing/undo.md
           - name: Поддержка более ранних версий сценариев Office
