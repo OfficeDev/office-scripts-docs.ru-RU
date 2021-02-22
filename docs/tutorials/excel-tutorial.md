@@ -1,14 +1,14 @@
 ---
 title: Запись, редактирование и создание сценариев Office в Excel в Интернете
 description: Учебник с основными сведениями о сценариях Office, включая запись сценариев с помощью средства записи действий и запись данных в книгу.
-ms.date: 07/21/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 96bdc286883d87249de260666c7c8ffe2c94cc0f
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: fa2fec54cdb0289590868ee6848a942401f21665
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616775"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772980"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Запись, редактирование и создание сценариев Office в Excel в Интернете
 
@@ -49,7 +49,7 @@ ms.locfileid: "46616775"
 
     Ваш лист должен выглядеть, как показано ниже (не волнуйтесь, если цвет отличается):
 
-    ![Строка данных о продажах фруктов с выделенной оранжевым цветом строкой "Апельсины".](../images/tutorial-1.png)
+    ![Строка данных о продажах фруктов с выделенной оранжевым цветом строкой "Апельсины"](../images/tutorial-1.png)
 
 ## <a name="edit-an-existing-script"></a>Редактирование существующего сценария
 
@@ -78,7 +78,7 @@ ms.locfileid: "46616775"
 
 4. Протестируйте сценарий, нажав **Запустить**. Книга должна выглядеть следующим образом:
 
-    ![Строка данных о продажах фруктов с выделенной оранжевым цветом строкой "Апельсины" и выделенной желтым цветом строкой "Лимоны".](../images/tutorial-2.png)
+    ![Строка данных о продажах фруктов с выделенной оранжевым цветом строкой "Апельсины" и выделенной желтым цветом строкой "Лимоны"](../images/tutorial-2.png)
 
 ## <a name="create-a-table"></a>Создание таблицы
 
@@ -100,7 +100,7 @@ ms.locfileid: "46616775"
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
-        // Set fill color to FFC000 for range Sheet12!A2:C2
+        // Set fill color to FFC000 for range Sheet1!A2:C2
         let selectedSheet = workbook.getActiveWorksheet();
         selectedSheet.getRange("A2:C2").getFormat().getFill().setColor("FFC000");
         selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
@@ -113,7 +113,7 @@ ms.locfileid: "46616775"
 
 3. Запустите сценарий. Вы увидите следующую таблицу:
 
-    ![Отсортированная таблица продаж фруктов.](../images/tutorial-3.png)
+    ![Отсортированная таблица продаж фруктов](../images/tutorial-3.png)
 
     > [!NOTE]
     > При повторном запуске сценария возникнет ошибка. Это связано с тем, что вы не можете создать таблицу поверх другой таблицы. Однако вы можете запустить этот сценарий на другом листе или в другой книге.
