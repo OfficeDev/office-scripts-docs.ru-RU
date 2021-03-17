@@ -1,14 +1,14 @@
 ---
 title: Примеры скриптов Office Scripts в Excel в Интернете
 description: Коллекция примеров кода, которые можно использовать с помощью Office Scripts в Excel в Интернете.
-ms.date: 12/21/2020
+ms.date: 02/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 35a7fdb4dcfa4c349aa594e5b13d1b7e4d33a178
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: 4f1f6d4e160c42524df3c69228d182f1cb4838c8
+ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772969"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "50837280"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Примеры скриптов Office Scripts в Excel в Интернете (предварительный просмотр)
 
@@ -319,6 +319,43 @@ function main(workbook: ExcelScript.Workbook) {
     console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
     // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
+}
+```
+
+### <a name="use-data-validation-to-create-a-drop-down-list"></a>Использование проверки данных для создания выпадаемого списка
+
+В этом скрипте создается список выбора для ячейки. Он использует существующие значения выбранного диапазона в качестве выбора для списка.
+
+![Набор снимков экрана до и после, который отображает три слова в диапазоне, а затем те же самые слова в отсвеяемом списке.](../images/sample-data-validation.png)
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the values for data validation.
+  let selectedRange = workbook.getSelectedRange();
+  let rangeValues = selectedRange.getValues();
+
+  // Convert the values into a comma-delimited string.
+  let dataValidationListString = "";
+  rangeValues.forEach((rangeValueRow) => {
+    rangeValueRow.forEach((value) => {
+      dataValidationListString += value + ",";
+    });
+  });
+
+  // Clear the old range.
+  selectedRange.clear(ExcelScript.ClearApplyTo.contents);
+
+  // Apply the data validation to the first cell in the selected range.
+  let targetCell = selectedRange.getCell(0,0);
+  let dataValidation = targetCell.getDataValidation();
+
+  // Set the content of the drop-down list.
+  dataValidation.setRule({
+      list: {
+        inCellDropDown: true,
+        source: dataValidationListString
+      }
+    });
 }
 ```
 
