@@ -5,12 +5,12 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 10/30/2020
 localization_priority: Priority
-ms.openlocfilehash: 60eb5340e424617a3be87fea9d2a7ece3ca69c3b
-ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
+ms.openlocfilehash: 2e31cc52c9dbc5ebe23428773aa686fc93207d29
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49342831"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570271"
 ---
 # <a name="office-scripts-documentation-preview"></a>Документация по скриптам Office (предварительная версия)
 
@@ -145,11 +145,11 @@ ms.locfileid: "49342831"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
+                            <a href="/answers/products/m365" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>Предложить функцию</h3></a>
+                        <a href="/answers/products/m365" target="_blank"><h3>Предложить функцию</h3></a>
                     </div>
                 </div>
             </div>

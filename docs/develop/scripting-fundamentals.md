@@ -3,12 +3,12 @@ title: Основы сценариев для сценариев Office в Excel
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: acbeec69a5d9ae9e3ebfa95c9070033d1cca2265
-ms.sourcegitcommit: e7e019ba36c2f49451ec08c71a1679eb6dba4268
+ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49933275"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570236"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
 
@@ -20,7 +20,7 @@ ms.locfileid: "49933275"
 
 Каждый сценарий Office должен содержать функцию `main` с типом `ExcelScript.Workbook` в качестве первого параметра. При выполнении `main` приложение Excel вызывает эту функцию, предоставляя книгу в качестве ее первого параметра. Поэтому важно не изменять базовую подпись функции `main` после записи сценария или создания нового сценария в редакторе кода.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Your code goes here
 }
@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Следующий сценарий получает активный лист из книги и записывает его имя.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     let sheet = workbook.getActiveWorksheet();
@@ -169,7 +169,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Следующий сценарий возвращает все таблицы в книге. При этом отображаются заголовки, видны кнопки фильтров, а для таблицы устанавливается стиль "TableStyleLight1".
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   /* Get table collection */
   const tables = workbook.getTables();
@@ -191,7 +191,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Следующий сценарий создает таблицу в Excel на первом листе книги. Обратите внимание, что метод `addTable` возвращает созданную таблицу.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
@@ -213,7 +213,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Следующий сценарий удаляет первый лист в книге.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get first worksheet.
     let sheet = workbook.getWorksheets()[0];

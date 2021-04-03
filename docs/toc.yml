@@ -53,12 +53,44 @@ items:
             href: develop/excel-async-model.md
       - name: Примеры
         items:
-          - name: Примеры сценариев
-            href: resources/excel-samples.md
+          - name: Обзор
+            href: resources/samples/samples-overview.md
+          - name: Основы
+            items:
+              - name: Основы создания сценариев
+                href: resources/excel-samples.md
+              - name: Основы диапазонов
+                href: resources/samples/range-basics.md
+          - name: Более сложные действия
+            items:
+              - name: Добавление примечаний
+                href: resources/samples/add-excel-comments.md
+              - name: Копирование нескольких таблиц в одну таблицу
+                href: resources/samples/copy-tables-combine.md
+              - name: Подсчет пустых строк на листах
+                href: resources/samples/count-blank-rows.md
+              - name: Перекрестные ссылки и форматирование файлов Excel
+                href: resources/samples/excel-cross-reference.md
+              - name: Генератор номера документа
+                href: resources/samples/document-number-generator.md
+              - name: Отправка по почте изображений диаграмм и таблиц
+                href: resources/samples/email-images-chart-table.md
+              - name: Фильтрация таблицы и получение видимого диапазона
+                href: resources/samples/filter-table-get-visible-range.md
+              - name: Управление режимом вычислений
+                href: resources/samples/excel-calculation.md
+              - name: Перемещение выбранных строк между таблицами
+                href: resources/samples/move-rows-across-tables.md
+              - name: Вывод данных таблицы в виде JSON
+                href: resources/samples/get-table-data.md
+              - name: Удаление гиперссылок из ячеек Excel
+                href: resources/samples/remove-hyperlinks-from-cells.md
+              - name: Запуск сценария для всех файлов Excel в папке
+                href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
+              - name: Отправка приглашения Teams из данных Excel
+                href: resources/samples/send-teams-invite-from-excel-data.md
           - name: Сценарии
             items:
-              - name: Обзор
-                href: resources/scenarios/sample-scenario-overview.md
               - name: Анализ загруженного из Интернета
                 href: resources/scenarios/analyze-web-downloads.md
               - name: Извлечение и построение графика данных об уровне воды от NOAA
@@ -67,3 +99,7 @@ items:
                 href: resources/scenarios/grade-calculator.md
               - name: Напоминания о задачах (с помощью Power Automate)
                 href: resources/scenarios/task-reminders.md
+          - name: Вклад сообщества
+            items:
+              - name: Праздничные приветствия
+                href: resources/samples/community-seasons-greetings.md
