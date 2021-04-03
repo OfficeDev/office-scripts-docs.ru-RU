@@ -1,16 +1,16 @@
 ---
-title: Примеры скриптов Office Scripts в Excel в Интернете
+title: Основные скрипты для скриптов Office в Excel в Интернете
 description: Коллекция примеров кода, которые можно использовать с помощью Office Scripts в Excel в Интернете.
-ms.date: 02/12/2021
+ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 4f1f6d4e160c42524df3c69228d182f1cb4838c8
-ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
+ms.openlocfilehash: f52500f480b7e7fa637a606b99de035da326a4ba
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50837280"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570518"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Примеры скриптов Office Scripts в Excel в Интернете (предварительный просмотр)
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные скрипты для скриптов Office в Excel в Интернете
 
 Следующие примеры — это простые сценарии, которые можно попробовать в собственных книгах. Чтобы использовать их в Excel в Интернете:
 
@@ -20,8 +20,6 @@ ms.locfileid: "50837280"
 4. Замените весь сценарий образцом по вашему выбору.
 5. Нажмите **кнопку** Выполнить в области задач редактора кода.
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 ## <a name="scripting-basics"></a>Основы скриптов
 
 В этих примерах демонстрируются основные строительные блоки для office Scripts. Добавьте их в скрипты, чтобы расширить решение и решить распространенные проблемы.
@@ -30,7 +28,7 @@ ms.locfileid: "50837280"
 
 В этом примере считывать значение **A1** и печатать его на консоли.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
   let selectedSheet = workbook.getActiveWorksheet();
@@ -47,7 +45,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 В этом скрипте региструется значение текущей активной ячейки. Если выбрано несколько ячеек, будет зарегистрирована верхняя левая ячейка.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current active cell in the workbook.
   let cell = workbook.getActiveCell();
@@ -61,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт получает соседние ячейки с использованием относительных ссылок. Обратите внимание, что если активная ячейка находится в верхнем ряду, часть скрипта не работает, так как она ссылается на ячейку выше выбранной в настоящее время.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently active cell in the workbook.
   let activeCell = workbook.getActiveCell();
@@ -88,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт копирует форматирование в активной ячейке в соседние ячейки. Обратите внимание, что этот скрипт работает только тогда, когда активная ячейка не на краю таблицы.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the active cell.
   let activeCell = workbook.getActiveCell();
@@ -111,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт цикличен по диапазону выбора в настоящее время. Он очищает текущее форматирование и задает цвет заполнения в каждой ячейке случайным цветом.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently selected range.
   let range = workbook.getSelectedRange();
@@ -140,7 +138,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт получает все пустые ячейки в используемом диапазоне текущего листа. Затем он выделяет все эти ячейки с желтым фоном.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the current used range.
     let range = workbook.getActiveWorksheet().getUsedRange();
@@ -161,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт получает и записывает имена всех таблиц в книге. Он также задает цвета вкладки случайным цветом.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get all the worksheets in the workbook.
   let sheets = workbook.getWorksheets();
@@ -188,7 +186,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт создает новую таблицу. Он проверяет существующую копию листа и удаляет его перед созданием нового листа.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Name of the worksheet to be added.
   let name = "Index";
@@ -328,7 +326,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ![Набор снимков экрана до и после, который отображает три слова в диапазоне, а затем те же самые слова в отсвеяемом списке.](../images/sample-data-validation.png)
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the values for data validation.
   let selectedRange = workbook.getSelectedRange();
@@ -367,7 +365,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт задает формулу ячейки, а затем отображает, как Excel хранит формулу и значение ячейки отдельно.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let selectedSheet = workbook.getActiveWorksheet();
 
@@ -388,7 +386,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Этот скрипт передает диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE. Если переливание приводит к ошибке #SPILL, он очищает целевой диапазон и снова применяет формулу.
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let sheet = workbook.getActiveWorksheet();
   // Use the data in A1:D2 for the sample.
@@ -417,10 +415,6 @@ function main(workbook: ExcelScript.Workbook) {
   targetRange.select();
 }
 ```
-
-## <a name="scenario-samples"></a>Примеры сценариев
-
-Примеры более крупных решений в реальном мире можно найти в примере сценариев [сценариев Office Scripts.](scenarios/sample-scenario-overview.md)
 
 ## <a name="suggest-new-samples"></a>Предложить новые примеры
 
