@@ -3,12 +3,13 @@ title: Начало работы со сценариями Office
 description: Основные принципы сценариев Office, включая шаблоны доступа, среды и скриптов.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: f954ee67aa486e4b8185047738ef3d15319a94ae
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ROBOTS: NOINDEX
+ms.openlocfilehash: c1c4675b2fdc1f5ebd9e86f04f5fb011c27a3f1b
+ms.sourcegitcommit: 190ae1c071243f4638d0d650e35f1425914b0156
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571326"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "51650369"
 ---
 # <a name="getting-started"></a>Начало работы
 
@@ -20,7 +21,7 @@ ms.locfileid: "51571326"
 
 [![Основы приложения Office Scripts](../../images/getting-started-env.png)](https://youtu.be/vvCtxsjPxo8 "Основы приложения Office Scripts")
 
-### <a name="access"></a>Доступ
+### <a name="access"></a>Access
 
 Сценарии Office требуют параметров администратора, доступных для администратора Microsoft 365 в настройках  >  **параметров Office**  >  **Scripts.** По умолчанию он включен для всех пользователей. Существует два подпараметров, которые администратор может включить и отключить.
 
@@ -775,7 +776,7 @@ function updateTargetRange(
 
 *Предупреждение.* `try..catch` Использование внутри цикла притормозит сценарий. Избегайте использования этого внутри или вокруг циклов.
 
-## <a name="range-basics"></a>Основы диапазона
+## <a name="range-basics"></a>Основы диапазонов
 
 Ознакомьтесь [с базами диапазона](range-basics.md) перед дальнейшим путешествием.
 
