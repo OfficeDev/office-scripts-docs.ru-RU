@@ -3,12 +3,12 @@ title: Вызовы внешнего API в сценариях Office
 description: Узнайте, как делать внешние вызовы API в скриптах Office.
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: d0abfa0bb1adedc7535059ed359b8053d9f1c84d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0ed57ed3b97309dbb7ea196695dcc347e133b3cf
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571470"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754805"
 ---
 # <a name="external-api-calls-from-office-scripts"></a>Внешние вызовы API из office Scripts
 
@@ -40,8 +40,6 @@ ms.locfileid: "51571470"
 ## <a name="scenario"></a>Сценарий
 
 Этот скрипт получает основные сведения о репозиториях GitHub пользователя.
-
-![Пример получения данных репозиториев](../../images/git.png)
 
 ## <a name="resources-used-in-the-sample"></a>Ресурсы, используемые в примере
 

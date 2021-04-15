@@ -3,12 +3,12 @@ title: 'Пример сценария office Scripts: автоматически
 description: Пример, использующий Power Automate и Adaptive Cards, автоматизирует напоминания о задачах в таблице управления проектами.
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a229a06e9f1f9118d57dadac8864bbc7eae7315b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570229"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755156"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Пример сценария office Scripts: автоматические напоминания о задачах
 
@@ -24,7 +24,7 @@ ms.locfileid: "51570229"
 - Адаптивные карты Teams
 - Таблицы
 
-## <a name="prerequisites"></a>Необходимые условия
+## <a name="prerequisites"></a>Предварительные условия
 
 В этом сценарии [используются Power Automate](https://flow.microsoft.com) и [Microsoft Teams.](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software) Вам потребуется как связанное с учетной записью, используемой для разработки сценариев Office. Чтобы получить бесплатный доступ к подписке microsoft Developer, чтобы узнать об этих приложениях и работать с ними, рассмотрите возможность присоединения к [программе разработчиков Microsoft 365.](https://developer.microsoft.com/microsoft-365/dev-program)
 
@@ -161,7 +161,7 @@ ms.locfileid: "51570229"
     - **Файл**: task-reminders.xlsx *(выбранный через браузер файлов)*
     - **Сценарий**: Get People
 
-    ![Первый шаг потока запуска скрипта.](../../images/scenario-task-reminders-first-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="Поток Power Automate, показывающий первый шаг потока скрипта Run.":::
 
 12. Далее поток должен обрабатывать каждого сотрудника в массиве, возвращаемом скриптом. Нажмите **кнопку Новый шаг** и выберите сообщение адаптивной карты пользователю Teams и **дождись ответа.**
 
@@ -222,7 +222,7 @@ ms.locfileid: "51570229"
     - **senderEmail:** электронная *почта (динамическое содержимое из Excel)*
     - **statusReportResponse**: response *(динамический контент из Teams)*
 
-    ![Шаг "Применить к каждому потоку".](../../images/scenario-task-reminders-last-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="Поток Power Automate, показывающий каждый шаг apply-to-each.":::
 
 17. Сохраните поток.
 
@@ -234,12 +234,12 @@ ms.locfileid: "51570229"
 
 ### <a name="before-running-the-flow"></a>Перед запуском потока
 
-![Таблица с отчетом о состоянии, содержащим одну отсутствующую запись состояния.](../../images/scenario-task-reminders-spreadsheet-before.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="Таблица с отчетом о состоянии, содержащим одну отсутствующую запись состояния.":::
 
 ### <a name="receiving-the-adaptive-card"></a>Получение адаптивной карты
 
-![Адаптивная карта в Teams, запрашиваемая сотрудником для обновления состояния.](../../images/scenario-task-reminders-adaptive-card.png)
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Адаптивная карта в Teams, запрашиваемая сотрудником для обновления состояния.":::
 
 ### <a name="after-running-the-flow"></a>После запуска потока
 
-![Таблица с отчетом о состоянии с записью состояния, заполненной в настоящее время.](../../images/scenario-task-reminders-spreadsheet-after.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="Таблица с отчетом о состоянии с записью состояния, заполненной в настоящее время.":::

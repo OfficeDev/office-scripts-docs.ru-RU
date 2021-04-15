@@ -3,12 +3,12 @@ title: Основы сценариев для сценариев Office в Excel
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570236"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755065"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Выполнение этого скрипта создает следующие данные в текущей рабочей таблице:
 
-![Запись о продажах, показывающая строки значений, столбец формулы и отформатированные заголовки.](../images/range-sample.png)
+:::image type="content" source="../images/range-sample.png" alt-text="Лист с записями о продажах, содержащий строки значений, столбец формулы и отформатированные заголовки.":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>Диаграммы, таблицы и другие объекты данных
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Выполнение этого сценария на листе с предыдущими данными создает следующую таблицу:
 
-![Таблица сделана из предыдущего рекорда продаж.](../images/table-sample.png)
+:::image type="content" source="../images/table-sample.png" alt-text="Лист, содержащий таблицу, созданную из предыдущей записи о продажах.":::
 
 #### <a name="creating-a-chart"></a>Создание диаграммы
 
@@ -159,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Запуск этого скрипта на листе с предыдущей таблицей создает следующую диаграмму:
 
-![Столбчатая диаграмма, показывающая количество трех предметов из предыдущей записи о продажах.](../images/chart-sample.png)
+:::image type="content" source="../images/chart-sample.png" alt-text="Гистограмма, показывающая количества трех элементов из предыдущей записи о продажах.":::
 
 ### <a name="collections-and-other-object-relations"></a>Коллекции и другие отношения объектов
 

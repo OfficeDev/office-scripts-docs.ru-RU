@@ -3,12 +3,12 @@ title: Фильтр четких столбцов таблицы на основ
 description: Узнайте, как очистить фильтр столбца таблицы на основе активного расположения ячейки.
 ms.date: 03/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 5da3cdfe753f254c7f9ec97bea384b77ccaff09e
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 4f8353fb5480812b7b63e7a9b3ffb11ece2a8c6c
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571356"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755086"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>Фильтр четких столбцов таблицы на основе расположения активных клеток
 
@@ -18,11 +18,11 @@ ms.locfileid: "51571356"
 
 _Перед очисткой фильтра столбца (обратите внимание на активную ячейку)_
 
-![Перед очисткой фильтра столбцов](../../images/before-filter-applied.png)
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="Активная ячейка перед очисткой фильтра столбца.":::
 
 _После очистки фильтра столбца_
 
-![После очистки фильтра столбца](../../images/after-filter-cleared.png)
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="Активная ячейка после очистки фильтра столбца.":::
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>Пример кода: фильтр столбцов ясной таблицы на основе активной ячейки
 

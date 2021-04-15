@@ -3,12 +3,12 @@ title: Перемещение строк по таблицам с помощью
 description: Узнайте, как перемещать строки по таблицам, экономя фильтры, а затем обрабатывая и повторно примыкая к фильтрам.
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a66c8ff0f8e0e7b7f074ad77e8c660fc80b50a9
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571301"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755044"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>Перемещение строк по таблицам с сохранением фильтров, а затем обработкой и повторной обработкой фильтров
 
@@ -18,7 +18,7 @@ ms.locfileid: "51571301"
 * Перемещает все выбранные строки в другую (целевую) таблицу на другой таблице.
 * Повторное повторное появление соответствующих фильтров в исходных таблицах.
 
-![Скриншоты книги до и после](../../images/table-filter-before-after.png)
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="Скриншоты книги до и после":::
 
 В этом решении есть два сценария. Основное отличие состоит в выборе строк.
 

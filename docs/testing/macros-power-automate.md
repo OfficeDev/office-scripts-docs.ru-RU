@@ -3,12 +3,12 @@ title: Использование макрофайлов в потоках Power
 description: Узнайте, как использовать макрофайлы или xlsm-файлы в потоках Power Automate.
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: ec1fe00eb9ddc382ae4bc02187de7a36c97288b1
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a7929fc485ae2118d30a4f2783538d0e04deca2a
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571476"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755016"
 ---
 # <a name="how-to-use-macro-files-in-power-automate-flows"></a>Использование макрофайлов в потоках Power Automate
 
@@ -16,11 +16,11 @@ ms.locfileid: "51571476"
 
 Однако макрофайлы не могут быть выбраны в отсеве файла (см. пример на следующем скриншоте).
 
-![Нет xlsm в действии Сценарий запуска](../images/no-xlsm.png)
+:::image type="content" source="../images/no-xlsm.png" alt-text="Действие скрипта Power Automate Run, в котором не было выбрано макрофайла. Показана ошибка &quot;Файл&quot;.":::
 
 Один из способов решения этой проблемы — включите действие "Get File Metadata" (OneDrive или SharePoint) и используйте свойство ID в действии "Сценарий запуска", как показано на следующем скриншоте.
 
-![xlsm в действии Run Script](../images/xlsm-in-pa.png)
+:::image type="content" source="../images/xlsm-in-pa.png" alt-text="Действие скрипта Power Automate Run, показывающая выбранный макрофайл и отсутствие ошибки скрипта Run.":::
 
 > [!NOTE]
 > Некоторые XLSM (особенно те, которые ActiveX/Form) могут не работать в сетевом соединитель Excel. Убедитесь, что перед развертыванием решения необходимо протестировать.

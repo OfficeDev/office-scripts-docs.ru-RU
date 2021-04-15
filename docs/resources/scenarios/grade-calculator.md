@@ -1,24 +1,24 @@
 ---
-title: 'Пример сценария Office Scripts: Калькулятор производительности'
-description: Пример, который определяет процентные и буквенные оценки для класса учащихся.
-ms.date: 07/24/2020
+title: 'Пример сценария Office Scripts: калькулятор оценки'
+description: Пример, определяя процент и оценки букв для класса учащихся.
+ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 4e488c6cc67bda9122b88c55070654632d9c7fa2
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616745"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755030"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Пример сценария Office Scripts: Калькулятор производительности
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Пример сценария Office Scripts: калькулятор оценки
 
-В этом сценарии лектор Таллинг каждый из оценок на конце каждого учащегося. Вы ввели оценки для своих назначений и тестов при переходе. Теперь можно определить учащихся "фатес".
+В этом сценарии вы будете инструктором, который подытвет оценки каждого учащегося по окончании срока обучения. Вы вводя оценки для их назначений и тестов, как вы идете. Теперь настало время определить судьбы учащихся.
 
-Вы разрабатываете сценарий, который суммирует оценки для каждой категории точек. Затем каждый учащийся будет назначать буквенную оценку на основе итогового значения. Чтобы обеспечить точность, вы добавляете пару проверок, чтобы определить, слишком низкие или высокие показатели. Если показатель учащегося меньше нуля или больше возможного значения точки, то сценарий помечает ячейку красной заливкой, а не итоговым баллам учащегося. Это будет ясно указывает, какие записи необходимо проверить. Вы также добавите в оценки некоторые базовые параметры, чтобы можно было быстро просмотреть верхнюю и нижнюю часть класса.
+Вы разработает сценарий, который суммит оценки для каждой категории точки. Затем он назначает каждому учащемуся оценку буквы в зависимости от общей суммы. Чтобы обеспечить точность, вы добавим несколько проверок, чтобы убедиться, что какие-либо отдельные оценки слишком низкие или высокие. Если оценка учащегося меньше нуля или больше возможного значения точки, скрипт будет пометить ячейку с красной заливкой, а не суммой точек этого студента. Это будет четким указанием, какие записи необходимо перепросмотрить. Вы также добавим некоторые базовые форматирования в оценки, чтобы можно было быстро просмотреть верхнюю и нижнюю части класса.
 
-## <a name="scripting-skills-covered"></a>Охваченные навыки работы со сценариями
+## <a name="scripting-skills-covered"></a>Навыки скриптов, охватываемых
 
-- Форматирование ячеек
+- Форматирование ячейки
 - Проверка ошибок
 - Регулярные выражения
 - Условное форматирование
@@ -27,11 +27,11 @@ ms.locfileid: "46616745"
 
 1. Скачайте <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> в OneDrive.
 
-2. Откройте книгу с помощью Excel для веб-сайта.
+2. Откройте книгу с Excel для интернета.
 
-3. На вкладке **Автоматизация** откройте **Редактор кода**.
+3. В **вкладке Automate** откройте **все скрипты.**
 
-4. В области задач **Редактор кода** нажмите **новый скрипт** и вставьте следующий скрипт в редактор.
+4. В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -51,9 +51,9 @@ ms.locfileid: "46616745"
 
       // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
-      const assignmentMaxMatches = studentData[0][1].match(/\d+/);
-      const midtermMaxMatches = studentData[0][2].match(/\d+/);
-      const finalMaxMatches = studentData[0][3].match(/\d+/);
+      const assignmentMaxMatches = (studentData[0][1] as string).match(/\d+/);
+      const midtermMaxMatches = (studentData[0][2] as string).match(/\d+/);
+      const finalMaxMatches = (studentData[0][3] as string).match(/\d+/);
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
@@ -89,7 +89,7 @@ ms.locfileid: "46616745"
           studentData[i][3] > maxScores[2]) {
           continue;
         }
-        const total = studentData[i][1] + studentData[i][2] + studentData[i][3];
+        const total = (studentData[i][1] as number) + (studentData[i][2] as number) + (studentData[i][3] as number);
         let grade: string;
         switch (true) {
           case total < 60:
@@ -108,7 +108,7 @@ ms.locfileid: "46616745"
             grade = "A";
             break;
         }
-
+    
         // Set total score formula.
         studentsRangeFormulas[i][0] = '=RC[-2]+RC[-1]';
         // Set grade cell.
@@ -166,24 +166,24 @@ ms.locfileid: "46616745"
       }
 
       // Apply conditional formatting.
-      let conditionalFormatting : ExcelScript.ConditionalFormat;
+      let conditionalFormatting: ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
-      conditionalFormatting.getCellValue().setRule({formula1, operator});
+      conditionalFormatting.getCellValue().setRule({ formula1, operator });
     }
     ```
 
-5. Переименуйте сценарий на **Оценка калькулятора** и сохраните его.
+5. Переименуй сценарий в **калькулятор класса и** сохраните его.
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
-Запустите сценарий **калькулятора** на листе. Сценарий выполнит итоговые оценки и присвоит каждому студенте буквенную оценку. Если для какого-либо из конкретных оценок задано больше баллов, чем стоит на назначении или тестировании, то несвязанное с ним помечается красным, а итоговое значение не вычисляется. Кроме того, все оценки "A" выделены зеленым цветом, а "оценки" и "F" выделены в желтом цвете.
+Запустите **сценарий калькулятора класса** на единственной таблице. Сценарий будет общую оценку и назначить каждому учащемуся оценку буквы. Если в отдельных классах имеется больше баллов, чем стоит назначение или тест, то класс обижающих будет отмечен красным, а общее число не вычисляется. Кроме того, все оценки "A" выделены зеленым цветом, а оценки "D" и "F" выделены желтым цветом.
 
-### <a name="before-running-the-script"></a>Перед выполнением скрипта
+### <a name="before-running-the-script"></a>Перед запуском сценария
 
-![Лист, показывающий строки оценок для учащихся.](../../images/scenario-grade-calculator-before.png)
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="Таблица, в которую показаны строки баллов для учащихся.":::
 
-### <a name="after-running-the-script"></a>После выполнения скрипта
+### <a name="after-running-the-script"></a>После запуска скрипта
 
-![Лист с данными оценки учащегося с недопустимыми ячейками в красном итоге для допустимых строк учащихся.](../../images/scenario-grade-calculator-after.png)
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="Таблица, в которую показаны данные о оценках учащихся с недействительными ячейками в красных итоговых числах для допустимых студенческих строк.":::

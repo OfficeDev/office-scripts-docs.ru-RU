@@ -3,12 +3,12 @@ title: Ограничения TypeScript в сценариях Office
 description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода сценариев Office.
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 8c9d1beafb236e7ba10dedf00fab944c40fb954d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570278"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755051"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в сценариях Office
 
@@ -22,11 +22,11 @@ ms.locfileid: "51570278"
 
 Нельзя явно объявить переменную типом в `any` Скриптах Office (то `let someVariable: any;` есть). Тип `any` вызывает проблемы при обработке Excel. Например, необходимо знать, что значение `Range` является `string` значением , или `number` `boolean` . Вы получите ошибку времени компиляции (ошибка перед запуском скрипта), если любая переменная явно определена как `any` тип сценария.
 
-![Явное любое сообщение в тексте наведении редактора кода](../images/explicit-any-editor-message.png)
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="Явное сообщение &quot;любое&quot; в тексте наведении редактора кода":::
 
-![Явные ошибки в окне консоли](../images/explicit-any-error-message.png)
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="Явные ошибки в окне консоли.":::
 
-На вышеуказанной скриншоте указывается, что `[5, 16] Explicit Any is not allowed` строка #5, столбец #16 определяет `any` тип. Это поможет найти ошибку.
+На предыдущем `[5, 16] Explicit Any is not allowed` скриншоте указывается, что строка #5, столбец #16 определяет `any` тип. Это поможет найти ошибку.
 
 Чтобы обойти эту проблему, всегда определите тип переменной. Если вы не уверены в типе переменной, можно использовать [тип union.](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html) Это может быть полезно для переменных, которые держат значения, которые могут быть типа , или (тип для значений является `Range` `string` `number` `boolean` `Range` союзом из них: `string | number | boolean` ).
 

@@ -3,12 +3,12 @@ title: Запуск сценариев Office с помощью power Automate
 description: Как получить скрипты Office для Excel в Интернете, работая с рабочим процессом Power Automate.
 ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: c31c650e54c1ef78a7e8d901d602c69211b0c716
-ms.sourcegitcommit: 5f79e5ba9935edb8a890012f2cde3b89fe80faa0
+ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "49726969"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755072"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Запуск сценариев Office с помощью power Automate
 
@@ -99,7 +99,7 @@ Power Automate позволяет передавать фрагменты дан
 
 На следующем скриншоте показан поток power Automate, который запускается при назначенной вам проблеме [GitHub.](https://github.com/) Поток запускает сценарий, который добавляет проблему в таблицу в книге Excel. Если в этой таблице имеется пять или более проблем, поток отправляет напоминание по электронной почте.
 
-![Поток примера, показанный в редакторе потока Power Automate](../images/power-automate-parameter-return-sample.png)
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="Редактор потока Power Automate, показывающий поток примера.":::
 
 Функция скрипта указывает ID проблемы и название выпуска в качестве параметров ввода, и скрипт возвращает количество строк в `main` таблице вопросов.
 
@@ -108,8 +108,8 @@ function main(
   workbook: ExcelScript.Workbook,
   issueId: string,
   issueTitle: string): number {
-  // Get the "GitHub&quot; worksheet.
-  let worksheet = workbook.getWorksheet(&quot;GitHub");
+  // Get the "GitHub" worksheet.
+  let worksheet = workbook.getWorksheet("GitHub");
 
   // Get the first table in this worksheet, which contains the table of GitHub issues.
   let issueTable = worksheet.getTables()[0];

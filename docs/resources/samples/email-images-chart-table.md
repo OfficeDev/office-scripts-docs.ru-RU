@@ -3,12 +3,12 @@ title: Отправить по электронной почте изображ�
 description: Узнайте, как использовать office Scripts и Power Automate для извлечения и отправки по электронной почте изображений диаграммы и таблицы Excel.
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 7eb12526f97d72de31acdc3c9a4228c670875e2b
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: de3cf16537cb12db45d4d465d367d797d053afc4
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571374"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754812"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Использование скриптов Office и power Automate для отправки изображений диаграммы и таблицы по электронной почте
 
@@ -23,15 +23,15 @@ ms.locfileid: "51571374"
 
 _Входные данные_
 
-![Входные данные](../../images/input-data.png)
+:::image type="content" source="../../images/input-data.png" alt-text="Таблица, показывающая таблицу входных данных.":::
 
 _Диаграмма вывода_
 
-![Созданная диаграмма](../../images/chart-created.png)
+:::image type="content" source="../../images/chart-created.png" alt-text="Диаграмма столбцов, созданная с указанием суммы, которая должна быть засвеяна клиентом.":::
 
 _Электронная почта, полученная через поток Power Automate_
 
-![Полученная электронная почта](../../images/email-received.png)
+:::image type="content" source="../../images/email-received.png" alt-text="Сообщение, отправленное потоком, с указанием диаграммы Excel, встроенной в тело.":::
 
 ## <a name="solution"></a>Решение
 

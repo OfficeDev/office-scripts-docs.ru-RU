@@ -1,54 +1,54 @@
 ---
-title: 'Сценарий примера сценариев Office: анализ загружаемых веб-файлов'
-description: Пример, который принимает необработанные данные из Интернета в книгу Excel и определяет исходное расположение, прежде чем упорядочивать эту информацию в таблице.
-ms.date: 07/10/2020
+title: 'Пример сценария office Scripts: Анализ веб-загрузки'
+description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовывать эти сведения в таблицу.
+ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: adc2cb401830b66b245c0dfcc4441b7ac9c8c61f
-ms.sourcegitcommit: 009935c5773761c5833e5857491af47e2c95d851
+ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49408968"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755037"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Сценарий примера сценариев Office: анализ загружаемых веб-файлов
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Пример сценария office Scripts: Анализ веб-загрузки
 
-В этом сценарии вы являетесь задачей анализа загрузки отчетов с веб-сайта компании. Цель этого анализа — определить, поступает ли веб-трафик из Соединенных Штатов Америки или других стран мира.
+В этом сценарии вам будет поручено проанализировать отчеты о загрузке с веб-сайта вашей компании. Цель этого анализа состоит в том, чтобы определить, идет ли веб-трафик из США или других стран мира.
 
-Ваши коллеги отправляют необработанные данные в вашу книгу. В наборе данных каждой недели есть собственный лист. Кроме того, существует **сводный** лист с таблицей и диаграммой, в которой показаны тенденции за неделю.
+Ваши коллеги загружают необработанные данные в книгу. Набор данных каждую неделю имеет свой собственный таблицу. Существует также таблица **сводки** с таблицей и диаграммой, которая отображает тенденции недели за неделю.
 
-Вы разрабатываете сценарий, который анализирует еженедельные загрузки данных на активном листе. Он будет анализировать IP-адрес, связанный с каждым загружаемым пакетом, и определять, был ли он передан из США. Ответ будет вставлен на лист в виде логического значения ("TRUE" или "FALSE"), а условное форматирование будет применено к этим ячейкам. Результаты размещения IP-адресов будут суммироваться на листе и скопированы в сводную таблицу.
+Вы разработаете сценарий, который анализирует еженедельные скачивания данных в активном таблице. Он будет размазить IP-адрес, связанный с каждым скачиванием, и определить, поступил ли он из США или нет. Ответ будет вставлен в таблицу как значение boolean ("TRUE" или "FALSE") и условное форматирование будет применено к этим ячейкам. Результаты расположения IP-адресов будут подведены на таблицу и скопированы в сводную таблицу.
 
-## <a name="scripting-skills-covered"></a>Охваченные навыки работы со сценариями
+## <a name="scripting-skills-covered"></a>Навыки скриптов, охватываемых
 
-- Синтаксический анализ текста
-- Подфункции в скриптах
+- Размыв текста
+- Subfunctions in scripts
 - Условное форматирование
 - Таблицы
 
-## <a name="demo-video"></a>Демонстрационное видео
+## <a name="demo-video"></a>Демонстрация видео
 
-В этом примере показана демонстрация при вызове сообщества разработчиков надстроек Office в течение февраля 2020.
+Этот пример был демо-версией в рамках вызова сообщества разработчиков надстройки Office в феврале 2020 года.
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
 
 > [!NOTE]
-> Код, показанный в этом видео, использует устаревшую модель API ( [сценарии Office для асинхронных API](../../develop/excel-async-model.md)). Пример, представленный на этой странице, был обновлен, но код выглядит немного иначе, чем запись. Изменения не влияют на поведение скрипта или другого контента в демо докладчика.
+> Код, показанный в этом видео, использует старую модель API (API [Office Scripts Async).](../../develop/excel-async-model.md) Пример, представленный на этой странице, был обновлен, но код немного отличается от записи. Изменения не влияют на поведение скрипта или другого контента в демонстрации презентовщика.
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 
 1. Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.
 
-2. Откройте книгу с помощью Excel для веб-сайта.
+2. Откройте книгу с Excel для интернета.
 
-3. На вкладке **Автоматизация** откройте **Редактор кода**.
+3. В **вкладке Automate** откройте **все скрипты.**
 
-4. В области задач **Редактор кода** нажмите **новый скрипт** и вставьте следующий скрипт в редактор.
+4. В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
       /* Get the Summary worksheet and table.
-       * End the script early if either object is not in the workbook.
-       */
+        * End the script early if either object is not in the workbook.
+        */
       let summaryWorksheet = workbook.getWorksheet("Summary");
       if (!summaryWorksheet) {
         console.log("The script expects a worksheet named \"Summary\". Please download the correct template and try again.");
@@ -59,39 +59,39 @@ ms.locfileid: "49408968"
         console.log("The script expects a summary table named \"Table1\". Please download the correct template and try again.");
         return;
       }
-
+  
       // Get the current worksheet.
       let currentWorksheet = workbook.getActiveWorksheet();
       if (currentWorksheet.getName().toLocaleLowerCase().indexOf("week") !== 0) {
         console.log("Please switch worksheet to one of the weekly data sheets and try again.")
         return;
       }
-
+  
       // Get the values of the active range of the active worksheet.
       let logRange = currentWorksheet.getUsedRange();
-
+  
       if (logRange.getColumnCount() !== 8) {
         console.log(`Verify that you are on the correct worksheet. Either the week's data has been already processed or the content is incorrect. The following columns are expected: ${[
-          "Time Stamp", "IP Address", "kilobytes", "user agent code", "milliseconds", "Request", "Results", "Referrer"
+            "Time Stamp", "IP Address", "kilobytes", "user agent code", "milliseconds", "Request", "Results", "Referrer"
         ]}`);
         return;
       }
       // Get the range that will contain TRUE/FALSE if the IP address is from the United States (US).
       let isUSColumn = logRange
-        .getLastColumn()
-        .getOffsetRange(0, 1);
-
+          .getLastColumn()
+          .getOffsetRange(0, 1);
+  
       // Get the values of all the US IP addresses.
       let ipRange = workbook.getWorksheet("USIPAddresses").getUsedRange();
-      let ipRangeValues = ipRange.getValues();
-      let logRangeValues = logRange.getValues();
+      let ipRangeValues = ipRange.getValues() as number[][];
+      let logRangeValues = logRange.getValues() as string[][];
       // Remove the first row.
       let topRow = logRangeValues.shift();
       console.log(`Analyzing ${logRangeValues.length} entries.`);
-
+  
       // Create a new array to contain the boolean representing if this is a US IP address.
       let newCol = [];
-
+  
       // Go through each row in worksheet and add Boolean.
       for (let i = 0; i < logRangeValues.length; i++) {
         let curRowIP = logRangeValues[i][1];
@@ -101,43 +101,43 @@ ms.locfileid: "49408968"
           newCol.push([false]);
         }
       }
-
+  
       // Remove the empty column header and add proper heading.
       newCol = [["Is US IP"], ...newCol];
-
+  
       // Write the result to the spreadsheet.
       console.log(`Adding column to indicate whether IP belongs to US region or not at address: ${isUSColumn.getAddress()}`);
       console.log(newCol.length);
       console.log(newCol);
       isUSColumn.setValues(newCol);
-
+  
       // Call the local function to add summary data to the worksheet.
       addSummaryData();
-
+  
       // Call the local function to apply conditional formatting.
       applyConditionalFormatting(isUSColumn);
-
+  
       // Autofit columns.
       currentWorksheet.getUsedRange().getFormat().autofitColumns();
-
+  
       // Get the calculated summary data.
       let summaryRangeValues = currentWorksheet.getRange("J2:M2").getValues();
-
+  
       // Add the corresponding row to the summary table.
       summaryTable.addRow(null, summaryRangeValues[0]);
       console.log("Complete.");
       return;
-
+  
       /**
        * A function to add summary data on the worksheet.
-       */
+        */
       function addSummaryData() {
         // Add a summary row and table.
         let summaryHeader = [["Year", "Week", "US", "Other"]];
         let countTrueFormula =
-          "=COUNTIF(" + isUSColumn.getAddress() + ', "=TRUE")/' + (newCol.length - 1);
+            "=COUNTIF(" + isUSColumn.getAddress() + ', "=TRUE")/' + (newCol.length - 1);
         let countFalseFormula =
-          "=COUNTIF(" + isUSColumn.getAddress() + ', "=FALSE")/' + (newCol.length - 1);
+            "=COUNTIF(" + isUSColumn.getAddress() + ', "=FALSE")/' + (newCol.length - 1);
 
         let summaryContent = [
           [
@@ -147,10 +147,8 @@ ms.locfileid: "49408968"
             countFalseFormula
           ]
         ];
-        let summaryHeaderRow = currentWorksheet
-          .getRange("J1:M1");
-        let summaryContentRow = currentWorksheet
-          .getRange("J2:M2");
+        let summaryHeaderRow = currentWorksheet.getRange("J1:M1");
+        let summaryContentRow = currentWorksheet.getRange("J2:M2");
         console.log("2");
 
         summaryHeaderRow.setValues(summaryHeader);
@@ -161,8 +159,8 @@ ms.locfileid: "49408968"
 
         let formats = [[".000", ".000"]];
         summaryContentRow
-          .getOffsetRange(0, 2)
-          .getResizedRange(0, -2).setNumberFormats(formats);
+            .getOffsetRange(0, 2)
+            .getResizedRange(0, -2).setNumberFormats(formats);
       }
     }
     /**
@@ -171,21 +169,21 @@ ms.locfileid: "49408968"
     function applyConditionalFormatting(isUSColumn: ExcelScript.Range) {
       // Add conditional formatting to the new column.
       let conditionalFormatTrue = isUSColumn.addConditionalFormat(
-        ExcelScript.ConditionalFormatType.cellValue
+          ExcelScript.ConditionalFormatType.cellValue
       );
       let conditionalFormatFalse = isUSColumn.addConditionalFormat(
-        ExcelScript.ConditionalFormatType.cellValue
+          ExcelScript.ConditionalFormatType.cellValue
       );
       // Set TRUE to light blue and FALSE to light orange.
       conditionalFormatTrue.getCellValue().getFormat().getFill().setColor("#8FA8DB");
       conditionalFormatTrue.getCellValue().setRule({
-        formula1: "=TRUE",
-        operator: ExcelScript.ConditionalCellValueOperator.equalTo
+          formula1: "=TRUE",
+          operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
       conditionalFormatFalse.getCellValue().getFormat().getFill().setColor("#F8CCAD");
       conditionalFormatFalse.getCellValue().setRule({
-        formula1: "=FALSE",
-        operator: ExcelScript.ConditionalCellValueOperator.equalTo
+          formula1: "=FALSE",
+          operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
     }
     /**
@@ -195,14 +193,14 @@ ms.locfileid: "49408968"
     function ipAddressToInteger(ipAddress: string): number {
       // Split the IP address into octets.
       let octets = ipAddress.split(".");
-
+  
       // Create a number for each octet and do the math to create the integer value of the IP address.
       let fullNum =
-        // Define an arbitrary number for the last octet.
-        111 +
-        parseInt(octets[2]) * 256 +
-        parseInt(octets[1]) * 65536 +
-        parseInt(octets[0]) * 16777216;
+          // Define an arbitrary number for the last octet.
+          111 +
+          parseInt(octets[2]) * 256 +
+          parseInt(octets[1]) * 65536 +
+          parseInt(octets[0]) * 16777216;
       return fullNum;
     }
     /**
@@ -220,18 +218,18 @@ ms.locfileid: "49408968"
     }
     ```
 
-5. Переименуйте сценарий, чтобы **проанализировать загрузку веб-файлов** и сохранить его.
+5. Переименуйте сценарий **для анализа веб-скачивания** и сохранения его.
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
-Перейдите к любому листу **недели \* \*** и запустите скрипт **анализа веб-загрузки** . Сценарий применит условное форматирование и расположение лабеллинг к текущему листу. Кроме того, будет обновлен лист **сводки** .
+Перейдите к любому из таблиц **Недели \* \*** и запустите сценарий **Анализ веб-загрузки.** Сценарий будет применять условное форматирование и маркировку расположения на текущем листе. Кроме того, будет обновлена **таблица Сводка.**
 
-### <a name="before-running-the-script"></a>Перед выполнением скрипта
+### <a name="before-running-the-script"></a>Перед запуском сценария
 
-![Лист, отображающий необработанные данные веб-трафика.](../../images/scenario-analyze-web-downloads-before.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, в которую показаны необработанные данные веб-трафика.":::
 
-### <a name="after-running-the-script"></a>После выполнения скрипта
+### <a name="after-running-the-script"></a>После запуска скрипта
 
-![Лист с отформатированными сведениями о расположении IP с предыдущими строками веб-трафика.](../../images/scenario-analyze-web-downloads-after.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика.":::
 
-![Сводная таблица и диаграмма, в которой перечисляются листы, на которых выполнен сценарий.](../../images/scenario-analyze-web-downloads-table.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, в которой обобщены таблицы, на которых был прорабатлан сценарий.":::

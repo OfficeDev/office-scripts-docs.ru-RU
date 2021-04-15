@@ -3,12 +3,12 @@ title: Поддержка старых скриптов Office, которые �
 description: Праймер в API API Office Scripts Async и использование шаблона нагрузки и синхронизации для старых скриптов.
 ms.date: 02/08/2021
 localization_priority: Normal
-ms.openlocfilehash: d61a5d8affae2077b23e140645c19dac977ff0d2
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 143f52a7ffefb4f19ee36ba4343fd7c2f1cbdffe
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570285"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755079"
 ---
 # <a name="support-older-office-scripts-that-use-the-async-apis"></a>Поддержка старых скриптов Office, которые используют API async
 
@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 На следующем рисунке показан пример потока управления между сценарием и книгой:
 
-![Диаграмма, показывающая операции чтения и записи, идущие в рабочую книгу из сценария.](../images/load-sync.png)
+:::image type="content" source="../images/load-sync.png" alt-text="Диаграмма, показывающая операции чтения и записи, идущие в рабочую книгу из сценария.":::
 
 ### <a name="sync"></a>Синхронизировать
 
