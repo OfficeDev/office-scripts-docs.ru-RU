@@ -3,12 +3,12 @@ title: Возвращение данных из сценария в автома
 description: Руководство по отправке напоминаний по электронной почте путем запуска сценариев Office для Excel в Интернете с помощью Power Automate.
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 31ba31ddbfb36f20087be6aa7d83b1b896a698d1
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0c8d8f308147d727a0a5880c11c9c0d924149fb2
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570532"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754903"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>Возвращение данных из сценария в автоматически запускаемый поток Power Automate (предварительная версия)
 
@@ -36,7 +36,7 @@ ms.locfileid: "51570532"
     > [!IMPORTANT]
     > Сценарий, который вы создаете, использует первую соответствующую запись в таблице, поэтому убедитесь, что ваше имя расположено выше строки с текущей неделей.
 
-    ![Снимок экрана: таблица сменных дежурных на листе Excel](../images/power-automate-return-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="Таблица, содержащая расписание поочередных дежурств.":::
 
 ## <a name="create-an-office-script"></a>Создание сценария Office
 
@@ -129,11 +129,11 @@ ms.locfileid: "51570532"
 
 1. В меню в левой части экрана выберите **Создать**. При этом откроется список способов создания новых рабочих процессов.
 
-    ![Кнопка "Создать" в Power Automate](../images/power-automate-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Кнопка &quot;Создать&quot; в Power Automate":::
 
 1. В разделе **Начать с пустого** выберите **Запланированный облачный поток**.
 
-    ![Кнопка "Запланированный облачный поток" в Power Automate](../images/power-automate-return-tutorial-2.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="Кнопка &quot;Запланированный облачный поток&quot; в Power Automate":::
 
 1. Теперь необходимо задать расписание для этого потока. На нашем листе назначение новых дежурных начинается каждый понедельник в первой половине 2021 года. Настроим запуск потока в первую очередь утром в понедельник. Используйте приведенные ниже параметры, чтобы настроить запуск потока каждый понедельник.
 
@@ -142,7 +142,7 @@ ms.locfileid: "51570532"
     - **Частота повтора**: 1 неделя
     - **В такие дни**: Пн
 
-    ![Окно с указанными параметрами для запланированного потока](../images/power-automate-return-tutorial-3.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="Диалоговое окно Power Automate &quot;Построение запланированного облачного потока операций&quot; с параметрами. Возможные параметры: имя потока операций, время начала, время повторения и день недели для запуска потока.":::
 
 1. Нажмите кнопку **Создать**.
 
@@ -150,11 +150,11 @@ ms.locfileid: "51570532"
 
 1. Перейдите на вкладку **Стандартные** и выберите **Excel Online (бизнес)**.
 
-    ![Параметр Excel Online (бизнес) в Power Automate](../images/power-automate-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Параметр Excel Online (бизнес) в Power Automate":::
 
 1. В разделе **Действия** выберите **Запуск сценария (предварительная версия)**.
 
-    ![Вариант действия "Запуск сценария" (предварительная версия) в Power Automate](../images/power-automate-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Вариант действия &quot;Запуск сценария&quot; (предварительная версия) в Power Automate":::
 
 1. Затем выберите книгу и сценарий для использования на следующем шаге. Используйте книгу **on-call-rotation.xlsx**, созданную в OneDrive. Укажите следующие параметры для соединителя **Запуск сценария**.
 
@@ -163,13 +163,13 @@ ms.locfileid: "51570532"
     - **Файл**: on-call-rotation.xlsx *(выбран с помощью браузера файлов)*
     - **Сценарий**: Получение дежурного
 
-    ![Параметры соединителя для запуска сценария в Power Automate](../images/power-automate-return-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="Параметры соединителя для запуска сценария в Power Automate":::
 
 1. Нажмите кнопку **Новый шаг**.
 
 1. Завершим поток отправкой сообщения с напоминанием. Выберите **Отправить сообщение (V2)** с помощью панели поиска соединителя. Чтобы добавить адрес электронной почты, возвращенный сценарием, используйте элемент управления **Добавить динамическое содержимое**. Он будет помечен как **результат** и значком Excel. Можно использовать любую тему и основной текст.
 
-    ![Параметры соединителя для отправки сообщения в Power Automate](../images/power-automate-return-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="Параметры соединителя Outlook Power Automate для отправки сообщения электронной почты. В их число входят имя файла для отправки, тема и тело сообщения электронной почты, а также дополнительные параметры.":::
 
     > [!NOTE]
     > В этом учебном руководстве используется Outlook. Можно использовать любую предпочитаемую вами службу электронной почты, хотя в этом случае некоторые параметры могут отличаться.
@@ -180,7 +180,7 @@ ms.locfileid: "51570532"
 
 Ваш поток будет запускаться каждый понедельник утром. Вы можете проверить сценарий, нажав кнопку **Проверить** в правом верхнем углу экрана. Выберите **Вручную** и нажмите **Запустить тест**, чтобы запустить поток и проверить поведение. Возможно, вам понадобится предоставить разрешения для Excel и Outlook, чтобы продолжить.
 
-![Кнопка "Проверить" в Power Automate](../images/power-automate-return-tutorial-6.png)
+:::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="Кнопка &quot;Проверить&quot; в Power Automate":::
 
 > [!TIP]
 > Если поток не сможет отправить сообщение, еще раз проверьте, чтобы на листе был указан действительный адрес электронной почты для текущего диапазона дат в верхней части страницы.
