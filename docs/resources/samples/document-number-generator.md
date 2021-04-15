@@ -3,44 +3,44 @@ title: Создание уникального идентификатора в �
 description: Узнайте, как использовать скрипты Office для создания уникального идентификатора и добавить строку в таблицу и диапазон.
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 219aaf5894ee81112e12c44e828beefc74886794
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: c75eba551cc1c05426db613c78d41431b5177842
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571392"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754840"
 ---
-# <a name="generate-a-unique-identifier-in-a-workbook"></a><span data-ttu-id="9f0c0-103">Создание уникального идентификатора в книге</span><span class="sxs-lookup"><span data-stu-id="9f0c0-103">Generate a unique identifier in a workbook</span></span>
+# <a name="generate-a-unique-identifier-in-a-workbook"></a><span data-ttu-id="ff91a-103">Создание уникального идентификатора в книге</span><span class="sxs-lookup"><span data-stu-id="ff91a-103">Generate a unique identifier in a workbook</span></span>
 
-<span data-ttu-id="9f0c0-104">Этот сценарий помогает пользователю создать уникальный номер документа в определенном формате и добавить его в качестве записи в диапазон или таблицу.</span><span class="sxs-lookup"><span data-stu-id="9f0c0-104">This scenario helps a user generate a unique document number with a specific format and add it as an entry to a range or table.</span></span> <span data-ttu-id="9f0c0-105">Добавленная новая запись или строка будет содержать вновь созданный уникальный номер документа и несколько других атрибутов, переданных сценарию.</span><span class="sxs-lookup"><span data-stu-id="9f0c0-105">The new entry or row added will contain the newly generated unique document number and a few other attributes passed to the script.</span></span>
+<span data-ttu-id="ff91a-104">Этот сценарий помогает пользователю создать уникальный номер документа в определенном формате и добавить его в качестве записи в диапазон или таблицу.</span><span class="sxs-lookup"><span data-stu-id="ff91a-104">This scenario helps a user generate a unique document number with a specific format and add it as an entry to a range or table.</span></span> <span data-ttu-id="ff91a-105">Добавленная новая запись или строка будет содержать вновь созданный уникальный номер документа и несколько других атрибутов, переданных сценарию.</span><span class="sxs-lookup"><span data-stu-id="ff91a-105">The new entry or row added will contain the newly generated unique document number and a few other attributes passed to the script.</span></span>
 
-<span data-ttu-id="9f0c0-106">Существует две версии примера для этого сценария.</span><span class="sxs-lookup"><span data-stu-id="9f0c0-106">There are two versions of the sample for this scenario.</span></span>
+<span data-ttu-id="ff91a-106">Существует две версии примера для этого сценария.</span><span class="sxs-lookup"><span data-stu-id="ff91a-106">There are two versions of the sample for this scenario.</span></span>
 
-* [<span data-ttu-id="9f0c0-107">Версия 1. Чтение и добавление строки в таблицу, содержащую простой диапазон</span><span class="sxs-lookup"><span data-stu-id="9f0c0-107">Version 1: Read and add a row to a worksheet containing plain range</span></span>](#sample-code-generate-key-and-add-row-to-range)
+* [<span data-ttu-id="ff91a-107">Версия 1. Чтение и добавление строки в таблицу, содержащую простой диапазон</span><span class="sxs-lookup"><span data-stu-id="ff91a-107">Version 1: Read and add a row to a worksheet containing plain range</span></span>](#sample-code-generate-key-and-add-row-to-range)
 
-    <span data-ttu-id="9f0c0-108">_Перед добавлением новой строки_</span><span class="sxs-lookup"><span data-stu-id="9f0c0-108">_Before the new row is added_</span></span>
+    <span data-ttu-id="ff91a-108">_Перед добавлением новой строки_</span><span class="sxs-lookup"><span data-stu-id="ff91a-108">_Before the new row is added_</span></span>
 
-    ![Снимок экрана, показывающий диапазон перед добавлением строки](../../images/document-number-generator-range-before.png)
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="Таблица, показывающая диапазон данных перед добавлением строки.":::
 
-    <span data-ttu-id="9f0c0-110">_После добавления новой строки_</span><span class="sxs-lookup"><span data-stu-id="9f0c0-110">_After the new row is added_</span></span>
+    <span data-ttu-id="ff91a-110">_После добавления новой строки_</span><span class="sxs-lookup"><span data-stu-id="ff91a-110">_After the new row is added_</span></span>
 
-    ![Снимок экрана, показывающий диапазон после добавленной строки](../../images/document-number-generator-range-after.png)
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="Таблица, показывающая диапазон данных после строки, добавляется.":::
 
-* [<span data-ttu-id="9f0c0-112">Версия 2. Чтение и добавление строки в таблицу</span><span class="sxs-lookup"><span data-stu-id="9f0c0-112">Version 2: Read and add a row to a table</span></span>](#sample-code-generate-key-and-add-row-to-table)
+* [<span data-ttu-id="ff91a-112">Версия 2. Чтение и добавление строки в таблицу</span><span class="sxs-lookup"><span data-stu-id="ff91a-112">Version 2: Read and add a row to a table</span></span>](#sample-code-generate-key-and-add-row-to-table)
 
-    <span data-ttu-id="9f0c0-113">_Перед добавлением новой строки_</span><span class="sxs-lookup"><span data-stu-id="9f0c0-113">_Before the new row is added_</span></span>
+    <span data-ttu-id="ff91a-113">_Перед добавлением новой строки_</span><span class="sxs-lookup"><span data-stu-id="ff91a-113">_Before the new row is added_</span></span>
 
-    ![Снимок экрана, показывающий таблицу перед добавлением строки](../../images/document-number-generator-table-before.png)
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="Таблица, показывающая таблицу перед добавлением строки.":::
 
-    <span data-ttu-id="9f0c0-115">_После добавления новой строки_</span><span class="sxs-lookup"><span data-stu-id="9f0c0-115">_After the new row is added_</span></span>
+    <span data-ttu-id="ff91a-115">_После добавления новой строки_</span><span class="sxs-lookup"><span data-stu-id="ff91a-115">_After the new row is added_</span></span>
 
-    ![Снимок экрана, показывающий таблицу после добавленной строки](../../images/document-number-generator-table-after.png)
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="Таблица, показывающая таблицу после добавленной строки.":::
 
-## <a name="sample-excel-file"></a><span data-ttu-id="9f0c0-117">Пример файла Excel</span><span class="sxs-lookup"><span data-stu-id="9f0c0-117">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="ff91a-117">Пример файла Excel</span><span class="sxs-lookup"><span data-stu-id="ff91a-117">Sample Excel file</span></span>
 
-<span data-ttu-id="9f0c0-118">Скачайте <a href="document-number-generator.xlsx"> файлdocument-number-generator.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="9f0c0-118">Download the file <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="ff91a-118">Скачайте <a href="document-number-generator.xlsx"> файлdocument-number-generator.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="ff91a-118">Download the file <a href="document-number-generator.xlsx">document-number-generator.xlsx</a> used in this solution to try it out yourself!</span></span>
 
-## <a name="sample-code-generate-key-and-add-row-to-range"></a><span data-ttu-id="9f0c0-119">Пример кода. Создание ключа и добавление строки в диапазон</span><span class="sxs-lookup"><span data-stu-id="9f0c0-119">Sample code: Generate key and add row to range</span></span>
+## <a name="sample-code-generate-key-and-add-row-to-range"></a><span data-ttu-id="ff91a-119">Пример кода. Создание ключа и добавление строки в диапазон</span><span class="sxs-lookup"><span data-stu-id="ff91a-119">Sample code: Generate key and add row to range</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
@@ -115,7 +115,7 @@ interface RequestData {
 }
 ```
 
-## <a name="sample-code-generate-key-and-add-row-to-table"></a><span data-ttu-id="9f0c0-120">Пример кода: создание ключа и добавление строки в таблицу</span><span class="sxs-lookup"><span data-stu-id="9f0c0-120">Sample code: Generate key and add row to table</span></span>
+## <a name="sample-code-generate-key-and-add-row-to-table"></a><span data-ttu-id="ff91a-120">Пример кода: создание ключа и добавление строки в таблицу</span><span class="sxs-lookup"><span data-stu-id="ff91a-120">Sample code: Generate key and add row to table</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, inputString: string): string {
