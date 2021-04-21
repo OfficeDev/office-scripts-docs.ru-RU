@@ -25,7 +25,7 @@
 
 - Чтобы задать вопрос о разработке сценариев Office или API Office.js Office Scripts, раздайте свой вопрос в Stack Overflow и пометите его тегом "Office-scripts" https://stackoverflow.com/questions/tagged/office-scripts) (.
 - Чтобы сообщить о проблеме с API Office.js, создайте проблему в репозитории [OfficeDev/office-js,](https://github.com/OfficeDev/office-js)который члены группы продуктов отслеживают для проблем, о которых сообщает клиент.
-- Чтобы отправить запрос на функции для Office Scripts, отправьте свою идею в [Microsoft Q&A](https://docs.microsoft.com/answers/products/m365)или если запрос на функции уже существует, добавьте свой голос за него. Не забудьте использовать тег "Office-Scripts-Dev" при запросе функции.
+- Чтобы отправить запрос на функции для Office Scripts, отправьте свою идею на страницу Голос пользователя [или](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)если запрос на функции уже существует, добавьте свой голос за него, или если запрос на функции уже существует, добавьте свой голос за него. Не забудьте подать запрос в Excel для веб-страницы в категории "Макрос, скрипты и надстройки".
 
 ## <a name="copyright"></a>Авторское право
 
