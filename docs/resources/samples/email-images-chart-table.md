@@ -1,25 +1,25 @@
 ---
-title: Отправить по электронной почте изображения диаграммы и таблицы Excel
-description: Узнайте, как использовать office Scripts и Power Automate для извлечения и отправки по электронной почте изображений диаграммы и таблицы Excel.
-ms.date: 04/01/2021
+title: Отправить по электронной почте изображения Excel и таблицы
+description: Узнайте, как использовать Office скрипты и Power Automate для извлечения и отправки по электронной почте изображений Excel диаграммы и таблицы.
+ms.date: 04/05/2021
 localization_priority: Normal
-ms.openlocfilehash: de3cf16537cb12db45d4d465d367d797d053afc4
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 0265250f7fd885cb4899d0b9493b4285496965ff
+ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754812"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52026871"
 ---
-# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Использование скриптов Office и power Automate для отправки изображений диаграммы и таблицы по электронной почте
+# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Использование Office и Power Automate для отправки изображений диаграммы и таблицы по электронной почте
 
-В этом примере для создания диаграммы используются скрипты Office и Power Automate. Затем он передает по электронной почте изображения диаграммы и базовой таблицы.
+В этом примере Office скрипты и Power Automate для создания диаграммы. Затем он передает по электронной почте изображения диаграммы и базовой таблицы.
 
 ## <a name="example-scenario"></a>Пример сценария
 
 * Вычислять, чтобы получить последние результаты.
 * Создание диаграммы.
 * Получите изображения диаграммы и таблицы.
-* Отправьте изображения по электронной почте с помощью Power Automate.
+* Отправьте изображения по электронной почте Power Automate.
 
 _Входные данные_
 
@@ -29,20 +29,20 @@ _Диаграмма вывода_
 
 :::image type="content" source="../../images/chart-created.png" alt-text="Диаграмма столбцов, созданная с указанием суммы, которая должна быть засвеяна клиентом.":::
 
-_Электронная почта, полученная через поток Power Automate_
+_Электронная почта, полученная Power Automate потока_
 
-:::image type="content" source="../../images/email-received.png" alt-text="Сообщение, отправленное потоком, с указанием диаграммы Excel, встроенной в тело.":::
+:::image type="content" source="../../images/email-received.png" alt-text="Сообщение, отправленное потоком, с указанием Excel, встроенного в тело.":::
 
 ## <a name="solution"></a>Решение
 
 Это решение состоит из двух частей:
 
-1. [Сценарий Office для вычисления и извлечения диаграммы и таблицы Excel](#sample-code-calculate-and-extract-excel-chart-and-table)
+1. [Сценарий Office для вычисления и извлечения Excel диаграммы и таблицы](#sample-code-calculate-and-extract-excel-chart-and-table)
 1. Поток Power Automate для вызова скрипта и отправки результатов по электронной почте. Пример этого см. в примере [Create an automated workflow with Power Automate.](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
 
-## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>Пример кода: Вычислять и извлекать диаграмму и таблицу Excel
+## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>Пример кода. Вычислять и извлекать Excel диаграмму и таблицу
 
-Следующий сценарий вычисляет и извлекает диаграмму и таблицу Excel.
+Следующий сценарий вычисляет и извлекает Excel диаграмму и таблицу.
 
 Скачайте пример файла <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> и используйте его с помощью этого скрипта, чтобы попробовать его самостоятельно!
 
@@ -88,6 +88,41 @@ interface ReportImages {
   tableImage: string
 }
 ```
+
+## <a name="power-automate-flow-email-the-chart-and-table-images"></a>Power Automate потока: отправить по электронной почте изображения диаграммы и таблицы
+
+Этот поток запускает сценарий и передает возвращаемые изображения по электронной почте.
+
+1. Создайте новый **поток мгновенных облаков.**
+1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
+1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **Запуска скрипта (предварительного просмотра).** Используйте следующие значения для действия:
+    * **Расположение**: OneDrive для бизнеса
+    * **Библиотека документов**: OneDrive
+    * **Файл**: Ваша книга [(выбрана с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **Сценарий:** имя сценария
+
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate.":::
+1. В этом примере Outlook как клиент электронной почты. Можно использовать любые соединители электронной почты Power Automate поддерживает, но остальные действия предполагают, что вы выбрали Outlook. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия:
+    * **Чтобы:** ваша тестовая учетная запись электронной почты (или личная электронная почта)
+    * **Тема:** Просмотрите отчетные данные
+    * Для поля **Body** выберите "Представление кода" () и `</>` введите следующее:
+
+    ```HTML
+    <p>Please review the following report data:<br>
+    <br>
+    Chart:<br>
+    <br>
+    <img src="data:image/png;base64,@{outputs('Run_script')?['body/result/chartImage']}"/>
+    <br>
+    Data:<br>
+    <br>
+    <img src="data:image/png;base64,@{outputs('Run_script')?['body/result/tableImage']}"/>
+    <br>
+    </p>
+    ```
+
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate.":::
+1. Сохраните поток и попробуйте его.
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>Обучающее видео: извлечение и отправка изображений диаграммы и таблицы по электронной почте
 

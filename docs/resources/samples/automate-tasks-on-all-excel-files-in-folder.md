@@ -1,23 +1,25 @@
 ---
-title: Запустите сценарий для всех файлов Excel в папке
-description: Узнайте, как запустить сценарий для всех файлов Excel в папке OneDrive для бизнеса.
-ms.date: 03/31/2021
+title: Запуск сценария для всех файлов Excel в папке
+description: Узнайте, как запустить сценарий для всех Excel файлов в папке на OneDrive для бизнеса.
+ms.date: 04/02/2021
 localization_priority: Normal
-ms.openlocfilehash: a11876e8241a069a7c640bbcf2c36b4842d3bd90
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 6376dcac0eb36c04c2b60b2717d18cd730a0a8ee
+ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571488"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52026857"
 ---
-# <a name="run-a-script-on-all-excel-files-in-a-folder"></a>Запустите сценарий для всех файлов Excel в папке
+# <a name="run-a-script-on-all-excel-files-in-a-folder"></a>Запуск сценария для всех файлов Excel в папке
 
-Этот проект выполняет набор задач автоматизации для всех файлов, расположенных в папке OneDrive для бизнеса. Он также может использоваться в папке SharePoint.
-Выполняет вычисления в файлах Excel, добавляет форматирование и [](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) вставляет @mentions коллегу.
+Этот проект выполняет набор задач автоматизации для всех файлов, расположенных в папке на OneDrive для бизнеса. Его также можно использовать в SharePoint папке.
+Он выполняет вычисления Excel файлов, добавляет форматирование и вставляет комментарий, @mentions [коллеге.](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)
+
+Скачайте <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true"> файлhighlight-alert-excel-files.zip,</a>извлеките файлы в папку с названием **Sales,** используемую в этом примере, и попробуйте ее самостоятельно!
 
 ## <a name="sample-code-add-formatting-and-insert-comment"></a>Пример кода: добавление форматирования и вставки комментариев
 
-Скачайте <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true"> файлhighlight-alert-excel-files.zip,</a>извлеките файлы в папку с названием **Sales,** используемую в этом примере, и попробуйте ее самостоятельно!
+Это сценарий, который выполняется в каждой отдельной книге.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -61,6 +63,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>Обучающее видео. Запустите сценарий для всех файлов Excel в папке
+## <a name="power-automate-flow-run-the-script-on-every-workbook-in-the-folder"></a>Power Automate: запустите сценарий для каждой книги в папке
 
-[Просмотрите пошаговую видеозапись](https://youtu.be/xMg711o7k6w) запуска скрипта для всех файлов Excel в папке OneDrive для бизнеса или SharePoint.
+Этот поток запускает сценарий для каждой книги в папке "Продажи".
+
+1. Создайте новый **поток мгновенных облаков.**
+1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
+1. Добавьте новый **шаг,** использующий **соединителю OneDrive для бизнеса** и файлы **List в действии папки.**
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="Завершенный OneDrive для бизнеса в Power Automate.":::
+1. Выберите папку "Продажи" с извлеченными книгами.
+1. Чтобы убедиться, что выбраны только книги, выберите **новый** шаг, а затем выберите **Условие** и установите следующие значения:
+    1. **Имя** (значение OneDrive файла)
+    1. "заканчивается"
+    1. xlsx.
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="Блок Power Automate, который применяет последующие действия к каждому файлу.":::
+1. В **филиале If Yes** **добавьте соединителю Excel Online (Бизнес)** с действием Сценарий запуска **(предварительного просмотра).** Используйте следующие значения для действия:
+    1. **Расположение**: OneDrive для бизнеса
+    1. **Библиотека документов**: OneDrive
+    1. **Файл**: **Id** (OneDrive файла)
+    1. **Сценарий:** имя сценария
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate.":::
+1. Сохраните поток и попробуйте его.
+
+## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>Обучающее видео: запустите сценарий для всех Excel файлов в папке
+
+[Просмотрите пошаговую](https://youtu.be/xMg711o7k6w) видеозапись запуска сценария для всех Excel файлов в OneDrive для бизнеса или SharePoint папке.
