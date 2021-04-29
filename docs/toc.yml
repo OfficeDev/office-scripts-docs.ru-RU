@@ -89,6 +89,8 @@ items:
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
               - name: Отправка приглашения Teams из данных Excel
                 href: resources/samples/send-teams-invite-from-excel-data.md
+              - name: Использование внешних вызовов Fetch в сценариях Office
+                href: resources/samples/external-fetch-calls.md
           - name: Сценарии
             items:
               - name: Анализ загруженного из Интернета
