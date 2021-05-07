@@ -1,16 +1,16 @@
 ---
-title: 'Пример сценария office Scripts: Анализ веб-загрузки'
-description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовывать эти сведения в таблицу.
-ms.date: 12/17/2020
+title: 'Office Сценарий примера сценариев: анализ веб-загрузки'
+description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовать эту информацию в таблицу.
+ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755037"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232713"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Пример сценария office Scripts: Анализ веб-загрузки
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office Сценарий примера сценариев: анализ веб-загрузки
 
 В этом сценарии вам будет поручено проанализировать отчеты о загрузке с веб-сайта вашей компании. Цель этого анализа состоит в том, чтобы определить, идет ли веб-трафик из США или других стран мира.
 
@@ -23,22 +23,13 @@ ms.locfileid: "51755037"
 - Размыв текста
 - Subfunctions in scripts
 - Условное форматирование
-- Таблицы
-
-## <a name="demo-video"></a>Демонстрация видео
-
-Этот пример был демо-версией в рамках вызова сообщества разработчиков надстройки Office в феврале 2020 года.
-
-> [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
-
-> [!NOTE]
-> Код, показанный в этом видео, использует старую модель API (API [Office Scripts Async).](../../develop/excel-async-model.md) Пример, представленный на этой странице, был обновлен, но код немного отличается от записи. Изменения не влияют на поведение скрипта или другого контента в демонстрации презентовщика.
+- Tables
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 
 1. Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.
 
-2. Откройте книгу с Excel для интернета.
+2. Откройте книгу с помощью Excel веб-страницы.
 
 3. В **вкладке Automate** откройте **все скрипты.**
 
@@ -226,10 +217,10 @@ ms.locfileid: "51755037"
 
 ### <a name="before-running-the-script"></a>Перед запуском сценария
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, в которую показаны необработанные данные веб-трафика.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, отображаемая необработанные данные веб-трафика":::
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, в которой обобщены таблицы, на которых был прорабатлан сценарий.":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, на которой обобщены таблицы, на которых был прорабатлан сценарий":::

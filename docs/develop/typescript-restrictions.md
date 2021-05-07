@@ -1,30 +1,30 @@
 ---
-title: Ограничения TypeScript в сценариях Office
-description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода сценариев Office.
+title: Ограничения TypeScript в Office скриптах
+description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода Office скриптов.
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 40eb6923d7b0c47dfeb4c846cdcc745e5d893c13
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755051"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232461"
 ---
-# <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в сценариях Office
+# <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в Office скриптах
 
-Скрипты Office используют язык TypeScript. По большей части любой код TypeScript или JavaScript будет работать в скрипте Office. Однако редактор кода соблюдает несколько ограничений, чтобы гарантировать, что сценарий работает последовательно и по назначению в вашей книге Excel.
+Office Скрипты используют язык TypeScript. По большей части любой код TypeScript или JavaScript будет работать в Office скрипта. Однако редактор кода соблюдает несколько ограничений, чтобы гарантировать, что сценарий работает последовательно и по назначению с Excel книгой.
 
-## <a name="no-any-type-in-office-scripts"></a>Нет типа "любой" в сценариях Office
+## <a name="no-any-type-in-office-scripts"></a>Нет типа "любой" в Office скриптах
 
-Типы [записи](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) необязательны в TypeScript, так как эти типы можно сделать вывод. Однако для Office Script требуется, чтобы переменная не впечатыла. [](https://www.typescriptlang.org/docs/handbook/basic-types.html#any) Явные и `any` неявные не допускаются в скрипте Office. Эти случаи сообщаются как ошибки.
+Типы [записи](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) необязательны в TypeScript, так как эти типы можно сделать вывод. Однако для Office скрипта требуется, чтобы переменная не была [типной.](https://www.typescriptlang.org/docs/handbook/basic-types.html#any) Явные и неявные не допускаются в `any` Office скрипте. Эти случаи сообщаются как ошибки.
 
 ### <a name="explicit-any"></a>Явный `any`
 
-Нельзя явно объявить переменную типом в `any` Скриптах Office (то `let someVariable: any;` есть). Тип `any` вызывает проблемы при обработке Excel. Например, необходимо знать, что значение `Range` является `string` значением , или `number` `boolean` . Вы получите ошибку времени компиляции (ошибка перед запуском скрипта), если любая переменная явно определена как `any` тип сценария.
+Нельзя явно объявить переменную типом в `any` Office Скрипты (то `let someVariable: any;` есть). Тип `any` вызывает проблемы при обработке Excel. Например, необходимо знать, что значение `Range` является `string` значением , или `number` `boolean` . Вы получите ошибку времени компиляции (ошибка перед запуском скрипта), если любая переменная явно определена как `any` тип сценария.
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="Явное сообщение &quot;любое&quot; в тексте наведении редактора кода":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="Явные ошибки в окне консоли.":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="Явные ошибки в окне консоли":::
 
 На предыдущем `[5, 16] Explicit Any is not allowed` скриншоте указывается, что строка #5, столбец #16 определяет `any` тип. Это поможет найти ошибку.
 
@@ -39,13 +39,13 @@ ms.locfileid: "51755051"
 * Назначение переменной неявно идентифицируемого типа `let value = 5;` `let value = workbook.getWorksheet();` (или).
 * Явно введите переменную ( `let value: number;` )
 
-## <a name="no-inheriting-office-script-classes-or-interfaces"></a>Нет наследующих классов и интерфейсов office Script
+## <a name="no-inheriting-office-script-classes-or-interfaces"></a>Нет наследующих Office классов или интерфейсов скриптов
 
-Классы и интерфейсы, созданные в скрипте Office, не могут расширять или внедрять классы или интерфейсы [office](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) Scripts. Другими словами, ничто в пространстве имен не может `ExcelScript` иметь подклассов или подинтерфейсов.
+Классы и интерфейсы, созданные в Office скрипта, не могут расширять или [внедрять](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) Office скрипты или интерфейсы. Другими словами, ничто в пространстве имен не может `ExcelScript` иметь подклассов или подинтерфейсов.
 
 ## <a name="incompatible-typescript-functions"></a>Несовместимые функции TypeScript
 
-API office Scripts нельзя использовать в следующих следующих сценариях:
+Office API скриптов нельзя использовать в следующих следующих сценариях:
 
 * [Функции генератора](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 * [Array.sort](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
@@ -81,13 +81,13 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="performance-warnings"></a>Предупреждения о производительности
 
-Подкладка редактора кода [дает](https://wikipedia.org/wiki/Lint_(software)) предупреждения, если у скрипта могут возникнуть проблемы с производительностью. Случаи и их работа описаны в документе Улучшение производительности [скриптов Office.](web-client-performance.md)
+Подкладка редактора кода [дает](https://wikipedia.org/wiki/Lint_(software)) предупреждения, если у скрипта могут возникнуть проблемы с производительностью. Случаи и их работа описаны в документе Улучшение производительности [Office скриптов.](web-client-performance.md)
 
 ## <a name="external-api-calls"></a>Внешние вызовы API
 
-Дополнительные сведения см. в дополнительных сведениях в службе поддержки вызовов [внешнего API в Office Scripts.](external-calls.md)
+Дополнительные сведения см. в Office службе поддержки [вызовов API.](external-calls.md)
 
 ## <a name="see-also"></a>См. также
 
 * [Основные сведения о сценариях Office в Excel в Интернете](scripting-fundamentals.md)
-* [Повышение производительности скриптов Office](web-client-performance.md)
+* [Повышение производительности Office скриптов](web-client-performance.md)

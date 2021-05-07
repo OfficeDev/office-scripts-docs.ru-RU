@@ -3,12 +3,12 @@ title: 'Office Пример сценария: Graph данных уровня в
 description: Пример, который извлекает данные JSON из базы данных NOAA и использует их для создания диаграммы.
 ms.date: 04/26/2021
 localization_priority: Normal
-ms.openlocfilehash: 8aea11f42bf2a81fa53cbf4f6ee7280213b97085
-ms.sourcegitcommit: d466b82f27bc61aeba193f902c9bc65ecbf60e4e
+ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "52066303"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232692"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office Сценарий примера сценариев: извлечение и график данных уровня воды из NOAA
 
@@ -119,4 +119,4 @@ ms.locfileid: "52066303"
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма.":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма":::

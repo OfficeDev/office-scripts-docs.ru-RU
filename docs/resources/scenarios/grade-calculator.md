@@ -1,16 +1,16 @@
 ---
-title: 'Пример сценария Office Scripts: калькулятор оценки'
+title: 'Office Пример сценария: калькулятор оценки'
 description: Пример, определяя процент и оценки букв для класса учащихся.
 ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755030"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232699"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Пример сценария Office Scripts: калькулятор оценки
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office Пример сценария: калькулятор оценки
 
 В этом сценарии вы будете инструктором, который подытвет оценки каждого учащегося по окончании срока обучения. Вы вводя оценки для их назначений и тестов, как вы идете. Теперь настало время определить судьбы учащихся.
 
@@ -27,7 +27,7 @@ ms.locfileid: "51755030"
 
 1. Скачайте <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> в OneDrive.
 
-2. Откройте книгу с Excel для интернета.
+2. Откройте книгу с помощью Excel веб-страницы.
 
 3. В **вкладке Automate** откройте **все скрипты.**
 
@@ -182,8 +182,8 @@ ms.locfileid: "51755030"
 
 ### <a name="before-running-the-script"></a>Перед запуском сценария
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="Таблица, в которую показаны строки баллов для учащихся.":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="Таблица, в которую показаны строки баллов для учащихся":::
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="Таблица, в которую показаны данные о оценках учащихся с недействительными ячейками в красных итоговых числах для допустимых студенческих строк.":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="Таблица, отображающая данные о оценках учащихся с недействительными ячейками в красных итоговых числах для допустимых строк учащихся":::

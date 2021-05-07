@@ -1,16 +1,16 @@
 ---
-title: Использование внешних вызовов для Office скриптов
+title: Использование внешних вызовов Fetch в сценариях Office
 description: Узнайте, как делать внешние вызовы API в Office Скрипты.
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: a77ceb61c2ff46a7b6226b798462b7be2c8e1c54
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: 721bfa39eea1e9973efc7fd13efa5bac734b76dd
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026996"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232524"
 ---
-# <a name="use-external-fetch-calls-in-office-scripts"></a>Использование внешних вызовов для Office скриптов
+# <a name="use-external-fetch-calls-in-office-scripts"></a>Использование внешних вызовов Fetch в сценариях Office
 
 Этот скрипт получает основные сведения о репозиториях GitHub пользователя. В нем показано, как `fetch` использовать в простом сценарии.
 
@@ -51,4 +51,4 @@ interface License {
 
 ## <a name="training-video-how-to-make-external-api-calls"></a>Обучающее видео: как сделать внешние вызовы API
 
-[![Просмотр видео о том, как делать внешние вызовы API](../../images/api-vid.png)](https://youtu.be/fulP29J418E "Видео о том, как делать внешние вызовы API")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/fulP29J418E).

@@ -1,28 +1,28 @@
 ---
-title: Перекрестная ссылка и формат файла Excel
-description: Узнайте, как использовать office Scripts и Power Automate для перекрестной ссылки и формата файла Excel.
-ms.date: 03/18/2021
+title: Перекрестная ссылка и формат Excel файла
+description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 287de604733b7e6a126d0c81cb4e23351e558c61
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 858fe561c1a82f471bc3c0f43d81e457fb02b627
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571512"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232384"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>Перекрестная ссылка и формат файла Excel
+# <a name="cross-reference-and-format-an-excel-file"></a>Перекрестная ссылка и формат Excel файла
 
-В этом решении показано, как два файла Excel можно перекрестно ссылаться и форматировать с помощью office Scripts и Power Automate.
+Это решение показывает, как Excel двух файлов можно перекрестно ссылаться и форматирование с помощью Office и Power Automate.
 
 В проекте реализуется следующее:
 
 1. Извлекает данные событий из <a href="events.xlsx">events.xlsx</a> с помощью одного действия скрипта Run.
-1. Передает эти данные во второй файл Excel, содержащий данные транзакций событий, и использует эти данные для базовой проверки данных и форматирования отсутствующих или неправильных данных с помощью скриптов Office.
+1. Передает эти данные во второй Excel, содержащий данные транзакций событий, и использует эти данные для базовой проверки данных и форматирования отсутствующих или неправильных данных с помощью Office Scripts.
 1. По электронной почте результат передается рецензенту.
 
-Дополнительные сведения см. в [перекрестной ссылке и форматирования двух файлов Excel с помощью скриптов Office.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)
+Дополнительные сведения см. в перекрестной ссылке и [форматирования двух Excel с помощью Office Scripts.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)
 
-## <a name="sample-excel-files"></a>Примеры файлов Excel
+## <a name="sample-excel-files"></a>Пример Excel файлов
 
 Скачайте следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!
 
@@ -125,6 +125,6 @@ capacity: number
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>Обучающее видео: перекрестная ссылка и формат файла Excel
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a>Обучающее видео: перекрестная ссылка и формат Excel файла
 
-[![Просмотр пошагового видео о перекрестной ссылке и формате файла Excel](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Пошаговая видеозапись о перекрестной ссылке и формате файла Excel")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/dVwqBf483qo").

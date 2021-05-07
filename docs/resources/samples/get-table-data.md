@@ -1,34 +1,34 @@
 ---
-title: Выходные данные Excel в качестве JSON
-description: Узнайте, как вывод данных таблиц Excel в качестве JSON для использования в Power Automate.
+title: Выходные Excel как JSON
+description: Узнайте, как вывод данных Excel таблицы как JSON для использования в Power Automate.
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: db6eb8f8645079eebc369e0a0622539075853953
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: c6b033a68fdbde2b053f65d1a54db58da6c93b2e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754798"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232538"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Данные таблицы Output Excel в качестве JSON для использования в Power Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Данные Excel таблицы как JSON для использования в Power Automate
 
-Данные таблиц Excel могут быть представлены в виде массива объектов в виде JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам с помощью потоков Power Automate.
+Excel таблицы могут быть представлены в виде массива объектов в виде JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам Power Automate потоками.
 
 _Данные таблицы ввода_
 
-:::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода.":::
+:::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода":::
 
 Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет всплыть в JSON дополнительные уровни данных ячейки.
 
 _Данные таблицы ввода, включаемой гиперссылки_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, форматированный как гиперссылки.":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, отформатированный как гиперссылки":::
 
 _Диалоговое окно для редактирования гиперссылки_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="Диалоговое окно Редактирование гиперссылки, отображающий параметры для изменения гиперссылки.":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="Диалоговое окно Изменить гиперссылку, отображающий параметры для изменения гиперссылки":::
 
-## <a name="sample-excel-file"></a>Пример файла Excel
+## <a name="sample-excel-file"></a>Пример Excel файла
 
 Скачайте файл <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx, </a> используемый в этих примерах, и попробуйте его самостоятельно!
 
@@ -255,4 +255,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>Использование в Power Automate
 
-О том, как использовать такой скрипт в Power Automate, см. в статью Создание автоматизированного рабочего процесса [с помощью Power Automate.](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
+О том, как использовать такой сценарий в Power Automate, см. в [Power Automate.](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)

@@ -1,14 +1,14 @@
 ---
 title: Праздничные приветствия
 description: Узнайте, как использовать Office скрипты, чтобы показать дерево пения в Excel в Интернете.
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: d0f50cf32c3b5c9b098813b3e8dc07dbb4367c25
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: a328ba66fedc245ff73300d7f47cd339ec87234f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026914"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232580"
 ---
 # <a name="seasons-greetings"></a>Праздничные приветствия
 
@@ -16,7 +16,7 @@ ms.locfileid: "52026914"
 
 Наслаждайтесь!
 
-[![Просмотрите сценарий приветствия Seasons в действии](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "Сценарий приветствий Seasons в действии!")
+[Смотрите сценарий приветствия Seasons в действии на youTube-канале "ИТ-блог Лес".](https://youtu.be/HBiGEkzmkgo)
 
 ## <a name="script"></a>Script
 

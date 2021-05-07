@@ -1,31 +1,31 @@
 ---
 title: Использование встроенных объектов JavaScript в сценариях Office
-description: Как вызывать встроенные API JavaScript из скрипта Office в Excel в Интернете.
+description: Вызов встроенных API JavaScript из сценария Office в Excel в Интернете.
 ms.date: 07/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 4bb5fb5444887005ececbbfdf0130cba3784e0c4
-ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
+ms.openlocfilehash: e3b36265f235678eee18fbf369058b165da46210
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229598"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232405"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>Использование встроенных объектов JavaScript в сценариях Office
 
-JavaScript предоставляет несколько встроенных объектов, которые можно использовать в сценариях Office независимо от того, используете ли вы скрипты в JavaScript или [TypeScript](../overview/code-editor-environment.md) (расширенный набор JavaScript). В этой статье описывается, как можно использовать встроенные объекты JavaScript в сценариях Office для Excel в Интернете.
+JavaScript предоставляет несколько встроенных объектов, которые можно использовать в Office скриптах, независимо от того, создаете ли вы сценарии в JavaScript или [TypeScript](../overview/code-editor-environment.md) (суперсети JavaScript). В этой статье описывается, как можно использовать некоторые встроенные объекты JavaScript в Office скриптов для Excel в Интернете.
 
 > [!NOTE]
-> Полный список всех встроенных объектов JavaScript представлен в статье [стандартные встроенные объекты](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) Mozilla Mozilla.
+> Полный список всех встроенных объектов JavaScript см. в статье Mozilla's [Standard built-in objects.](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
 
 ## <a name="array"></a>Массив
 
-Объект [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) обеспечивает стандартизированный способ работы с массивами в вашем скрипте. Хотя массивы являются стандартными конструкциями JavaScript, они относятся к сценариям Office двумя основными способами: Ranges и Collections.
+Объект [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) предоставляет стандартный способ работы с массивами в скрипте. Хотя массивы являются стандартными конструкциями JavaScript, они относятся к Office скриптам двумя основными способами: диапазонами и коллекциями.
 
 ### <a name="working-with-ranges"></a>Работа с диапазонами
 
-Диапазоны содержат несколько двухмерных массивов, которые напрямую сопоставляются с ячейками в этом диапазоне. Эти массивы содержат конкретные сведения о каждой ячейке в этом диапазоне. Например, `Range.getValues` возвращает все значения в этих ячейках (со строками и столбцами, которые сопоставлены с двумерным массивом, на строки и столбцы этого подраздела листа). `Range.getFormulas`и `Range.getNumberFormats` это часто используемые методы, возвращающие массивы, такие как `Range.getValues` .
+Диапазоны содержат несколько двухмерных массивов, которые непосредственно соеряду с ячейками в этом диапазоне. Эти массивы содержат конкретные сведения о каждой ячейке в этом диапазоне. Например, возвращает все значения в этих ячейках (с строками и столбцами сопоставления двухмерных массивов в строки и столбцы этого `Range.getValues` подсети). `Range.getFormulas` и `Range.getNumberFormats` являются другими часто используемыми методами, возвращая массивы, такие как `Range.getValues` .
 
-Следующий сценарий выполняет поиск любого числового формата в диапазоне **a1: D4** для любого числового формата, содержащего "$". В этом сценарии для цвета заливки в ячейках задается значение "Yellow".
+В следующем скрипте выполняется поиск диапазона **A1:D4** для любого формата номеров, содержащего "$". Сценарий задает цвет заполнения в этих ячейках на "желтый".
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -50,12 +50,12 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="working-with-collections"></a>Работа с коллекциями
 
-В коллекции присутствует множество объектов Excel. Коллекция управляется API скриптов Office и предоставляется в виде массива. Например, все [фигуры](/javascript/api/office-scripts/excelscript/excelscript.shape) на листе включены в объект `Shape[]` , возвращаемый `Worksheet.getShapes` методом. Этот массив можно использовать для считывания значений из коллекции или для доступа к определенным объектам из методов родительского объекта `get*` .
+Многие Excel содержатся в коллекции. Коллекция управляется API Office скриптов и выставляется в качестве массива. Например, все [фигуры](/javascript/api/office-scripts/excelscript/excelscript.shape) в таблице содержатся в возвращаемом `Shape[]` `Worksheet.getShapes` методом методе. Этот массив можно использовать для чтения значений из коллекции или для доступа к определенным объектам из методов родительского `get*` объекта.
 
 > [!NOTE]
-> Не добавляйте и не удаляйте объекты из этих массивов коллекций вручную. Используйте `add` методы для родительских объектов и `delete` методы в объектах типа Collection. Например, добавьте [таблицу](/javascript/api/office-scripts/excelscript/excelscript.table) на [лист](/javascript/api/office-scripts/excelscript/excelscript.worksheet) с `Worksheet.addTable` методом и удалите метод `Table` using `Table.delete` .
+> Не добавляйте или удаляйте объекты из этих массивов коллекции вручную. Используйте методы для родительских объектов и `add` методы для объектов типа `delete` коллекции. Например, добавьте [таблицу](/javascript/api/office-scripts/excelscript/excelscript.table) в [таблицу](/javascript/api/office-scripts/excelscript/excelscript.worksheet) с `Worksheet.addTable` методом и удалите `Table` использование `Table.delete` .
 
-Следующий сценарий записывает в журнал тип каждой фигуры на текущем листе.
+В следующем скрипте региструется тип каждой фигуры текущего таблицы.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -72,7 +72,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-Следующий сценарий удаляет самую старую фигуру на текущем листе.
+Следующий скрипт удаляет старейшую фигуру текущего таблицы.
 
 ```Typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -90,9 +90,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="date"></a>Дата
 
-Объект [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) предоставляет стандартизированный способ работы с датами в скрипте. `Date.now()`Создает объект с текущей датой и временем, который полезен при добавлении меток времени к записи данных в скрипте.
+Объект [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) предоставляет стандартный способ работы с датами в скрипте. `Date.now()` создает объект с текущей датой и временем, что полезно при добавлении в запись данных скрипта.
 
-Следующий сценарий добавляет текущую дату на лист. Обратите внимание, что с помощью `toLocaleDateString` метода Excel распознает значение как дату и автоматически изменяет формат числа в ячейке.
+Следующий сценарий добавляет текущую дату в таблицу. Обратите внимание, что с помощью метода Excel распознает значение как дату и автоматически меняет формат `toLocaleDateString` номера ячейки.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,13 +107,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-В разделе " [трудозатраты с датами](../resources/excel-samples.md#dates) " в примерах имеются дополнительные скрипты, связанные с датами.
+В [разделе Работа с датами](../resources/samples/excel-samples.md#dates) в примерах больше сценариев, связанных с датами.
 
 ## <a name="math"></a>математика;
 
-Объект [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math) предоставляет методы и константы для распространенных математических операций. Они предоставляют множество функций, которые также доступны в Excel, без необходимости использовать подсистему вычисления книги. При этом скрипту не требуется запрашивать книгу, что повышает производительность.
+Объект [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math) предоставляет методы и константы для общих математических операций. Они предоставляют множество функций, Excel в Excel, без необходимости использования двигателя вычислений книги. Это позволяет сохранить скрипт от необходимости запрашивать книгу, что повышает производительность.
 
-Следующий сценарий использует `Math.min` для поиска и записи в журнал наименьшего числа в диапазоне **a1: D4** . Обратите внимание, что в этом примере предполагается, что весь диапазон содержит только цифры, а не строки.
+Следующий скрипт использует `Math.min` для поиска и входа наименьшее число в **диапазоне A1:D4.** Обратите внимание, что в этом примере предполагается, что весь диапазон содержит только числа, а не строки.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -142,9 +142,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="use-of-external-javascript-libraries-is-not-supported"></a>Использование внешних библиотек JavaScript не поддерживается
 
-Сценарии Office не поддерживают использование внешних сторонних библиотек. Ваш сценарий может использовать только встроенные объекты JavaScript и API сценариев Office.
+Office Скрипты не поддерживают использование внешних сторонних библиотек. В скрипте можно использовать только встроенные объекты JavaScript и API Office скриптов.
 
 ## <a name="see-also"></a>См. также
 
 - [Стандартные встроенные объекты](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
-- [Среда редактора кода сценариев Office](../overview/code-editor-environment.md)
+- [Office Среда редактора кода скриптов](../overview/code-editor-environment.md)

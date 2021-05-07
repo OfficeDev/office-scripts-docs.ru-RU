@@ -1,31 +1,31 @@
 ---
-title: Запуск сценариев Office с помощью power Automate
-description: Как получить скрипты Office для Excel в Интернете, работая с рабочим процессом Power Automate.
+title: Запустите Office скрипты с Power Automate
+description: Как получить Office скрипты для Excel в Интернете работы с рабочим Power Automate рабочим процессом.
 ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: fd2622880f08c253f4333e642d1ebb0410bce681
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755072"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232419"
 ---
-# <a name="run-office-scripts-with-power-automate"></a>Запуск сценариев Office с помощью power Automate
+# <a name="run-office-scripts-with-power-automate"></a>Запустите Office скрипты с Power Automate
 
-[Power Automate](https://flow.microsoft.com) позволяет добавлять скрипты Office в более крупный автоматизированный рабочий процесс. Вы можете использовать Power Automate для таких действий, как добавление содержимого электронной почты в таблицу таблицы или создание действий в средствах управления проектами на основе комментариев к книгам.
+[Power Automate](https://flow.microsoft.com) позволяет добавлять Office скрипты в более крупный автоматизированный рабочий процесс. Вы можете Power Automate что-то вроде добавления содержимого электронной почты в таблицу таблицы или создания действий в средствах управления проектами на основе комментариев к книгам.
 
 ## <a name="getting-started"></a>Начало работы
 
-Если вы только что приступили к power Automate, рекомендуем посетить [Get started with Power Automate.](/power-automate/getting-started) Здесь вы можете узнать больше обо всех доступных вам возможностях автоматизации. В этих документах основное внимание уделяется работе сценариев Office с Power Automate и улучшению работы с Excel.
+Если вы не Power Automate, рекомендуем посетить Начало работы [с Power Automate](/power-automate/getting-started). Здесь вы можете узнать больше обо всех доступных вам возможностях автоматизации. В этих документах основное внимание уделяется работе Office скриптов с Power Automate и как это может помочь улучшить Excel работу.
 
-Чтобы приступить к объединению сценариев Power Automate и Office, следуйте учебнику [Начните с помощью скриптов с power Automate.](../tutorials/excel-power-automate-manual.md) Это научит вас создавать поток, который вызывает простой сценарий. После завершения этого учебника и передачи данных скриптам в руководстве по автоматическому запуску потока power Automate возвращайтесь сюда для получения подробных сведений о подключении скриптов Office к потокам Power [Automate.](../tutorials/excel-power-automate-trigger.md)
+Чтобы приступить к Power Automate и Office скриптов, следуйте учебнику [Начните](../tutorials/excel-power-automate-manual.md)использовать скрипты с Power Automate . Это научит вас создавать поток, который вызывает простой сценарий. После завершения этого учебника [](../tutorials/excel-power-automate-trigger.md) и передачи данных скриптам в руководстве Power Automate потока автоматически возвращайтесь сюда для получения подробных сведений о подключении Office скриптов к Power Automate потокам.
 
-## <a name="excel-online-business-connector"></a>Соединитель Excel Online (Бизнес)
+## <a name="excel-online-business-connector"></a>Excel Соединитетор Online (Business)
 
-[Соединители](/connectors/connectors) — это мосты между Power Automate и приложениями. Соединитель [Excel Online (Бизнес)](/connectors/excelonlinebusiness) предоставляет вашим потокам доступ к книгам Excel. Действие "Сценарий запуска" позволяет вызывать любой скрипт Office, доступный через выбранную книгу. Вы также можете предоставить параметры ввода сценариев, чтобы данные могли быть предоставлены потоком, или иметь сведения о возвращении сценария для последующих действий в потоке.
+[Соединители](/connectors/connectors) — это мосты между Power Automate и приложениями. [Соединитель Excel Online (Бизнес)](/connectors/excelonlinebusiness) предоставляет вашим потокам доступ к Excel книгам. Действие "Сценарий запуска" позволяет вызывать любой Office, доступный через выбранную книгу. Вы также можете предоставить параметры ввода сценариев, чтобы данные могли быть предоставлены потоком, или иметь сведения о возвращении сценария для последующих действий в потоке.
 
 > [!IMPORTANT]
-> Действие "Сценарий запуска" предоставляет людям, которые используют соединитель Excel, значительный доступ к вашей книге и ее данным. Кроме того, существуют риски безопасности со скриптами, которые делают внешние вызовы API, как объясняется в внешних звонках [из Power Automate.](external-calls.md) Если администратор обеспокоен воздействием высокочувствительных данных, он может отключить соединитель Excel Online или ограничить доступ к скриптам Office с помощью элементов управления администратором [office Scripts.](/microsoft-365/admin/manage/manage-office-scripts-settings)
+> Действие "Запуск скрипта" предоставляет людям, Excel соединитетелем, значительный доступ к вашей книге и ее данным. Кроме того, существуют риски безопасности со скриптами, которые делают внешние вызовы API, как объясняется в внешних звонках [из Power Automate.](external-calls.md) Если администратор обеспокоен воздействием высокочувствительных данных, он может отключить соединители Excel Online или ограничить доступ к скриптам Office с помощью элементов управления Office [скриптов.](/microsoft-365/admin/manage/manage-office-scripts-settings)
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>Передача данных в потоках для скриптов
 
@@ -34,13 +34,13 @@ Power Automate позволяет передавать фрагменты дан
 > [!NOTE]
 > При создании блока "Сценарий запуска" в потоке заполняются принятые параметры и возвращаемые типы. Если вы измените параметры или типы возвращаемого скрипта, вам потребуется переоценить блок потока "Запустить сценарий". Это обеспечивает правильную обработку данных.
 
-В следующих разделах подробно освещается ввод и выход сценариев, используемых в Power Automate. Если вы хотите практический подход к изучению этой темы, попробуйте передать данные в скрипты в автоматически [](../resources/scenarios/task-reminders.md) запускаемом руководстве по потоку [Power Automate](../tutorials/excel-power-automate-trigger.md) или ознакомьтесь с примером сценария автоматизированных напоминаний задач.
+В следующих разделах подробно освещается ввод и выход сценариев, используемых в Power Automate. Если вы хотите практический подход к изучению этой [](../tutorials/excel-power-automate-trigger.md) темы, попробуйте передать данные в скрипты в автоматическом [](../resources/scenarios/task-reminders.md) руководстве по потоку Power Automate или изучите пример примера автоматических напоминаний задач.
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main` Параметры: передача данных в скрипт
 
 Все входные данные скрипта указаны в качестве дополнительных параметров для `main` функции. Например, если вы хотите, чтобы сценарий принял имя в качестве ввода, необходимо изменить подпись на `string` `main` `function main(workbook: ExcelScript.Workbook, name: string)` .
 
-При настройке потока в Power Automate можно указать ввод скрипта в качестве статических значений, [выражений](/power-automate/use-expressions-in-conditions)или динамического контента. Сведения о соединители отдельной службы можно найти в документации [power Automate Connector.](/connectors/)
+При настройке потока в Power Automate можно указать ввод сценария в качестве [](/power-automate/use-expressions-in-conditions)статических значений, выражений или динамического контента. Сведения о соединители отдельной службы можно найти в документации [Power Automate connector.](/connectors/)
 
 При добавлении параметров ввода в функцию скрипта рассмотрите следующие ограничения и `main` надбавки.
 
@@ -83,7 +83,7 @@ Power Automate позволяет передавать фрагменты дан
 
 ### <a name="returning-data-from-a-script"></a>Возвращение данных из скрипта
 
-Скрипты могут возвращать данные из книги, которая используется в качестве динамического контента в потоке Power Automate. Как и в отношении параметров ввода, Power Automate вводит некоторые ограничения для возвращаемого типа.
+Скрипты могут возвращать данные из книги, которая будет использоваться в качестве динамического контента в потоке Power Automate. Как и в отношении параметров ввода, Power Automate вводит некоторые ограничения для возвращаемого типа.
 
 1. Основные типы `string` `number` , , и `boolean` `void` `undefined` поддерживаются.
 
@@ -97,9 +97,9 @@ Power Automate позволяет передавать фрагменты дан
 
 ## <a name="example"></a>Пример
 
-На следующем скриншоте показан поток power Automate, который запускается при назначенной вам проблеме [GitHub.](https://github.com/) Поток запускает сценарий, который добавляет проблему в таблицу в книге Excel. Если в этой таблице имеется пять или более проблем, поток отправляет напоминание по электронной почте.
+На следующем скриншоте показан Power Automate, который запускается [](https://github.com/) при GitHub назначена вам проблема. Поток запускает сценарий, который добавляет проблему в таблицу в Excel книге. Если в этой таблице имеется пять или более проблем, поток отправляет напоминание по электронной почте.
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="Редактор потока Power Automate, показывающий поток примера.":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="Редактор Power Automate потока, показывающий поток примера":::
 
 Функция скрипта указывает ID проблемы и название выпуска в качестве параметров ввода, и скрипт возвращает количество строк в `main` таблице вопросов.
 
@@ -124,9 +124,9 @@ function main(
 
 ## <a name="see-also"></a>См. также
 
-- [Запуск скриптов Office в Excel в Интернете с помощью power Automate](../tutorials/excel-power-automate-manual.md)
+- [Запустите Office скрипты в Excel в Интернете с Power Automate](../tutorials/excel-power-automate-manual.md)
 - [Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate](../tutorials/excel-power-automate-trigger.md)
 - [Возвращение данных из сценария в автоматически запускаемый поток Power Automate](../tutorials/excel-power-automate-returns.md)
-- [Сведения об устранении неполадок для power Automate с помощью скриптов Office](../testing/power-automate-troubleshooting.md)
+- [Сведения об устранении неполадок для Power Automate с Office скриптами](../testing/power-automate-troubleshooting.md)
 - [Начало работы с Power Automate](/power-automate/getting-started)
-- [Справочная документация по соединители Excel Online (Бизнес)](/connectors/excelonlinebusiness/)
+- [Excel Справочная документация по соединители online (Business)](/connectors/excelonlinebusiness/)

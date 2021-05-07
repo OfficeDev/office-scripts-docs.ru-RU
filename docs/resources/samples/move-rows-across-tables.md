@@ -1,14 +1,14 @@
 ---
-title: Перемещение строк по таблицам с помощью скриптов Office
+title: Перемещение строк по таблицам с Office скриптами
 description: Узнайте, как перемещать строки по таблицам, экономя фильтры, а затем обрабатывая и повторно примыкая к фильтрам.
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 959fb002b0ba485b43f4de7de3004e1074f768a7
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755044"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232755"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>Перемещение строк по таблицам с сохранением фильтров, а затем обработкой и повторной обработкой фильтров
 
@@ -25,7 +25,7 @@ ms.locfileid: "51755044"
 * В первом [варианте](#sample-code-move-rows-using-table-filter)строки выбираются путем применения фильтра таблицы и чтения видимого диапазона.
 * Во [втором](#sample-code-move-rows-using-range-values)строки выбираются путем чтения значений и извлечения значений строки.
 
-## <a name="sample-excel-file"></a>Пример файла Excel
+## <a name="sample-excel-file"></a>Пример Excel файла
 
 Скачайте <a href="input-table-filters.xlsx"> файлinput-table-filters.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!
 
@@ -249,4 +249,4 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 
 ## <a name="training-video-move-rows-across-tables"></a>Обучающее видео: перемещение строк по таблицам
 
-[![Просмотр пошагового видео о том, как перемещать строки по таблицам](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Пошаговая видеозапись перемещения строк по таблицам")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/_3t3Pk4i2L0).

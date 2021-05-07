@@ -1,33 +1,33 @@
 ---
-title: Сведения об устранении неполадок для power Automate с помощью скриптов Office
-description: Советы, сведения о платформе и известные проблемы с интеграцией между скриптами Office и Power Automate.
+title: Сведения об устранении неполадок для Power Automate с Office скриптами
+description: Советы, сведения о платформе и известные проблемы с интеграцией между Office и Power Automate.
 ms.date: 01/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 59f4cd8b3476c2ee2a1a862f136173a543ba8a15
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: bcfedb8db88d74f16e46c604121bceff3c7c7382
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755009"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232650"
 ---
-# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>Сведения об устранении неполадок для power Automate с помощью скриптов Office
+# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>Сведения об устранении неполадок для Power Automate с Office скриптами
 
-Power Automate позволяет выровизировать автоматизацию скриптов Office на следующий уровень. Однако, поскольку Power Automate запускает скрипты от вашего имени в независимых сеансах Excel, необходимо отметить несколько важных моментов.
+Power Automate позволяет выровизировать Office скрипта на следующий уровень. Однако, Power Automate сценарии от вашего имени в независимых сеансах Excel, необходимо отметить несколько важных моментов.
 
 > [!TIP]
-> Если вы только начинаете использовать скрипты Office с помощью power Automate, начните с запуска скриптов Office с power [Automate,](../develop/power-automate-integration.md) чтобы узнать о платформах.
+> Если вы только начинаете использовать Office скрипты с Power Automate, начните с run [Office Scripts с](../develop/power-automate-integration.md) Power Automate, чтобы узнать о платформах.
 
 ## <a name="avoid-using-relative-references"></a>Избегайте использования относительных ссылок
 
-Power Automate запускает скрипт в выбранной книге Excel от вашего имени. Книга может быть закрыта, если это произойдет. Любой API, который зависит от текущего состояния пользователя, например, может вести себя `Workbook.getActiveWorksheet` по-другому в Power Automate. Это происходит потому, что API основаны на относительном расположении представления пользователя или курсора, и эта ссылка не существует в потоке Power Automate.
+Power Automate сценарий выполняется в выбранной Excel от вашего имени. Книга может быть закрыта, если это произойдет. Любой API, который зависит от текущего состояния пользователя, например, может вести себя по-другому в `Workbook.getActiveWorksheet` Power Automate. Это происходит потому, что API основаны на относительном расположении представления или курсора пользователя, и эта ссылка не существует в потоке Power Automate.
 
-Некоторые относительные API ссылки бросают ошибки в Power Automate. Другие имеют поведение по умолчанию, которое подразумевает состояние пользователя. При разработке сценариев обязательно используйте абсолютные ссылки для таблиц и диапазонов. Это делает поток Power Automate последовательным, даже если таблицы перенастановки.
+Некоторые относительные API ссылки бросают ошибки в Power Automate. Другие имеют поведение по умолчанию, которое подразумевает состояние пользователя. При разработке сценариев обязательно используйте абсолютные ссылки для таблиц и диапазонов. Это делает поток Power Automate согласованным, даже если таблицы переостановки.
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>Методы скрипта, которые не работают при запуске потоков Power Automate
+### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>Методы скрипта, которые не работают при Power Automate потоках
 
-Следующие методы будут бросать ошибку и сбой при призыве из скрипта в потоке Power Automate.
+Следующие методы будут бросать ошибку и сбой при набрав из сценария в потоке Power Automate.
 
-| Класс | Method |
+| Класс | Метод |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
@@ -37,31 +37,31 @@ Power Automate запускает скрипт в выбранной книге 
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
 
-### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>Методы скрипта с поведением по умолчанию в потоках Power Automate
+### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>Методы скрипта с поведением по умолчанию в Power Automate потоках
 
 В следующих методах используется поведение по умолчанию вместо текущего состояния любого пользователя.
 
-| Класс | Method | Power Automate behaviour |
+| Класс | Метод | Power Automate поведения |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Возвращает либо первую таблицу в книге, либо таблицу, активированную `Worksheet.activate` методом. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Отмечает таблицу как активную таблицу для целей `Workbook.getActiveWorksheet` . |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>Выбор книг с управлением браузером файлов
 
-При создании шага **запуска сценария** потока Power Automate необходимо выбрать, какая книга является частью потока. Используйте браузер файлов, чтобы выбрать книгу, а не вручную вводить имя книги.
+При создании шага **сценария run** Power Automate потока необходимо выбрать, какая книга является частью потока. Используйте браузер файлов, чтобы выбрать книгу, а не вручную вводить имя книги.
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="Действие скрипта Power Automate Run, показывающая параметр браузера файлов Show Picker.":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="Действие Power Automate run script, показывающая параметр браузера файла Show Picker":::
 
-Дополнительные вопросы об ограничении power Automate и обсуждении возможных обходных обходов динамического выбора книг см. в этой теме в [сообществе Microsoft Power Automate.](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)
+Дополнительные контексты Power Automate ограничения и обсуждения потенциальных обходных пути для динамического выбора книг см. в этом потоке в [Microsoft Power Automate Community](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#).
 
 ## <a name="time-zone-differences"></a>Различия часовой зоны
 
-Файлы Excel не имеют неотъемлемого расположения или часовой пояс. Каждый раз, когда пользователь открывает книгу, его сеанс использует локальный часовой пояс пользователя для расчетов дат. Power Automate всегда использует UTC.
+Excel файлы не имеют неотъемлемого расположения или часовой пояс. Каждый раз, когда пользователь открывает книгу, его сеанс использует локальный часовой пояс пользователя для расчетов дат. Power Automate всегда использует UTC.
 
-Если в сценарии используются даты или время, при локальной проверке скрипта могут возникнуть различия в поведении по сравнению с тем, когда он проходит через Power Automate. Power Automate позволяет преобразовывать, форматировать и настраивать время. Сведения о том, как использовать эти функции в Power Automate и [ `main` Parameters:](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script) Passing data [to](https://flow.microsoft.com/blog/working-with-dates-and-times/) a script, чтобы узнать, как предоставить эти сведения для сценария, см. в инструкции по работе с датами и временем внутри потоков.
+Если в сценарии используются даты или время, при локальной проверке скрипта могут возникнуть различия в поведении по сравнению с тем, когда он Power Automate. Power Automate позволяет преобразовывать, форматировать и настраивать время. Сведения [](https://flow.microsoft.com/blog/working-with-dates-and-times/) о том, как использовать эти функции в Power Automate и [ `main` Параметры:](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script) передача данных в сценарий, см. в инструкции по работе с датами и временем внутри потоков.
 
 ## <a name="see-also"></a>См. также
 
 - [Устранение неполадок в сценариях Office](troubleshooting.md)
-- [Запуск сценариев Office с помощью power Automate](../develop/power-automate-integration.md)
-- [Справочная документация по соединители Excel Online (Бизнес)](/connectors/excelonlinebusiness/)
+- [Запустите Office скрипты с Power Automate](../develop/power-automate-integration.md)
+- [Excel Справочная документация по соединители online (Business)](/connectors/excelonlinebusiness/)

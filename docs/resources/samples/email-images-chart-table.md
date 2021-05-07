@@ -1,14 +1,14 @@
 ---
 title: Отправить по электронной почте изображения Excel и таблицы
 description: Узнайте, как использовать Office скрипты и Power Automate для извлечения и отправки по электронной почте изображений Excel диаграммы и таблицы.
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 0265250f7fd885cb4899d0b9493b4285496965ff
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: b49b6670562d117bb3dd6dcf894c54432bc5ceaa
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026871"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232594"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Использование Office и Power Automate для отправки изображений диаграммы и таблицы по электронной почте
 
@@ -23,15 +23,15 @@ ms.locfileid: "52026871"
 
 _Входные данные_
 
-:::image type="content" source="../../images/input-data.png" alt-text="Таблица, показывающая таблицу входных данных.":::
+:::image type="content" source="../../images/input-data.png" alt-text="Таблица, показывающая таблицу входных данных":::
 
 _Диаграмма вывода_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="Диаграмма столбцов, созданная с указанием суммы, которая должна быть засвеяна клиентом.":::
+:::image type="content" source="../../images/chart-created.png" alt-text="Диаграмма столбцов, созданная с указанием суммы, за которую должен высмеять клиент":::
 
 _Электронная почта, полученная Power Automate потока_
 
-:::image type="content" source="../../images/email-received.png" alt-text="Сообщение, отправленное потоком, с указанием Excel, встроенного в тело.":::
+:::image type="content" source="../../images/email-received.png" alt-text="Сообщение, отправленное потоком, с указанием Excel, встроенного в тело":::
 
 ## <a name="solution"></a>Решение
 
@@ -101,7 +101,7 @@ interface ReportImages {
     * **Файл**: Ваша книга [(выбрана с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **Сценарий:** имя сценария
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate.":::
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate":::
 1. В этом примере Outlook как клиент электронной почты. Можно использовать любые соединители электронной почты Power Automate поддерживает, но остальные действия предполагают, что вы выбрали Outlook. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия:
     * **Чтобы:** ваша тестовая учетная запись электронной почты (или личная электронная почта)
     * **Тема:** Просмотрите отчетные данные
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate.":::
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate":::
 1. Сохраните поток и попробуйте его.
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>Обучающее видео: извлечение и отправка изображений диаграммы и таблицы по электронной почте
 
-[![Просмотрите пошаговую видеозапись по извлечению и отправке изображений диаграммы и таблицы по электронной почте](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "Пошаговая видеозапись по извлечению и отправке изображений диаграммы и таблицы по электронной почте")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/152GJyqc-Kw).

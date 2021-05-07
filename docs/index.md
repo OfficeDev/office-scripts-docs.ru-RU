@@ -5,12 +5,12 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 10/30/2020
 localization_priority: Priority
-ms.openlocfilehash: 2e31cc52c9dbc5ebe23428773aa686fc93207d29
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0d75d1326db0399f64f53b0b25bd6c7b49296e0b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570271"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232671"
 ---
 # <a name="office-scripts-documentation-preview"></a>Документация по скриптам Office (предварительная версия)
 
@@ -97,11 +97,11 @@ ms.locfileid: "51570271"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="resources/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
+                            <a href="resources/samples/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-samples.md" target="_blank"><h3>Примеры сценариев</h3></a>
+                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>Примеры сценариев</h3></a>
                     </div>
                 </div>
             </div>
@@ -145,11 +145,11 @@ ms.locfileid: "51570271"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/products/m365" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
+                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/products/m365" target="_blank"><h3>Предложить функцию</h3></a>
+                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>Предложить функцию</h3></a>
                     </div>
                 </div>
             </div>

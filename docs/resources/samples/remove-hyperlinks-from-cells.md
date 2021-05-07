@@ -1,16 +1,16 @@
 ---
-title: Удаление гиперссылки из каждой ячейки в листах Excel
-description: Узнайте, как использовать скрипты Office для удаления гиперссылки из каждой ячейки в листах Excel.
-ms.date: 03/18/2021
+title: Удаление гиперссылки из каждой ячейки в Excel таблицы
+description: Узнайте, как использовать Office скрипты для удаления гиперссылки из каждой ячейки в Excel таблицы.
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 07b670aac3368e38b9b93283404befee608391a7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: eb5f486cb5228e639727c5ee7e6c335d5e94239f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571295"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232748"
 ---
-# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Удаление гиперссылки из каждой ячейки в листах Excel
+# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Удаление гиперссылки из каждой ячейки в Excel таблицы
 
  Этот пример очищает все гиперссылки из текущего таблицы. Она пересекает таблицу, и если есть гиперссылка, связанная с ячейкой, она очищает гиперссылку, но сохраняет значение ячейки как есть. Кроме того, записи времени, необходимого для завершения обхода.
 
@@ -80,6 +80,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Обучающее видео. Удаление гиперссылки из каждой ячейки в листах Excel
+## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Обучающее видео: Удаление гиперссылки из каждой ячейки в Excel таблицы
 
-[![Пошагового просмотра видео о том, как удалить гиперссылки из каждой ячейки в листах Excel](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Пошагового видео о том, как удалить гиперссылки из каждой ячейки в листах Excel")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/v20fdinxpHU).

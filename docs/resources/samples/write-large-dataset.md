@@ -1,20 +1,20 @@
 ---
 title: Оптимизация производительности при написании большого набора данных
-description: Узнайте, как оптимизировать производительность при написании большого набора данных в Office Scripts.
-ms.date: 03/04/2021
+description: Узнайте, как оптимизировать производительность при написании большого Office скриптов.
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 190072e58238be95a2939f73dcda077ed91db848
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: dcbcf156ef624c4c5ce35c44d501286d507d9c40
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571494"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232720"
 ---
 # <a name="performance-optimization-when-writing-a-large-dataset"></a>Оптимизация производительности при написании большого набора данных
 
 ## <a name="basic-performance-optimization"></a>Базовая оптимизация производительности
 
-Основы производительности в сценариях Office см. в разделе [Производительность](getting-started.md#basic-performance-considerations) статьи Начало работы.
+Основы производительности в Office скриптах см. в разделе [Производительность](getting-started.md#basic-performance-considerations) статьи Начало работы.
 
 ## <a name="sample-code-optimize-performance-of-a-large-dataset"></a>Пример кода. Оптимизация производительности большого набора данных
 
@@ -153,4 +153,4 @@ function getRandomString(length: number): string {
 
 ## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a>Обучающее видео. Оптимизация производительности при написании большого набора данных
 
-[![Просмотр видео о том, как оптимизировать производительность при написании большого наборов данных](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "Видео о том, как оптимизировать производительность при написании большого наборов данных")
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/BP9Kp0Ltj7U).

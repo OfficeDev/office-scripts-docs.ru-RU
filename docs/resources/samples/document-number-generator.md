@@ -1,14 +1,14 @@
 ---
 title: Создание уникального идентификатора в книге
-description: Узнайте, как использовать скрипты Office для создания уникального идентификатора и добавить строку в таблицу и диапазон.
+description: Узнайте, как использовать Office скрипты для создания уникального идентификатора и добавить строку в таблицу и диапазон.
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: c75eba551cc1c05426db613c78d41431b5177842
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 62c930bfc638dc46b36daf81b6d1ec976c90a8d0
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754840"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232482"
 ---
 # <a name="generate-a-unique-identifier-in-a-workbook"></a>Создание уникального идентификатора в книге
 
@@ -20,23 +20,23 @@ ms.locfileid: "51754840"
 
     _Перед добавлением новой строки_
 
-    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="Таблица, показывающая диапазон данных перед добавлением строки.":::
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="Таблица, показывающая диапазон данных перед добавлением строки":::
 
     _После добавления новой строки_
 
-    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="Таблица, показывающая диапазон данных после строки, добавляется.":::
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="Таблица, показывающая диапазон данных после добавленной строки":::
 
 * [Версия 2. Чтение и добавление строки в таблицу](#sample-code-generate-key-and-add-row-to-table)
 
     _Перед добавлением новой строки_
 
-    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="Таблица, показывающая таблицу перед добавлением строки.":::
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="Таблица, показывающая таблицу перед добавлением строки":::
 
     _После добавления новой строки_
 
-    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="Таблица, показывающая таблицу после добавленной строки.":::
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="Таблица, показывающая таблицу после добавленной строки":::
 
-## <a name="sample-excel-file"></a>Пример файла Excel
+## <a name="sample-excel-file"></a>Пример Excel файла
 
 Скачайте <a href="document-number-generator.xlsx"> файлdocument-number-generator.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!
 
