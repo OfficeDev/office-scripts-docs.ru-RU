@@ -1,35 +1,35 @@
 ---
-title: Перемещение строк по таблицам с помощью скриптов Office
+title: Перемещение строк по таблицам с Office скриптами
 description: Узнайте, как перемещать строки по таблицам, экономя фильтры, а затем обрабатывая и повторно примыкая к фильтрам.
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 959fb002b0ba485b43f4de7de3004e1074f768a7
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755044"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232755"
 ---
-# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="7516f-103">Перемещение строк по таблицам с сохранением фильтров, а затем обработкой и повторной обработкой фильтров</span><span class="sxs-lookup"><span data-stu-id="7516f-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
+# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="01b8b-103">Перемещение строк по таблицам с сохранением фильтров, а затем обработкой и повторной обработкой фильтров</span><span class="sxs-lookup"><span data-stu-id="01b8b-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
 
-<span data-ttu-id="7516f-104">В этом скрипте делается следующее:</span><span class="sxs-lookup"><span data-stu-id="7516f-104">This script does the following:</span></span>
+<span data-ttu-id="01b8b-104">В этом скрипте делается следующее:</span><span class="sxs-lookup"><span data-stu-id="01b8b-104">This script does the following:</span></span>
 
-* <span data-ttu-id="7516f-105">Выбирает строки из первой таблицы, где значение в столбце равно _некоторому значению._</span><span class="sxs-lookup"><span data-stu-id="7516f-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
-* <span data-ttu-id="7516f-106">Перемещает все выбранные строки в другую (целевую) таблицу на другой таблице.</span><span class="sxs-lookup"><span data-stu-id="7516f-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
-* <span data-ttu-id="7516f-107">Повторное повторное появление соответствующих фильтров в исходных таблицах.</span><span class="sxs-lookup"><span data-stu-id="7516f-107">Reapplies the relevant filters on the source table.</span></span>
+* <span data-ttu-id="01b8b-105">Выбирает строки из первой таблицы, где значение в столбце равно _некоторому значению._</span><span class="sxs-lookup"><span data-stu-id="01b8b-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
+* <span data-ttu-id="01b8b-106">Перемещает все выбранные строки в другую (целевую) таблицу на другой таблице.</span><span class="sxs-lookup"><span data-stu-id="01b8b-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
+* <span data-ttu-id="01b8b-107">Повторное повторное появление соответствующих фильтров в исходных таблицах.</span><span class="sxs-lookup"><span data-stu-id="01b8b-107">Reapplies the relevant filters on the source table.</span></span>
 
 :::image type="content" source="../../images/table-filter-before-after.png" alt-text="Скриншоты книги до и после":::
 
-<span data-ttu-id="7516f-109">В этом решении есть два сценария.</span><span class="sxs-lookup"><span data-stu-id="7516f-109">There are two scripts in this solution.</span></span> <span data-ttu-id="7516f-110">Основное отличие состоит в выборе строк.</span><span class="sxs-lookup"><span data-stu-id="7516f-110">The main difference is how the rows are selected.</span></span>
+<span data-ttu-id="01b8b-109">В этом решении есть два сценария.</span><span class="sxs-lookup"><span data-stu-id="01b8b-109">There are two scripts in this solution.</span></span> <span data-ttu-id="01b8b-110">Основное отличие состоит в выборе строк.</span><span class="sxs-lookup"><span data-stu-id="01b8b-110">The main difference is how the rows are selected.</span></span>
 
-* <span data-ttu-id="7516f-111">В первом [варианте](#sample-code-move-rows-using-table-filter)строки выбираются путем применения фильтра таблицы и чтения видимого диапазона.</span><span class="sxs-lookup"><span data-stu-id="7516f-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
-* <span data-ttu-id="7516f-112">Во [втором](#sample-code-move-rows-using-range-values)строки выбираются путем чтения значений и извлечения значений строки.</span><span class="sxs-lookup"><span data-stu-id="7516f-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
+* <span data-ttu-id="01b8b-111">В первом [варианте](#sample-code-move-rows-using-table-filter)строки выбираются путем применения фильтра таблицы и чтения видимого диапазона.</span><span class="sxs-lookup"><span data-stu-id="01b8b-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
+* <span data-ttu-id="01b8b-112">Во [втором](#sample-code-move-rows-using-range-values)строки выбираются путем чтения значений и извлечения значений строки.</span><span class="sxs-lookup"><span data-stu-id="01b8b-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
 
-## <a name="sample-excel-file"></a><span data-ttu-id="7516f-113">Пример файла Excel</span><span class="sxs-lookup"><span data-stu-id="7516f-113">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="01b8b-113">Пример Excel файла</span><span class="sxs-lookup"><span data-stu-id="01b8b-113">Sample Excel file</span></span>
 
-<span data-ttu-id="7516f-114">Скачайте <a href="input-table-filters.xlsx"> файлinput-table-filters.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="7516f-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="01b8b-114">Скачайте <a href="input-table-filters.xlsx"> файлinput-table-filters.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="01b8b-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
 
-## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="7516f-115">Пример кода. Перемещение строк с помощью фильтра таблицы</span><span class="sxs-lookup"><span data-stu-id="7516f-115">Sample code: Move rows using table filter</span></span>
+## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="01b8b-115">Пример кода. Перемещение строк с помощью фильтра таблицы</span><span class="sxs-lookup"><span data-stu-id="01b8b-115">Sample code: Move rows using table filter</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -146,7 +146,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="7516f-116">Пример кода. Перемещение строк с использованием значений диапазона</span><span class="sxs-lookup"><span data-stu-id="7516f-116">Sample code: Move rows using range values</span></span>
+## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="01b8b-116">Пример кода. Перемещение строк с использованием значений диапазона</span><span class="sxs-lookup"><span data-stu-id="01b8b-116">Sample code: Move rows using range values</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -247,6 +247,6 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="7516f-117">Обучающее видео: перемещение строк по таблицам</span><span class="sxs-lookup"><span data-stu-id="7516f-117">Training video: Move rows across tables</span></span>
+## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="01b8b-117">Обучающее видео: перемещение строк по таблицам</span><span class="sxs-lookup"><span data-stu-id="01b8b-117">Training video: Move rows across tables</span></span>
 
-<span data-ttu-id="7516f-118">[![Просмотр пошагового видео о том, как перемещать строки по таблицам](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Пошаговая видеозапись перемещения строк по таблицам")</span><span class="sxs-lookup"><span data-stu-id="7516f-118">[![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")</span></span>
+<span data-ttu-id="01b8b-118">[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/_3t3Pk4i2L0).</span><span class="sxs-lookup"><span data-stu-id="01b8b-118">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/_3t3Pk4i2L0).</span></span>
