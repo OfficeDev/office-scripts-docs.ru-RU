@@ -1,14 +1,14 @@
 ---
 title: Управление режимом вычисления в Excel
 description: Узнайте, как использовать Office скрипты для управления режимом вычисления в Excel в Интернете.
-ms.date: 04/28/2021
+ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 34a14874197ffda8487df5e450e3dcab980f7ed5
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: a60fddc91b3a8f124a44722d0d75e6e9f239351d
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232454"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285915"
 ---
 # <a name="manage-calculation-mode-in-excel"></a>Управление режимом вычисления в Excel
 
@@ -16,22 +16,20 @@ ms.locfileid: "52232454"
 
 ## <a name="scenario"></a>Сценарий
 
-В Excel в Интернете режим вычисления файла можно управлять программным образом с помощью API. Следующие действия возможны с помощью Office скриптов.
+Перерасчет книг с большим количеством формул может занять некоторое время. Вместо того, чтобы Excel управлять при вычислениях, вы можете управлять ими в рамках сценария. Это поможет с производительностью в определенных сценариях.
 
-1. Получите режим вычисления.
-1. Установите режим вычисления.
-1. Вычислять Excel для файлов, задамых в ручном режиме (также именуемого перерасчетом).
+Пример сценария задает режим вычисления вручную. Это означает, что книга будет пересчитывать формулы только в том случае, если сценарий подсказывает ему (или вручную вычисляется с помощью [пользовательского интерфейса).](https://support.microsoft.com/office/change-formula-recalculation-iteration-or-precision-in-excel-73fc7dac-91cf-4d36-86e8-67124f6bcce4) Затем сценарий отображает текущий режим вычислений и полностью пересчитывает всю книгу.
 
 ## <a name="sample-code-control-calculation-mode"></a>Пример кода: режим вычисления управления
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-    // Set calculation mode.
+    // Set the calculation mode to manual.
     workbook.getApplication().setCalculationMode(ExcelScript.CalculationMode.manual);
-    // Get calculation mode.
+    // Get and log the calculation mode.
     const calcMode = workbook.getApplication().getCalculationMode();    
     console.log(calcMode);
-    // Calculate (for manual mode files).
+    // Manually calculate the file.
     workbook.getApplication().calculate(ExcelScript.CalculationType.full);
 }
 ```

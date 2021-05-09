@@ -1,14 +1,14 @@
 ---
 title: Office Примеры сценариев
 description: Доступные Office сценарии и сценарии.
-ms.date: 04/28/2021
+ms.date: 05/07/2021
 localization_priority: Normal
-ms.openlocfilehash: 625db792763606e8db77abdc4665b7db2732892f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 6df28f3b9d88f202b3b16661a36296bb8bee6c73
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232741"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285845"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office Примеры сценариев и сценарии
 
@@ -41,7 +41,6 @@ ms.locfileid: "52232741"
 | [Диаграмма электронной почты и изображения таблиц](email-images-chart-table.md) | В этом примере Office сценарии и Power Automate для создания диаграммы и отправки этой диаграммы в качестве изображения по электронной почте. |
 | [Внешние вызовы на извлечение](external-fetch-calls.md) | В этом примере используется для получения `fetch` GitHub для сценария. |
 | [Фильтр Excel таблицы и получить видимый диапазон](filter-table-get-visible-range.md) | Этот пример фильтрует таблицу Excel и возвращает видимый диапазон в качестве объекта JSON. Этот JSON может быть предоставлен потоку Power Automate как часть более крупного решения. |
-| [Создание уникального идентификатора в книге](document-number-generator.md) | Этот сценарий помогает пользователю создать уникальный номер документа в определенном формате и добавить запись в диапазон или таблицу. |
 | [Управление режимом вычисления в Excel](excel-calculation.md) | В этом примере показано, как использовать режим вычисления и вычислять методы в Excel в Интернете с помощью Office скриптов. |
 | [Перемещение строк по таблицам](move-rows-across-tables.md) | В этом примере показано, как перемещать строки по таблицам, экономя фильтры, а затем обрабатывая и повторно примыкая к фильтрам. |
 | [Выходные Excel как JSON](get-table-data.md) | В этом решении показано, как Excel данные таблицы как JSON для использования в Power Automate. |
