@@ -58,15 +58,13 @@ items:
           - name: Основы
             items:
               - name: Основы создания сценариев
-                href: resources/excel-samples.md
-              - name: Основы диапазонов
-                href: resources/samples/range-basics.md
-          - name: Более сложные действия
-            items:
+                href: resources/samples/excel-samples.md
               - name: Добавление примечаний
                 href: resources/samples/add-excel-comments.md
               - name: Копирование нескольких таблиц в одну таблицу
                 href: resources/samples/copy-tables-combine.md
+          - name: Более сложные действия
+            items:
               - name: Подсчет пустых строк на листах
                 href: resources/samples/count-blank-rows.md
               - name: Перекрестные ссылки и форматирование файлов Excel
