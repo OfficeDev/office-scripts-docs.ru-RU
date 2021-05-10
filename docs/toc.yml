@@ -69,8 +69,6 @@ items:
                 href: resources/samples/count-blank-rows.md
               - name: Перекрестные ссылки и форматирование файлов Excel
                 href: resources/samples/excel-cross-reference.md
-              - name: Генератор номера документа
-                href: resources/samples/document-number-generator.md
               - name: Отправка по почте изображений диаграмм и таблиц
                 href: resources/samples/email-images-chart-table.md
               - name: Фильтрация таблицы и получение видимого диапазона
