@@ -3,12 +3,12 @@ title: Основы сценариев для сценариев Office в Excel
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 685f83952fa6aecc660524a95dec57e149522820
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755065"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232391"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Выполнение этого скрипта создает следующие данные в текущей рабочей таблице:
 
-:::image type="content" source="../images/range-sample.png" alt-text="Лист с записями о продажах, содержащий строки значений, столбец формулы и отформатированные заголовки.":::
+:::image type="content" source="../images/range-sample.png" alt-text="Лист с записями о продажах, содержащий строки значений, столбец формулы и отформатированные заголовки":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>Диаграммы, таблицы и другие объекты данных
 
@@ -117,7 +117,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### <a name="creating-a-table"></a>Создание таблицы
 
-Создавайте таблицы, используя заполненные данными диапазоны. Элементы управления форматированием и таблицами (например, фильтры) автоматически применяются к диапазону.
+Создайте таблицы с помощью диапазонов данных. Форматирование и элементы управления таблицами (например, фильтры) автоматически применяются к диапазону.
 
 Следующий скрипт создает таблицу с использованием диапазонов из предыдущего примера.
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Выполнение этого сценария на листе с предыдущими данными создает следующую таблицу:
 
-:::image type="content" source="../images/table-sample.png" alt-text="Лист, содержащий таблицу, созданную из предыдущей записи о продажах.":::
+:::image type="content" source="../images/table-sample.png" alt-text="Лист, содержащий таблицу, созданную из предыдущей записи о продажах":::
 
 #### <a name="creating-a-chart"></a>Создание диаграммы
 
@@ -159,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Запуск этого скрипта на листе с предыдущей таблицей создает следующую диаграмму:
 
-:::image type="content" source="../images/chart-sample.png" alt-text="Гистограмма, показывающая количества трех элементов из предыдущей записи о продажах.":::
+:::image type="content" source="../images/chart-sample.png" alt-text="Гистограмма, показывающая количество для трех элементов из предыдущей записи о продажах":::
 
 ### <a name="collections-and-other-object-relations"></a>Коллекции и другие отношения объектов
 
