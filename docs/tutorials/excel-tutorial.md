@@ -3,12 +3,12 @@ title: Запись, редактирование и создание сцена
 description: Учебник с основными сведениями о сценариях Office, включая запись сценариев с помощью средства записи действий и запись данных в книгу.
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: ae864cc08453a9c8a2538f15ceee1275e131725d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 9f1b2e29d60ec0e370bdb29fde0f04be831a222b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754847"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232867"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Запись, редактирование и создание сценариев Office в Excel в Интернете
 
@@ -49,7 +49,7 @@ ms.locfileid: "51754847"
 
     Ваш лист должен выглядеть, как показано ниже (не волнуйтесь, если цвет отличается):
 
-    :::image type="content" source="../images/tutorial-1.png" alt-text="Лист, показывающий строку данных о продажах фруктов, причем строка &quot;Апельсины&quot; выделена оранжевым цветом.":::
+    :::image type="content" source="../images/tutorial-1.png" alt-text="Лист со строкой данных о продажах фруктов, причем строка &quot;Апельсины&quot; выделена оранжевым цветом":::
 
 ## <a name="edit-an-existing-script"></a>Редактирование существующего сценария
 
@@ -78,7 +78,7 @@ ms.locfileid: "51754847"
 
 4. Протестируйте сценарий, нажав **Запустить**. Книга должна выглядеть следующим образом:
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="Лист, показывающий строку данных о продажах фруктов, в которой строка &quot;Апельсины&quot; выделена оранжевым цветом, а строка &quot;Лимоны&quot; — желтым цветом.":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="Лист со строкой данных о продажах фруктов, причем строка &quot;Апельсины&quot; выделена оранжевым цветом, а строка &quot;Лимоны&quot; — желтым цветом":::
 
 ## <a name="create-a-table"></a>Создание таблицы
 
@@ -113,7 +113,7 @@ ms.locfileid: "51754847"
 
 3. Запустите сценарий. Вы увидите следующую таблицу:
 
-    :::image type="content" source="../images/tutorial-3.png" alt-text="лист с таблицей продаж отсортированных фруктов.":::
+    :::image type="content" source="../images/tutorial-3.png" alt-text="Лист с таблицей продаж отсортированных фруктов":::
 
     > [!NOTE]
     > При повторном запуске сценария возникнет ошибка. Это связано с тем, что вы не можете создать таблицу поверх другой таблицы. Однако вы можете запустить этот сценарий на другом листе или в другой книге.
