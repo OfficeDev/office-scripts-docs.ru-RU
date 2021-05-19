@@ -21,6 +21,8 @@ items:
         href: develop/scripting-fundamentals.md
       - name: Концепции
         items:
+          - name: Рекомендации по сценариям Office
+            href: develop/best-practices.md
           - name: Встроенные объекты JavaScript
             href: develop/javascript-objects.md
           - name: Среда редактора кода
@@ -47,7 +49,7 @@ items:
             href: testing/platform-limits.md
           - name: Ограничения TypeScript
             href: develop/typescript-restrictions.md
-          - name: Отмена эффектов сценария Office
+          - name: Отмена эффектов сценариев Office
             href: testing/undo.md
           - name: Поддержка более ранних версий сценариев Office
             href: develop/excel-async-model.md
@@ -61,14 +63,14 @@ items:
                 href: resources/samples/excel-samples.md
               - name: Добавление примечаний
                 href: resources/samples/add-excel-comments.md
+              - name: Добавление изображений в книгу
+                href: resources/samples/add-image-to-workbook.md
               - name: Копирование нескольких таблиц в одну таблицу
                 href: resources/samples/copy-tables-combine.md
           - name: Более сложные действия
             items:
               - name: Подсчет пустых строк на листах
                 href: resources/samples/count-blank-rows.md
-              - name: Перекрестные ссылки и форматирование файлов Excel
-                href: resources/samples/excel-cross-reference.md
               - name: Отправка по почте изображений диаграмм и таблиц
                 href: resources/samples/email-images-chart-table.md
               - name: Фильтрация таблицы и получение видимого диапазона
@@ -83,10 +85,10 @@ items:
                 href: resources/samples/remove-hyperlinks-from-cells.md
               - name: Запуск сценария для всех файлов Excel в папке
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
-              - name: Отправка приглашения Teams из данных Excel
-                href: resources/samples/send-teams-invite-from-excel-data.md
               - name: Использование внешних вызовов Fetch в сценариях Office
                 href: resources/samples/external-fetch-calls.md
+              - name: Запись большого набора данных
+                href: resources/samples/write-large-dataset.md
           - name: Сценарии
             items:
               - name: Анализ загруженного из Интернета
