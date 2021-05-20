@@ -1,32 +1,32 @@
 ---
-title: Основные сценарии Office скриптов в Excel в Интернете
-description: Коллекция примеров кода, которые можно использовать с Office скриптами в Excel в Интернете.
-ms.date: 04/28/2021
+title: Основные сценарии для Office сценариев в Excel в Интернете
+description: Коллекция образцов кода для использования с помощью Office в Excel в Интернете.
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: ea0430910aa16ef8a0eed04cf9ebcab7d611ae62
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: f252934a92126212b9520223826b3b2f5161ed57
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52233011"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545761"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные сценарии Office скриптов в Excel в Интернете
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные сценарии для Office сценариев в Excel в Интернете
 
-Следующие примеры — это простые сценарии, которые можно попробовать в собственных книгах. Чтобы использовать их в Excel в Интернете:
+Следующие образцы простые сценарии для вас, чтобы попробовать на ваших собственных трудовых книжек. Чтобы использовать их в Excel в Интернете:
 
 1. Откройте вкладку **Автоматизировать**.
-2. Редактор **кода прессы**.
-3. Нажмите **новый скрипт** в области задач редактора кода.
-4. Замените весь сценарий образцом по вашему выбору.
-5. Нажмите **кнопку** Выполнить в области задач редактора кода.
+2. Редактор **пресс-кода**.
+3. Нажмите **новый** сценарий в панели задач редактора Кода.
+4. Замените весь скрипт на образец по вашему выбору.
+5. **Нажмите** Вы запустите в панели задач редактора Кода.
 
-## <a name="scripting-basics"></a>Основы создания сценариев
+## <a name="script-basics"></a>Основы сценария
 
-В этих примерах демонстрируются основные строительные блоки для Office скриптов. Добавьте их в скрипты, чтобы расширить решение и решить распространенные проблемы.
+Эти образцы демонстрируют фундаментальные строительные блоки для Office скриптов. Добавьте их в скрипты, чтобы расширить решение и решить общие проблемы.
 
-### <a name="read-and-log-one-cell"></a>Чтение и журнал одной ячейки
+### <a name="read-and-log-one-cell"></a>Читать и регистрировать одну ячейку
 
-В этом примере считывать значение **A1** и печатать его на консоли.
+Этот образец считывает значение **A1** и печатает его на консоли.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -41,9 +41,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="read-the-active-cell"></a>Чтение активной ячейки
+### <a name="read-the-active-cell"></a>Читать активную ячейку
 
-В этом скрипте региструется значение текущей активной ячейки. Если выбрано несколько ячеек, будет зарегистрирована верхняя левая ячейка.
+Этот скрипт регистрирует значение текущей активной ячейки. Если выбрано несколько ячеек, в журнал будет зарегистрирована ячейка верхней левой.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -57,7 +57,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-an-adjacent-cell"></a>Изменение соседней ячейки
 
-Этот скрипт получает соседние ячейки с использованием относительных ссылок. Обратите внимание, что если активная ячейка находится в верхнем ряду, часть скрипта не работает, так как она ссылается на ячейку выше выбранной в настоящее время.
+Этот скрипт получает смежные ячейки с использованием относительных ссылок. Обратите внимание, что если активная ячейка находится в верхнем ряду, часть скрипта выходит из строя, поскольку она ссылается на ячейку выше выбранной в настоящее время ячейки.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -84,7 +84,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-all-adjacent-cells"></a>Изменение всех смежных ячеек
 
-Этот скрипт копирует форматирование в активной ячейке в соседние ячейки. Обратите внимание, что этот скрипт работает только тогда, когда активная ячейка не на краю таблицы.
+Этот скрипт копирует форматирование в активной ячейке в соседние ячейки. Обратите внимание, что этот скрипт работает только тогда, когда активная ячейка не находится на краю листа.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,7 +107,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-each-individual-cell-in-a-range"></a>Изменение каждой отдельной ячейки в диапазоне
 
-Этот скрипт цикличен по диапазону выбора в настоящее время. Он очищает текущее форматирование и задает цвет заполнения в каждой ячейке случайным цветом.
+Этот скрипт циклов над в настоящее время выбрать диапазон. Он очищает текущее форматирование и устанавливает цвет заполнения в каждой ячейке на случайный цвет.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -136,7 +136,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="get-groups-of-cells-based-on-special-criteria"></a>Получить группы ячеек на основе специальных критериев
 
-Этот скрипт получает все пустые ячейки в используемом диапазоне текущего листа. Затем он выделяет все эти ячейки с желтым фоном.
+Этот скрипт получает все пустые ячейки в используемом диапазоне текущего листа. Затем он выделяет все эти клетки с желтым фоном.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -153,11 +153,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="collections"></a>Коллекции
 
-Эти примеры работают с коллекциями объектов в книге.
+Эти образцы работают с коллекциями объектов в рабочей книге.
 
-### <a name="iterating-over-collections"></a>Итерирование над коллекциями
+### <a name="iterate-over-collections"></a>Итерировать над коллекциями
 
-Этот скрипт получает и записывает имена всех таблиц в книге. Он также задает цвета вкладки случайным цветом.
+Этот скрипт получает и регистрирует имена всех листов в рабочей книге. Он также устанавливает их цвета вкладок на случайный цвет.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -182,9 +182,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="querying-and-deleting-from-a-collection"></a>Запрос и удаление из коллекции
+### <a name="query-and-delete-from-a-collection"></a>Запрос и удаление из коллекции
 
-Этот скрипт создает новую таблицу. Он проверяет существующую копию листа и удаляет его перед созданием нового листа.
+Этот скрипт создает новый лист. Он проверяет существующую копию листа и удаляет его перед созданием нового листа.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -213,9 +213,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="dates"></a>Даты
 
-В примерах этого раздела покажите, как использовать объект [даты](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) JavaScript.
+Образцы в этом разделе показывают, как использовать объект JavaScript [Дата.](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)
 
-Следующий пример получает текущую дату и время, а затем записывает эти значения в две ячейки в активном таблице.
+Следующий пример получает текущую дату и время, а затем записывает эти значения на две ячейки в активном листе.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-В следующем примере считываю дату, храняную в Excel, и переводим ее на объект JavaScript Date. В качестве ввода [для даты](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript используется числовый серийный номер даты.
+Следующий пример считывает дату, хранящуюся в Excel переводит ее на объект JavaScript Date. Он использует [числовой серийный номер даты в качестве](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) ввода для даты JavaScript.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -250,11 +250,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="display-data"></a>Отображение данных
 
-В этих примерах показано, как работать с данными таблицы и предоставить пользователям лучшее представление или организацию.
+Эти образцы демонстрируют, как работать с данными листа и предоставить пользователям лучшее представление или организацию.
 
 ### <a name="apply-conditional-formatting"></a>Применение условного форматирования
 
-В этом примере применяется условное форматирование к используемой в настоящее время линейке в таблице. Условное форматирование — это зеленое заполнение для 10% значений.
+Этот пример применяет условное форматирование к используемому в настоящее время диапазону в листе. Условное форматирование является зеленым заливки для верхних 10% значений.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -274,9 +274,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a>Создание отсортировать таблицу
+### <a name="create-a-sorted-table"></a>Создание отсортированной таблицы
 
-В этом примере создается таблица из используемого диапазона текущего таблицы, а затем сортируются на основе первого столбца.
+Этот пример создает таблицу из используемого диапазона текущего листа, а затем сортирует ее на основе первого столбца.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,11 +292,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a>Журнал значений "Grand Total" из pivotTable
+### <a name="log-the-grand-total-values-from-a-pivottable"></a>Войти в значения "Grand Total" с PivotTable
 
-В этом примере находится первый pivotTable в книге и регистрируемые значения в ячейках "Grand Total" (как выделено зеленым цветом на рисунке ниже).
+Этот пример находит первый PivotTable в рабочей книге и регистрирует значения в ячейках "Grand Total" (как выделено зеленым цветом на рисунке ниже).
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="PivotTable, показывающий продажи фруктов с Grand Total строки подчеркнул зеленый":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -320,11 +320,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="use-data-validation-to-create-a-drop-down-list"></a>Использование проверки данных для создания выпадаемого списка
+### <a name="create-a-drop-down-list-using-data-validation"></a>Создание списка отсева с использованием проверки данных
 
-В этом скрипте создается список выбора для ячейки. Он использует существующие значения выбранного диапазона в качестве выбора для списка.
+Этот скрипт создает список выпадают из списка выбора ячейки. В качестве выбора списка он использует существующие значения выбранного диапазона.
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="Лист, на котором отображается диапазон из трех ячеек, содержащих варианты цвета &quot;красный, синий, зеленый&quot; и рядом с ней, те же варианты, показанные в выпадаемом списке.":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="Лист, показывающий ряд из трех ячеек, содержащих цветовые варианты &quot;красный, синий, зеленый&quot; и рядом с ним, тот же выбор, показанный в списке выпадают":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -359,11 +359,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="formulas"></a>Формулы
 
-В этих примерах Excel формулы и покажите, как работать с ними в сценариях.
+В этих образцах Excel формулы и покажем, как с ними работать в скриптах.
 
 ### <a name="single-formula"></a>Единая формула
 
-Этот скрипт задает формулу ячейки, а затем отображает, как Excel хранит формулу и значение ячейки отдельно.
+Этот скрипт устанавливает формулу ячейки, а затем отображает, Excel хранит формулу и значение ячейки отдельно.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -382,9 +382,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="spilling-results-from-a-formula"></a>Проливка результатов из формулы
+### <a name="handle-a-spill-error-returned-from-a-formula"></a>Ручка `#SPILL!` ошибки, возвращенной из формулы
 
-Этот скрипт передает диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE. Если переливание приводит к ошибке #SPILL, он очищает целевой диапазон и снова применяет формулу.
+Этот скрипт транспонирует диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE. Если транспонирует `#SPILL` ошибку, он очищает целевой диапазон и применяет формулу снова.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,12 +416,12 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="suggest-new-samples"></a>Предложить новые примеры
+## <a name="suggest-new-samples"></a>Предложить новые образцы
 
-Мы приветствуем предложения по новым образцам. Если существует распространенный сценарий, который поможет другим разработчикам сценариев, сообщите нам об этом в разделе отзывов в нижней части страницы.
+Мы приветствуем предложения по новым образцам. Если есть общий сценарий, который поможет другим разработчикам скриптов, пожалуйста, сообщите нам в разделе обратной связи в нижней части страницы.
 
 ## <a name="see-also"></a>См. также
 
-* [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
-* [Office Примеры сценариев и сценарии](samples-overview.md)
+* [Судхи Рамамурти "Основы диапазона" на YouTube](https://youtu.be/4emjkOFdLBA)
+* [Office Образцы сценариев и сценарии](samples-overview.md)
 * [Запись, редактирование и создание сценариев Office в Excel в Интернете](../../tutorials/excel-tutorial.md)

@@ -1,98 +1,97 @@
 ---
-title: Оптимизация производительности при написании большого набора данных
-description: Узнайте, как оптимизировать производительность при написании большого Office скриптов.
-ms.date: 04/28/2021
+title: Запись большого набора данных
+description: Узнайте, как разделить большой набор данных на более мелкие операции записи в Office скриптах.
+ms.date: 05/13/2021
 localization_priority: Normal
-ms.openlocfilehash: 9622494378a24db16ea43b5500d6efa156726ff8
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 06abb58c61c18620d638ab3eb61ea68398bf20aa
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285950"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545625"
 ---
-# <a name="performance-optimization-when-writing-a-large-dataset"></a>Оптимизация производительности при написании большого набора данных
+# <a name="write-a-large-dataset"></a>Запись большого набора данных
 
-## <a name="basic-performance-optimization"></a>Базовая оптимизация производительности
+`Range.setValues()`API помещает данные в диапазон. Этот API имеет ограничения в зависимости от различных факторов, таких как размер данных и настройки сети. Это означает, что если вы попытаетеся написать огромное количество информации в трудовую книжку в качестве одной операции, вам нужно будет написать данные небольшими партиями, чтобы надежно обновить [большой диапазон.](../../testing/platform-limits.md)
 
-Основы производительности в Office скриптах см. в разделе [Производительность](getting-started.md#basic-performance-considerations) статьи Начало работы.
+Для основы производительности в Office скриптах, пожалуйста, [прочитайте Улучшение производительности ваших Office скриптов](../../develop/web-client-performance.md).
 
-## <a name="sample-code-optimize-performance-of-a-large-dataset"></a>Пример кода. Оптимизация производительности большого набора данных
+## <a name="sample-code-write-a-large-dataset"></a>Пример кода: Напишите большой набор данных
 
-API диапазона позволяет устанавливать значения `setValues()` диапазона. Этот API имеет ограничения данных в зависимости от различных факторов, таких как размер данных, параметры сети и т.д. Чтобы надежно обновить большой диапазон данных, необходимо подумать о том, чтобы делать обновления данных небольшими фрагментами. Этот сценарий пытается сделать это и записывает строки диапазона в куски, чтобы при обновлении большого диапазона его можно было сделать в меньших частях. **Предупреждение.** Он не был протестирован в разных размерах, поэтому следует помнить об этом, если вы хотите использовать это в скрипте. Поскольку у нас есть возможность проверить, мы будем обновляться с выводами о том, как она выполняется для различных размеров данных.
+Этот скрипт записывает строки диапазона в более мелких частях. Он выбирает 1000 ячеек для записи за один раз. Запустите скрипт на пустой лист, чтобы увидеть пакеты обновлений в действии. Выход консоли дает дальнейшее представление о том, что происходит.
 
-Этот сценарий выбирает 1K-ячейки на каждый кусок, но вы можете переопреять, чтобы проверить, как он работает для вас. Он обновляет 100-тысячные строки с 6 столбцами данных. Запустите это на пустом листе, чтобы изучить.
+> [!NOTE]
+> Вы можете изменить количество полных строк, написанных путем изменения значения `SAMPLE_ROWS` . Вы можете изменить количество ячеек, чтобы записать как одно действие, изменив значение `CELLS_IN_BATCH` .
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
+  const SAMPLE_ROWS = 100000;
+  const CELLS_IN_BATCH = 10000;
+
+  // Get the current worksheet.
   const sheet = workbook.getActiveWorksheet();
 
-  let data: (string | number | boolean)[][] = [];
-  // Number of rows in the random data (x 6 columns).
-  const sampleRows = 100000;
-
   console.log(`Generating data...`)
-  // Dynamically generate some random data for testing purpose. 
-  for (let i = 0; i < sampleRows; i++) {
+  let data: (string | number | boolean)[][] = [];
+  // Generate six columns of random data per row. 
+  for (let i = 0; i < SAMPLE_ROWS; i++) {
     data.push([i, ...[getRandomString(5), getRandomString(20), getRandomString(10), Math.random()], "Sample data"]);
   }
 
   console.log(`Calling update range function...`);
-  const updated = updateRangeInChunks(sheet.getRange("B2"), data);
+  const updated = updateRangeInBatches(sheet.getRange("B2"), data, CELLS_IN_BATCH);
   if (!updated) {
     console.log(`Update did not take place or complete. Check and run again.`);
   }
 }
 
-function updateRangeInChunks(
+function updateRangeInBatches(
   startCell: ExcelScript.Range,
   values: (string | boolean | number)[][],
-  cellsInChunk: number = 10000
+  cellsInBatch: number
 ): boolean {
 
   const startTime = new Date().getTime();
-  console.log(`Cells per chunk setting: ${cellsInChunk}`);
-  if (!values) {
-    console.log(`Invalid input values to update.`);
-    return false;
-  }
-  if (values.length === 0 || values[0].length === 0) {
-    console.log(`Empty data -- nothing to update.`);
-    return true;
-  }
-  const totalCells = values.length * values[0].length;
+  console.log(`Cells per batch setting: ${cellsInBatch}`);
 
+  // Determine the total number of cells to write.
+  const totalCells = values.length * values[0].length;
   console.log(`Total cells to update in the target range: ${totalCells}`);
-  if (totalCells <= cellsInChunk) {
-    console.log(`No need to chunk -- updating directly`);
+  if (totalCells <= cellsInBatch) {
+    console.log(`No need to batch -- updating directly`);
     updateTargetRange(startCell, values);
     return true;
   }
 
-  const rowsPerChunk = Math.floor(cellsInChunk / values[0].length);
-  console.log("Rows per chunk: " + rowsPerChunk);
+  // Determine how many rows to write at once.
+  const rowsPerBatch = Math.floor(cellsInBatch / values[0].length);
+  console.log("Rows per batch: " + rowsPerBatch);
   let rowCount = 0;
   let totalRowsUpdated = 0;
-  let chunkCount = 0;
+  let batchCount = 0;
 
+  // Write each batch of rows.
   for (let i = 0; i < values.length; i++) {
     rowCount++;
-    if (rowCount === rowsPerChunk) {
-      chunkCount++;
-      console.log(`Calling update next chunk function. Chunk#: ${chunkCount}`);
-      updateNextChunk(startCell, values, rowsPerChunk, totalRowsUpdated);
-      rowCount = 0;
-      totalRowsUpdated += rowsPerChunk;
-      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
+    if (rowCount === rowsPerBatch) {
+      batchCount++;
+      console.log(`Calling update next batch function. Batch#: ${batchCount}`);
+      updateNextBatch(startCell, values, rowsPerBatch, totalRowsUpdated);
 
+      // Write a completion percentage to help the user understand the progress.
+      rowCount = 0;
+      totalRowsUpdated += rowsPerBatch;
+      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
     }
   }
-  console.log(`Updating remaining rows -- last chunk: ${rowCount}`)
+  
+  console.log(`Updating remaining rows -- last batch: ${rowCount}`)
   if (rowCount > 0) {
-    updateNextChunk(startCell, values, rowCount, totalRowsUpdated);
+    updateNextBatch(startCell, values, rowCount, totalRowsUpdated);
   }
 
   let endTime = new Date().getTime();
-  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInChunk).toFixed(8)} seconds per ${cellsInChunk} cells-chunk.`);
+  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInBatch).toFixed(8)} seconds per ${cellsInBatch} cells-batch.`);
 
   return true;
 }
@@ -100,22 +99,20 @@ function updateRangeInChunks(
 /**
  * A helper function that computes the target range and updates. 
  */
-
-function updateNextChunk(
+function updateNextBatch(
   startingCell: ExcelScript.Range,
   data: (string | boolean | number)[][],
-  rowsPerChunk: number,
+  rowsPerBatch: number,
   totalRowsUpdated: number
 ) {
-
   const newStartCell = startingCell.getOffsetRange(totalRowsUpdated, 0);
-  const targetRange = newStartCell.getResizedRange(rowsPerChunk - 1, data[0].length - 1);
-  console.log(`Updating chunk at range ${targetRange.getAddress()}`);
-  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerChunk);
+  const targetRange = newStartCell.getResizedRange(rowsPerBatch - 1, data[0].length - 1);
+  console.log(`Updating batch at range ${targetRange.getAddress()}`);
+  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerBatch);
   try {
     targetRange.setValues(dataToUpdate);
   } catch (e) {
-    throw `Error while updating the chunk range: ${JSON.stringify(e)}`;
+    throw `Error while updating the batch range: ${JSON.stringify(e)}`;
   }
   return;
 }
@@ -149,6 +146,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a>Обучающее видео. Оптимизация производительности при написании большого набора данных
+## <a name="training-video-write-a-large-dataset"></a>Учебное видео: Напишите большой набор данных
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/BP9Kp0Ltj7U).
+[Смотреть Судхи Рамамурти ходить через этот образец на YouTube](https://youtu.be/BP9Kp0Ltj7U).

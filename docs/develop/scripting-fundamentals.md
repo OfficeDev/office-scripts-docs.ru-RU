@@ -1,14 +1,14 @@
 ---
 title: Основы сценариев для сценариев Office в Excel в Интернете
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
-ms.date: 07/08/2020
+ms.date: 05/10/2021
 localization_priority: Priority
-ms.openlocfilehash: 685f83952fa6aecc660524a95dec57e149522820
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: d930c9ee36933cb0458de8cce4f1d1adc7b6a001
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232391"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545104"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
 
@@ -16,9 +16,15 @@ ms.locfileid: "52232391"
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## <a name="main-function"></a>Функция `main`
+## <a name="typescript-the-language-of-office-scripts"></a>TypeScript: язык сценариев Office
 
-Каждый сценарий Office должен содержать функцию `main` с типом `ExcelScript.Workbook` в качестве первого параметра. При выполнении `main` приложение Excel вызывает эту функцию, предоставляя книгу в качестве ее первого параметра. Поэтому важно не изменять базовую подпись функции `main` после записи сценария или создания нового сценария в редакторе кода.
+Сценарии Office написаны на языке [TypeScript](https://www.typescriptlang.org/docs/home.html), который является супермножеством [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). Если вы знакомы с JavaScript, ваши знания пригодятся, так как большая часть кода одинакова в обоих языках. Перед началом написания кода сценариев Office рекомендуется получить опыт программирования на начальном уровне. Следующие ресурсы помогут вам понять код сценариев Office.
+
+[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+
+## <a name="main-function-the-scripts-starting-point"></a>Функция `main`: начальная точка сценария
+
+Каждый сценарий должен содержать функцию `main` с типом `ExcelScript.Workbook` в качестве первого параметра. При выполнении функции приложение Excel вызывает функцию `main`, предоставляя книгу в качестве ее первого параметра. Параметр `ExcelScript.Workbook` всегда должен быть первым параметром.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -26,14 +32,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-Код внутри `main` функции запускается при запуске скрипта. `main` может вызывать другие функции в вашем скрипте, но код, который не содержится в функции, не будет работать.
+Код внутри `main` функции запускается при запуске скрипта. `main` может вызывать другие функции в вашем скрипте, но код, который не содержится в функции, не будет работать. Сценарии не могут вызывать другие сценарии Office.
 
-> [!CAUTION]
-> Если ваша функция `main` выглядит как `async function main(context: Excel.RequestContext)`, то сценарий использует устаревшую асинхронную модель API. Дополнительные сведения, включая сведения о преобразовании устаревших сценариев в текущую модель API, см. в статье [Использование асинхронных API сценариев Office для поддержки устаревших сценариев](excel-async-model.md).
+[Power Automate](https://flow.microsoft.com) позволяет подключать сценарии в потоках. Данные передаются между сценариями и потоком через параметры и возвращаемые результаты метода `main`. Способ интеграции сценариев Office с Power Automate подробно описан в статье [Запуск сценариев Office с помощью Power Automate](power-automate-integration.md).
 
-## <a name="object-model"></a>Объектная модель
+## <a name="object-model-overview"></a>Обзор объектной модели
 
-Чтобы написать сценарий, необходимо знать, как устроены API Office Script. Компоненты книги определенным образом взаимосвязаны друг с другом. Эти взаимосвязи во многом схожи с пользовательским интерфейсом Excel.
+Чтобы написать сценарий, необходимо знать, как устроены API сценариев Office. Компоненты книги определенным образом взаимосвязаны друг с другом. Эти взаимосвязи во многом схожи с пользовательским интерфейсом Excel.
 
 - **Рабочая книга** содержит одну или несколько **рабочих листов**.
 - **Рабочий лист** предоставляет доступ к ячейкам через объекты **Range**.
@@ -42,7 +47,7 @@ function main(workbook: ExcelScript.Workbook) {
 - **Рабочий лист** содержит коллекции тех объектов данных, которые присутствуют на отдельном листе.
 - **Рабочие книги** содержат коллекции некоторых из этих объектов данных (таких как **таблицы**) для всей **рабочей книги**.
 
-### <a name="workbook"></a>Книга
+## <a name="workbook"></a>Книга
 
 Для каждого сценария предоставляется объект `workbook` типа `Workbook`, он предоставляется функцией `main`. Это объект верхнего уровня, через который сценарий взаимодействует с книгой Excel.
 
@@ -58,15 +63,15 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="ranges"></a>Диапазоны
+## <a name="ranges"></a>Диапазоны
 
 Диапазон - это группа непрерывных ячеек в рабочей книге. В сценариях обычно используется нотация в стиле A1 (например, **B3** для отдельной ячейки в столбце **B** и строке **3** или **C2:F4** для ячеек из столбцов с **C** по **F** и строк с **2** по **4**) для определения диапазонов.
 
 У диапазонов три основных свойства: значения, формулы и формат. Эти свойства получают или устанавливают значения ячеек, формулы для вычисления и визуальное форматирование ячеек. Для доступа к ним используются `getValues`, `getFormulas` и `getFormat`. Значения и формулы можно изменять с помощью `setValues` и `setFormulas`, а формат является объектом `RangeFormat`, который состоит из нескольких меньших объектов, задаваемых по отдельности.
 
-Диапазоны используют двухмерные массивы для управления информацией. Дополнительные сведения об обработке этих массивов на платформе сценариев Office см. в разделе ["Работа с диапазонами" статьи "Использование встроенных объектов JavaScript в сценариях Office"](javascript-objects.md#working-with-ranges).
+Диапазоны используют двухмерные массивы для управления информацией. Дополнительные сведения об обработке массивов в инфраструктуре сценариев Office см. в статье [Работа с диапазонами](javascript-objects.md#work-with-ranges).
 
-#### <a name="range-sample"></a>Образец диапазона
+### <a name="range-sample"></a>Образец диапазона
 
 В следующем примере показано, как создавать записи продаж. В этом сценарии используются объекты `Range` для установки значений, формул и частей формата.
 
@@ -111,11 +116,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 :::image type="content" source="../images/range-sample.png" alt-text="Лист с записями о продажах, содержащий строки значений, столбец формулы и отформатированные заголовки":::
 
-### <a name="charts-tables-and-other-data-objects"></a>Диаграммы, таблицы и другие объекты данных
+## <a name="charts-tables-and-other-data-objects"></a>Диаграммы, таблицы и другие объекты данных
 
 Скрипты могут создавать и управлять структурами данных и визуализациями в Excel. Таблицы и диаграммы являются двумя наиболее часто используемыми объектами, но API поддерживают сводные таблицы, фигуры, изображения и многое другое. Они сохраняются в коллекциях, которые рассматриваются далее в этой статье.
 
-#### <a name="creating-a-table"></a>Создание таблицы
+### <a name="create-a-table"></a>Создание таблицы
 
 Создайте таблицы с помощью диапазонов данных. Форматирование и элементы управления таблицами (например, фильтры) автоматически применяются к диапазону.
 
@@ -135,7 +140,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 :::image type="content" source="../images/table-sample.png" alt-text="Лист, содержащий таблицу, созданную из предыдущей записи о продажах":::
 
-#### <a name="creating-a-chart"></a>Создание диаграммы
+### <a name="create-a-chart"></a>Создание диаграммы
 
 Создайте диаграммы для визуализации данных в диапазоне. Сценарии позволяют создавать десятки разновидностей диаграмм, каждая из которых может быть настроена в соответствии с вашими потребностями.
 
@@ -161,19 +166,22 @@ function main(workbook: ExcelScript.Workbook) {
 
 :::image type="content" source="../images/chart-sample.png" alt-text="Гистограмма, показывающая количество для трех элементов из предыдущей записи о продажах":::
 
-### <a name="collections-and-other-object-relations"></a>Коллекции и другие отношения объектов
+## <a name="collections"></a>Коллекции
 
-Доступ к любому дочернему объекту осуществляется через его родительский объект. Например, можно прочесть `Worksheets` из объекта `Workbook`. Будет доступен связанный метод `get` родительского класса (например, `Workbook.getWorksheets()` или `Workbook.getWorksheet(name)`). Одиночные методы `get` возвращают один объект, им требуется идентификатор или имя конкретного объекта (например, имя листа). Множественные методы `get` возвращают всю коллекцию объектов в качестве массива. Если коллекция пуста, возвращается пустой массив (`[]`).
+Если объект Excel содержит коллекцию из одного или нескольких объектов одного типа, он сохраняет их в массиве. Например, объект `Workbook` содержит `Worksheet[]`. Доступ к этому массиву обеспечивается методом `Workbook.getWorksheets()`. Множественные методы `get`, например `Worksheet.getCharts()`, возвращают всю коллекцию объектов в качестве массива. Вы увидите этот шаблон во всех API сценариев Office: объект `Worksheet` использует метод `getTables()`, возвращающий `Table[]`, объект `Table` использует метод `getColumns()`, возвращающий `TableColumn[]`, и т. д.
 
-После получения коллекции можно использовать обычные операции с массивами, такие как получение его `length` или использование циклов `for`, `for..of`, `while` для итерации. Также можно использовать методы массивов TypeScript, такие как `map`, `forEach`. Также можно получить доступ к отдельным объектам внутри коллекции с помощью значения индекса массива. Например, `workbook.getTables()[0]` возвращает первую таблицу в коллекции. Дополнительные сведения об использовании встроенной функциональности массивов платформы сценариев Office см. в разделе ["Работа с коллекциями" статьи "Использование встроенных объектов JavaScript в сценариях Office"](javascript-objects.md#working-with-collections).
+Возвращаемый массив является обычным массивом, поэтому все обычные операции массивов доступны для вашего сценария. Также можно получить доступ к отдельным объектам внутри коллекции с помощью значения индекса массива. Например, `workbook.getTables()[0]` возвращает первую таблицу в коллекции. Дополнительные сведения об использовании встроенных функций массива в структуре сценариев Office см. в статье [Работа с коллекциями](javascript-objects.md#work-with-collections). 
+
+Отдельные объекты также доступны из коллекции с помощью метода `get`. Одиночные методы `get`, например `Worksheet.getTable(name)`, возвращают один объект и требуют идентификатор или имя конкретного объекта. Этот идентификатор или имя обычно задается сценарием или с помощью пользовательского интерфейса Excel.
 
 Следующий сценарий возвращает все таблицы в книге. При этом отображаются заголовки, видны кнопки фильтров, а для таблицы устанавливается стиль "TableStyleLight1".
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-  /* Get table collection */
-  const tables = workbook.getTables();
-  /* Set table formatting properties */
+  // Get the table collection.
+  let tables = workbook.getTables();
+
+  // Set the table formatting properties for every table.
   tables.forEach(table => {
     table.setShowHeaders(true);
     table.setShowFilterButton(true);
@@ -182,11 +190,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-#### <a name="adding-excel-objects-with-a-script"></a>Добавление объектов Excel с помощью сценария
+## <a name="add-excel-objects-with-a-script"></a>Добавление объектов Excel с помощью сценария
 
 Можно программным образом добавлять объекты документов, например таблицы или диаграммы, путем вызова соответствующего метода `add`, доступного для родительского объекта.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Не следует вручную добавлять объекты в массивы коллекций. Используйте методы `add` для родительских объектов. Например, можно добавить `Table` к `Worksheet` методом `Worksheet.addTable`.
 
 Следующий сценарий создает таблицу в Excel на первом листе книги. Обратите внимание, что метод `addTable` возвращает созданную таблицу.
@@ -196,15 +204,65 @@ function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
 
-    // Add a table that uses the data in C3:G10.
+    // Add a table that uses the data in A1:G10.
     let table = sheet.addTable(
-      "C3:G10",
+      "A1:G10",
        true /* True because the table has headers. */
     );
+    
+    // Give the table a name for easy reference in other scripts.
+    table.setName("MyTable");
 }
 ```
 
-## <a name="removing-excel-objects-with-a-script"></a>Удаление объектов Excel с помощью сценария
+> [!TIP]
+> Большинство объектов Excel используют метод `setName`. Это позволяет легко получить доступ к объектам Excel позже в сценарии или в других сценариях для той же книги.
+
+### <a name="verify-an-object-exists-in-the-collection"></a>Проверка существования объекта в коллекции
+
+Перед продолжением сценариям часто требуется проверить, существует ли таблица или похожий объект. Используйте имена, заданные сценариями или с помощью пользовательского интерфейса Excel, чтобы определить необходимые объекты и действовать соответствующим образом. Методы `get` возвращают `undefined`, когда запрашиваемый объект отсутствует в коллекции.
+
+Следующий сценарий запрашивает таблицу MyTable и использует оператор `if...else`, чтобы проверить, найдена ли таблица.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table named "MyTable".
+  let myTable = workbook.getTable("MyTable");
+
+  // If the table is in the workbook, myTable will have a value.
+  // Otherwise, the variable will be undefined and go to the else clause.
+  if (myTable) {
+    let worksheetName = myTable.getWorksheet().getName();
+    console.log(`MyTable is on the ${worksheetName} worksheet`);
+  } else {
+    console.log(`MyTable is not in the workbook.`);
+  }
+}
+```
+
+Распространенный шаблон в сценариях Office — воссоздание таблицы, диаграммы или другого объекта при каждом запуске сценария. Если старые данные не нужны, рекомендуется удалить старый объект перед созданием нового. Это позволяет избежать конфликтов имен или других различий, которые могли быть добавлены другими пользователями.
+
+Следующий сценарий удаляет таблицу MyTable, если она существует, а затем добавляет новую таблицу с таким же именем.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table named "MyTable" from the first worksheet.
+  let sheet = workbook.getWorksheets()[0];
+  let tableName = "MyTable";
+  let oldTable = sheet.getTable(tableName);
+
+  // If the table exists, remove it.
+  if (oldTable) {
+    oldTable.delete();
+  }
+
+  // Add a new table with the same name.
+  let newTable = sheet.addTable("A1:G10", true);
+  newTable.setName(tableName);
+}
+```
+
+## <a name="remove-excel-objects-with-a-script"></a>Удаление объектов Excel с помощью сценария
 
 Чтобы удалить объект, вызовите метод `delete` этого объекта.
 
@@ -223,7 +281,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="further-reading-on-the-object-model"></a>Дальнейшее чтение по объектной модели
+## <a name="further-reading-on-the-object-model"></a>Дальнейшее чтение по объектной модели
 
 [Справочная документация по API сценариев Office](/javascript/api/office-scripts/overview) представляет собой полный список объектов, используемых в сценариях Office. Там вы можете использовать оглавление, чтобы перейти к любому классу, о котором вы хотите узнать больше. Ниже приведены несколько часто просматриваемых страниц.
 
@@ -243,3 +301,4 @@ function main(workbook: ExcelScript.Workbook) {
 - [Чтение данных рабочей книги с помощью сценариев Office в Excel в Интернете](../tutorials/excel-read-tutorial.md)
 - [Справочник API для сценариев Office](/javascript/api/office-scripts/overview)
 - [Использование встроенных объектов JavaScript в сценариях Office](javascript-objects.md)
+- [Рекомендации по сценариям Office](best-practices.md)

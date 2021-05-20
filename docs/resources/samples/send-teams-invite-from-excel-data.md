@@ -1,41 +1,42 @@
 ---
-title: Отправка собрания Teams из Excel данных
-description: Узнайте, как использовать Office скрипты для отправки собрания Teams из Excel данных.
+title: Отправить Teams из Excel данных
+description: Узнайте, как использовать Office скрипты для отправки Teams собрания из Excel данных.
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: d366da45618f211450a4779bc3a1aec4297eb376
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ROBOTS: NOINDEX
+ms.openlocfilehash: 85b39d7e3d1008dee01e7fe9c690116be1d7e5d8
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285831"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545632"
 ---
-# <a name="send-teams-meeting-from-excel-data"></a>Отправка Teams собрания из Excel данных
+# <a name="send-teams-meeting-from-excel-data"></a>Отправить Teams совещание из Excel данных
 
-В этом решении показано, как использовать Office скрипты и Power Automate для выбора строк из Excel файла и использования его для отправки приглашения Teams собрания, а затем обновления Excel.
+Это решение показывает, как использовать Office Scripts и Power Automate действия для выбора строк из файла Excel и использовать его для отправки приглашения Teams собрания, а затем Excel.
 
 ## <a name="example-scenario"></a>Пример сценария
 
-* Вербовщик кадров управляет расписанием собеседований кандидатов в Excel файле.
-* Рекрутеру необходимо отправить приглашение Teams собрания кандидату и интервьюерам. Правила бизнеса:
+* Рекрутер отдела кадров управляет графиком собеседований кандидатов в Excel файле.
+* Рекрутер должен отправить Teams приглашение кандидату и интервьюерам. Бизнес-правила должны выбрать:
 
-    a) Приглашает только тех, для которых приглашение еще не отправлено, как записано в столбце файла.
+    а) приглашает только тех, для кого приглашение еще не отправлено, как записано в столбце файла.
 
-    b) даты интервью в будущем (без прошлых дат).
+    b) Даты собеседования в будущем (без прошлых дат).
 
-* Рекрутеру необходимо обновить файл Excel с подтверждением того, что Teams собрания были отправлены для соответствующих записей.
+* Рекрутер должен обновить файл Excel подтверждением того, что все Teams собрания были отправлены для соответствующих записей.
 
 Решение состоит из 3 частей:
 
-1. Office Скрипт для извлечения данных из таблицы на основе условий и возвращает массив объектов в качестве данных JSON.
-1. Затем данные отправляются в Teams **создать Teams** собрания для отправки приглашений. Отправка Teams собрания на экземпляр в массиве JSON.
-1. Отправьте те же данные JSON в другой Office скрипт, чтобы обновить состояние приглашения.
+1. Office Сценарий для извлечения данных из таблицы на основе условий и возвращает массив объектов в качестве данных JSON.
+1. Затем данные отправляются в Teams **создать Teams для** отправки приглашений. Отправить по Teams собрания в каждом экземпляре в массиве JSON.
+1. Отправьте те же данные JSON в Office сценарий для обновления статуса приглашения.
 
-## <a name="sample-excel-file"></a>Пример Excel файла
+## <a name="sample-excel-file"></a>Образец Excel файла
 
-Скачайте файл <a href="hr-schedule.xlsx">hr-schedule.xlsx, </a> используемый в этом решении, и попробуйте его самостоятельно!
+Скачать файл <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> используется в этом решении и попробовать его самостоятельно!
 
-## <a name="sample-code-select-filtered-rows-from-table-as-json"></a>Пример кода. Выберите отфильтрованные строки из таблицы в качестве JSON
+## <a name="sample-code-select-filtered-rows-from-table-as-json"></a>Пример кода: Выберите отфильтрованные строки из таблицы как JSON
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -173,7 +174,7 @@ interface InterviewInvite extends BasicObj {
 }
 ```
 
-## <a name="sample-code-mark-as-invited"></a>Пример кода: пометить как приглашенный
+## <a name="sample-code-mark-as-invited"></a>Пример кода: Марк по приглашениям
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
@@ -227,6 +228,6 @@ interface InterviewInvite  {
 }
 ```
 
-## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>Обучающее видео: отправка Teams собрания из Excel данных
+## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>Учебное видео: Отправить Teams встречу из Excel данных
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/HyBdx52NOE8).
+[Смотреть Судхи Рамамурти ходить через этот образец на YouTube](https://youtu.be/HyBdx52NOE8).
