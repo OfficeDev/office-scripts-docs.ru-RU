@@ -1,6 +1,6 @@
 ---
 title: Перекрестная ссылка и формат Excel файла
-description: Узнайте, как Office скрипты и Power Automate для перекрестной ссылки и форматировать Excel файл.
+description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
 ms.date: 05/06/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
@@ -11,26 +11,26 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545768"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a><span data-ttu-id="3875f-103">Перекрестная ссылка и формат Excel файла</span><span class="sxs-lookup"><span data-stu-id="3875f-103">Cross-reference and format an Excel file</span></span>
+# <a name="cross-reference-and-format-an-excel-file"></a><span data-ttu-id="aa1f7-103">Перекрестная ссылка и формат Excel файла</span><span class="sxs-lookup"><span data-stu-id="aa1f7-103">Cross-reference and format an Excel file</span></span>
 
-<span data-ttu-id="3875f-104">Это решение показывает, как Excel файлы могут быть перекрестными ссылками и отформатированы с помощью Office скриптов и Power Automate.</span><span class="sxs-lookup"><span data-stu-id="3875f-104">This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate.</span></span>
+<span data-ttu-id="aa1f7-104">Это решение показывает, как Excel двух файлов можно перекрестно ссылаться и форматирование с помощью Office и Power Automate.</span><span class="sxs-lookup"><span data-stu-id="aa1f7-104">This solution shows how two Excel files can be cross-referenced and formatted using Office Scripts and Power Automate.</span></span>
 
-<span data-ttu-id="3875f-105">Проект достигает следующих результатов:</span><span class="sxs-lookup"><span data-stu-id="3875f-105">The project achieves the following:</span></span>
+<span data-ttu-id="aa1f7-105">В проекте реализуется следующее:</span><span class="sxs-lookup"><span data-stu-id="aa1f7-105">The project achieves the following:</span></span>
 
-1. <span data-ttu-id="3875f-106">Извлекает данные событий из <a href="events.xlsx">events.xlsxс </a> помощью одного действия сценария Run.</span><span class="sxs-lookup"><span data-stu-id="3875f-106">Extracts event data from <a href="events.xlsx">events.xlsx</a> using one Run script action.</span></span>
-1. <span data-ttu-id="3875f-107">Передает эти данные во второй файл Excel, содержащий данные о транзакциях событий, и использует эти данные для базовой проверки данных и форматирования недостающих или неверных данных с помощью Office скриптов.</span><span class="sxs-lookup"><span data-stu-id="3875f-107">Passes that data to the second Excel file containing event transaction data and uses that data to do basic validation of data and formatting of missing or incorrect data using Office Scripts.</span></span>
-1. <span data-ttu-id="3875f-108">Электронная почта результат рецензента.</span><span class="sxs-lookup"><span data-stu-id="3875f-108">Emails the result to a reviewer.</span></span>
+1. <span data-ttu-id="aa1f7-106">Извлекает данные событий из <a href="events.xlsx">events.xlsx</a> с помощью одного действия скрипта Run.</span><span class="sxs-lookup"><span data-stu-id="aa1f7-106">Extracts event data from <a href="events.xlsx">events.xlsx</a> using one Run script action.</span></span>
+1. <span data-ttu-id="aa1f7-107">Передает эти данные во второй Excel, содержащий данные транзакций событий, и использует эти данные для базовой проверки данных и форматирования отсутствующих или неправильных данных с помощью Office Scripts.</span><span class="sxs-lookup"><span data-stu-id="aa1f7-107">Passes that data to the second Excel file containing event transaction data and uses that data to do basic validation of data and formatting of missing or incorrect data using Office Scripts.</span></span>
+1. <span data-ttu-id="aa1f7-108">По электронной почте результат передается рецензенту.</span><span class="sxs-lookup"><span data-stu-id="aa1f7-108">Emails the result to a reviewer.</span></span>
 
-<span data-ttu-id="3875f-109">Для получения более подробной [информации с Office Excel м.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)</span><span class="sxs-lookup"><span data-stu-id="3875f-109">For further details, see [Cross Reference and formatting two Excel files using Office Scripts](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535).</span></span>
+<span data-ttu-id="aa1f7-109">Дополнительные сведения см. в перекрестной ссылке и [форматирования двух Excel с помощью Office Scripts.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)</span><span class="sxs-lookup"><span data-stu-id="aa1f7-109">For further details, see [Cross Reference and formatting two Excel files using Office Scripts](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535).</span></span>
 
-## <a name="sample-excel-files"></a><span data-ttu-id="3875f-110">Пример Excel файлов</span><span class="sxs-lookup"><span data-stu-id="3875f-110">Sample Excel files</span></span>
+## <a name="sample-excel-files"></a><span data-ttu-id="aa1f7-110">Пример Excel файлов</span><span class="sxs-lookup"><span data-stu-id="aa1f7-110">Sample Excel files</span></span>
 
-<span data-ttu-id="3875f-111">Скачать следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="3875f-111">Download the following files used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="aa1f7-111">Скачайте следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="aa1f7-111">Download the following files used in this solution to try it out yourself!</span></span>
 
-1. <span data-ttu-id="3875f-112"><a href="events.xlsx">events.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="3875f-112"><a href="events.xlsx">events.xlsx</a></span></span>
-1. <span data-ttu-id="3875f-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="3875f-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span></span>
+1. <span data-ttu-id="aa1f7-112"><a href="events.xlsx">events.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="aa1f7-112"><a href="events.xlsx">events.xlsx</a></span></span>
+1. <span data-ttu-id="aa1f7-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span><span class="sxs-lookup"><span data-stu-id="aa1f7-113"><a href="event-transactions.xlsx">event-transactions.xlsx</a></span></span>
 
-## <a name="sample-code-get-event-data"></a><span data-ttu-id="3875f-114">Пример кода: Получить данные о событиях</span><span class="sxs-lookup"><span data-stu-id="3875f-114">Sample code: Get event data</span></span>
+## <a name="sample-code-get-event-data"></a><span data-ttu-id="aa1f7-114">Пример кода: получить данные событий</span><span class="sxs-lookup"><span data-stu-id="aa1f7-114">Sample code: Get event data</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -67,7 +67,7 @@ interface EventData {
 }
 ```
 
-## <a name="sample-code-validate-event-transactions"></a><span data-ttu-id="3875f-115">Пример кода: Проверка транзакций событий</span><span class="sxs-lookup"><span data-stu-id="3875f-115">Sample code: Validate event transactions</span></span>
+## <a name="sample-code-validate-event-transactions"></a><span data-ttu-id="aa1f7-115">Пример кода. Проверка транзакций событий</span><span class="sxs-lookup"><span data-stu-id="aa1f7-115">Sample code: Validate event transactions</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -150,6 +150,6 @@ interface EventData {
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a><span data-ttu-id="3875f-116">Учебное видео: Кросс-справка и формат Excel файл</span><span class="sxs-lookup"><span data-stu-id="3875f-116">Training video: Cross-reference and format an Excel file</span></span>
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a><span data-ttu-id="aa1f7-116">Обучающее видео: перекрестная ссылка и формат Excel файла</span><span class="sxs-lookup"><span data-stu-id="aa1f7-116">Training video: Cross-reference and format an Excel file</span></span>
 
-<span data-ttu-id="3875f-117">[Смотреть Судхи Рамамурти ходить через этот образец на YouTube](https://youtu.be/dVwqBf483qo").</span><span class="sxs-lookup"><span data-stu-id="3875f-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/dVwqBf483qo").</span></span>
+<span data-ttu-id="aa1f7-117">[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/dVwqBf483qo").</span><span class="sxs-lookup"><span data-stu-id="aa1f7-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/dVwqBf483qo").</span></span>

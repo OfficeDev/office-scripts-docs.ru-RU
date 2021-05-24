@@ -1,6 +1,6 @@
 ---
-title: Основные сценарии для Office сценариев в Excel в Интернете
-description: Коллекция образцов кода для использования с помощью Office в Excel в Интернете.
+title: Основные сценарии Office скриптов в Excel в Интернете
+description: Коллекция примеров кода, которые можно использовать с Office скриптами в Excel в Интернете.
 ms.date: 05/17/2021
 localization_priority: Normal
 ms.openlocfilehash: f252934a92126212b9520223826b3b2f5161ed57
@@ -10,23 +10,23 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545761"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="e1e2a-103">Основные сценарии для Office сценариев в Excel в Интернете</span><span class="sxs-lookup"><span data-stu-id="e1e2a-103">Basic scripts for Office Scripts in Excel on the web</span></span>
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="46775-103">Основные сценарии Office скриптов в Excel в Интернете</span><span class="sxs-lookup"><span data-stu-id="46775-103">Basic scripts for Office Scripts in Excel on the web</span></span>
 
-<span data-ttu-id="e1e2a-104">Следующие образцы простые сценарии для вас, чтобы попробовать на ваших собственных трудовых книжек.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="e1e2a-105">Чтобы использовать их в Excel в Интернете:</span><span class="sxs-lookup"><span data-stu-id="e1e2a-105">To use them in Excel on the web:</span></span>
+<span data-ttu-id="46775-104">Следующие примеры — это простые сценарии, которые можно попробовать в собственных книгах.</span><span class="sxs-lookup"><span data-stu-id="46775-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="46775-105">Чтобы использовать их в Excel в Интернете:</span><span class="sxs-lookup"><span data-stu-id="46775-105">To use them in Excel on the web:</span></span>
 
-1. <span data-ttu-id="e1e2a-106">Откройте вкладку **Автоматизировать**.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-106">Open the **Automate** tab.</span></span>
-2. <span data-ttu-id="e1e2a-107">Редактор **пресс-кода**.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-107">Press **Code Editor**.</span></span>
-3. <span data-ttu-id="e1e2a-108">Нажмите **новый** сценарий в панели задач редактора Кода.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-108">Press **New Script** in the Code Editor's task pane.</span></span>
-4. <span data-ttu-id="e1e2a-109">Замените весь скрипт на образец по вашему выбору.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-109">Replace the entire script with the sample of your choice.</span></span>
-5. <span data-ttu-id="e1e2a-110">**Нажмите** Вы запустите в панели задач редактора Кода.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-110">Press **Run** in the Code Editor's task pane.</span></span>
+1. <span data-ttu-id="46775-106">Откройте вкладку **Автоматизировать**.</span><span class="sxs-lookup"><span data-stu-id="46775-106">Open the **Automate** tab.</span></span>
+2. <span data-ttu-id="46775-107">Редактор **кода прессы**.</span><span class="sxs-lookup"><span data-stu-id="46775-107">Press **Code Editor**.</span></span>
+3. <span data-ttu-id="46775-108">Нажмите **новый скрипт** в области задач редактора кода.</span><span class="sxs-lookup"><span data-stu-id="46775-108">Press **New Script** in the Code Editor's task pane.</span></span>
+4. <span data-ttu-id="46775-109">Замените весь сценарий образцом по вашему выбору.</span><span class="sxs-lookup"><span data-stu-id="46775-109">Replace the entire script with the sample of your choice.</span></span>
+5. <span data-ttu-id="46775-110">Нажмите **кнопку** Выполнить в области задач редактора кода.</span><span class="sxs-lookup"><span data-stu-id="46775-110">Press **Run** in the Code Editor's task pane.</span></span>
 
-## <a name="script-basics"></a><span data-ttu-id="e1e2a-111">Основы сценария</span><span class="sxs-lookup"><span data-stu-id="e1e2a-111">Script basics</span></span>
+## <a name="script-basics"></a><span data-ttu-id="46775-111">Основы скрипта</span><span class="sxs-lookup"><span data-stu-id="46775-111">Script basics</span></span>
 
-<span data-ttu-id="e1e2a-112">Эти образцы демонстрируют фундаментальные строительные блоки для Office скриптов.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-112">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="e1e2a-113">Добавьте их в скрипты, чтобы расширить решение и решить общие проблемы.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-113">Add these to your scripts to extend your solution and solve common problems.</span></span>
+<span data-ttu-id="46775-112">В этих примерах демонстрируются основные строительные блоки для Office скриптов.</span><span class="sxs-lookup"><span data-stu-id="46775-112">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="46775-113">Добавьте их в скрипты, чтобы расширить решение и решить распространенные проблемы.</span><span class="sxs-lookup"><span data-stu-id="46775-113">Add these to your scripts to extend your solution and solve common problems.</span></span>
 
-### <a name="read-and-log-one-cell"></a><span data-ttu-id="e1e2a-114">Читать и регистрировать одну ячейку</span><span class="sxs-lookup"><span data-stu-id="e1e2a-114">Read and log one cell</span></span>
+### <a name="read-and-log-one-cell"></a><span data-ttu-id="46775-114">Чтение и журнал одной ячейки</span><span class="sxs-lookup"><span data-stu-id="46775-114">Read and log one cell</span></span>
 
-<span data-ttu-id="e1e2a-115">Этот образец считывает значение **A1** и печатает его на консоли.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-115">This sample reads the value of **A1** and prints it to the console.</span></span>
+<span data-ttu-id="46775-115">В этом примере считывать значение **A1** и печатать его на консоли.</span><span class="sxs-lookup"><span data-stu-id="46775-115">This sample reads the value of **A1** and prints it to the console.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -41,9 +41,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="read-the-active-cell"></a><span data-ttu-id="e1e2a-116">Читать активную ячейку</span><span class="sxs-lookup"><span data-stu-id="e1e2a-116">Read the active cell</span></span>
+### <a name="read-the-active-cell"></a><span data-ttu-id="46775-116">Чтение активной ячейки</span><span class="sxs-lookup"><span data-stu-id="46775-116">Read the active cell</span></span>
 
-<span data-ttu-id="e1e2a-117">Этот скрипт регистрирует значение текущей активной ячейки.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-117">This script logs the value of the current active cell.</span></span> <span data-ttu-id="e1e2a-118">Если выбрано несколько ячеек, в журнал будет зарегистрирована ячейка верхней левой.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-118">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
+<span data-ttu-id="46775-117">В этом скрипте региструется значение текущей активной ячейки.</span><span class="sxs-lookup"><span data-stu-id="46775-117">This script logs the value of the current active cell.</span></span> <span data-ttu-id="46775-118">Если выбрано несколько ячеек, будет зарегистрирована верхняя левая ячейка.</span><span class="sxs-lookup"><span data-stu-id="46775-118">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -55,9 +55,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-an-adjacent-cell"></a><span data-ttu-id="e1e2a-119">Изменение соседней ячейки</span><span class="sxs-lookup"><span data-stu-id="e1e2a-119">Change an adjacent cell</span></span>
+### <a name="change-an-adjacent-cell"></a><span data-ttu-id="46775-119">Изменение соседней ячейки</span><span class="sxs-lookup"><span data-stu-id="46775-119">Change an adjacent cell</span></span>
 
-<span data-ttu-id="e1e2a-120">Этот скрипт получает смежные ячейки с использованием относительных ссылок.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-120">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="e1e2a-121">Обратите внимание, что если активная ячейка находится в верхнем ряду, часть скрипта выходит из строя, поскольку она ссылается на ячейку выше выбранной в настоящее время ячейки.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-121">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
+<span data-ttu-id="46775-120">Этот скрипт получает соседние ячейки с использованием относительных ссылок.</span><span class="sxs-lookup"><span data-stu-id="46775-120">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="46775-121">Обратите внимание, что если активная ячейка находится в верхнем ряду, часть скрипта не работает, так как она ссылается на ячейку выше выбранной в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="46775-121">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -82,9 +82,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-all-adjacent-cells"></a><span data-ttu-id="e1e2a-122">Изменение всех смежных ячеек</span><span class="sxs-lookup"><span data-stu-id="e1e2a-122">Change all adjacent cells</span></span>
+### <a name="change-all-adjacent-cells"></a><span data-ttu-id="46775-122">Изменение всех смежных ячеек</span><span class="sxs-lookup"><span data-stu-id="46775-122">Change all adjacent cells</span></span>
 
-<span data-ttu-id="e1e2a-123">Этот скрипт копирует форматирование в активной ячейке в соседние ячейки.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-123">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="e1e2a-124">Обратите внимание, что этот скрипт работает только тогда, когда активная ячейка не находится на краю листа.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-124">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
+<span data-ttu-id="46775-123">Этот скрипт копирует форматирование в активной ячейке в соседние ячейки.</span><span class="sxs-lookup"><span data-stu-id="46775-123">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="46775-124">Обратите внимание, что этот скрипт работает только тогда, когда активная ячейка не на краю таблицы.</span><span class="sxs-lookup"><span data-stu-id="46775-124">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -105,9 +105,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="e1e2a-125">Изменение каждой отдельной ячейки в диапазоне</span><span class="sxs-lookup"><span data-stu-id="e1e2a-125">Change each individual cell in a range</span></span>
+### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="46775-125">Изменение каждой отдельной ячейки в диапазоне</span><span class="sxs-lookup"><span data-stu-id="46775-125">Change each individual cell in a range</span></span>
 
-<span data-ttu-id="e1e2a-126">Этот скрипт циклов над в настоящее время выбрать диапазон.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-126">This script loops over the currently select range.</span></span> <span data-ttu-id="e1e2a-127">Он очищает текущее форматирование и устанавливает цвет заполнения в каждой ячейке на случайный цвет.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-127">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
+<span data-ttu-id="46775-126">Этот скрипт цикличен по диапазону выбора в настоящее время.</span><span class="sxs-lookup"><span data-stu-id="46775-126">This script loops over the currently select range.</span></span> <span data-ttu-id="46775-127">Он очищает текущее форматирование и задает цвет заполнения в каждой ячейке случайным цветом.</span><span class="sxs-lookup"><span data-stu-id="46775-127">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -134,9 +134,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="e1e2a-128">Получить группы ячеек на основе специальных критериев</span><span class="sxs-lookup"><span data-stu-id="e1e2a-128">Get groups of cells based on special criteria</span></span>
+### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="46775-128">Получить группы ячеек на основе специальных критериев</span><span class="sxs-lookup"><span data-stu-id="46775-128">Get groups of cells based on special criteria</span></span>
 
-<span data-ttu-id="e1e2a-129">Этот скрипт получает все пустые ячейки в используемом диапазоне текущего листа.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-129">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="e1e2a-130">Затем он выделяет все эти клетки с желтым фоном.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-130">It then highlights all those cells with a yellow background.</span></span>
+<span data-ttu-id="46775-129">Этот скрипт получает все пустые ячейки в используемом диапазоне текущего листа.</span><span class="sxs-lookup"><span data-stu-id="46775-129">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="46775-130">Затем он выделяет все эти ячейки с желтым фоном.</span><span class="sxs-lookup"><span data-stu-id="46775-130">It then highlights all those cells with a yellow background.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -151,13 +151,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a><span data-ttu-id="e1e2a-131">Коллекции</span><span class="sxs-lookup"><span data-stu-id="e1e2a-131">Collections</span></span>
+## <a name="collections"></a><span data-ttu-id="46775-131">Коллекции</span><span class="sxs-lookup"><span data-stu-id="46775-131">Collections</span></span>
 
-<span data-ttu-id="e1e2a-132">Эти образцы работают с коллекциями объектов в рабочей книге.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-132">These samples work with collections of objects in the workbook.</span></span>
+<span data-ttu-id="46775-132">Эти примеры работают с коллекциями объектов в книге.</span><span class="sxs-lookup"><span data-stu-id="46775-132">These samples work with collections of objects in the workbook.</span></span>
 
-### <a name="iterate-over-collections"></a><span data-ttu-id="e1e2a-133">Итерировать над коллекциями</span><span class="sxs-lookup"><span data-stu-id="e1e2a-133">Iterate over collections</span></span>
+### <a name="iterate-over-collections"></a><span data-ttu-id="46775-133">Итерации над коллекциями</span><span class="sxs-lookup"><span data-stu-id="46775-133">Iterate over collections</span></span>
 
-<span data-ttu-id="e1e2a-134">Этот скрипт получает и регистрирует имена всех листов в рабочей книге.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-134">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="e1e2a-135">Он также устанавливает их цвета вкладок на случайный цвет.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-135">It also sets the their tab colors to a random color.</span></span>
+<span data-ttu-id="46775-134">Этот скрипт получает и записывает имена всех таблиц в книге.</span><span class="sxs-lookup"><span data-stu-id="46775-134">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="46775-135">Он также задает цвета вкладки случайным цветом.</span><span class="sxs-lookup"><span data-stu-id="46775-135">It also sets the their tab colors to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -182,9 +182,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="e1e2a-136">Запрос и удаление из коллекции</span><span class="sxs-lookup"><span data-stu-id="e1e2a-136">Query and delete from a collection</span></span>
+### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="46775-136">Запрос и удаление из коллекции</span><span class="sxs-lookup"><span data-stu-id="46775-136">Query and delete from a collection</span></span>
 
-<span data-ttu-id="e1e2a-137">Этот скрипт создает новый лист.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-137">This script creates a new worksheet.</span></span> <span data-ttu-id="e1e2a-138">Он проверяет существующую копию листа и удаляет его перед созданием нового листа.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-138">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
+<span data-ttu-id="46775-137">Этот скрипт создает новую таблицу.</span><span class="sxs-lookup"><span data-stu-id="46775-137">This script creates a new worksheet.</span></span> <span data-ttu-id="46775-138">Он проверяет существующую копию листа и удаляет его перед созданием нового листа.</span><span class="sxs-lookup"><span data-stu-id="46775-138">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -211,11 +211,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="dates"></a><span data-ttu-id="e1e2a-139">Даты</span><span class="sxs-lookup"><span data-stu-id="e1e2a-139">Dates</span></span>
+## <a name="dates"></a><span data-ttu-id="46775-139">Даты</span><span class="sxs-lookup"><span data-stu-id="46775-139">Dates</span></span>
 
-<span data-ttu-id="e1e2a-140">Образцы в этом разделе показывают, как использовать объект JavaScript [Дата.](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)</span><span class="sxs-lookup"><span data-stu-id="e1e2a-140">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
+<span data-ttu-id="46775-140">В примерах этого раздела покажите, как использовать объект [даты](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) JavaScript.</span><span class="sxs-lookup"><span data-stu-id="46775-140">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
 
-<span data-ttu-id="e1e2a-141">Следующий пример получает текущую дату и время, а затем записывает эти значения на две ячейки в активном листе.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-141">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
+<span data-ttu-id="46775-141">Следующий пример получает текущую дату и время, а затем записывает эти значения в две ячейки в активном таблице.</span><span class="sxs-lookup"><span data-stu-id="46775-141">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-<span data-ttu-id="e1e2a-142">Следующий пример считывает дату, хранящуюся в Excel переводит ее на объект JavaScript Date.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-142">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="e1e2a-143">Он использует [числовой серийный номер даты в качестве](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) ввода для даты JavaScript.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-143">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
+<span data-ttu-id="46775-142">В следующем примере считываю дату, храняную в Excel, и переводим ее на объект JavaScript Date.</span><span class="sxs-lookup"><span data-stu-id="46775-142">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="46775-143">В качестве ввода [для даты](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript используется числовый серийный номер даты.</span><span class="sxs-lookup"><span data-stu-id="46775-143">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -248,13 +248,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="display-data"></a><span data-ttu-id="e1e2a-144">Отображение данных</span><span class="sxs-lookup"><span data-stu-id="e1e2a-144">Display data</span></span>
+## <a name="display-data"></a><span data-ttu-id="46775-144">Отображение данных</span><span class="sxs-lookup"><span data-stu-id="46775-144">Display data</span></span>
 
-<span data-ttu-id="e1e2a-145">Эти образцы демонстрируют, как работать с данными листа и предоставить пользователям лучшее представление или организацию.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-145">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
+<span data-ttu-id="46775-145">В этих примерах показано, как работать с данными таблицы и предоставить пользователям лучшее представление или организацию.</span><span class="sxs-lookup"><span data-stu-id="46775-145">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
 
-### <a name="apply-conditional-formatting"></a><span data-ttu-id="e1e2a-146">Применение условного форматирования</span><span class="sxs-lookup"><span data-stu-id="e1e2a-146">Apply conditional formatting</span></span>
+### <a name="apply-conditional-formatting"></a><span data-ttu-id="46775-146">Применение условного форматирования</span><span class="sxs-lookup"><span data-stu-id="46775-146">Apply conditional formatting</span></span>
 
-<span data-ttu-id="e1e2a-147">Этот пример применяет условное форматирование к используемому в настоящее время диапазону в листе.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-147">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="e1e2a-148">Условное форматирование является зеленым заливки для верхних 10% значений.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-148">The conditional formatting is a green fill for the top 10% of values.</span></span>
+<span data-ttu-id="46775-147">В этом примере применяется условное форматирование к используемой в настоящее время линейке в таблице.</span><span class="sxs-lookup"><span data-stu-id="46775-147">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="46775-148">Условное форматирование — это зеленое заполнение для 10% значений.</span><span class="sxs-lookup"><span data-stu-id="46775-148">The conditional formatting is a green fill for the top 10% of values.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -274,9 +274,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a><span data-ttu-id="e1e2a-149">Создание отсортированной таблицы</span><span class="sxs-lookup"><span data-stu-id="e1e2a-149">Create a sorted table</span></span>
+### <a name="create-a-sorted-table"></a><span data-ttu-id="46775-149">Создание отсортировать таблицу</span><span class="sxs-lookup"><span data-stu-id="46775-149">Create a sorted table</span></span>
 
-<span data-ttu-id="e1e2a-150">Этот пример создает таблицу из используемого диапазона текущего листа, а затем сортирует ее на основе первого столбца.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-150">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
+<span data-ttu-id="46775-150">В этом примере создается таблица из используемого диапазона текущего таблицы, а затем сортируются на основе первого столбца.</span><span class="sxs-lookup"><span data-stu-id="46775-150">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,11 +292,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="e1e2a-151">Войти в значения "Grand Total" с PivotTable</span><span class="sxs-lookup"><span data-stu-id="e1e2a-151">Log the "Grand Total" values from a PivotTable</span></span>
+### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="46775-151">Журнал значений "Grand Total" из pivotTable</span><span class="sxs-lookup"><span data-stu-id="46775-151">Log the "Grand Total" values from a PivotTable</span></span>
 
-<span data-ttu-id="e1e2a-152">Этот пример находит первый PivotTable в рабочей книге и регистрирует значения в ячейках "Grand Total" (как выделено зеленым цветом на рисунке ниже).</span><span class="sxs-lookup"><span data-stu-id="e1e2a-152">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
+<span data-ttu-id="46775-152">В этом примере находится первый pivotTable в книге и регистрируемые значения в ячейках "Grand Total" (как выделено зеленым цветом на рисунке ниже).</span><span class="sxs-lookup"><span data-stu-id="46775-152">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="PivotTable, показывающий продажи фруктов с Grand Total строки подчеркнул зеленый":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="A PivotTable showing fruit sales with the Grand Total row highlighted green":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -320,11 +320,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="e1e2a-154">Создание списка отсева с использованием проверки данных</span><span class="sxs-lookup"><span data-stu-id="e1e2a-154">Create a drop-down list using data validation</span></span>
+### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="46775-154">Создание выпадаемого списка с помощью проверки данных</span><span class="sxs-lookup"><span data-stu-id="46775-154">Create a drop-down list using data validation</span></span>
 
-<span data-ttu-id="e1e2a-155">Этот скрипт создает список выпадают из списка выбора ячейки.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-155">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="e1e2a-156">В качестве выбора списка он использует существующие значения выбранного диапазона.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-156">It uses the existing values of the selected range as the choices for the list.</span></span>
+<span data-ttu-id="46775-155">В этом скрипте создается список выбора для ячейки.</span><span class="sxs-lookup"><span data-stu-id="46775-155">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="46775-156">Он использует существующие значения выбранного диапазона в качестве выбора для списка.</span><span class="sxs-lookup"><span data-stu-id="46775-156">It uses the existing values of the selected range as the choices for the list.</span></span>
 
-:::image type="content" source="../../images/sample-data-validation.png" alt-text="Лист, показывающий ряд из трех ячеек, содержащих цветовые варианты &quot;красный, синий, зеленый&quot; и рядом с ним, тот же выбор, показанный в списке выпадают":::
+:::image type="content" source="../../images/sample-data-validation.png" alt-text="Лист, на котором отображается диапазон из трех ячеек, содержащих варианты цвета &quot;красный, синий, зеленый&quot; и рядом с ней, те же варианты, показанные в выпадаемом списке.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -357,13 +357,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="formulas"></a><span data-ttu-id="e1e2a-158">Формулы</span><span class="sxs-lookup"><span data-stu-id="e1e2a-158">Formulas</span></span>
+## <a name="formulas"></a><span data-ttu-id="46775-158">Формулы</span><span class="sxs-lookup"><span data-stu-id="46775-158">Formulas</span></span>
 
-<span data-ttu-id="e1e2a-159">В этих образцах Excel формулы и покажем, как с ними работать в скриптах.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-159">These samples use Excel formulas and show how to work with them in scripts.</span></span>
+<span data-ttu-id="46775-159">В этих примерах Excel формулы и покажите, как работать с ними в сценариях.</span><span class="sxs-lookup"><span data-stu-id="46775-159">These samples use Excel formulas and show how to work with them in scripts.</span></span>
 
-### <a name="single-formula"></a><span data-ttu-id="e1e2a-160">Единая формула</span><span class="sxs-lookup"><span data-stu-id="e1e2a-160">Single formula</span></span>
+### <a name="single-formula"></a><span data-ttu-id="46775-160">Единая формула</span><span class="sxs-lookup"><span data-stu-id="46775-160">Single formula</span></span>
 
-<span data-ttu-id="e1e2a-161">Этот скрипт устанавливает формулу ячейки, а затем отображает, Excel хранит формулу и значение ячейки отдельно.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-161">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
+<span data-ttu-id="46775-161">Этот скрипт задает формулу ячейки, а затем отображает, как Excel хранит формулу и значение ячейки отдельно.</span><span class="sxs-lookup"><span data-stu-id="46775-161">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -382,9 +382,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="e1e2a-162">Ручка `#SPILL!` ошибки, возвращенной из формулы</span><span class="sxs-lookup"><span data-stu-id="e1e2a-162">Handle a `#SPILL!` error returned from a formula</span></span>
+### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="46775-162">Обработка `#SPILL!` ошибки, возвращаемой из формулы</span><span class="sxs-lookup"><span data-stu-id="46775-162">Handle a `#SPILL!` error returned from a formula</span></span>
 
-<span data-ttu-id="e1e2a-163">Этот скрипт транспонирует диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-163">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="e1e2a-164">Если транспонирует `#SPILL` ошибку, он очищает целевой диапазон и применяет формулу снова.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-164">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
+<span data-ttu-id="46775-163">Этот скрипт передает диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE.</span><span class="sxs-lookup"><span data-stu-id="46775-163">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="46775-164">Если переливание приводит к ошибке, он очищает целевой диапазон и снова `#SPILL` применяет формулу.</span><span class="sxs-lookup"><span data-stu-id="46775-164">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,12 +416,12 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="suggest-new-samples"></a><span data-ttu-id="e1e2a-165">Предложить новые образцы</span><span class="sxs-lookup"><span data-stu-id="e1e2a-165">Suggest new samples</span></span>
+## <a name="suggest-new-samples"></a><span data-ttu-id="46775-165">Предложить новые примеры</span><span class="sxs-lookup"><span data-stu-id="46775-165">Suggest new samples</span></span>
 
-<span data-ttu-id="e1e2a-166">Мы приветствуем предложения по новым образцам.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-166">We welcome suggestions for new samples.</span></span> <span data-ttu-id="e1e2a-167">Если есть общий сценарий, который поможет другим разработчикам скриптов, пожалуйста, сообщите нам в разделе обратной связи в нижней части страницы.</span><span class="sxs-lookup"><span data-stu-id="e1e2a-167">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
+<span data-ttu-id="46775-166">Мы приветствуем предложения по новым образцам.</span><span class="sxs-lookup"><span data-stu-id="46775-166">We welcome suggestions for new samples.</span></span> <span data-ttu-id="46775-167">Если существует распространенный сценарий, который поможет другим разработчикам сценариев, сообщите нам об этом в разделе отзывов в нижней части страницы.</span><span class="sxs-lookup"><span data-stu-id="46775-167">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e1e2a-168">См. также</span><span class="sxs-lookup"><span data-stu-id="e1e2a-168">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="46775-168">См. также</span><span class="sxs-lookup"><span data-stu-id="46775-168">See also</span></span>
 
-* [<span data-ttu-id="e1e2a-169">Судхи Рамамурти "Основы диапазона" на YouTube</span><span class="sxs-lookup"><span data-stu-id="e1e2a-169">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
-* [<span data-ttu-id="e1e2a-170">Office Образцы сценариев и сценарии</span><span class="sxs-lookup"><span data-stu-id="e1e2a-170">Office Scripts samples and scenarios</span></span>](samples-overview.md)
-* [<span data-ttu-id="e1e2a-171">Запись, редактирование и создание сценариев Office в Excel в Интернете</span><span class="sxs-lookup"><span data-stu-id="e1e2a-171">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)
+* [<span data-ttu-id="46775-169">Sudhi Ramamurthy's "Range basics" on YouTube</span><span class="sxs-lookup"><span data-stu-id="46775-169">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
+* [<span data-ttu-id="46775-170">Office Примеры сценариев и сценарии</span><span class="sxs-lookup"><span data-stu-id="46775-170">Office Scripts samples and scenarios</span></span>](samples-overview.md)
+* [<span data-ttu-id="46775-171">Запись, редактирование и создание сценариев Office в Excel в Интернете</span><span class="sxs-lookup"><span data-stu-id="46775-171">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)
