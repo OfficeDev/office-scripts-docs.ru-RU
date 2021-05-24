@@ -1,6 +1,6 @@
 ---
 title: Перекрестная ссылка и формат Excel файла
-description: Узнайте, как Office скрипты и Power Automate для перекрестной ссылки и форматировать Excel файл.
+description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
 ms.date: 05/06/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
@@ -13,24 +13,24 @@ ms.locfileid: "52545768"
 ---
 # <a name="cross-reference-and-format-an-excel-file"></a>Перекрестная ссылка и формат Excel файла
 
-Это решение показывает, как Excel файлы могут быть перекрестными ссылками и отформатированы с помощью Office скриптов и Power Automate.
+Это решение показывает, как Excel двух файлов можно перекрестно ссылаться и форматирование с помощью Office и Power Automate.
 
-Проект достигает следующих результатов:
+В проекте реализуется следующее:
 
-1. Извлекает данные событий из <a href="events.xlsx">events.xlsxс </a> помощью одного действия сценария Run.
-1. Передает эти данные во второй файл Excel, содержащий данные о транзакциях событий, и использует эти данные для базовой проверки данных и форматирования недостающих или неверных данных с помощью Office скриптов.
-1. Электронная почта результат рецензента.
+1. Извлекает данные событий из <a href="events.xlsx">events.xlsx</a> с помощью одного действия скрипта Run.
+1. Передает эти данные во второй Excel, содержащий данные транзакций событий, и использует эти данные для базовой проверки данных и форматирования отсутствующих или неправильных данных с помощью Office Scripts.
+1. По электронной почте результат передается рецензенту.
 
-Для получения более подробной [информации с Office Excel м.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)
+Дополнительные сведения см. в перекрестной ссылке и [форматирования двух Excel с помощью Office Scripts.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)
 
 ## <a name="sample-excel-files"></a>Пример Excel файлов
 
-Скачать следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!
+Скачайте следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!
 
 1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
 
-## <a name="sample-code-get-event-data"></a>Пример кода: Получить данные о событиях
+## <a name="sample-code-get-event-data"></a>Пример кода: получить данные событий
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -67,7 +67,7 @@ interface EventData {
 }
 ```
 
-## <a name="sample-code-validate-event-transactions"></a>Пример кода: Проверка транзакций событий
+## <a name="sample-code-validate-event-transactions"></a>Пример кода. Проверка транзакций событий
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -150,6 +150,6 @@ interface EventData {
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>Учебное видео: Кросс-справка и формат Excel файл
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a>Обучающее видео: перекрестная ссылка и формат Excel файла
 
-[Смотреть Судхи Рамамурти ходить через этот образец на YouTube](https://youtu.be/dVwqBf483qo").
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/dVwqBf483qo").

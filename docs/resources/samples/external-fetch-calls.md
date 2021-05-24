@@ -1,6 +1,6 @@
 ---
 title: Использование внешних вызовов Fetch в сценариях Office
-description: Узнайте, как делать внешние вызовы API в Office скриптах.
+description: Узнайте, как делать внешние вызовы API в Office Скрипты.
 ms.date: 05/14/2021
 localization_priority: Normal
 ms.openlocfilehash: df8814cbab16969a1140aecfe526fd68e609d43c
@@ -12,13 +12,13 @@ ms.locfileid: "52545754"
 ---
 # <a name="use-external-fetch-calls-in-office-scripts"></a>Использование внешних вызовов Fetch в сценариях Office
 
-Этот скрипт получает основную информацию о GitHub пользователя. Он показывает, как использовать `fetch` в простом сценарии. Для получения дополнительной информации об `fetch` использовании или других внешних вызовах читайте [в программе поддержки](../../develop/external-calls.md) внешних вызовов API Office скриптах
+Этот скрипт получает основные сведения о репозиториях GitHub пользователя. В нем показано, как `fetch` использовать в простом сценарии. Дополнительные сведения об использовании или других внешних вызовах читайте в публикации Поддержка вызовов внешнего `fetch` [API в Office Scripts](../../develop/external-calls.md)
 
-Вы можете узнать больше об API GItHub, используемых [в GitHub ссылке API.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user) Вы также можете увидеть необработанный выход вызова API, посетив веб-браузер (не забудьте заменить `https://api.github.com/users/{USERNAME}/repos` заполнителя «USERNAME» на ваш GitHub ID).
+Дополнительные данные о API GItHub, используемых в ссылке GitHub [API.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user) Вы также можете увидеть необработанный вывод вызова API, посетив веб-браузер (не забудьте заменить местообладатель `https://api.github.com/users/{USERNAME}/repos` {USERNAME} своим GitHub ID).
 
-![Пример информации о репозиториях](../../images/git.png)
+![Пример получения данных репозиториев](../../images/git.png)
 
-## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>Пример кода: Получить основную информацию о GitHub пользователя
+## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>Пример кода. Получите базовую информацию о GitHub хранилищах пользователя
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
@@ -55,6 +55,6 @@ interface License {
 }
 ```
 
-## <a name="training-video-how-to-make-external-api-calls"></a>Учебное видео: Как сделать внешние вызовы API
+## <a name="training-video-how-to-make-external-api-calls"></a>Обучающее видео: как сделать внешние вызовы API
 
-[Смотреть Судхи Рамамурти ходить через этот образец на YouTube](https://youtu.be/fulP29J418E).
+[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/fulP29J418E).

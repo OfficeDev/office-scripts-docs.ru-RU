@@ -1,32 +1,32 @@
 ---
 title: Добавление изображений в книгу
-description: Узнайте, как использовать Office скрипты для добавления изображения в трудовую книжку и копирования его на листах.
+description: Узнайте, как использовать Office скрипты, чтобы добавить изображение в книгу и скопировать его на листах.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 99c3cc2cacf6e535bdb882bb8414d23fd105be35
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 64c356b2d76a561276b2955263555b16de27b3ba
+ms.sourcegitcommit: a2b85168d2b5e2c4e6951f808368f7d726400df0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52546039"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52592756"
 ---
 # <a name="add-images-to-a-workbook"></a>Добавление изображений в книгу
 
-Этот пример показывает, как работать с изображениями с помощью Office скрипта в Excel.
+В этом примере показано, как работать с изображениями с помощью Office скрипта в Excel.
 
 ## <a name="scenario"></a>Сценарий
 
-Изображения помогают с брендингом, визуальной идентичностью и шаблонами. Они помогают сделать трудовую книжку больше, чем просто гигантский стол.
+Изображения помогают с брендингом, визуальной идентичностью и шаблонами. Они помогают сделать книгу больше, чем просто гигантская таблица.
 
-Первый образец копирует изображение с одного листа на другой. Это может быть использовано, чтобы поставить логотип вашей компании в том же положении на каждом листе.
+Первый пример копирует изображение из одного таблицы в другой. Это можно использовать для того, чтобы поместить логотип вашей компании в одинаковое положение на каждом листе.
 
-Второй образец копирует изображение с URL. Это может быть использовано для копирования фотографий, которые коллега хранил в общей папке в родственную трудовую книжку.
+Второй пример копирует изображение из URL-адреса. Это можно использовать для копирования фотографий, хранимых коллегой в общей папке, в связанную книгу.
 
-## <a name="sample-excel-file"></a>Образец Excel файла
+## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачать файл <a href="add-images.xlsx">add-images.xlsx</a> используется в этих образцах и попробовать его самостоятельно!
+Скачайте файл <a href="add-images.xlsx">add-images.xlsx, </a> используемый в этих примерах, и попробуйте его самостоятельно!
 
-## <a name="sample-code-copy-an-image-across-worksheets"></a>Пример кода: Копирование изображения на листах
+## <a name="sample-code-copy-an-image-across-worksheets"></a>Пример кода. Скопируйте изображение в таблицах
 
 ```TypeScript
 /**
@@ -52,12 +52,12 @@ function main(workbook: ExcelScript.Workbook)
 }
 ```
 
-## <a name="sample-code-add-an-image-from-a-url-to-a-workbook"></a>Пример кода: Добавить изображение из URL в трудовую книжку
+## <a name="sample-code-add-an-image-from-a-url-to-a-workbook"></a>Пример кода. Добавление изображения из URL-адреса в книгу
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
   // Fetch the image from a URL.
-  const link = "https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/images/git-octocat.png";
+  const link = "https://raw.githubusercontent.com/OfficeDev/office-scripts-docs/master/docs/images/git-octocat.png";
   const response = await fetch(link);
 
   // Store the response as an ArrayBuffer, since it is a raw image file.

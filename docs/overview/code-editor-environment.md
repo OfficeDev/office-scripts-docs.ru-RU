@@ -1,6 +1,6 @@
 ---
 title: Office Среда редактора кода скриптов
-description: Предпосылки и информация об окружающей среде для Office скриптов в Excel в Интернете.
+description: Необходимые условия и сведения об среде для Office скриптов в Excel в Интернете.
 ms.date: 05/10/2021
 localization_priority: Normal
 ms.openlocfilehash: aa54939826f8dda2a068df0f3fabf0fd3a2c842b
@@ -12,36 +12,36 @@ ms.locfileid: "52545824"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office Среда редактора кода скриптов
 
-Office Сценарии написаны в TypeScript или JavaScript и используют Office Api JavaScript для взаимодействия с Excel книгой. Редактор кода основан на Visual Studio Code, так что если вы использовали эту среду раньше, вы будете чувствовать себя как дома.
+Office Скрипты написаны в TypeScript или JavaScript и используют API javaScript Office скриптов для взаимодействия с Excel книгой. Редактор кода основан на Visual Studio Code, поэтому если вы использовали эту среду раньше, вы будете чувствовать себя как дома.
 
-## <a name="scripting-language-typescript-or-javascript"></a>Язык сценариев: TypeScript или JavaScript
+## <a name="scripting-language-typescript-or-javascript"></a>Язык скриптов: TypeScript или JavaScript
 
-Office Сценарии написаны в [TypeScript](https://www.typescriptlang.org/docs/home.html), который является суперсет [javaScript](https://developer.mozilla.org/docs/Web/JavaScript). Action Recorder генерирует код в TypeScript, а Office Scripts использует TypeScript. Поскольку TypeScript является суперсетом JavaScript, любой скрипт-код, который вы пишете в JavaScript, будет работать просто отлично.
+Сценарии Office написаны на языке [TypeScript](https://www.typescriptlang.org/docs/home.html), который является супермножеством [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). Регистратор действий создает код в TypeScript, а документация Office скриптов использует TypeScript. Так как TypeScript является суперсетью JavaScript, любой код скриптов, который вы пишете в JavaScript, будет работать нормально.
 
-Office Сценарии в основном являются автономными фрагментами кода. Используется лишь малая часть функциональности TypeScript. Таким образом, вы можете редактировать скрипты без необходимости изучать тонкости TypeScript. Редактор кода также обрабатывает установку, компиляцию и выполнение кода, так что вам не нужно беспокоиться ни о чем, кроме самого скрипта. Можно изучать язык и создавать скрипты без предыдущих знаний программирования. Однако, если вы нов для программирования, мы рекомендуем изузнать некоторые основы, прежде чем приступить к Office скриптов:
+Office Скрипты — это в основном автономные фрагменты кода. Используется только малая часть функциональных возможностей TypeScript. Таким образом, вы можете изменить сценарии, не изучив тонкости TypeScript. Редактор кода также обрабатывает установку, компиляцию и выполнение кода, поэтому вам не нужно беспокоиться ни о чем, кроме самого сценария. Можно изучать язык и создавать сценарии без предыдущих знаний о программировании. Однако, если вы не знаете программирования, мы рекомендуем изучать некоторые основы перед тем, как Office скрипты:
 
 [!INCLUDE [Preview note](../includes/coding-basics-references.md)]
 
-## <a name="office-scripts-javascript-api"></a>Office Сценарии JavaScript API
+## <a name="office-scripts-javascript-api"></a>Office API скриптов JavaScript
 
-Office Скрипты используют специализированную версию Office JavaScript [для Office дополнительных приложений.](/office/dev/add-ins/overview/index) Хотя в двух API есть сходство, не следует предполагать, что код может быть портирован между двумя платформами. Различия между двумя платформами описаны в [различиях между Office и Office надстройки](../resources/add-ins-differences.md#apis) статьи. Вы можете просмотреть все API, доступные для вашего [скрипта, в справочной документации Office скриптов API.](/javascript/api/office-scripts/overview)
+Office Скрипты используют специализированную версию API Office JavaScript для Office [надстройки](/office/dev/add-ins/overview/index). Хотя в двух API имеются сходства, не следует предполагать, что код можно портировать между двумя платформами. Различия между двумя платформами описаны в статье Различия между Office скриптами и [Office надстройки.](../resources/add-ins-differences.md#apis) Все API, доступные вашему сценарию, можно просмотреть в справочной документации [Office скриптов.](/javascript/api/office-scripts/overview)
 
-## <a name="external-library-support"></a>Внешняя поддержка библиотеки
+## <a name="external-library-support"></a>Поддержка внешней библиотеки
 
-Office Скрипты не поддерживают использование внешних сторонних библиотек JavaScript. В настоящее время нельзя звонить в какую-либо библиотеку, кроме Office API-скриптов из сценария. У вас все еще есть доступ к [любому встроенному объекту JavaScript,](../develop/javascript-objects.md)например, [к математике.](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)
+Office Скрипты не поддерживают использование внешних сторонних библиотек JavaScript. В настоящее время нельзя вызывать любую библиотеку, кроме API Office скриптов. У вас по-прежнему есть доступ к любому встроенного [объекта JavaScript,](../develop/javascript-objects.md)например [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense функция редактора кода, которая помогает предотвратить опечатки и ошибки синтаксиса при редактировании сценария. Он отображает возможные имена объектов и поля при ввеся, а также вко— вко— вко— вко— в соответствующую документацию для каждого API.
+IntelliSense — это функция редактора кода, которая помогает предотвратить ошибки опечатки и синтаксиса при редактировании сценария. Он отображает возможные имена объектов и полей при введите, а также рядную документацию для каждого API.
 
-Редактор Excel кода использует тот же движок IntelliSense, что и Visual Studio Code. Чтобы узнать больше об этой функции, [Visual Studio Code в IntelliSense функции](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features).
+Редактор Excel кода использует тот же IntelliSense, что и Visual Studio Code. Дополнительные возможности этой функции [Visual Studio Code в IntelliSense.](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)
 
 ## <a name="keyboard-shortcuts"></a>Сочетания клавиш
 
-Большинство ярлыков клавиатуры для Visual Studio Code также работают в Office Code Editor. Используйте следующие PDF-файлы, чтобы узнать о доступных опциях и получить большую часть из редактора кода:
+Большинство клавиш для Visual Studio Code также работают в редакторе Office скриптов. С помощью следующих PDF-адресов вы узнаете о доступных вариантах и получите большую часть редактора кода:
 
-- [Клавишные ярлыки для macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf).
-- [Клавиатура ярлыки для Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf).
+- [Клавиши клавиш для macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf).
+- [Клавиши клавиш для Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf).
 
 ## <a name="see-also"></a>См. также
 

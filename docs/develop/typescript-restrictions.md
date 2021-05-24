@@ -1,6 +1,6 @@
 ---
 title: Ограничения TypeScript в Office скриптах
-description: Специфика компилятора TypeScript и линтера, используемого Office Code Scripts.
+description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода Office скриптов.
 ms.date: 02/05/2021
 localization_priority: Normal
 ms.openlocfilehash: a4198e0e56224ac5da89e89c43c8d2f3ef44d6d7
@@ -12,59 +12,59 @@ ms.locfileid: "52545021"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в Office скриптах
 
-Office Скрипты используют язык TypeScript. По большей части любой код TypeScript или JavaScript будет работать в Office скриптах. Тем не менее, редактор Кода применяет несколько ограничений для обеспечения того, чтобы ваш скрипт работал последовательно и по назначению с вашей Excel книгой.
+Office Скрипты используют язык TypeScript. По большей части любой код TypeScript или JavaScript будет работать в Office скриптах. Однако редактор кода соблюдает несколько ограничений, чтобы гарантировать, что сценарий работает последовательно и по назначению с Excel книгой.
 
 ## <a name="no-any-type-in-office-scripts"></a>Нет типа "любой" в Office скриптах
 
-Типы [писания](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) не являются обязательными в TypeScript, потому что типы могут быть выведены. Тем не Office, что скрипты требуют, чтобы переменная не может быть [типа любого](https://www.typescriptlang.org/docs/handbook/basic-types.html#any). Как явные, так `any` и неявные не допускаются Office скриптов. Эти случаи сообщаются как ошибки.
+Типы [записи](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) необязательны в TypeScript, так как эти типы можно сделать вывод. Однако для Office скриптов требуется, чтобы переменная не была [типной.](https://www.typescriptlang.org/docs/handbook/basic-types.html#any) Явные и неявные не допускаются `any` в Office скриптах. Эти случаи сообщаются как ошибки.
 
-### <a name="explicit-any"></a>явный `any`
+### <a name="explicit-any"></a>Явный `any`
 
-Вы не можете прямо объявить переменную `any` типом в Office (то `let someVariable: any;` есть). Тип `any` вызывает проблемы при обработке Excel. Например, `Range` нужно знать, что значение `string` `number` является, или `boolean` . Вы получите ошибку времени компиляции (ошибка до запуска скрипта), если какая-либо переменная явно `any` определена как тип скрипта.
+Нельзя явно объявить переменную типом в `any` Office Скрипты (то `let someVariable: any;` есть). Тип `any` вызывает проблемы при обработке Excel. Например, необходимо знать, что значение `Range` является `string` значением , или `number` `boolean` . Вы получите ошибку времени компиляции (ошибка перед запуском скрипта), если любая переменная явно определена как `any` тип сценария.
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="Явное сообщение «любого» в тексте наведении редактора Кода":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="Явное сообщение &quot;любое&quot; в тексте наведении редактора кода":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="Явная ошибка «любого» в окне консоли":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="Явная ошибка &quot;любая&quot; в окне консоли":::
 
-На предыдущем скриншоте `[5, 16] Explicit Any is not allowed` указывается, что #5, #16 определяет `any` тип. Это поможет вам найти ошибку.
+На предыдущем `[5, 16] Explicit Any is not allowed` скриншоте указывается, что строка #5, столбец #16 определяет `any` тип. Это поможет найти ошибку.
 
-Чтобы обойти эту проблему, всегда определите тип переменной. Если вы не уверены в типе переменной, можно использовать [тип профсоюза.](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html) Это может быть полезно для переменных, которые держат значения, которые могут быть типа `Range` , или `string` `number` `boolean` `Range` (тип для значений является объединение `string | number | boolean` тех:).
+Чтобы обойти эту проблему, всегда определите тип переменной. Если вы не уверены в типе переменной, можно использовать [тип union.](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html) Это может быть полезно для переменных, которые держат значения, которые могут быть типа , или (тип для значений является `Range` `string` `number` `boolean` `Range` союзом из них: `string | number | boolean` ).
 
-### <a name="implicit-any"></a>подразумеваемый `any`
+### <a name="implicit-any"></a>Неявный `any`
 
-ТипОписные переменные типы [могут быть неявно](https://www.typescriptlang.org/docs/handbook/type-inference.html) определены. Если компилятор TypeScript не в состоянии определить тип переменной (либо потому, что тип не определен явно или вывод типа не является возможным), то это неявное, `any` и вы получите ошибку компиляции времени.
+Типы переменных TypeScript можно [неявно](https://www.typescriptlang.org/docs/handbook/type-inference.html) определить. Если компилятор TypeScript не может определить тип переменной (либо из-за того, что тип явно не определен, либо вывод типа невозможен), то это неявное значение, и вы получите ошибку времени `any` компиляции.
 
-Наиболее распространенный случай на любой неявной `any` находится в переменной декларации, например `let value;` . Есть два способа избежать этого:
+Наиболее распространенный случай для любого неявного `any` находится в переменной декларации, например `let value;` . Существует два способа избежать этого:
 
-* Присвоить переменную неявно идентифицируемому типу `let value = 5;` `let value = workbook.getWorksheet();` (или).
-* Явно ввех ввех переменной `let value: number;` ( )
+* Назначение переменной неявно идентифицируемого типа `let value = 5;` `let value = workbook.getWorksheet();` (или).
+* Явно введите переменную ( `let value: number;` )
 
-## <a name="no-inheriting-office-script-classes-or-interfaces"></a>Отсутствие Office классов или интерфейсов скрипта
+## <a name="no-inheriting-office-script-classes-or-interfaces"></a>Нет наследующих Office классов или интерфейсов скриптов
 
-Классы и интерфейсы, созданные в вашем Office, [не могут](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) расширить или реализовать Office классов или интерфейсов скриптов. Другими словами, ничто в `ExcelScript` пространстве имен не может иметь подклассов или подповерхностных данных.
+Классы и интерфейсы, созданные в Office скрипта, не могут расширять или [внедрять](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) Office скрипты или интерфейсы. Другими словами, ничто в пространстве имен не может `ExcelScript` иметь подклассов или подинтерфейсов.
 
 ## <a name="incompatible-typescript-functions"></a>Несовместимые функции TypeScript
 
-Office API-файлы скриптов не могут быть использованы в следующих:
+Office API скриптов нельзя использовать в следующих следующих сценариях:
 
 * [Функции генератора](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Iterators_and_Generators#generator_functions)
 * [Array.sort](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 ## <a name="eval-is-not-supported"></a>`eval` не поддерживается
 
-Функция JavaScript [eval не](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval) поддерживается по соображениям безопасности.
+Функция [eval JavaScript](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/eval) не поддерживается из соображений безопасности.
 
-## <a name="restricted-identifers"></a>Ограниченные идентификаторы
+## <a name="restricted-identifers"></a>Ограниченные identifers
 
-Следующие слова не могут быть использованы в качестве идентификаторов в скрипте. Это зарезервированные условия.
+Следующие слова нельзя использовать в качестве идентификаторов в скрипте. Это зарезервированные условия.
 
 * `Excel`
 * `ExcelScript`
 * `console`
 
-## <a name="only-arrow-functions-in-array-callbacks"></a>Функции только стрелки в возвратах массивов
+## <a name="only-arrow-functions-in-array-callbacks"></a>Только функции стрелки в вызовах массива
 
-Скрипты могут использовать функции [стрелки только при предоставлении](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) аргументов обратного вызова для [методов Array.](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) Вы не можете передать эти методы какой-либо идентификатор или «традиционную» функцию.
+В скриптах можно использовать функции [стрелки](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions) только при предоставлении аргументов вызова для [методов Array.](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array) Эти методы не могут передавать какие-либо идентификаторы или "традиционные" функции.
 
 ```TypeScript
 const myArray = [1, 2, 3, 4, 5, 6];
@@ -81,13 +81,13 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="performance-warnings"></a>Предупреждения о производительности
 
-Линтер редактора кода [предупреждает, если](https://wikipedia.org/wiki/Lint_(software)) у скрипта могут возникнуть проблемы с производительностью. Случаи и как обойти их задокументированы в [Улучшение производительности ваших Office скриптов](web-client-performance.md).
+Подкладка редактора кода [дает](https://wikipedia.org/wiki/Lint_(software)) предупреждения, если у скрипта могут возникнуть проблемы с производительностью. Случаи и их работа описаны в документе Улучшение производительности [Office скриптов.](web-client-performance.md)
 
 ## <a name="external-api-calls"></a>Внешние вызовы API
 
-Дополнительную [информацию можно получить в Office внешних API-поддержки](external-calls.md) в скриптах.
+Дополнительные сведения см. в Office службе поддержки [вызовов API.](external-calls.md)
 
 ## <a name="see-also"></a>См. также
 
 * [Основные сведения о сценариях Office в Excel в Интернете](scripting-fundamentals.md)
-* [Улучшение производительности ваших Office скриптов](web-client-performance.md)
+* [Повышение производительности Office скриптов](web-client-performance.md)

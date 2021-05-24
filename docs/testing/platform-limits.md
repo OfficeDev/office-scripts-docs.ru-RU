@@ -1,6 +1,6 @@
 ---
 title: Ограничения и требования платформы с Office скриптами
-description: Ограничения ресурсов и поддержка браузера для Office скриптов при использовании с Excel в Интернете
+description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете
 ms.date: 05/17/2021
 localization_priority: Normal
 ms.openlocfilehash: 7e81aaf2f96faeb67c815814fe3b7f1795651318
@@ -12,22 +12,22 @@ ms.locfileid: "52545583"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Ограничения и требования платформы с Office скриптами
 
-Есть некоторые ограничения платформы, о которых вы должны знать при разработке Office скриптов. В этой статье подробно подробно поддержки браузера и ограничения данных для Office скриптов для Excel в Интернете.
+Существуют некоторые ограничения платформы, о которых следует знать при разработке Office скриптов. В этой статье подробно извесятся о поддержке браузера и ограничениях данных для Office скриптов для Excel в Интернете.
 
 ## <a name="browser-support"></a>Поддержка браузеров
 
-Office Скрипты работают в любом [браузере, который Office для Интернета.](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или позже,](https://www.w3schools.com/Js/js_es6.asp) не будут работать с IE 11. Если люди в вашей организации по-прежнему используют этот браузер, обязательно проверьте ваши скрипты в этой среде при их совместном использовании.
+Office Скрипты работают в любом [браузере, Office для веб-сайта.](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или](https://www.w3schools.com/Js/js_es6.asp) более поздней, не будут работать с IE 11. Если люди в организации по-прежнему используют этот браузер, обязательно проверьте свои скрипты в этой среде при их совместном использовании.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ### <a name="third-party-cookies"></a>Сторонние файлы cookie
 
-Вашему браузеру нужны сторонние файлы cookie, которые могут показывать **вкладку Automate** в Excel в Интернете. Проверьте настройки браузера, если вкладка не отображается. Если вы используете сеанс частного браузера, возможно, потребуется каждый раз повторно включать эту настройку.
+Вашему браузеру нужны сторонние файлы cookie, включенные для показа вкладки **Automate** в Excel в Интернете. Проверьте параметры браузера, если вкладка не отображается. При использовании закрытого сеанса браузера может потребоваться каждый раз повторно включить этот параметр.
 
 > [!NOTE]
-> Некоторые браузеры называют эту настройку «всеми файлами cookie», а не «сторонними файлами cookie».
+> Некоторые браузеры ссылаются на этот параметр как на "все файлы cookie", а не на "сторонние файлы cookie".
 
-#### <a name="instructions-for-adjusting-cookie-settings-in-popular-browsers"></a>Инструкции по настройке настроек файлов cookie в популярных браузерах
+#### <a name="instructions-for-adjusting-cookie-settings-in-popular-browsers"></a>Инструкции по настройке параметров cookie в популярных браузерах
 
 - [Chrome](https://support.google.com/chrome/answer/95647)
 - [Microsoft Edge](https://support.microsoft.com/microsoft-edge/temporarily-allow-cookies-and-site-data-in-microsoft-edge-597f04f2-c0ce-f08c-7c2b-541086362bd2)
@@ -36,29 +36,29 @@ Office Скрипты работают в любом [браузере, кото
 
 ## <a name="data-limits"></a>Ограничения данных
 
-Существуют ограничения на то, Excel данные могут быть переданы сразу и сколько отдельных Power Automate транзакций могут быть проведены.
+Существуют ограничения по объему Excel данных, которые могут быть переданы одновременно, и Power Automate отдельных транзакций.
 
 ### <a name="excel"></a>Excel
 
-Excel для Интернета имеет следующие ограничения при звонках в трудовую книжку через скрипт:
+Excel веб-страницы имеет следующие ограничения при вызове в книгу с помощью скрипта:
 
-- Запросы и ответы ограничены **5MB**.
+- Запросы и ответы ограничены **5МБ.**
 - Диапазон ограничен пятью **миллионами ячеек.**
 
-Если вы столкнулись с ошибками при работе с большими наборами данных, попробуйте использовать несколько меньших диапазонов вместо больших диапазонов. Например, [см.](../resources/samples/write-large-dataset.md) Вы также можете использовать API, такие как [Range.getSpecialCells, для таргетинга](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) на определенные ячейки вместо больших диапазонов.
+Если вы сталкиваетесь с ошибками при работе с большими наборами данных, попробуйте использовать несколько меньших диапазонов вместо больших диапазонов. Пример см. в [примере Write a large dataset](../resources/samples/write-large-dataset.md) sample. Вы также можете использовать API, такие как [Range.getSpecialCells,](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-) чтобы нацелить определенные ячейки вместо больших диапазонов.
 
 ### <a name="power-automate"></a>Power Automate
 
-При использовании Office скриптов Power Automate, каждый пользователь ограничен **400 вызовов на run Script действий в день**. Этот лимит сбрасывается в 12:00 UTC.
+При использовании Office скриптов с Power Automate каждый пользователь может использовать **400** вызовов к действию Run Script в день. Это ограничение сбрасывается в 12:00 утра по UTC.
 
 Платформа Power Automate также имеет ограничения использования, которые можно найти в следующих статьях:
 
 - [Ограничения и конфигурация в Power Automate](/power-automate/limits-and-config)
-- [Известные проблемы и ограничения для Excel Online (Бизнес) разъем](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+- [Известные проблемы и ограничения для соединиттеля Excel Online (Бизнес)](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 ## <a name="see-also"></a>См. также
 
-- [Устранение неполадок Office скриптов](troubleshooting.md)
+- [Устранение Office скриптов](troubleshooting.md)
 - [Отмена эффектов сценариев Office](undo.md)
-- [Улучшение производительности ваших Office скриптов](../develop/web-client-performance.md)
-- [Основы сценариев для Office сценариев в Excel в Интернете](../develop/scripting-fundamentals.md)
+- [Повышение производительности Office скриптов](../develop/web-client-performance.md)
+- [Основы сценариев для Office скриптов в Excel в Интернете](../develop/scripting-fundamentals.md)
