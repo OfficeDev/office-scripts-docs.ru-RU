@@ -51,8 +51,6 @@ items:
             href: develop/typescript-restrictions.md
           - name: Отмена эффектов сценариев Office
             href: testing/undo.md
-          - name: Поддержка более ранних версий сценариев Office
-            href: develop/excel-async-model.md
       - name: Примеры
         items:
           - name: Обзор
