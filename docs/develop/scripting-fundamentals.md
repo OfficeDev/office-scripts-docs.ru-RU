@@ -1,26 +1,24 @@
 ---
-title: Основы сценариев для сценариев Office в Excel в Интернете
+title: Основные сведения о сценариях Office в Excel для Интернета
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: d930c9ee36933cb0458de8cce4f1d1adc7b6a001
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 629e816ea988d6b8ffe5264c701e3a1eba6c6feb
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545104"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639896"
 ---
-# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Основы сценариев для сценариев Office в Excel в Интернете (предварительная версия)
+# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Основные сведения о сценариях Office в Excel для Интернета
 
 Эта статья познакомит вас с техническими аспектами сценариев Office. Вы узнаете, как объекты Excel работают вместе и как редактор кода синхронизируется с книгой.
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## <a name="typescript-the-language-of-office-scripts"></a>TypeScript: язык сценариев Office
 
 Сценарии Office написаны на языке [TypeScript](https://www.typescriptlang.org/docs/home.html), который является супермножеством [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript). Если вы знакомы с JavaScript, ваши знания пригодятся, так как большая часть кода одинакова в обоих языках. Перед началом написания кода сценариев Office рекомендуется получить опыт программирования на начальном уровне. Следующие ресурсы помогут вам понять код сценариев Office.
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="main-function-the-scripts-starting-point"></a>Функция `main`: начальная точка сценария
 
@@ -91,7 +89,7 @@ function main(workbook: ExcelScript.Workbook) {
     let productData = [
         ["Almonds", 6, 7.5],
         ["Coffee", 20, 34.5],
-        ["Chocolate", 10, 9.56],
+        ["Chocolate", 10, 9.54],
     ];
     let dataRange = sheet.getRange("B3:D5");
     dataRange.setValues(productData);
@@ -115,6 +113,32 @@ function main(workbook: ExcelScript.Workbook) {
 Выполнение этого скрипта создает следующие данные в текущей рабочей таблице:
 
 :::image type="content" source="../images/range-sample.png" alt-text="Лист с записями о продажах, содержащий строки значений, столбец формулы и отформатированные заголовки":::
+
+### <a name="the-types-of-range-values"></a>Типы значений диапазона
+
+Каждая ячейка содержит значение. Это значение является базовым значением, введенным в ячейку, которое может отличаться от текста, отображаемого в Excel. Например, в ячейке может отображаться дата 02.05.2021, но действительное значение — 44318. Это отображаемое значение можно изменить с использованием числового формата, но действительное значение и тип в ячейке изменяются только при настройке нового значения.
+
+При использовании значения ячейки важно сообщить TypeScript, какое значение вы ожидаете получить из ячейки или диапазона. Ячейка содержит один из следующих типов: `string`, `number`или `boolean`. Чтобы сценарий обрабатывал возвращенные значения как один из этих типов, необходимо объявить тип.
+
+Следующий сценарий получает среднюю цену из таблицы в предыдущем примере. Обратите внимание на код `priceRange.getValues() as number[][]`. Это [утверждает](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) `number[][]` в качестве типа значений диапазона. После этого все значения в этом массиве могут рассматриваться как числа в сценарии.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active worksheet.
+  let sheet = workbook.getActiveWorksheet();
+
+  // Get the "Unit Price" column. 
+  // The result of calling getValues is declared to be a number[][] so that we can perform arithmetic operations.
+  let priceRange = sheet.getRange("D3:D5");
+  let prices = priceRange.getValues() as number[][];
+
+  // Get the average price.
+  let totalPrices = 0;
+  prices.forEach((price) => totalPrices += price[0]);
+  let averagePrice = totalPrices / prices.length;
+  console.log(averagePrice);
+}
+```
 
 ## <a name="charts-tables-and-other-data-objects"></a>Диаграммы, таблицы и другие объекты данных
 

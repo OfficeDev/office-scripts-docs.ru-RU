@@ -3,12 +3,12 @@ title: Устранение Office скриптов
 description: Отладка советов и методов для Office скриптов, а также ресурсов справки.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: ff0ac1e63084c7c541d2a4925f1f011d16fa4992
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 04ea0ea5d49d40667d249a6f4f4b109e03362940
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545560"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631705"
 ---
 # <a name="troubleshoot-office-scripts"></a>Устранение Office скриптов
 
@@ -84,9 +84,11 @@ console.log(myRange.getAddress());
 
 [Переполнение стека](https://stackoverflow.com/questions/tagged/office-scripts) — это сообщество разработчиков, готовых помочь с проблемами кодирования. Часто вы сможете найти решение проблемы с помощью быстрого поиска переполнения стека. Если нет, задайте свой вопрос и пометите его тегом "Office-scripts". Не забудьте упомянуть, что вы создаете сценарий *Office,* а не Office *надстройки.*
 
-Если возникла проблема с API Office JavaScript, создайте проблему в репозитории [OfficeDev/office-js](https://github.com/OfficeDev/office-js) GitHub. Члены группы продуктов будут реагировать на проблемы и предоставлять дополнительную помощь. Создание проблемы в репозитории **OfficeDev/office-js** указывает на то, что в библиотеке API Office JavaScript, которую должна решить группа продуктов, обнаружена ошибка.
+Чтобы отправить запрос на Office скрипты, отправьте свою идею на страницу Голос пользователя [или](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)если запрос на функции уже существует, добавьте свой голос за него. Не забудьте подать запрос в Excel веб-страницы в категории "Макрос, скрипты и надстройки".
 
-Если возникла проблема с регистратором действий или редактором, отправьте отзывы через кнопку справки **>** обратной связи в Excel.
+Если возникла проблема с регистратором действий или редактором, сообщите нам об этом. В меню области задач редактора кода **выберите** кнопку **Отправка** отзывов, чтобы поделиться любыми вопросами.
+
+:::image type="content" source="../images/code-editor-feedback.png" alt-text="Меню редактора кода переполнено кнопкой &quot;Отправить обратную связь&quot;":::
 
 ## <a name="see-also"></a>См. также
 

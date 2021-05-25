@@ -1,16 +1,16 @@
 ---
-title: Сценарии Office в Excel в Интернете
+title: Сценарии Office в Excel для Интернета
 description: Краткое введение в регистратор действий и редактор кода для сценариев Office.
-ms.date: 05/17/2021
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 36bf679c1778375ad2fb010d34efc88678fd9f57
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: fe1552ca51e8ef251f029aa11968725ad466a841
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545815"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639889"
 ---
-# <a name="office-scripts-in-excel-on-the-web-preview"></a>Сценарии Office в Excel в Интернете (предварительный просмотр)
+# <a name="office-scripts-in-excel-on-the-web"></a>Сценарии Office в Excel для Интернета
 
 Сценарии Office в Excel в Интернете позволяют автоматизировать повседневные задачи. Вы можете записывать свои действия в Excel с помощью средства записи действий, создающего сценарий на языке TypeScript. Вы также можете создавать и редактировать сценарии с помощью редактора кода. После этого можно поделиться сценариями в организации, чтобы ваши коллеги также могли автоматизировать свои рабочие процессы.
 
@@ -21,8 +21,6 @@ ms.locfileid: "52545815"
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
 ## <a name="requirements"></a>Требования
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 Для использования сценариев Office вам потребуются следующие компоненты.
 
@@ -62,13 +60,13 @@ ms.locfileid: "52545815"
 
 Один из простых способов начать изучение возможностей Office Scripts - это запись сценариев в Excel в Интернете и просмотр полученного кода. Другой вариант заключается в том, чтобы следовать нашим [учебным пособиям](../tutorials/excel-tutorial.md), чтобы учиться более структурированным образом.
 
-После завершения работы с учебником ознакомьтесь со статьей [Основы создания сценариев Office в Excel в Интернете](../develop/scripting-fundamentals.md), чтобы узнать больше о редакторе кода, а также способе записи и изменения собственных сценариев. Дополнительные сведения о редакторе кода и способе интерпретации кода сценария см. в статье [Среда редактора кода сценариев Office](code-editor-environment.md).
+После завершения работы с учебником ознакомьтесь со статьей [Основные сведения о сценариях Office в Excel для Интернета](../develop/scripting-fundamentals.md), чтобы узнать больше о редакторе кода, а также способе записи и изменения собственных сценариев. Дополнительные сведения о редакторе кода и способе интерпретации кода сценария см. в статье [Среда редактора кода сценариев Office](code-editor-environment.md).
 
 ## <a name="sharing-scripts"></a>Общий доступ к сценариям
 
 :::image type="content" source="../images/script-sharing.png" alt-text="Страница сведений о сценариях, на которой отображается параметр &quot;Поделиться с другими пользователями в этой книге&quot;":::
 
-Сценариями Office можно поделиться с другими пользователям книги Excel. Когда вы делитесь сценарием с другими пользователями в книге, он прикрепляется к книге. Ваши сценарии хранятся в вашем хранилище OneDrive, а когда вы делитесь сценарием, в книге, которую вы открыли, создается ссылка на него.
+Сценариями Office можно поделиться с другими пользователям книги Excel. При совместном доступе к сценарию в общей книге все, у кого есть доступ к книге, также смогут просматривать и запускать ваш сценарий.
 
 Дополнительные сведения об общем доступе и отмене общего доступа к сценариям см. в статье [Общий доступ к сценариям Office в Excel в Интернете](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
 
@@ -81,11 +79,11 @@ ms.locfileid: "52545815"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Завершите [руководство по сценариям Office в Microsoft Excel в Интернете](../tutorials/excel-tutorial.md), чтобы узнать, как создавать свои первые сценарии Office.
+Завершите [руководство по сценариям Office в Excel для Интернета](../tutorials/excel-tutorial.md), чтобы узнать, как создать свой первый сценарий.
 
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения о сценариях Office в Excel в Интернете](../develop/scripting-fundamentals.md)
+- [Основные сведения о сценариях Office в Excel для Интернета](../develop/scripting-fundamentals.md)
 - [Справочник API для сценариев Office](/javascript/api/office-scripts/overview)
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)
 - [Параметры сценариев Office в M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)

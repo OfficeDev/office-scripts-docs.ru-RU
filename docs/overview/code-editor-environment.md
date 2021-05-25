@@ -1,14 +1,14 @@
 ---
 title: Office Среда редактора кода скриптов
 description: Необходимые условия и сведения об среде для Office скриптов в Excel в Интернете.
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: aa54939826f8dda2a068df0f3fabf0fd3a2c842b
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: aca97c31ba970617a9fa270021a5b5b976ae4a57
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545824"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639882"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office Среда редактора кода скриптов
 
@@ -20,7 +20,7 @@ Office Скрипты написаны в TypeScript или JavaScript и исп
 
 Office Скрипты — это в основном автономные фрагменты кода. Используется только малая часть функциональных возможностей TypeScript. Таким образом, вы можете изменить сценарии, не изучив тонкости TypeScript. Редактор кода также обрабатывает установку, компиляцию и выполнение кода, поэтому вам не нужно беспокоиться ни о чем, кроме самого сценария. Можно изучать язык и создавать сценарии без предыдущих знаний о программировании. Однако, если вы не знаете программирования, мы рекомендуем изучать некоторые основы перед тем, как Office скрипты:
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="office-scripts-javascript-api"></a>Office API скриптов JavaScript
 

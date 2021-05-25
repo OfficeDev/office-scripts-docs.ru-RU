@@ -1,14 +1,14 @@
 ---
 title: Устранение Office скриптов, запущенных в Power Automate
 description: Советы, сведения о платформе и известные проблемы с интеграцией между Office и Power Automate.
-ms.date: 05/17/2021
+ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: e26378051c764d97b4e8d748abc85fbe095c7b03
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545574"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631666"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Устранение Office скриптов, запущенных в Power Automate
 
@@ -23,11 +23,11 @@ Power Automate сценарий выполняется в выбранной Exc
 
 Некоторые относительные API ссылки бросают ошибки в Power Automate. Другие имеют поведение по умолчанию, которое подразумевает состояние пользователя. При разработке сценариев обязательно используйте абсолютные ссылки для таблиц и диапазонов. Это делает поток Power Automate согласованным, даже если таблицы переостановки.
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>Методы скрипта, которые не работают при Power Automate потоках
+### <a name="script-methods-that-fail-when-run-in-power-automate-flows"></a>Методы скрипта, которые не работают при Power Automate потоках
 
-Следующие методы будут бросать ошибку и сбой при набрав из сценария в потоке Power Automate.
+Следующие методы вбрасывать ошибку и сбой при призыве из сценария в потоке Power Automate.
 
-| Класс | Метод |
+| Класс | Method |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
@@ -41,10 +41,25 @@ Power Automate сценарий выполняется в выбранной Exc
 
 В следующих методах используется поведение по умолчанию вместо текущего состояния любого пользователя.
 
-| Класс | Метод | Power Automate поведения |
+| Класс | Method | Power Automate поведения |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Возвращает либо первую таблицу в книге, либо таблицу, активированную `Worksheet.activate` методом. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Отмечает таблицу как активную таблицу для целей `Workbook.getActiveWorksheet` . |
+
+## <a name="data-refresh-not-supported-in-power-automate"></a>Обновление данных не поддерживается в Power Automate
+
+Office Скрипты не могут обновлять данные при Power Automate. Такие методы, `PivotTable.refresh` как не делают ничего, когда они вызваны в потоке. Кроме того, Power Automate не запускает обновление данных для формул, которые используют ссылки на книги.
+
+### <a name="script-methods-that-do-nothing-when-run-in-power-automate-flows"></a>Методы скрипта, которые ничего не делают при Power Automate потоках
+
+Следующие методы ничего не делают в скрипте при Power Automate. Они по-прежнему успешно возвращаются и не выбрасывают ошибок.
+
+| Класс | Method |
+|--|--|
+| [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>Выбор книг с управлением браузером файлов
 
