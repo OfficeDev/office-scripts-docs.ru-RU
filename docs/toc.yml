@@ -95,6 +95,8 @@ items:
                 href: resources/scenarios/noaa-data-fetch.md
               - name: Калькулятор оценок
                 href: resources/scenarios/grade-calculator.md
+              - name: Планирование собеседований в Teams
+                href: resources/scenarios/schedule-interviews-in-teams.md
               - name: Напоминания о задачах (с помощью Power Automate)
                 href: resources/scenarios/task-reminders.md
           - name: Вклад сообщества
