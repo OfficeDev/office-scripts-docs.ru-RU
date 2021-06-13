@@ -1,14 +1,14 @@
 ---
 title: Office Хранение и владение файлами скриптов
 description: Сведения о том, Office скрипты хранятся в Microsoft OneDrive и передаются между владельцами.
-ms.date: 05/21/2021
+ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 25683d2b6ac2e8ac47b465b24fa087af83175806
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: b7ccb3ceae99a3a10bb56d5a4e56cc869d99850e
+ms.sourcegitcommit: 7dcb13daa3a765b87295e5a453a8f123e17ee24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631659"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52906789"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office Хранение и владение файлами скриптов
 
@@ -22,6 +22,14 @@ Office Скрипты хранятся как **файлы .osts** в Microsoft 
 
 Скрипты, общие для одной из ваших книг, остаются в OneDrive. Они не копируется ни в одной из локальных или OneDrive папок при запуске общего скрипта в Excel. Кнопка **Make a Copy** редактора кода сохраняет отдельную копию сценария в OneDrive. Изменения в копии не влияют на исходный сценарий.
 
+### <a name="restore-deleted-scripts"></a>Восстановление удаленных скриптов
+
+При удалении сценария в Excel он отправляется в OneDrive корзину. Чтобы восстановить удаленный сценарий, выполните действия, указанные в [списке Восстановление](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)удаленных файлов или папок в OneDrive . Восстановление файла **.osts** возвращает его в список **всех скриптов.**
+
+Удаленный сценарий не удаляется вместе с книгой. При восстановлении скрипта он **не сохраняет** доступ к скрипту. Вам потребуется еще раз поделиться сценарием.
+
+Восстановленные скрипты по-прежнему работают так, как Power Automate потоками. Нет необходимости воссоздавать соединителет потока.
+
 ## <a name="file-ownership-and-retention"></a>Владение и хранение файлов
 
 Office Скрипты хранятся в OneDrive. Они следуют политикам хранения и удаления, указанным Microsoft OneDrive. Сведения о том, как обрабатывать сценарии, созданные и предоставленные пользователем, удаляемым из вашей организации, см. в статье [Хранение и удаление в OneDrive](/onedrive/retention-and-deletion).
@@ -30,7 +38,7 @@ Office Скрипты хранятся в OneDrive. Они следуют пол
 
 ## <a name="audit-office-scripts-usage-at-the-admin-level"></a>Использование Office аудита на уровне администрирования
 
-Узнайте, какие клиенты используют Office скрипты с журналом аудита в центре соответствия требованиям. Чтобы узнать, как использовать этот инструмент, посетите журнал поиска аудита в Центре [& безопасности.](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log)
+Узнайте, какие клиенты используют Office скрипты с журналом аудита в центре соответствия требованиям. Чтобы узнать, как использовать этот инструмент, посетите журнал поиска аудита в Центре [& безопасности.](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)
 
 Чтобы найти, кто использует Office скрипты с помощью средства поиска, добавьте в `.osts` **файл, папку** или поле сайта. При этом выполняется поиск всех файлов с расширением Office скриптов. Если кто-либо в вашей организации использовал Office скрипты, действие пользователя появляется в результатах поиска журнала аудита.
 
