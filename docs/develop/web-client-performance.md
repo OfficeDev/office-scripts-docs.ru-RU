@@ -3,12 +3,12 @@ title: Повышение производительности Office скрип
 description: Создайте более быстрые сценарии, понимая связь между Excel книгой и скриптом.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 512e2108cb81cf9ac8ae98980951d5d01b3d2de9
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: a5bd879625b9c3bac0caa621dde312f7c961dd5c
+ms.sourcegitcommit: 2aaf7dc527cb6c9f1206550b2c5745280503b2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52544993"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957702"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>Повышение производительности Office скриптов
 
@@ -100,9 +100,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>Помощь в разных случаях
 
-По мере расширения платформы Office скриптов для работы с [Power Automate,](https://flow.microsoft.com/) [адаптивными](/adaptive-cards)картами и другими функциями кросс-продукта, сведения о связи скрипта и книги становятся более сложными. Если вам нужна помощь по ускорению запуска сценария, обратитесь к [Microsoft Q&A](/answers/topics/office-scripts-dev.html). Обязательно пометите свой вопрос с помощью "office-scripts-dev", чтобы эксперты могли найти его и помочь.
+По мере расширения платформы Office скриптов для работы с [Power Automate,](https://flow.microsoft.com/) [адаптивными](/adaptive-cards)картами и другими функциями кросс-продукта, сведения о связи скрипта и книги становятся более сложными. Если вам нужна помощь по ускорению запуска сценария, обратитесь к [Microsoft Q&A](/answers/topics/office-scripts-excel-dev.html). Обязательно пометите свой вопрос с помощью "office-scripts-dev", чтобы эксперты могли найти его и помочь.
 
 ## <a name="see-also"></a>См. также
 
-- [Основные сведения о сценариях Office в Excel в Интернете](scripting-fundamentals.md)
+- [Основные сведения о сценариях Office в Excel для Интернета](scripting-fundamentals.md)
 - [Веб-документы MDN: циклы и итерация](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Loops_and_iteration)
