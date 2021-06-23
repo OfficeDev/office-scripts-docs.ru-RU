@@ -3,37 +3,37 @@ title: 'Office Сценарий примера сценариев: анализ 
 description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовать эту информацию в таблицу.
 ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232713"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074461"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="7dd8a-103">Office Сценарий примера сценариев: анализ веб-загрузки</span><span class="sxs-lookup"><span data-stu-id="7dd8a-103">Office Scripts sample scenario: Analyze web downloads</span></span>
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="5b8d5-103">Office Сценарий примера сценариев: анализ веб-загрузки</span><span class="sxs-lookup"><span data-stu-id="5b8d5-103">Office Scripts sample scenario: Analyze web downloads</span></span>
 
-<span data-ttu-id="7dd8a-104">В этом сценарии вам будет поручено проанализировать отчеты о загрузке с веб-сайта вашей компании.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="7dd8a-105">Цель этого анализа состоит в том, чтобы определить, идет ли веб-трафик из США или других стран мира.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
+<span data-ttu-id="5b8d5-104">В этом сценарии вам будет поручено проанализировать отчеты о загрузке с веб-сайта вашей компании.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="5b8d5-105">Цель этого анализа состоит в том, чтобы определить, идет ли веб-трафик из США или других стран мира.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
 
-<span data-ttu-id="7dd8a-106">Ваши коллеги загружают необработанные данные в книгу.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="7dd8a-107">Набор данных каждую неделю имеет свой собственный таблицу.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="7dd8a-108">Существует также таблица **сводки** с таблицей и диаграммой, которая отображает тенденции недели за неделю.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
+<span data-ttu-id="5b8d5-106">Ваши коллеги загружают необработанные данные в книгу.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="5b8d5-107">Набор данных каждую неделю имеет свой собственный таблицу.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="5b8d5-108">Существует также таблица **сводки** с таблицей и диаграммой, которая отображает тенденции недели за неделю.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
 
-<span data-ttu-id="7dd8a-109">Вы разработаете сценарий, который анализирует еженедельные скачивания данных в активном таблице.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="7dd8a-110">Он будет размазить IP-адрес, связанный с каждым скачиванием, и определить, поступил ли он из США или нет.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="7dd8a-111">Ответ будет вставлен в таблицу как значение boolean ("TRUE" или "FALSE") и условное форматирование будет применено к этим ячейкам.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="7dd8a-112">Результаты расположения IP-адресов будут подведены на таблицу и скопированы в сводную таблицу.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
+<span data-ttu-id="5b8d5-109">Вы разработаете сценарий, который анализирует еженедельные скачивания данных в активном таблице.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="5b8d5-110">Он будет размазить IP-адрес, связанный с каждым скачиванием, и определить, поступил ли он из США или нет.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="5b8d5-111">Ответ будет вставлен в таблицу как значение boolean ("TRUE" или "FALSE") и условное форматирование будет применено к этим ячейкам.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="5b8d5-112">Результаты расположения IP-адресов будут подведены на таблицу и скопированы в сводную таблицу.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="7dd8a-113">Навыки скриптов, охватываемых</span><span class="sxs-lookup"><span data-stu-id="7dd8a-113">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="5b8d5-113">Навыки скриптов, охватываемых</span><span class="sxs-lookup"><span data-stu-id="5b8d5-113">Scripting skills covered</span></span>
 
-- <span data-ttu-id="7dd8a-114">Размыв текста</span><span class="sxs-lookup"><span data-stu-id="7dd8a-114">Text parsing</span></span>
-- <span data-ttu-id="7dd8a-115">Subfunctions in scripts</span><span class="sxs-lookup"><span data-stu-id="7dd8a-115">Subfunctions in scripts</span></span>
-- <span data-ttu-id="7dd8a-116">Условное форматирование</span><span class="sxs-lookup"><span data-stu-id="7dd8a-116">Conditional formatting</span></span>
-- <span data-ttu-id="7dd8a-117">Tables</span><span class="sxs-lookup"><span data-stu-id="7dd8a-117">Tables</span></span>
+- <span data-ttu-id="5b8d5-114">Размыв текста</span><span class="sxs-lookup"><span data-stu-id="5b8d5-114">Text parsing</span></span>
+- <span data-ttu-id="5b8d5-115">Subfunctions in scripts</span><span class="sxs-lookup"><span data-stu-id="5b8d5-115">Subfunctions in scripts</span></span>
+- <span data-ttu-id="5b8d5-116">Условное форматирование</span><span class="sxs-lookup"><span data-stu-id="5b8d5-116">Conditional formatting</span></span>
+- <span data-ttu-id="5b8d5-117">Таблицы</span><span class="sxs-lookup"><span data-stu-id="5b8d5-117">Tables</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="7dd8a-118">Инструкции по настройке</span><span class="sxs-lookup"><span data-stu-id="7dd8a-118">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="5b8d5-118">Инструкции по настройке</span><span class="sxs-lookup"><span data-stu-id="5b8d5-118">Setup instructions</span></span>
 
-1. <span data-ttu-id="7dd8a-119">Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-119">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="5b8d5-119">Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-119">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="7dd8a-120">Откройте книгу с помощью Excel веб-страницы.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-120">Open the workbook with Excel for the web.</span></span>
+2. <span data-ttu-id="5b8d5-120">Откройте книгу с помощью Excel для Интернета.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-120">Open the workbook with Excel for the web.</span></span>
 
-3. <span data-ttu-id="7dd8a-121">В **вкладке Automate** откройте **все скрипты.**</span><span class="sxs-lookup"><span data-stu-id="7dd8a-121">Under the **Automate** tab, open **All Scripts**.</span></span>
+3. <span data-ttu-id="5b8d5-121">В **вкладке Automate** откройте **все скрипты.**</span><span class="sxs-lookup"><span data-stu-id="5b8d5-121">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-4. <span data-ttu-id="7dd8a-122">В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="5b8d5-122">В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -209,18 +209,18 @@ ms.locfileid: "52232713"
     }
     ```
 
-5. <span data-ttu-id="7dd8a-123">Переименуйте сценарий **для анализа веб-скачивания** и сохранения его.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-123">Rename the script to **Analyze Web Downloads** and save it.</span></span>
+5. <span data-ttu-id="5b8d5-123">Переименуйте сценарий **для анализа веб-скачивания** и сохранения его.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-123">Rename the script to **Analyze Web Downloads** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="7dd8a-124">Выполнение скрипта</span><span class="sxs-lookup"><span data-stu-id="7dd8a-124">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="5b8d5-124">Выполнение скрипта</span><span class="sxs-lookup"><span data-stu-id="5b8d5-124">Running the script</span></span>
 
-<span data-ttu-id="7dd8a-125">Перейдите к любому из таблиц **Недели \* \*** и запустите сценарий **Анализ веб-загрузки.**</span><span class="sxs-lookup"><span data-stu-id="7dd8a-125">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="7dd8a-126">Сценарий будет применять условное форматирование и маркировку расположения на текущем листе.</span><span class="sxs-lookup"><span data-stu-id="7dd8a-126">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="7dd8a-127">Кроме того, будет обновлена **таблица Сводка.**</span><span class="sxs-lookup"><span data-stu-id="7dd8a-127">It will also update the **Summary** worksheet.</span></span>
+<span data-ttu-id="5b8d5-125">Перейдите к любому из таблиц **Недели \* \*** и запустите сценарий **Анализ веб-загрузки.**</span><span class="sxs-lookup"><span data-stu-id="5b8d5-125">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="5b8d5-126">Сценарий будет применять условное форматирование и маркировку расположения на текущем листе.</span><span class="sxs-lookup"><span data-stu-id="5b8d5-126">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="5b8d5-127">Кроме того, будет обновлена **таблица Сводка.**</span><span class="sxs-lookup"><span data-stu-id="5b8d5-127">It will also update the **Summary** worksheet.</span></span>
 
-### <a name="before-running-the-script"></a><span data-ttu-id="7dd8a-128">Перед запуском сценария</span><span class="sxs-lookup"><span data-stu-id="7dd8a-128">Before running the script</span></span>
+### <a name="before-running-the-script"></a><span data-ttu-id="5b8d5-128">Перед запуском сценария</span><span class="sxs-lookup"><span data-stu-id="5b8d5-128">Before running the script</span></span>
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, отображаемая необработанные данные веб-трафика":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, в которую показаны необработанные данные веб-трафика.":::
 
-### <a name="after-running-the-script"></a><span data-ttu-id="7dd8a-130">После запуска скрипта</span><span class="sxs-lookup"><span data-stu-id="7dd8a-130">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="5b8d5-130">После запуска скрипта</span><span class="sxs-lookup"><span data-stu-id="5b8d5-130">After running the script</span></span>
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика.":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, на которой обобщены таблицы, на которых был прорабатлан сценарий":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, в которой обобщены таблицы, на которых был прорабатлан сценарий.":::
