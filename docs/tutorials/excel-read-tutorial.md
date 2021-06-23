@@ -3,12 +3,12 @@ title: Чтение данных книги с помощью сценариев
 description: Учебник по сценариям Office о чтении данных из книг и их оценке в сценарии.
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 979ad949f999f67ee9de750c53ba4690ce6294e6
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aa05533f0d7cd3b53e4eb616ae3216d672d026f9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232853"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074692"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Чтение данных книги с помощью сценариев Office в Excel в Интернете
 
@@ -73,7 +73,7 @@ ms.locfileid: "52232853"
 8. Когда двухмерный массив регистрируется в консоли, она группирует значения столбцов под каждой строкой. Разверните журнал массива, нажав синий треугольник.
 9. Разверните второй уровень массива, нажав появившийся синий треугольник. Вот что вы увидите теперь:
 
-    :::image type="content" source="../images/tutorial-4.png" alt-text="Журнал консоли, отображающий результат &quot;–20,05&quot;, размещенный под двумя массивами":::
+    :::image type="content" source="../images/tutorial-4.png" alt-text="Журнал консоли, отображающий результат &quot;–20,05&quot;, размещенный под двумя массивами.":::
 
 ## <a name="modify-the-value-of-a-cell"></a>Изменение значения ячейки
 
@@ -143,7 +143,7 @@ ms.locfileid: "52232853"
 
     Теперь банковская выписка должна выглядеть следующим образом:
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="Лист с банковской выпиской в виде отформатированной таблицы только с положительными значениями":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="Таблица, показывающая банковскую выписку в виде отформатированной таблицы только с положительными значениями.":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
