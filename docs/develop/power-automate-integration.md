@@ -3,12 +3,12 @@ title: Запустите Office скрипты с Power Automate
 description: Как получить Office скрипты для Excel в Интернете работы с рабочим Power Automate рабочим процессом.
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 7562a2b2359cde67a9a47e0640515018fe23ac35
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 96b07501e07383ace5ff88a8bc6b64ef145ebd5e
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545042"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074426"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Запустите Office скрипты с Power Automate
 
@@ -99,7 +99,7 @@ Power Automate позволяет передавать фрагменты дан
 
 На следующем скриншоте показан Power Automate, который запускается [](https://github.com/) при GitHub назначена вам проблема. Поток запускает сценарий, который добавляет проблему в таблицу в Excel книге. Если в этой таблице имеется пять или более проблем, поток отправляет напоминание по электронной почте.
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="Редактор Power Automate потока, показывающий поток примера":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="Редактор Power Automate потока, показывающий поток примера.":::
 
 Функция скрипта указывает ID проблемы и название выпуска в качестве параметров ввода, и скрипт возвращает количество строк в `main` таблице вопросов.
 

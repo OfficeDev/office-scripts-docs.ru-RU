@@ -3,12 +3,12 @@ title: Запуск сценария для всех файлов Excel в па�
 description: Узнайте, как запустить сценарий для всех Excel файлов в папке на OneDrive для бизнеса.
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: fb9a4deb01b52ef031cb1ba3400bd6f10de9d9f5
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545795"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074587"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>Запуск сценария для всех файлов Excel в папке
 
@@ -77,21 +77,21 @@ function main(workbook: ExcelScript.Workbook) {
 1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
 1. Добавьте новый **шаг,** использующий **соединителю OneDrive для бизнеса** и файлы **List в действии папки.**
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="Завершенный OneDrive для бизнеса в Power Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="Завершенный OneDrive для бизнеса в Power Automate.":::
 1. Выберите папку "Продажи" с извлеченными книгами.
 1. Чтобы убедиться, что выбраны только книги, выберите **новый** шаг, а затем выберите **Условие** и установите следующие значения:
     1. **Имя** (значение OneDrive файла)
     1. "заканчивается"
     1. xlsx.
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="Блок Power Automate, который применяет последующие действия к каждому файлу":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="Блок Power Automate, который применяет последующие действия к каждому файлу.":::
 1. В **филиале If Yes** **добавьте соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
     1. **Расположение**: OneDrive для бизнеса
     1. **Библиотека документов**: OneDrive
     1. **Файл**: **Id** (OneDrive файла)
     1. **Сценарий:** имя сценария
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate.":::
 1. Сохраните поток и попробуйте его.
 
 ## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>Обучающее видео: запустите сценарий для всех Excel файлов в папке

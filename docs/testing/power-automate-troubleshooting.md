@@ -3,12 +3,12 @@ title: Устранение Office скриптов, запущенных в Pow
 description: Советы, сведения о платформе и известные проблемы с интеграцией между Office и Power Automate.
 ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: 7ba128314c0d632a3e77792b7ee545bfb7dca71d
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631666"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074636"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Устранение Office скриптов, запущенных в Power Automate
 
@@ -27,7 +27,7 @@ Power Automate сценарий выполняется в выбранной Exc
 
 Следующие методы вбрасывать ошибку и сбой при призыве из сценария в потоке Power Automate.
 
-| Класс | Method |
+| Класс | Метод |
 |--|--|
 | [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
@@ -41,7 +41,7 @@ Power Automate сценарий выполняется в выбранной Exc
 
 В следующих методах используется поведение по умолчанию вместо текущего состояния любого пользователя.
 
-| Класс | Method | Power Automate поведения |
+| Класс | Метод | Power Automate поведения |
 |--|--|--|
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | Возвращает либо первую таблицу в книге, либо таблицу, активированную `Worksheet.activate` методом. |
 | [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | Отмечает таблицу как активную таблицу для целей `Workbook.getActiveWorksheet` . |
@@ -54,7 +54,7 @@ Office Скрипты не могут обновлять данные при Pow
 
 Следующие методы ничего не делают в скрипте при Power Automate. Они по-прежнему успешно возвращаются и не выбрасывают ошибок.
 
-| Класс | Method |
+| Класс | Метод |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
 | [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
@@ -65,7 +65,7 @@ Office Скрипты не могут обновлять данные при Pow
 
 При создании шага **сценария run** Power Automate потока необходимо выбрать, какая книга является частью потока. Используйте браузер файлов, чтобы выбрать книгу, а не вручную вводить имя книги.
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="Действие Power Automate run script, показывающая параметр браузера файла Show Picker":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="Действие Power Automate запуска скрипта, показывающая параметр браузера файлов Show Picker.":::
 
 Дополнительные контексты Power Automate ограничения и обсуждения потенциальных обходных пути для динамического выбора книг см. в этом потоке в [Microsoft Power Automate Community](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#).
 

@@ -3,12 +3,12 @@ title: Выходные Excel как JSON
 description: Узнайте, как вывод данных Excel таблицы как JSON для использования в Power Automate.
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 9b8c0c48b969cfd05750ca4a6703a5ecbb9d18d2
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: fefeda4f7e60880758f8f01e03f437a70c4111d4
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285817"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074573"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Данные Excel таблицы как JSON для использования в Power Automate
 
@@ -16,17 +16,17 @@ Excel таблицы могут быть представлены в виде м
 
 _Данные таблицы ввода_
 
-:::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода":::
+:::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода.":::
 
 Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет всплыть в JSON дополнительные уровни данных ячейки.
 
 _Данные таблицы ввода, включаемой гиперссылки_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, отформатированный как гиперссылки":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, форматированный как гиперссылки.":::
 
 _Диалоговое окно для редактирования гиперссылки_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="Диалоговое окно Изменить гиперссылку, отображающий параметры для изменения гиперссылки":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="Диалоговое окно Редактирование гиперссылки, отображающий параметры для изменения гиперссылки.":::
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 

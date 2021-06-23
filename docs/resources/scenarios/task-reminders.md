@@ -3,12 +3,12 @@ title: 'Office Пример сценария: автоматические на�
 description: Пример, использующий Power Automate и адаптивные карты, автоматизирует напоминания о задачах в таблице управления проектами.
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: c254a627da8442c0974263908a41275182740b6e
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 1297f10e45c515079994d659378331fc4a2be744
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545610"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074664"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office Пример сценария: автоматические напоминания о задачах
 
@@ -24,7 +24,7 @@ ms.locfileid: "52545610"
 - Teams Адаптивные карты
 - Таблицы
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 В этом [сценарии используются Power Automate](https://flow.microsoft.com) и [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). Вам потребуется как связанное с учетной записью, используемой для разработки Office скриптов. Чтобы получить бесплатный доступ к подписке microsoft Developer, чтобы узнать об этих приложениях и работать с ними, рассмотрите возможность присоединения [к программе Microsoft 365 разработчика.](https://developer.microsoft.com/microsoft-365/dev-program)
 
@@ -161,7 +161,7 @@ ms.locfileid: "52545610"
     - **Файл**: task-reminders.xlsx *(выбранный через браузер файлов)*
     - **Сценарий**: Get People
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="Поток Power Automate, показывающий первый шаг потока скрипта Run":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="Поток Power Automate, показывающий первый шаг потока скрипта Run.":::
 
 12. Далее поток должен обрабатывать каждого сотрудника в массиве, возвращаемом скриптом. Нажмите **кнопку Новый** шаг и выберите **Сообщение адаптивной** карты Teams пользователю и ждать ответа .
 
@@ -222,7 +222,7 @@ ms.locfileid: "52545610"
     - **senderEmail:** email *(динамическое содержимое из Excel)*
     - **statusReportResponse**: response *(динамическое содержимое из Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="Поток Power Automate, показывающий каждый шаг apply-to-each":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="Поток Power Automate, показывающий каждый шаг apply-to-each.":::
 
 17. Сохраните поток.
 
@@ -234,12 +234,12 @@ ms.locfileid: "52545610"
 
 ### <a name="before-running-the-flow"></a>Перед запуском потока
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="Таблица с отчетом о состоянии, содержащая одну отсутствующую запись состояния":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="Таблица с отчетом о состоянии, содержащим одну отсутствующую запись состояния.":::
 
 ### <a name="receiving-the-adaptive-card"></a>Получение адаптивной карты
 
-:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Адаптивная карта в Teams запрашивает у сотрудника обновление состояния":::
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="Адаптивная карта в Teams запрашивает у сотрудника обновление состояния.":::
 
 ### <a name="after-running-the-flow"></a>После запуска потока
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="Таблица с отчетом о состоянии с записью состояния, заполненной в настоящее время":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="Таблица с отчетом о состоянии с записью состояния, заполненной в настоящее время.":::

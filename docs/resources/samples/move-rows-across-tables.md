@@ -3,12 +3,12 @@ title: Перемещение строк по таблицам с Office скр�
 description: Узнайте, как перемещать строки по таблицам, экономя фильтры, а затем обрабатывая и повторно примыкая к фильтрам.
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 02fa99ff0444924bd2d44ad4fa421fe66fbd7272
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: c850ed055457f6733694027469a96a87e74ef66a
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285943"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074454"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>Перемещение строк по таблицам с сохранением фильтров, а затем обработкой и повторной обработкой фильтров
 
@@ -18,7 +18,7 @@ ms.locfileid: "52285943"
 * Перемещает все выбранные строки в другую (целевую) таблицу на другой таблице.
 * Повторное повторное появление соответствующих фильтров в исходных таблицах.
 
-:::image type="content" source="../../images/table-filter-before-after.png" alt-text="Скриншоты книги до и после":::
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="Скриншоты книги до и после.":::
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 

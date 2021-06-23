@@ -1,14 +1,14 @@
 ---
-title: Расписание интервью в Teams
+title: Планирование собеседований в Teams
 description: Узнайте, как использовать Office скрипты для отправки собрания Teams из Excel данных.
 ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: f93d9ceca6603ddb9e7123a393787fcf54597cca
-ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
+ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697786"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074433"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Office Пример сценария: Расписание интервью в Teams
 
@@ -140,7 +140,7 @@ interface InterviewInvite {
     1. **Расположение**: OneDrive для бизнеса
     1. **Библиотека документов**: OneDrive
     1. **Файл**: hr-interviews.xlsx *(выбранный через браузер файлов)*
-    1. **Сценарий.** Расписание интервью Снимок экрана завершенного :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="соединиттеля Excel Online (Бизнес)"::: для получения данных интервью из книги в Power Automate
+    1. **Сценарий.** Запланировать скриншот интервью с завершенным :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="соединитетелем Excel Online (Бизнес),"::: чтобы получить данные интервью из книги в Power Automate.
 1. Добавьте новый **шаг,** использующий **действие Create a Teams собрания.** При выборе динамического контента Excel соединители, для каждого блока создается применение к каждому блоку.  Заполнять соединитектор следующими значениями.
     1. **Calendar id**: Calendar
     1. **Тема:** Интервью Contoso
@@ -148,13 +148,13 @@ interface InterviewInvite {
     1. **Часовой пояс**: Тихоокеанское стандартное время
     1. **Время начала:** **StartTime** (Excel значение)
     1. **End time:** **FinishTime** (Excel значение)
-    1. **Необходимые участники:** **CandidateEmail;** **InterviewerEmail** (Excel значений) Снимок экрана завершенного соединиттеля Teams для расписания :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="собраний в Power Automate":::
+    1. **Необходимые участники:** **CandidateEmail;** **InterviewerEmail** (Excel значений) Снимок экрана завершенного соединиттеля Teams для расписания :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="собраний в Power Automate.":::
 1. В том же **применить к каждому блоку** добавить **еще один соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения.
     1. **Расположение**: OneDrive для бизнеса
     1. **Библиотека документов**: OneDrive
     1. **Файл**: hr-interviews.xlsx *(выбранный через браузер файлов)*
     1. **Сценарий:** Запись отправленных приглашений
-    1. **приглашает:** результат **(Excel** значение) Снимок экрана завершенного соединиттеля Excel :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Online (Бизнес)"::: для записи того, что приглашения были отправлены в Power Automate
+    1. **приглашает:**  результат (Excel) Снимок экрана завершенного соединиттеля :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Excel Online (Бизнес)"::: для записи, что приглашения были отправлены в Power Automate.
 1. Сохраните поток и попробуйте его.
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>Обучающее видео: отправка Teams собрания из Excel данных

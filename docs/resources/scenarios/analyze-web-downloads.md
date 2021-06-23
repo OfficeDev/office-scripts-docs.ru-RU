@@ -3,12 +3,12 @@ title: 'Office Сценарий примера сценариев: анализ 
 description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовать эту информацию в таблицу.
 ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232713"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074461"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office Сценарий примера сценариев: анализ веб-загрузки
 
@@ -23,13 +23,13 @@ ms.locfileid: "52232713"
 - Размыв текста
 - Subfunctions in scripts
 - Условное форматирование
-- Tables
+- Таблицы
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 
 1. Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.
 
-2. Откройте книгу с помощью Excel веб-страницы.
+2. Откройте книгу с помощью Excel для Интернета.
 
 3. В **вкладке Automate** откройте **все скрипты.**
 
@@ -217,10 +217,10 @@ ms.locfileid: "52232713"
 
 ### <a name="before-running-the-script"></a>Перед запуском сценария
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, отображаемая необработанные данные веб-трафика":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="Таблица, в которую показаны необработанные данные веб-трафика.":::
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="Таблица, которая отображает отформатированные сведения о расположении IP с предыдущими строками веб-трафика.":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, на которой обобщены таблицы, на которых был прорабатлан сценарий":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="Сводная таблица и диаграмма, в которой обобщены таблицы, на которых был прорабатлан сценарий.":::

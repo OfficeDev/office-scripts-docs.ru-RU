@@ -4318,8 +4318,7 @@ Copyright (c) 2015 Yassine Elouafi
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.220 - MIT
-
+@types/office-js-preview 1.0.224 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 © Корпорация Майкрософт.
 
@@ -5180,11 +5179,11 @@ ansi-regex 4.1.0 — MIT https://github.com/chalk/ansi-regex#readme
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
 
-Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+c) Sindre Sorhus http://sindresorhus.com) (copyright c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-Лицензия MIT
+Лицензия MIT (MIT)
 
 Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -5199,11 +5198,11 @@ ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 ---------------------------------------------------------
 
-ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
-c) Sindre Sorhus http://sindresorhus.com) (copyright c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-Лицензия MIT (MIT)
+Лицензия MIT
 
 Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6299,7 +6298,7 @@ c) Sindre Sorhus https://sindresorhus.com) (copyright c) Sindre Sorhus <sindreso
 
 ---------------------------------------------------------
 
-camelcase 5.0.0 — MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.3.1 — MIT https://github.com/sindresorhus/camelcase#readme
 
 c) Sindre Sorhus https://sindresorhus.com) (copyright c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6318,7 +6317,7 @@ c) Sindre Sorhus https://sindresorhus.com) (copyright c) Sindre Sorhus <sindreso
 
 ---------------------------------------------------------
 
-camelcase 5.3.1 — MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.0.0 — MIT https://github.com/sindresorhus/camelcase#readme
 
 c) Sindre Sorhus https://sindresorhus.com) (copyright c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7187,7 +7186,7 @@ Copyright 2016 Selwyn <talk@selwyn.cc>
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 — MIT https://mths.be/cssesc
+cssesc 3.0.0 — MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7204,7 +7203,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 — MIT https://mths.be/cssesc
+cssesc 2.0.0 — MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7468,7 +7467,7 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-отлаг 4.1.1 — MIT https://github.com/visionmedia/debug#readme
+отлаг 3.2.6 — MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7488,7 +7487,7 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-отлаг 3.2.6 — MIT https://github.com/visionmedia/debug#readme
+отлаг 4.1.1 — MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -9460,26 +9459,6 @@ c) Sindre Sorhus http://sindresorhus.com) (copyright c) Sindre Sorhus <sindresor
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
-
-Copyright (c) 2015, John Schlinkert.
-Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
-
-Лицензия MIT (MIT)
-
-Copyright (c) 2015, John Schlinkert.
-
-Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
-
-Вышеупомянутое уведомление об авторских правах и данное уведомление о разрешении должны быть включены во все копии или значимые части Программного обеспечения.
-
-ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, ПОМИМО ПРОЧЕГО, ГАРАНТИИ ГОТОВНОСТИ ДЛЯ ПРОДАЖИ ИЛИ СООТВЕТСТВИЯ ОПРЕДЕЛЕННЫМ ЦЕЛЯМ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ВЛАДЕЛЬЦЫ АВТОРСКИХ ПРАВ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ В ОТНОШЕНИИ ЛЮБЫХ ПРЕТЕНЗИЙ, ПРИЧИНЕННОГО УЩЕРБА ИЛИ ИНОЙ ОТВЕТСТВЕННОСТИ ВСЛЕДСТВИЕ НАРУШЕНИЯ УСЛОВИЙ ДОГОВОРА, НЕБРЕЖНОСТИ ИЛИ ДРУГИХ НЕПРАВОМЕРНЫХ ДЕЙСТВИЙ КАСАТЕЛЬНО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ЕГО ИСПОЛЬЗОВАНИЯ ИЛИ ЛЮБОГО ИНОГО ДЕЙСТВИЯ ПРИМЕНИТЕЛЬНО К ПРОГРАММНОМУ ОБЕСПЕЧЕНИЮ.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
@@ -9500,7 +9479,27 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-isarray 1.0.0 — MIT https://github.com/juliangruber/isarray
+is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
+
+Copyright (c) 2015, John Schlinkert.
+Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
+
+Лицензия MIT (MIT)
+
+Copyright (c) 2015, John Schlinkert.
+
+Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
+
+Вышеупомянутое уведомление об авторских правах и данное уведомление о разрешении должны быть включены во все копии или значимые части Программного обеспечения.
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ, ПОМИМО ПРОЧЕГО, ГАРАНТИИ ГОТОВНОСТИ ДЛЯ ПРОДАЖИ ИЛИ СООТВЕТСТВИЯ ОПРЕДЕЛЕННЫМ ЦЕЛЯМ. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ВЛАДЕЛЬЦЫ АВТОРСКИХ ПРАВ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ В ОТНОШЕНИИ ЛЮБЫХ ПРЕТЕНЗИЙ, ПРИЧИНЕННОГО УЩЕРБА ИЛИ ИНОЙ ОТВЕТСТВЕННОСТИ ВСЛЕДСТВИЕ НАРУШЕНИЯ УСЛОВИЙ ДОГОВОРА, НЕБРЕЖНОСТИ ИЛИ ДРУГИХ НЕПРАВОМЕРНЫХ ДЕЙСТВИЙ КАСАТЕЛЬНО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ЕГО ИСПОЛЬЗОВАНИЯ ИЛИ ЛЮБОГО ИНОГО ДЕЙСТВИЯ ПРИМЕНИТЕЛЬНО К ПРОГРАММНОМУ ОБЕСПЕЧЕНИЮ.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+isarray 0.0.1 — MIT https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -9518,7 +9517,7 @@ Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
 ---------------------------------------------------------
 
-isarray 0.0.1 — MIT https://github.com/juliangruber/isarray
+isarray 1.0.0 — MIT https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -9730,7 +9729,7 @@ Copyright (c) 2015 Jordan Harband
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, John Schlinkert ( https://github.com/jonschlinkert) .
@@ -9749,7 +9748,7 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, John Schlinkert ( https://github.com/jonschlinkert) .
@@ -9924,14 +9923,14 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, John Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, John Schlinkert ( https://github.com/jonschlinkert) .
 
 Лицензия MIT (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -9944,14 +9943,14 @@ Copyright (c) 2014-2016, Jon Schlinkert
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, John Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, John Schlinkert ( https://github.com/jonschlinkert) .
 
 Лицензия MIT (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -10306,15 +10305,12 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-json3 3.3.3 — MIT https://bestiejs.github.io/json3
+json3 3.3.0 — MIT http://bestiejs.github.io/json3
 
-Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
+Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014, Kit Cambridge http://kit.mit-license.org
 
-Copyright (c) 2012-2015 Kit Cambridge.
+Copyright (c) 2012-2014 Kit Cambridge.
 http://kitcambridge.be/
-
-Copyright (c) 2013-2015 Benjamin Tan.
-https://d10.github.io/
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -10326,12 +10322,15 @@ https://d10.github.io/
 
 ---------------------------------------------------------
 
-json3 3.3.0 — MIT http://bestiejs.github.io/json3
+json3 3.3.3 — MIT https://bestiejs.github.io/json3
 
-Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014, Kit Cambridge http://kit.mit-license.org
+Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
 
-Copyright (c) 2012-2014 Kit Cambridge.
+Copyright (c) 2012-2015 Kit Cambridge.
 http://kitcambridge.be/
+
+Copyright (c) 2013-2015 Benjamin Tan.
+https://d10.github.io/
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -11390,7 +11389,7 @@ Copyright 2010 James Halliday (mail@substack.net)
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -11416,7 +11415,7 @@ Copyright (c) 2016 — настоящее время Корпорация Май
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -14971,24 +14970,6 @@ scheduler 0.19.1 - MIT https://reactjs.org/
 
 ---------------------------------------------------------
 
-схемы-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
-
-Copyright JS Foundation и другие участники
-
-Copyright JS Foundation и другие участники
-
-Таким образом, предоставляется бесплатное разрешение любому лицу, получившему копию этого программного обеспечения и связанных с ним файлов документации (программное обеспечение), иметь дело с программным обеспечением без ограничений, включая без ограничений права на использование, копирование, изменение, слияние, публикацию, распространение, распространение, подлицензию и/или продажу копий программного обеспечения, а также разрешение лицам, которым предоставлено программное обеспечение для этого, при условии следующих условий:
-
-Вышеупомянутое уведомление об авторских правах и данное уведомление о разрешении должны быть включены во все копии или значимые части Программного обеспечения.
-
-ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ ГАРАНТИИ ЛЮБОГО РОДА, ЭКСПРЕСС ИЛИ ПОДРАЗУМЕВАЕТСЯ, В ТОМ ЧИСЛЕ, НО НЕ ОГРАНИЧИВАЕТСЯ ГАРАНТИЯМИ ТОРГОВОЙ ДОСТУПНОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И NONINFRINGEMENT.
-НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ВЛАДЕЛЬЦЫ АВТОРСКИХ ПРАВ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ В ОТНОШЕНИИ ЛЮБЫХ ПРЕТЕНЗИЙ, ПРИЧИНЕННОГО УЩЕРБА ИЛИ ИНОЙ ОТВЕТСТВЕННОСТИ ВСЛЕДСТВИЕ НАРУШЕНИЯ УСЛОВИЙ ДОГОВОРА, НЕБРЕЖНОСТИ ИЛИ ДРУГИХ НЕПРАВОМЕРНЫХ ДЕЙСТВИЙ КАСАТЕЛЬНО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ЕГО ИСПОЛЬЗОВАНИЯ ИЛИ ЛЮБОГО ИНОГО ДЕЙСТВИЯ ПРИМЕНИТЕЛЬНО К ПРОГРАММНОМУ ОБЕСПЕЧЕНИЮ.
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 схемы-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation и другие участники
@@ -15008,6 +14989,24 @@ Copyright JS Foundation и другие участники
 ---------------------------------------------------------
 
 схемы-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+
+Copyright JS Foundation и другие участники
+
+Copyright JS Foundation и другие участники
+
+Таким образом, предоставляется бесплатное разрешение любому лицу, получившему копию этого программного обеспечения и связанных с ним файлов документации (программное обеспечение), иметь дело с программным обеспечением без ограничений, включая без ограничений права на использование, копирование, изменение, слияние, публикацию, распространение, распространение, подлицензию и/или продажу копий программного обеспечения, а также разрешение лицам, которым предоставлено программное обеспечение для этого, при условии следующих условий:
+
+Вышеупомянутое уведомление об авторских правах и данное уведомление о разрешении должны быть включены во все копии или значимые части Программного обеспечения.
+
+ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ "КАК ЕСТЬ", БЕЗ ГАРАНТИИ ЛЮБОГО РОДА, ЭКСПРЕСС ИЛИ ПОДРАЗУМЕВАЕТСЯ, В ТОМ ЧИСЛЕ, НО НЕ ОГРАНИЧИВАЕТСЯ ГАРАНТИЯМИ ТОРГОВОЙ ДОСТУПНОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЕННОЙ ЦЕЛИ И NONINFRINGEMENT.
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ ИЛИ ВЛАДЕЛЬЦЫ АВТОРСКИХ ПРАВ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ В ОТНОШЕНИИ ЛЮБЫХ ПРЕТЕНЗИЙ, ПРИЧИНЕННОГО УЩЕРБА ИЛИ ИНОЙ ОТВЕТСТВЕННОСТИ ВСЛЕДСТВИЕ НАРУШЕНИЯ УСЛОВИЙ ДОГОВОРА, НЕБРЕЖНОСТИ ИЛИ ДРУГИХ НЕПРАВОМЕРНЫХ ДЕЙСТВИЙ КАСАТЕЛЬНО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ, ЕГО ИСПОЛЬЗОВАНИЯ ИЛИ ЛЮБОГО ИНОГО ДЕЙСТВИЯ ПРИМЕНИТЕЛЬНО К ПРОГРАММНОМУ ОБЕСПЕЧЕНИЮ.
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+схемы-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
 
 Copyright JS Foundation и другие участники
 
@@ -15689,7 +15688,7 @@ c) Sindre Sorhus https://sindresorhus.com) (copyright c) Sindre Sorhus <sindreso
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 — MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 4.0.0 — MIT https://github.com/chalk/strip-ansi#readme
 
 Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -15708,7 +15707,7 @@ strip-ansi 5.2.0 — MIT https://github.com/chalk/strip-ansi#readme
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 — MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 5.2.0 — MIT https://github.com/chalk/strip-ansi#readme
 
 Авторское право (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
