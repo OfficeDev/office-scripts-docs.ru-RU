@@ -67,6 +67,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: Более сложные действия
             items:
+              - name: Перекрестные справочные таблицы
+                href: resources/samples/excel-cross-reference.md
               - name: Подсчет пустых строк на листах
                 href: resources/samples/count-blank-rows.md
               - name: Отправка по почте изображений диаграмм и таблиц
