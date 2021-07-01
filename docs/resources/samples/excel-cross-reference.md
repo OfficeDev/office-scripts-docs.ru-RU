@@ -1,42 +1,37 @@
 ---
-title: Перекрестная ссылка и формат Excel файла
+title: Перекрестные Excel файлы с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
-ms.date: 05/06/2021
+ms.date: 06/25/2021
 localization_priority: Normal
-ROBOTS: NOINDEX
-ms.openlocfilehash: f07395eb4e6c77b7aee3776e3252d135bc690a6f
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 89c4a5fa5dcff21681fa20cd4118447d39d9b6da
+ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545768"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "53202877"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>Перекрестная ссылка и формат Excel файла
+# <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестные Excel файлы с Power Automate
 
-Это решение показывает, как Excel двух файлов можно перекрестно ссылаться и форматирование с помощью Office и Power Automate.
+В этом решении показано, как сравнить данные между двумя Excel файлами, чтобы найти несоответствия. Он использует Office скрипты для анализа данных и Power Automate для связи между книгами.
 
-В проекте реализуется следующее:
+## <a name="example-scenario"></a>Пример сценария
 
-1. Извлекает данные событий из <a href="events.xlsx">events.xlsx</a> с помощью одного действия скрипта Run.
-1. Передает эти данные во второй Excel, содержащий данные транзакций событий, и использует эти данные для базовой проверки данных и форматирования отсутствующих или неправильных данных с помощью Office Scripts.
-1. По электронной почте результат передается рецензенту.
-
-Дополнительные сведения см. в перекрестной ссылке и [форматирования двух Excel с помощью Office Scripts.](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)
+Вы координатор событий, который составляет расписание докладчиков для предстоящих конференций. Данные событий будут храниться в одной таблице, а регистры динамиков - в другой. Чтобы обеспечить синхронизацию двух книг, для выделения потенциальных проблем используется поток с Office скриптами.
 
 ## <a name="sample-excel-files"></a>Пример Excel файлов
 
 Скачайте следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!
 
-1. <a href="events.xlsx">events.xlsx</a>
-1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
+1. <a href="event-data.xlsx">event-data.xlsx</a>
+1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
 
 ## <a name="sample-code-get-event-data"></a>Пример кода: получить данные событий
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook): EventData[] {
+function main(workbook: ExcelScript.Workbook): string {
   // Get the first table in the "Keys" worksheet.
   let table = workbook.getWorksheet('Keys').getTables()[0];
-  
+
   // Get the rows in the event table.
   let range = table.getRangeBetweenHeaderAndTotal();
   let rows = range.getValues();
@@ -44,30 +39,31 @@ function main(workbook: ExcelScript.Workbook): EventData[] {
   // Save each row as an EventData object. This lets them be passed through Power Automate.
   let records: EventData[] = [];
   for (let row of rows) {
-      let [event, date, location, capacity] = row;
-      records.push({
-          event: event as string,
-          date: date as number, 
-          location: location as string,
-          capacity: capacity as number
-      })
+    let [eventId, date, location, capacity] = row;
+    records.push({
+      eventId: eventId as string,
+      date: date as number,
+      location: location as string,
+      capacity: capacity as number
+    })
   }
 
   // Log the event data to the console and return it for a flow.
-  console.log(JSON.stringify(records));
-  return records;
+  let stringResult = JSON.stringify(records);
+  console.log(stringResult);
+  return stringResult;
 }
 
 // An interface representing a row of event data.
 interface EventData {
-  event: string
+  eventId: string
   date: number
   location: string
   capacity: number
 }
 ```
 
-## <a name="sample-code-validate-event-transactions"></a>Пример кода. Проверка транзакций событий
+## <a name="sample-code-validate-speaker-registrations"></a>Пример кода: Проверка регистрации спикеров
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -77,44 +73,35 @@ function main(workbook: ExcelScript.Workbook, keys: string): string {
   // Clear the existing formatting in the table.
   let range = table.getRangeBetweenHeaderAndTotal();
   range.clear(ExcelScript.ClearApplyTo.formats);
-    
- // Apply some basic formatting for readability.
-  table.getColumnByName('Date').getRangeBetweenHeaderAndTotal().setNumberFormatLocal("yyyy-mm-dd;@");
-  table.getColumnByName('Capacity').getRangeBetweenHeaderAndTotal().getFormat()
-    .setHorizontalAlignment(ExcelScript.HorizontalAlignment.center);
 
   // Compare the data in the table to the keys passed into the script.
   let keysObject = JSON.parse(keys) as EventData[];
+  let speakerSlotsRemaining = keysObject.map(value => value.capacity);
   let overallMatch = true;
 
-  // Iterate over every row.
+  // Iterate over every row looking for differences from the other worksheet.
   let rows = range.getValues();
   for (let i = 0; i < rows.length; i++) {
     let row = rows[i];
-    let [event, date, location, capacity] = row;
+    let [eventId, date, location, capacity] = row;
     let match = false;
 
     // Look at each key provided for a matching Event ID.
-    for (let keyObject of keysObject) {
-      if (keyObject.event === event) {
+    for (let keyIndex = 0; keyIndex < keysObject.length; keyIndex++) {
+      let event = keysObject[keyIndex];
+      if (event.eventId === eventId) {
         match = true;
-
+        speakerSlotsRemaining[keyIndex]--;
         // If there's a match on the event ID, look for things that don't match and highlight them.
-        if (keyObject.date !== date) {
+        if (event.date !== date) {
           overallMatch = false;
           range.getCell(i, 1).getFormat()
             .getFill()
             .setColor("FFFF00");
         }
-        if (keyObject.location !== location) {
+        if (event.location !== location) {
           overallMatch = false;
           range.getCell(i, 2).getFormat()
-            .getFill()
-            .setColor("FFFF00");
-        }
-        if (keyObject.capacity !== capacity) {
-          overallMatch = false;
-          range.getCell(i, 3).getFormat()
             .getFill()
             .setColor("FFFF00");
         }
@@ -128,28 +115,58 @@ function main(workbook: ExcelScript.Workbook, keys: string): string {
       overallMatch = false;
       range.getCell(i, 0).getFormat()
         .getFill()
-        .setColor("FFFF00");      
-    }  
+        .setColor("FFFF00");
+    }
   }
+
+  
 
   // Choose a message to send to the user.
   let returnString = "All the data is in the right order.";
   if (overallMatch === false) {
     returnString = "Mismatch found. Data requires your review.";
+  } else if (speakerSlotsRemaining.find(remaining => remaining < 0)){
+    returnString = "Event potentially overbooked. Please review."
   }
+
   console.log("Returning: " + returnString);
   return returnString;
 }
 
 // An interface representing a row of event data.
 interface EventData {
-  event: string
+  eventId: string
   date: number
   location: string
   capacity: number
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>Обучающее видео: перекрестная ссылка и формат Excel файла
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate: проверка несоответствий в книгах
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/dVwqBf483qo").
+Этот поток извлекает сведения о событиях из первой книги и использует эти данные для проверки второй книги.
+
+1. Вопишите [Power Automate](https://flow.microsoft.com) и создайте новый поток **мгновенных облаков.**
+1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
+1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
+    * **Расположение**: OneDrive для бизнеса
+    * **Библиотека документов**: OneDrive
+    * **Файл**: event-data.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **Сценарий:** Получить данные событий
+
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) для первого сценария в Power Automate.":::
+
+1. Добавьте второй **новый** шаг, использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
+    * **Расположение**: OneDrive для бизнеса
+    * **Библиотека документов**: OneDrive
+    * **Файл**: speaker-registration.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **Сценарий:** Проверка регистрации спикера
+
+    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Завершенный соедините Excel Online (Бизнес) для второго сценария в Power Automate.":::
+1. В этом примере Outlook как клиент электронной почты. Вы можете использовать любые соединители электронной почты Power Automate поддерживает. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия:
+    * **Чтобы:** ваша тестовая учетная запись электронной почты (или личная электронная почта)
+    * **Subject:** Результаты проверки событий
+    * **Body**: result _(динамическое содержимое из **сценария Run 2)**_
+
+    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate.":::
+1. Сохраните поток, а затем **выберите Тест,** чтобы попробовать его. Вы должны получить сообщение электронной почты с сообщением "Обнаружено несоответствие. Данные требуют проверки". Это означает, что между строками вspeaker-registrations.xlsx **и** строками вevent-data.xlsx **.** Откройте **speaker-registrations.xlsx,** чтобы увидеть несколько выделенных ячеек, где возможны проблемы с перечислениями регистрации динамиков.
