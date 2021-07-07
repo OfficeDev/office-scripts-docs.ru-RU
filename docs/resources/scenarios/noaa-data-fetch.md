@@ -1,34 +1,32 @@
 ---
 title: 'Office Пример сценария: Graph данных уровня воды из NOAA'
 description: Пример, который извлекает данные JSON из базы данных NOAA и использует их для создания диаграммы.
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aca2a966e6a0588c597d6f01f52f2c73354de0c1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232692"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313766"
 ---
-# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a><span data-ttu-id="5fe2c-103">Office Сценарий примера сценариев: извлечение и график данных уровня воды из NOAA</span><span class="sxs-lookup"><span data-stu-id="5fe2c-103">Office Scripts sample scenario: Fetch and graph water-level data from NOAA</span></span>
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a><span data-ttu-id="ae063-103">Office Сценарий примера сценариев: извлечение и график данных уровня воды из NOAA</span><span class="sxs-lookup"><span data-stu-id="ae063-103">Office Scripts sample scenario: Fetch and graph water-level data from NOAA</span></span>
 
-<span data-ttu-id="5fe2c-104">В этом сценарии необходимо совместить уровень воды на станции [National Oceanic and Atmospheric Administration's Seattle.](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)</span><span class="sxs-lookup"><span data-stu-id="5fe2c-104">In this scenario, you need to plot the water level at the [National Oceanic and Atmospheric Administration's Seattle station](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130).</span></span> <span data-ttu-id="5fe2c-105">Внешние данные используются для заполнения таблицы и создания диаграммы.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-105">You'll use external data to populate a spreadsheet and create a chart.</span></span>
+<span data-ttu-id="ae063-104">В этом сценарии необходимо совместить уровень воды на станции [National Oceanic and Atmospheric Administration's Seattle.](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)</span><span class="sxs-lookup"><span data-stu-id="ae063-104">In this scenario, you need to plot the water level at the [National Oceanic and Atmospheric Administration's Seattle station](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130).</span></span> <span data-ttu-id="ae063-105">Внешние данные используются для заполнения таблицы и создания диаграммы.</span><span class="sxs-lookup"><span data-stu-id="ae063-105">You'll use external data to populate a spreadsheet and create a chart.</span></span>
 
-<span data-ttu-id="5fe2c-106">Вы разработает сценарий, который использует команду для запроса базы `fetch` [данных NOAA Tides и Currents.](https://tidesandcurrents.noaa.gov/)</span><span class="sxs-lookup"><span data-stu-id="5fe2c-106">You'll develop a script that uses the `fetch` command to query the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/).</span></span> <span data-ttu-id="5fe2c-107">Это позволит получить уровень воды, записанный через заданный промежуток времени.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-107">That will get the water level recorded across a given time span.</span></span> <span data-ttu-id="5fe2c-108">Сведения будут возвращены в качестве JSON, поэтому часть сценария будет переводить их в значения диапазона.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-108">The information will be returned as JSON, so part of the script will translate that into range values.</span></span> <span data-ttu-id="5fe2c-109">После того как данные будут в таблице, они будут использоваться для сделайте диаграмму.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-109">Once the data is in the spreadsheet, it will be used to make a chart.</span></span>
+<span data-ttu-id="ae063-106">Вы разработает сценарий, который использует команду для запроса базы `fetch` [данных NOAA Tides и Currents.](https://tidesandcurrents.noaa.gov/)</span><span class="sxs-lookup"><span data-stu-id="ae063-106">You'll develop a script that uses the `fetch` command to query the [NOAA Tides and Currents database](https://tidesandcurrents.noaa.gov/).</span></span> <span data-ttu-id="ae063-107">Это позволит получить уровень воды, записанный через заданный промежуток времени.</span><span class="sxs-lookup"><span data-stu-id="ae063-107">That will get the water level recorded across a given time span.</span></span> <span data-ttu-id="ae063-108">Сведения будут возвращены в качестве JSON, поэтому часть сценария будет переводить их в значения диапазона.</span><span class="sxs-lookup"><span data-stu-id="ae063-108">The information will be returned as JSON, so part of the script will translate that into range values.</span></span> <span data-ttu-id="ae063-109">После того как данные будут в таблице, они будут использоваться для сделайте диаграмму.</span><span class="sxs-lookup"><span data-stu-id="ae063-109">Once the data is in the spreadsheet, it will be used to make a chart.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="5fe2c-110">Навыки скриптов, охватываемых</span><span class="sxs-lookup"><span data-stu-id="5fe2c-110">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="ae063-110">Навыки скриптов, охватываемых</span><span class="sxs-lookup"><span data-stu-id="ae063-110">Scripting skills covered</span></span>
 
-- <span data-ttu-id="5fe2c-111">Внешние вызовы API `fetch` ()</span><span class="sxs-lookup"><span data-stu-id="5fe2c-111">External API calls (`fetch`)</span></span>
-- <span data-ttu-id="5fe2c-112">Размыв JSON</span><span class="sxs-lookup"><span data-stu-id="5fe2c-112">JSON parsing</span></span>
-- <span data-ttu-id="5fe2c-113">Диаграммы</span><span class="sxs-lookup"><span data-stu-id="5fe2c-113">Charts</span></span>
+- <span data-ttu-id="ae063-111">Внешние вызовы API `fetch` ()</span><span class="sxs-lookup"><span data-stu-id="ae063-111">External API calls (`fetch`)</span></span>
+- <span data-ttu-id="ae063-112">Размыв JSON</span><span class="sxs-lookup"><span data-stu-id="ae063-112">JSON parsing</span></span>
+- <span data-ttu-id="ae063-113">Диаграммы</span><span class="sxs-lookup"><span data-stu-id="ae063-113">Charts</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="5fe2c-114">Инструкции по настройке</span><span class="sxs-lookup"><span data-stu-id="5fe2c-114">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="ae063-114">Инструкции по настройке</span><span class="sxs-lookup"><span data-stu-id="ae063-114">Setup instructions</span></span>
 
-1. <span data-ttu-id="5fe2c-115">Откройте книгу с помощью Excel в Интернете.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-115">Open the workbook with Excel on the web.</span></span>
+1. <span data-ttu-id="ae063-115">Откройте книгу с помощью Excel в Интернете.</span><span class="sxs-lookup"><span data-stu-id="ae063-115">Open the workbook with Excel on the web.</span></span>
 
-1. <span data-ttu-id="5fe2c-116">В **вкладке Automate** выберите **Все скрипты**.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-116">Under the **Automate** tab, select **All Scripts**.</span></span>
-
-1. <span data-ttu-id="5fe2c-117">В области **задач редактора** кода выберите **Новый скрипт** и вклеите следующий скрипт в редактор.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-117">In the **Code Editor** task pane, select **New Script** and paste the following script into the editor.</span></span>
+1. <span data-ttu-id="ae063-116">В **вкладке Automate** выберите **Новый скрипт** и вклеите следующий скрипт в редактор.</span><span class="sxs-lookup"><span data-stu-id="ae063-116">Under the **Automate** tab, select **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     /**
@@ -111,12 +109,12 @@ ms.locfileid: "52232692"
     }
     ```
 
-1. <span data-ttu-id="5fe2c-118">Переименуй сценарий в **диаграмму уровня воды NOAA** и сохраните его.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-118">Rename the script to **NOAA Water Level Chart** and save it.</span></span>
+1. <span data-ttu-id="ae063-117">Переименуй сценарий в **диаграмму уровня воды NOAA** и сохраните его.</span><span class="sxs-lookup"><span data-stu-id="ae063-117">Rename the script to **NOAA Water Level Chart** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="5fe2c-119">Выполнение скрипта</span><span class="sxs-lookup"><span data-stu-id="5fe2c-119">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="ae063-118">Выполнение скрипта</span><span class="sxs-lookup"><span data-stu-id="ae063-118">Running the script</span></span>
 
-<span data-ttu-id="5fe2c-120">На любом графике запустите сценарий **диаграммы уровня воды NOAA.**</span><span class="sxs-lookup"><span data-stu-id="5fe2c-120">On any worksheet, run the **NOAA Water Level Chart** script.</span></span> <span data-ttu-id="5fe2c-121">Сценарий извлекает данные уровня воды с 25 декабря 2020 г. по 27 декабря 2020 г.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-121">The script fetches the water level data from December 25, 2020 to December 27, 2020.</span></span> <span data-ttu-id="5fe2c-122">Переменные в начале сценария можно изменить, чтобы использовать разные даты `const` или получать различные сведения о станциях.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-122">The `const` variables at the beginning of the script can be changed to use different dates or get different station information.</span></span> <span data-ttu-id="5fe2c-123">API [CO-OPS for Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) описывает, как получить все эти данные.</span><span class="sxs-lookup"><span data-stu-id="5fe2c-123">The [CO-OPS API For Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) describes how to get all this data.</span></span>
+<span data-ttu-id="ae063-119">На любом графике запустите сценарий **диаграммы уровня воды NOAA.**</span><span class="sxs-lookup"><span data-stu-id="ae063-119">On any worksheet, run the **NOAA Water Level Chart** script.</span></span> <span data-ttu-id="ae063-120">Сценарий извлекает данные уровня воды с 25 декабря 2020 г. по 27 декабря 2020 г.</span><span class="sxs-lookup"><span data-stu-id="ae063-120">The script fetches the water level data from December 25, 2020 to December 27, 2020.</span></span> <span data-ttu-id="ae063-121">Переменные в начале сценария можно изменить, чтобы использовать разные даты `const` или получать различные сведения о станциях.</span><span class="sxs-lookup"><span data-stu-id="ae063-121">The `const` variables at the beginning of the script can be changed to use different dates or get different station information.</span></span> <span data-ttu-id="ae063-122">API [CO-OPS for Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) описывает, как получить все эти данные.</span><span class="sxs-lookup"><span data-stu-id="ae063-122">The [CO-OPS API For Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) describes how to get all this data.</span></span>
 
-### <a name="after-running-the-script"></a><span data-ttu-id="5fe2c-124">После запуска скрипта</span><span class="sxs-lookup"><span data-stu-id="5fe2c-124">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="ae063-123">После запуска скрипта</span><span class="sxs-lookup"><span data-stu-id="ae063-123">After running the script</span></span>
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма.":::

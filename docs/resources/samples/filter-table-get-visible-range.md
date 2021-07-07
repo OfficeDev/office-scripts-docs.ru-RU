@@ -1,30 +1,30 @@
 ---
 title: Фильтр Excel таблицы и получить видимый диапазон
 description: Узнайте, как использовать Office скрипты для фильтрации таблицы Excel и получения видимого диапазона в качестве массива объектов.
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 196e39ffdfb7e6ff2d0898802665d3c2eccc7dbe
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285796"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313955"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a><span data-ttu-id="37faf-103">Фильтр Excel таблицы и получить видимый диапазон в качестве объекта JSON</span><span class="sxs-lookup"><span data-stu-id="37faf-103">Filter Excel table and get visible range as a JSON object</span></span>
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a><span data-ttu-id="42496-103">Фильтр Excel таблицы и получить видимый диапазон в качестве объекта JSON</span><span class="sxs-lookup"><span data-stu-id="42496-103">Filter Excel table and get visible range as a JSON object</span></span>
 
-<span data-ttu-id="37faf-104">Этот пример фильтрует таблицу Excel и возвращает видимый диапазон в качестве объекта JSON.</span><span class="sxs-lookup"><span data-stu-id="37faf-104">This sample filters an Excel table and returns the visible range as a JSON object.</span></span> <span data-ttu-id="37faf-105">Этот JSON может быть предоставлен потоку Power Automate как часть более крупного решения.</span><span class="sxs-lookup"><span data-stu-id="37faf-105">This JSON could be provided to a Power Automate flow as part of a larger solution.</span></span>
+<span data-ttu-id="42496-104">Этот пример фильтрует таблицу Excel и возвращает видимый диапазон в качестве объекта JSON.</span><span class="sxs-lookup"><span data-stu-id="42496-104">This sample filters an Excel table and returns the visible range as a JSON object.</span></span> <span data-ttu-id="42496-105">Этот JSON может быть предоставлен потоку Power Automate как часть более крупного решения.</span><span class="sxs-lookup"><span data-stu-id="42496-105">This JSON could be provided to a Power Automate flow as part of a larger solution.</span></span>
 
-## <a name="example-scenario"></a><span data-ttu-id="37faf-106">Пример сценария</span><span class="sxs-lookup"><span data-stu-id="37faf-106">Example scenario</span></span>
+## <a name="example-scenario"></a><span data-ttu-id="42496-106">Пример сценария</span><span class="sxs-lookup"><span data-stu-id="42496-106">Example scenario</span></span>
 
-* <span data-ttu-id="37faf-107">Нанесите фильтр на столбец таблицы.</span><span class="sxs-lookup"><span data-stu-id="37faf-107">Apply a filter to a table column.</span></span>
-* <span data-ttu-id="37faf-108">Извлекать видимый диапазон после фильтрации.</span><span class="sxs-lookup"><span data-stu-id="37faf-108">Extract the visible range after filtering.</span></span>
-* <span data-ttu-id="37faf-109">Сборка и возвращение объекта с [определенной структурой JSON.](#sample-json)</span><span class="sxs-lookup"><span data-stu-id="37faf-109">Assemble and return an object with a [specific JSON structure](#sample-json).</span></span>
+* <span data-ttu-id="42496-107">Нанесите фильтр на столбец таблицы.</span><span class="sxs-lookup"><span data-stu-id="42496-107">Apply a filter to a table column.</span></span>
+* <span data-ttu-id="42496-108">Извлекать видимый диапазон после фильтрации.</span><span class="sxs-lookup"><span data-stu-id="42496-108">Extract the visible range after filtering.</span></span>
+* <span data-ttu-id="42496-109">Сборка и возвращение объекта с [определенной структурой JSON.](#sample-json)</span><span class="sxs-lookup"><span data-stu-id="42496-109">Assemble and return an object with a [specific JSON structure](#sample-json).</span></span>
 
-## <a name="sample-code-filter-a-table-and-get-visible-range"></a><span data-ttu-id="37faf-110">Пример кода: фильтруем таблицу и получаем видимый диапазон</span><span class="sxs-lookup"><span data-stu-id="37faf-110">Sample code: Filter a table and get visible range</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="42496-110">Пример Excel файла</span><span class="sxs-lookup"><span data-stu-id="42496-110">Sample Excel file</span></span>
 
-<span data-ttu-id="37faf-111">Следующий сценарий фильтрует таблицу и получает видимый диапазон.</span><span class="sxs-lookup"><span data-stu-id="37faf-111">The following script filters a table and gets the visible range.</span></span>
+<span data-ttu-id="42496-111">Скачайте <a href="table-filter.xlsx">table-filter.xlsx</a> для готовой к использованию книги.</span><span class="sxs-lookup"><span data-stu-id="42496-111">Download <a href="table-filter.xlsx">table-filter.xlsx</a> for a ready-to-use workbook.</span></span> <span data-ttu-id="42496-112">Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="42496-112">Add the following script to try the sample yourself!</span></span>
 
-<span data-ttu-id="37faf-112">Скачайте пример файла <a href="table-filter.xlsx">table-filter.xlsx</a> и используйте его с помощью этого скрипта, чтобы попробовать его самостоятельно!</span><span class="sxs-lookup"><span data-stu-id="37faf-112">Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and use it with this script to try it out yourself!</span></span>
+## <a name="sample-code-filter-a-table-and-get-visible-range"></a><span data-ttu-id="42496-113">Пример кода: фильтруем таблицу и получаем видимый диапазон</span><span class="sxs-lookup"><span data-stu-id="42496-113">Sample code: Filter a table and get visible range</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
@@ -88,9 +88,9 @@ interface ReturnTemplate {
 }
 ```
 
-### <a name="sample-json"></a><span data-ttu-id="37faf-113">Пример JSON</span><span class="sxs-lookup"><span data-stu-id="37faf-113">Sample JSON</span></span>
+### <a name="sample-json"></a><span data-ttu-id="42496-114">Пример JSON</span><span class="sxs-lookup"><span data-stu-id="42496-114">Sample JSON</span></span>
 
-<span data-ttu-id="37faf-114">Каждый ключ представляет уникальное значение таблицы.</span><span class="sxs-lookup"><span data-stu-id="37faf-114">Each key represents a unique value of a table.</span></span> <span data-ttu-id="37faf-115">Каждый экземпляр массива представляет строку, которая видна при применении соответствующего фильтра.</span><span class="sxs-lookup"><span data-stu-id="37faf-115">Each array instance represents the row that is visible when the corresponding filter is applied.</span></span>
+<span data-ttu-id="42496-115">Каждый ключ представляет уникальное значение таблицы.</span><span class="sxs-lookup"><span data-stu-id="42496-115">Each key represents a unique value of a table.</span></span> <span data-ttu-id="42496-116">Каждый экземпляр массива представляет строку, которая видна при применении соответствующего фильтра.</span><span class="sxs-lookup"><span data-stu-id="42496-116">Each array instance represents the row that is visible when the corresponding filter is applied.</span></span>
 
 ```json
 {
@@ -136,6 +136,6 @@ interface ReturnTemplate {
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a><span data-ttu-id="37faf-116">Обучающее видео: фильтровать таблицу Excel и получить видимый диапазон</span><span class="sxs-lookup"><span data-stu-id="37faf-116">Training video: Filter an Excel table and get the visible range</span></span>
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a><span data-ttu-id="42496-117">Обучающее видео: фильтровать таблицу Excel и получить видимый диапазон</span><span class="sxs-lookup"><span data-stu-id="42496-117">Training video: Filter an Excel table and get the visible range</span></span>
 
-<span data-ttu-id="37faf-117">[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/Mv7BrvPq84A).</span><span class="sxs-lookup"><span data-stu-id="37faf-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/Mv7BrvPq84A).</span></span>
+<span data-ttu-id="42496-118">[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/Mv7BrvPq84A).</span><span class="sxs-lookup"><span data-stu-id="42496-118">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/Mv7BrvPq84A).</span></span>
