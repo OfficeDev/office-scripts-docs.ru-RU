@@ -1,14 +1,14 @@
 ---
 title: Планирование собеседований в Teams
 description: Узнайте, как использовать Office скрипты для отправки собрания Teams из Excel данных.
-ms.date: 05/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: cb24da12637add805d86da4d07ce878509c6a5f6
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074433"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313731"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Office Пример сценария: Расписание интервью в Teams
 
@@ -32,7 +32,7 @@ ms.locfileid: "53074433"
 
 ## <a name="sample-code-extract-table-data-to-schedule-invites"></a>Пример кода. Извлечение данных таблицы для расписания приглашений
 
-Назови этот **сценарий Schedule Interviews** для потока.
+Добавьте этот скрипт в свою коллекцию скриптов. Назови **его Schedule Interviews** для потока.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -93,7 +93,7 @@ interface InterviewInvite {
 
 ## <a name="sample-code-mark-rows-as-invited"></a>Пример кода: пометить строки как приглашенные
 
-Назови этот **скрипт Запись отправленных приглашений** для потока.
+Добавьте этот скрипт в свою коллекцию скриптов. Назови **его Запись отправленных приглашений** для потока.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, invites: InterviewInvite[]) {
@@ -135,7 +135,7 @@ interface InterviewInvite {
 ## <a name="sample-flow-run-the-interview-scheduling-scripts-and-send-the-teams-meetings"></a>Пример потока: запустите сценарии планирования интервью и отправьте Teams собрания
 
 1. Создайте новый **поток мгновенных облаков.**
-1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
+1. Выберите **вручную вызвать поток и** выберите **Создать**.
 1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** и действие **скрипта Run.** Заполнять соединитектор следующими значениями.
     1. **Расположение**: OneDrive для бизнеса
     1. **Библиотека документов**: OneDrive
@@ -155,7 +155,7 @@ interface InterviewInvite {
     1. **Файл**: hr-interviews.xlsx *(выбранный через браузер файлов)*
     1. **Сценарий:** Запись отправленных приглашений
     1. **приглашает:**  результат (Excel) Снимок экрана завершенного соединиттеля :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Excel Online (Бизнес)"::: для записи, что приглашения были отправлены в Power Automate.
-1. Сохраните поток и попробуйте его.
+1. Сохраните поток и попробуйте его. Используйте **кнопку Test** на странице редактора потока или запустите поток через вкладку **Мои потоки.** Не забудьте разрешить доступ при запросе.
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>Обучающее видео: отправка Teams собрания из Excel данных
 

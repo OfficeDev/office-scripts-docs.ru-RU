@@ -1,14 +1,14 @@
 ---
 title: Удаление гиперссылки из каждой ячейки в Excel таблицы
 description: Узнайте, как использовать Office скрипты для удаления гиперссылки из каждой ячейки в Excel таблицы.
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 048d01691377a7086bdba9ceb87ca98839cfa4d1
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: dc33eb639edac8ada29824a53440031942e59179
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285803"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313752"
 ---
 # <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Удаление гиперссылки из каждой ячейки в Excel таблицы
 
@@ -17,9 +17,11 @@ ms.locfileid: "52285803"
 > [!NOTE]
 > Это работает только в том случае, если < 10k.
 
-## <a name="sample-code-remove-hyperlinks"></a>Пример кода. Удаление гиперссылки
+## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте файл <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx, </a> используемый в этом примере, и попробуйте его самостоятельно!
+Скачайте <a href="remove-hyperlinks.xlsx"> файлremove-hyperlinks.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+
+## <a name="sample-code-remove-hyperlinks"></a>Пример кода. Удаление гиперссылки
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

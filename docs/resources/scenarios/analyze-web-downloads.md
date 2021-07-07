@@ -1,14 +1,14 @@
 ---
 title: 'Office Сценарий примера сценариев: анализ веб-загрузки'
 description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовать эту информацию в таблицу.
-ms.date: 04/27/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: ec7ccd2a4f534be825ee4aa358f5d81becc53937
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074461"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313934"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office Сценарий примера сценариев: анализ веб-загрузки
 
@@ -29,11 +29,9 @@ ms.locfileid: "53074461"
 
 1. Скачайте <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> в OneDrive.
 
-2. Откройте книгу с помощью Excel для Интернета.
+1. Откройте книгу с помощью Excel для Интернета.
 
-3. В **вкладке Automate** откройте **все скрипты.**
-
-4. В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.
+1. В **вкладке Automate** выберите **Новый скрипт** и вклеите следующий скрипт в редактор.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -209,7 +207,7 @@ ms.locfileid: "53074461"
     }
     ```
 
-5. Переименуйте сценарий **для анализа веб-скачивания** и сохранения его.
+1. Переименуйте сценарий **для анализа веб-скачивания** и сохранения его.
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 

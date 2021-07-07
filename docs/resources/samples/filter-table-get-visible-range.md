@@ -1,14 +1,14 @@
 ---
 title: Фильтр Excel таблицы и получить видимый диапазон
 description: Узнайте, как использовать Office скрипты для фильтрации таблицы Excel и получения видимого диапазона в качестве массива объектов.
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 196e39ffdfb7e6ff2d0898802665d3c2eccc7dbe
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285796"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313955"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>Фильтр Excel таблицы и получить видимый диапазон в качестве объекта JSON
 
@@ -20,11 +20,11 @@ ms.locfileid: "52285796"
 * Извлекать видимый диапазон после фильтрации.
 * Сборка и возвращение объекта с [определенной структурой JSON.](#sample-json)
 
+## <a name="sample-excel-file"></a>Пример Excel файла
+
+Скачайте <a href="table-filter.xlsx">table-filter.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+
 ## <a name="sample-code-filter-a-table-and-get-visible-range"></a>Пример кода: фильтруем таблицу и получаем видимый диапазон
-
-Следующий сценарий фильтрует таблицу и получает видимый диапазон.
-
-Скачайте пример файла <a href="table-filter.xlsx">table-filter.xlsx</a> и используйте его с помощью этого скрипта, чтобы попробовать его самостоятельно!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {

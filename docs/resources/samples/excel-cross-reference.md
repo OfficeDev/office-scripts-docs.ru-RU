@@ -1,14 +1,14 @@
 ---
 title: Перекрестные Excel файлы с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 89c4a5fa5dcff21681fa20cd4118447d39d9b6da
-ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
+ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53202877"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313962"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестные Excel файлы с Power Automate
 
@@ -20,10 +20,12 @@ ms.locfileid: "53202877"
 
 ## <a name="sample-excel-files"></a>Пример Excel файлов
 
-Скачайте следующие файлы, используемые в этом решении, чтобы попробовать его самостоятельно!
+Скачайте следующие файлы, чтобы получить готовые к использованию книги для примера.
 
 1. <a href="event-data.xlsx">event-data.xlsx</a>
 1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+
+Добавьте следующие скрипты, чтобы попробовать пример самостоятельно!
 
 ## <a name="sample-code-get-event-data"></a>Пример кода: получить данные событий
 
@@ -147,7 +149,7 @@ interface EventData {
 Этот поток извлекает сведения о событиях из первой книги и использует эти данные для проверки второй книги.
 
 1. Вопишите [Power Automate](https://flow.microsoft.com) и создайте новый поток **мгновенных облаков.**
-1. Выберите **вручную вызвать поток и** нажмите **кнопку Создать**.
+1. Выберите **вручную вызвать поток и** выберите **Создать**.
 1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
     * **Расположение**: OneDrive для бизнеса
     * **Библиотека документов**: OneDrive
@@ -169,4 +171,5 @@ interface EventData {
     * **Body**: result _(динамическое содержимое из **сценария Run 2)**_
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate.":::
-1. Сохраните поток, а затем **выберите Тест,** чтобы попробовать его. Вы должны получить сообщение электронной почты с сообщением "Обнаружено несоответствие. Данные требуют проверки". Это означает, что между строками вspeaker-registrations.xlsx **и** строками вevent-data.xlsx **.** Откройте **speaker-registrations.xlsx,** чтобы увидеть несколько выделенных ячеек, где возможны проблемы с перечислениями регистрации динамиков.
+1. Сохраните поток. Используйте **кнопку Test** на странице редактора потока или запустите поток через вкладку **Мои потоки.** Не забудьте разрешить доступ при запросе.
+1. Вы должны получить сообщение электронной почты с сообщением "Обнаружено несоответствие. Данные требуют проверки". Это означает, что между строками вspeaker-registrations.xlsx **и** строками вevent-data.xlsx **.** Откройте **speaker-registrations.xlsx,** чтобы увидеть несколько выделенных ячеек, где возможны проблемы с перечислениями регистрации динамиков.

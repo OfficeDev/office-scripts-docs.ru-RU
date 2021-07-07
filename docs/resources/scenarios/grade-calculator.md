@@ -1,14 +1,14 @@
 ---
 title: 'Office Пример сценария: калькулятор оценки'
 description: Пример, определяя процент и оценки букв для класса учащихся.
-ms.date: 12/17/2020
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 2d98e68f37418ade238a707cb74cc7ccf47e8f59
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232699"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313794"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office Пример сценария: калькулятор оценки
 
@@ -27,11 +27,9 @@ ms.locfileid: "52232699"
 
 1. Скачайте <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> в OneDrive.
 
-2. Откройте книгу с помощью Excel веб-страницы.
+1. Откройте книгу с помощью Excel для Интернета.
 
-3. В **вкладке Automate** откройте **все скрипты.**
-
-4. В области **задач редактора** кода нажмите **кнопку Новый скрипт** и вклеите следующий скрипт в редактор.
+1. В **вкладке Automate** выберите **Новый скрипт** и вклеите следующий скрипт в редактор.
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -174,7 +172,7 @@ ms.locfileid: "52232699"
     }
     ```
 
-5. Переименуй сценарий в **калькулятор класса и** сохраните его.
+1. Переименуй сценарий в **калькулятор класса и** сохраните его.
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
@@ -182,8 +180,8 @@ ms.locfileid: "52232699"
 
 ### <a name="before-running-the-script"></a>Перед запуском сценария
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="Таблица, в которую показаны строки баллов для учащихся":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="Таблица, в которую показаны строки баллов для учащихся.":::
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="Таблица, отображающая данные о оценках учащихся с недействительными ячейками в красных итоговых числах для допустимых строк учащихся":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="Таблица, в которую показаны данные о оценках учащихся с недействительными ячейками в красных итоговых числах для допустимых студенческих строк.":::

@@ -1,14 +1,14 @@
 ---
 title: Добавление комментариев в Excel
 description: Узнайте, как использовать Office скрипты для добавления комментариев в таблицу.
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5e5d17c076eceaf06fddeea1a67d31ee3581f31
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 77e308d020281c71751e2652f8dbaec00c263e44
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285936"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313913"
 ---
 # <a name="add-comments-in-excel"></a>Добавление комментариев в Excel
 
@@ -26,9 +26,11 @@ ms.locfileid: "52285936"
 1. Затем скрипт добавляет комментарий (включая соответствующую электронную почту сотрудника) в соответствующую ячейку в записи смены.
 1. Существующие комментарии в ячейке удаляются перед добавлением нового комментария.
 
-## <a name="sample-code-add-comments"></a>Пример кода: добавление комментариев
+## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте файл <a href="excel-comments.xlsx">excel-comments.xlsx, </a> используемый в этом примере, и попробуйте его самостоятельно!
+Скачайте <a href="excel-comments.xlsx">excel-comments.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+
+## <a name="sample-code-add-comments"></a>Пример кода: добавление комментариев
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

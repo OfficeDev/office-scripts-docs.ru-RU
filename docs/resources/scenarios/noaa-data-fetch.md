@@ -1,14 +1,14 @@
 ---
 title: 'Office Пример сценария: Graph данных уровня воды из NOAA'
 description: Пример, который извлекает данные JSON из базы данных NOAA и использует их для создания диаграммы.
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aca2a966e6a0588c597d6f01f52f2c73354de0c1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232692"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313766"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office Сценарий примера сценариев: извлечение и график данных уровня воды из NOAA
 
@@ -26,9 +26,7 @@ ms.locfileid: "52232692"
 
 1. Откройте книгу с помощью Excel в Интернете.
 
-1. В **вкладке Automate** выберите **Все скрипты**.
-
-1. В области **задач редактора** кода выберите **Новый скрипт** и вклеите следующий скрипт в редактор.
+1. В **вкладке Automate** выберите **Новый скрипт** и вклеите следующий скрипт в редактор.
 
     ```TypeScript
     /**
@@ -119,4 +117,4 @@ ms.locfileid: "52232692"
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
-:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма":::
+:::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="В таблице после запуска скрипта показаны некоторые данные уровня воды и диаграмма.":::

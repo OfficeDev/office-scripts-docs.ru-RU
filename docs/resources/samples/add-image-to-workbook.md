@@ -1,14 +1,14 @@
 ---
 title: Добавление изображений в книгу
 description: Узнайте, как использовать Office скрипты, чтобы добавить изображение в книгу и скопировать его на листах.
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 64c356b2d76a561276b2955263555b16de27b3ba
-ms.sourcegitcommit: a2b85168d2b5e2c4e6951f808368f7d726400df0
+ms.openlocfilehash: 2ae77ca1295cf6e55443789506242d9cf888f9a1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2021
-ms.locfileid: "52592756"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313906"
 ---
 # <a name="add-images-to-a-workbook"></a>Добавление изображений в книгу
 
@@ -24,7 +24,7 @@ ms.locfileid: "52592756"
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте файл <a href="add-images.xlsx">add-images.xlsx, </a> используемый в этих примерах, и попробуйте его самостоятельно!
+Скачайте <a href="add-images.xlsx">add-images.xlsx</a> для готовой к использованию книги. Добавьте следующие скрипты и попробуйте пример самостоятельно!
 
 ## <a name="sample-code-copy-an-image-across-worksheets"></a>Пример кода. Скопируйте изображение в таблицах
 

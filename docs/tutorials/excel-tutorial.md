@@ -3,12 +3,12 @@ title: Запись, редактирование и создание сцена
 description: Учебник с основными сведениями о сценариях Office, включая запись сценариев с помощью средства записи действий и запись данных в книгу.
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: f9290a3d7dc723b72bfb4913171052472f2361c5
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6bcf603211aa07920e99178c35c6f405224c29bd
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074671"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313927"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Запись, редактирование и создание сценариев Office в Excel в Интернете
 
@@ -35,7 +35,7 @@ ms.locfileid: "53074671"
     |Лаймы |600 |500 |
     |Грейпфруты |900 |700 |
 
-3. Откройте вкладку **Автоматизировать**. Если вы не видите вкладку **Автоматизировать**, проверьте переполнение ленты, нажав стрелку раскрывающегося списка. Если нужного элемента по-прежнему нет, последуйте рекомендациям статьи [Устранение неполадок в сценариях Office](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
+3. Откройте вкладку **Автоматизация**. Если вы не видите вкладку **Автоматизация**, проверьте переполнение ленты, нажав стрелку раскрывающегося списка. Если нужного элемента по-прежнему нет, выполните рекомендации из статьи [Устранение неполадок в сценариях Office](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable).
 4. Нажмите кнопку **Записать действия**.
 5. Выделите ячейки **A2:C2** (строка "Апельсины") и установите оранжевый цвет заливки.
 6. Чтобы остановить запись, нажмите кнопку **Остановить**.
