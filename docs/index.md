@@ -5,12 +5,12 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: baa015f7f6384ccc2cdd7d8a4cbadcbc16167828
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 095fffbc0b92f4efb5dcdcde1cd5970d6fd3c3f1
+ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639903"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "53529220"
 ---
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
@@ -129,11 +129,11 @@ ms.locfileid: "52639903"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><h3>Задать вопрос</h3></a>
+                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Задать вопрос</h3></a>
                     </div>
                 </div>
             </div>

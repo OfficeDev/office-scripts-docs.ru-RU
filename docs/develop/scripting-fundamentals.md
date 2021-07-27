@@ -3,12 +3,12 @@ title: Основные сведения о сценариях Office в Excel �
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 9c3c10e283e40f1e719e73106bcdacfcff44dbc9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 8c153a6e9d5202a2c1f5a7db5c6bad760d211994
+ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074510"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "53529234"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Основные сведения о сценариях Office в Excel для Интернета
 
@@ -326,3 +326,4 @@ function main(workbook: ExcelScript.Workbook) {
 - [Справочник API для сценариев Office](/javascript/api/office-scripts/overview)
 - [Использование встроенных объектов JavaScript в сценариях Office](javascript-objects.md)
 - [Рекомендации по сценариям Office](best-practices.md)
+- [Центр разработчиков сценариев Office](https://developer.microsoft.com/office-scripts)

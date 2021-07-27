@@ -1,14 +1,14 @@
 ---
 title: Ограничения TypeScript в Office скриптах
 description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода Office скриптов.
-ms.date: 05/24/2021
+ms.date: 07/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 0bc6b4c0acaf9bb42f8200a0850dd7254632f965
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 530314b624ef4674de60e5cfac7735c90044fb56
+ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074447"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "53529227"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в Office скриптах
 
@@ -79,6 +79,31 @@ let filteredArray = myArray.filter((x) => {
     return x % 2 === 0;
   });
 */
+```
+
+## <a name="unions-of-excelscript-types-and-user-defined-types-arent-supported"></a>Союзы типов и типов, определенных `ExcelScript` пользователем, не поддерживаются
+
+Office Скрипты преобразуются во время запуска из синхронных в асинхронные блоки кода. Связь с книгой с помощью [обещаний](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) скрыта от создателя сценария. Это преобразование не поддерживает типы [профсоюзов,](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) которые включают типы и `ExcelScript` типы, определенные пользователем. В этом случае сценарий возвращается в сценарий, но компилятор Office скрипта не ожидает его, и создатель сценария не может взаимодействовать с `Promise` `Promise` .
+
+В следующем примере кода показан неподтверченный союз между `ExcelScript.Table` пользовательским `MyTable` интерфейсом.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  const selectedSheet = workbook.getActiveWorksheet();
+
+  // This union is not supported.
+  const tableOrMyTable: ExcelScript.Table | MyTable = selectedSheet.getTables()[0];
+
+  // `getName` returns a promise that can't be resolved by the script.
+  const name = tableOrMyTable.getName();
+
+  // This logs "{}" instead of the table name.
+  console.log(name);
+}
+
+interface MyTable {
+  getName(): string
+}
 ```
 
 ## <a name="performance-warnings"></a>Предупреждения о производительности
