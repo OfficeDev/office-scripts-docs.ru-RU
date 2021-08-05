@@ -3,12 +3,12 @@ title: Рекомендации по сценариям Office
 description: Предотвращение распространенных проблем и написание надежных Office скриптов, которые могут обрабатывать неожиданные входные данные или данные.
 ms.date: 05/10/2021
 localization_priority: Normal
-ms.openlocfilehash: 0697e6fd1fa8f437a4a585d938254deb5a05f20c
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 45dd40ad2f88aecbf66db2a623d92ca81f73657c
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52546033"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772311"
 ---
 # <a name="best-practices-in-office-scripts"></a>Рекомендации по сценариям Office
 
@@ -79,7 +79,7 @@ function main(workbook: ExcelScript.Workbook) {
   // Continue....
 }
 
-function inputPresent( workbook: ExcelScript.Workbook): boolean {
+function inputPresent(workbook: ExcelScript.Workbook): boolean {
   // These tables must be in the workbook for the script.
   const TargetTableName = 'Table1';
   const SourceTableName = 'Table2';
@@ -134,7 +134,7 @@ function main(workbook: ExcelScript.Workbook) {
 range.setValues(someLargeValues);
 ```
 
-Если `someLargeValues` размер Excel для веб-службы, вызов `setValues()` не удается. Затем скрипт также сбой с ошибкой [времени запуска](../testing/troubleshooting.md#runtime-errors). Это утверждение позволяет скрипту распознавать это условие, не завершая сценарий немедленно `try...catch` и не показывая ошибку по умолчанию.
+Если `someLargeValues` размер превышает Excel для Интернета, вызов не `setValues()` удается. Затем скрипт также сбой с ошибкой [времени запуска](../testing/troubleshooting.md#runtime-errors). Это утверждение позволяет скрипту распознавать это условие, не завершая сценарий немедленно `try...catch` и не показывая ошибку по умолчанию.
 
 Один из способов предоставления пользователю скрипта более удобного интерфейса — это предоставление им настраиваемой ошибки. В следующем фрагменте показана информация об ошибках, которая поможет читателю в журнале дополнительных сведений об `try...catch` ошибках.
 

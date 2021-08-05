@@ -3,12 +3,12 @@ title: Перекрестные Excel файлы с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 3ee3b7851773384c9a51a041c0e93c70accbab7d
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313962"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772318"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестные Excel файлы с Power Automate
 
@@ -150,7 +150,7 @@ interface EventData {
 
 1. Вопишите [Power Automate](https://flow.microsoft.com) и создайте новый поток **мгновенных облаков.**
 1. Выберите **вручную вызвать поток и** выберите **Создать**.
-1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
+1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия.
     * **Расположение**: OneDrive для бизнеса
     * **Библиотека документов**: OneDrive
     * **Файл**: event-data.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
@@ -158,14 +158,14 @@ interface EventData {
 
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) для первого сценария в Power Automate.":::
 
-1. Добавьте второй **новый** шаг, использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия:
+1. Добавьте второй **новый** шаг, использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия.
     * **Расположение**: OneDrive для бизнеса
     * **Библиотека документов**: OneDrive
     * **Файл**: speaker-registration.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **Сценарий:** Проверка регистрации спикера
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Завершенный соедините Excel Online (Бизнес) для второго сценария в Power Automate.":::
-1. В этом примере Outlook как клиент электронной почты. Вы можете использовать любые соединители электронной почты Power Automate поддерживает. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия:
+1. В этом примере Outlook как клиент электронной почты. Вы можете использовать любые соединители электронной почты Power Automate поддерживает. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия.
     * **Чтобы:** ваша тестовая учетная запись электронной почты (или личная электронная почта)
     * **Subject:** Результаты проверки событий
     * **Body**: result _(динамическое содержимое из **сценария Run 2)**_
