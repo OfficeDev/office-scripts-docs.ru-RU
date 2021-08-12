@@ -3,12 +3,12 @@ title: Чтение данных книги с помощью сценариев
 description: Учебник по сценариям Office о чтении данных из книг и их оценке в сценарии.
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 38a8c64fcf0ed998049c2b95c6d4ede148b6925b
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 74baff74d648365b32b09746c50c66944604be5d978095dc449c045f67d5a86d
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847196"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Чтение данных книги с помощью сценариев Office в Excel в Интернете
 

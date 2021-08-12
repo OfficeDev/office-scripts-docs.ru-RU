@@ -3,12 +3,12 @@ title: Отправить по электронной почте изображ�
 description: Узнайте, как использовать Office скрипты и Power Automate для извлечения и отправки по электронной почте изображений Excel диаграммы и таблицы.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 003769d026eb07f9bade44a40770f6309ee52b8a
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: 1fffd81426c8850cb605e2dbc0f9bf023a4a3692c12f8bd7c8dcc9ec45236ab8
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846743"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Использование Office и Power Automate для отправки изображений диаграммы и таблицы по электронной почте
 

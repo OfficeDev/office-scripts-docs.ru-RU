@@ -3,12 +3,12 @@ title: Office Хранение и владение файлами скрипто
 description: Сведения о том, Office скрипты хранятся в Microsoft OneDrive и передаются между владельцами.
 ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: b7ccb3ceae99a3a10bb56d5a4e56cc869d99850e
-ms.sourcegitcommit: 7dcb13daa3a765b87295e5a453a8f123e17ee24a
+ms.openlocfilehash: 6343b5bad366d9e4c4f349622a33b062de9c8ddd7877c3d40a49635d6aaef9cf
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2021
-ms.locfileid: "52906789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847298"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office Хранение и владение файлами скриптов
 

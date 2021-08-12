@@ -3,12 +3,12 @@ title: Различия между Office скриптами и макросам
 description: Различия между поведением и API между Office скриптами и Excel макросами VBA.
 ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: c934b546834e018e5bac1da4d90043eb3bb52e63
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 0d94607902fa62e07ce378b94ec3b9c328937e16535b1882b6cad5bd76212b33
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847270"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Различия между Office скриптами и макросами VBA
 
@@ -47,7 +47,7 @@ VBA не имеет соединитель Power Automate. Все поддерж
 
 ## <a name="see-also"></a>См. также
 
-- [Сценарии Office в Excel в Интернете](../overview/excel.md)
+- [Сценарии Office в Excel для Интернета](../overview/excel.md)
 - [Запустите Office скрипты с Power Automate](../develop/power-automate-integration.md)
 - [Различия между сценариями Office и надстройками Office](add-ins-differences.md)
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)

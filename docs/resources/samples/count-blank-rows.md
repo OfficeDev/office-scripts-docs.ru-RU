@@ -3,12 +3,12 @@ title: Подсчет пустых строк на листах
 description: Узнайте, как использовать Office скрипты, чтобы определить, есть ли пустые строки вместо данных в листах, а затем сообщить о том, сколько строк будет использоваться в потоке Power Automate.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5b60779d2ca2de5f4cf4e03ddd6ff7372515ad6
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 1aea3670d1bc0b50d7a7dd8d55124049c8871b413b7400b7eaf44df714e94f79
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846993"
 ---
 # <a name="count-blank-rows-on-sheets"></a>Подсчет пустых строк на листах
 

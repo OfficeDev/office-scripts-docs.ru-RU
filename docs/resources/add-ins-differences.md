@@ -3,12 +3,12 @@ title: Различия между сценариями Office и надстро
 description: Различия между поведением и API между Office скриптами и Office надстройки.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: c45fa12369ed8333df0c8f85a2b49900e7079eba
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: ac3fd216e264f0d98dd488de570fdfdfe939f243ab54e9a2865114f532883b2c
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847006"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Различия между сценариями Office и надстройками Office
 
@@ -40,7 +40,7 @@ Office Скрипты не могут использовать [общие API.]
 
 ## <a name="see-also"></a>См. также
 
-- [Сценарии Office в Excel в Интернете](../overview/excel.md)
+- [Сценарии Office в Excel для Интернета](../overview/excel.md)
 - [Различия между Office скриптами и макросами VBA](vba-differences.md)
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)
 - [Создание надстройки области задач Excel](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)

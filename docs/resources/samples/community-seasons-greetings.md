@@ -1,14 +1,14 @@
 ---
 title: Праздничные приветствия
 description: Узнайте, как использовать Office скрипты, чтобы показать дерево пения в Excel в Интернете.
-ms.date: 04/28/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: a328ba66fedc245ff73300d7f47cd339ec87234f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 3474a3e4a87257bba75132b029b57b0c28c922d1b901cda10068d5998d895c53
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846605"
 ---
 # <a name="seasons-greetings"></a>Праздничные приветствия
 
@@ -20,7 +20,7 @@ ms.locfileid: "52232580"
 
 ## <a name="script"></a>Script
 
-Скачайте <a href="happy-tree.xlsx"> файлhappy-tree.xlsx, </a> используемый в этом решении, чтобы попробовать его самостоятельно!
+Скачайте <a href="happy-tree.xlsx">happy-tree.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 ```TypeScript
 /* Original version by Leslie Black.  */

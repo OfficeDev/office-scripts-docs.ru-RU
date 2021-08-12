@@ -3,12 +3,12 @@ title: Добавление изображений в книгу
 description: Узнайте, как использовать Office скрипты, чтобы добавить изображение в книгу и скопировать его на листах.
 ms.date: 07/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 993444aa328356f872db90d1b9d2403bf28be4de
-ms.sourcegitcommit: a86b91c7e104bb7c26efd56de53b9e3976a34828
+ms.openlocfilehash: 7f8442ccfceb701fcca816d4203205dddabe68d9dfe594c87363c7eb42f353dd
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "53394418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846316"
 ---
 # <a name="add-images-to-a-workbook"></a>Добавление изображений в книгу
 

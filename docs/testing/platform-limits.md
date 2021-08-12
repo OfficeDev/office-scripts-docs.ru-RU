@@ -3,12 +3,12 @@ title: Ограничения и требования платформы с Offi
 description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 8b7afa02f73476e6e98f231a7a7162ad87607b37
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: e6a9baa7adac438c88767ae9b4138cc0a6b31f1c5b05ca74ad8b0a50b079075b
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847394"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Ограничения и требования платформы с Office скриптами
 

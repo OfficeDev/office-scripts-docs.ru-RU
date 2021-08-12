@@ -3,12 +3,12 @@ title: Основные сценарии Office скриптов в Excel в И�
 description: Коллекция примеров кода, которые можно использовать с Office скриптами в Excel в Интернете.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847554"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные сценарии Office скриптов в Excel в Интернете
 

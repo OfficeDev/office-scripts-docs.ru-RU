@@ -3,12 +3,12 @@ title: 'Office Сценарий примера сценариев: анализ 
 description: Пример, который принимает необработанные данные интернет-трафика в книге Excel и определяет расположение начала, прежде чем организовать эту информацию в таблицу.
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: ec7ccd2a4f534be825ee4aa358f5d81becc53937
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: a3ad957492184e358015d6fed5e3850a55f153b6722d1cd02ee8e4f5b2e39f93
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846334"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office Сценарий примера сценариев: анализ веб-загрузки
 
@@ -23,7 +23,7 @@ ms.locfileid: "53313934"
 - Размыв текста
 - Subfunctions in scripts
 - Условное форматирование
-- Таблицы
+- таблицы;
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 

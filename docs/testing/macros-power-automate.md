@@ -3,12 +3,12 @@ title: Использование макрофайлов в Power Automate по�
 description: Узнайте, как использовать макрофайлы или xlsm-файлы в Power Automate потоках.
 ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 91e11424e4220a3e1f80cdd2711d05f219016147
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 67686ca5d677a2d04c47d6312a37fa6375bed4a2bef9ae7b6ee61bba2302bfb4
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847231"
 ---
 # <a name="how-to-use-macro-files-in-power-automate-flows"></a>Использование макрофайлов в Power Automate потоках
 

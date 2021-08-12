@@ -5,12 +5,12 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 095fffbc0b92f4efb5dcdcde1cd5970d6fd3c3f1
-ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
+ms.openlocfilehash: 108642efda29aa9d794b1202befda0854f5db6305f6c93ee4038727016acebb0
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "53529220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847140"
 ---
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
@@ -74,7 +74,7 @@ ms.locfileid: "53529220"
 
 <h2>Другие ресурсы</h2>
 <p>Используйте следующие ресурсы, чтобы узнать об API-интерфейсах, которые используются сценариями Office для взаимодействия с рабочими книгами в Excel в Интернете, задать вопросы о сценариях Office в Excel в Интернете или запросить функции для сценариев Office в Excel в Интернете.</p>
-<ul class="panelContent cardsF cols cols3" style="display:flex!important;">
+<ul class="panelContent cardsF cols cols3">
     <li>
         <div class="cardSize">
             <div class="cardPadding">

@@ -3,12 +3,12 @@ title: Запись, редактирование и создание сцена
 description: Учебник с основными сведениями о сценариях Office, включая запись сценариев с помощью средства записи действий и запись данных в книгу.
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 6bcf603211aa07920e99178c35c6f405224c29bd
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: b29d9a5e95f510f63c2c71fc10bb68bc7b5430077a0be09327fc07675bb41f94
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847323"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Запись, редактирование и создание сценариев Office в Excel в Интернете
 
