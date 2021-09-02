@@ -3,12 +3,12 @@ title: Сценарии Office в Excel для Интернета
 description: Краткое введение в регистратор действий и редактор кода для сценариев Office.
 ms.date: 07/04/2021
 localization_priority: Priority
-ms.openlocfilehash: 30058bb2e372e4ad0e344de6202462a744f4e65df9964a8b2329f8b3e0cc27f1
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: f64adc3604dbaf9ac98563cb9eaf8068286bfeeb
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847088"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862084"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Сценарии Office в Excel для Интернета
 
@@ -68,7 +68,7 @@ ms.locfileid: "57847088"
 
 Сценариями Office можно поделиться с другими пользователям книги Excel. При совместном доступе к сценарию в общей книге все, у кого есть доступ к книге, также смогут просматривать и запускать ваш сценарий.
 
-Дополнительные сведения об общем доступе и отмене общего доступа к сценариям см. в статье [Общий доступ к сценариям Office в Excel в Интернете](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b).
+Дополнительные сведения об общем доступе и отмене общего доступа к сценариям см. в статье [Общий доступ к сценариям Office в Excel в Интернете](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b).
 
 > [!NOTE]
 > Дополнительные сведения о том, как сценарии сохраняются в OneDrive, см. в статье [Хранение файлов сценариев Office и владение ими](script-storage.md).
@@ -87,7 +87,6 @@ ms.locfileid: "57847088"
 - [Справочник API для сценариев Office](/javascript/api/office-scripts/overview)
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)
 - [Параметры сценариев Office в M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Общие сведения о сценариях Office в Excel (на сайте support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Общие сведения о сценариях Office в Excel](https://support.microsoft.com/office/9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Центр разработчиков сценариев Office](https://developer.microsoft.com/office-scripts)
-
