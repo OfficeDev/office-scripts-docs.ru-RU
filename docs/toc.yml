@@ -67,6 +67,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: Более сложные действия
             items:
+              - name: Преобразование CSV-файлов
+                href: resources/samples/convert-csv.md
               - name: Перекрестные справочные таблицы
                 href: resources/samples/excel-cross-reference.md
               - name: Подсчет пустых строк на листах
