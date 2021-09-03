@@ -3,12 +3,12 @@ title: Office Хранение и владение файлами скрипто
 description: Сведения о том, Office скрипты хранятся в Microsoft OneDrive и передаются между владельцами.
 ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 6343b5bad366d9e4c4f349622a33b062de9c8ddd7877c3d40a49635d6aaef9cf
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 788850db9c8e07ad59ea6d42eb9958779efcb06f
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847298"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862161"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office Хранение и владение файлами скриптов
 
@@ -24,7 +24,7 @@ Office Скрипты хранятся как **файлы .osts** в Microsoft 
 
 ### <a name="restore-deleted-scripts"></a>Восстановление удаленных скриптов
 
-При удалении сценария в Excel он отправляется в OneDrive корзину. Чтобы восстановить удаленный сценарий, выполните действия, указанные в [списке Восстановление](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)удаленных файлов или папок в OneDrive . Восстановление файла **.osts** возвращает его в список **всех скриптов.**
+При удалении сценария в Excel он отправляется в OneDrive корзину. Чтобы восстановить удаленный сценарий, выполните действия, указанные в [списке Восстановление](https://support.microsoft.com/office/949ada80-0026-4db3-a953-c99083e6a84f)удаленных файлов или папок в OneDrive . Восстановление файла **.osts** возвращает его в список **всех скриптов.**
 
 Удаленный сценарий не удаляется вместе с книгой. При восстановлении скрипта он **не сохраняет** доступ к скрипту. Вам потребуется еще раз поделиться сценарием.
 
@@ -47,7 +47,7 @@ Office Скрипты хранятся в OneDrive. Они следуют пол
 
 ## <a name="see-also"></a>См. также
 
-- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Общий доступ к сценариям Office в веб-программе Excel](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Устранение неполадок в сценариях Office](../testing/troubleshooting.md)
-- [Параметры сценариев Office в M365](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
+- [Параметры сценариев Office в M365](/microsoft-365/admin/manage/manage-office-scripts-settings)
 - [Отмена эффектов сценариев Office](../testing/undo.md)

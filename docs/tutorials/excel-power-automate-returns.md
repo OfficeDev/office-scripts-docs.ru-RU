@@ -3,12 +3,12 @@ title: Возвращение данных из сценария в автома
 description: Руководство по отправке напоминаний по электронной почте путем запуска сценариев Office для Excel в Интернете с помощью Power Automate.
 ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: c928ca612e08098c85307e22185e2240f47a5adcdfe028815c4dd837b4501c9f
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 5c021a4d146fc2c0f13c7d7ab560107a1bf5c335
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846462"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862224"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>Возвращение данных из сценария в автоматически запускаемый поток Power Automate
 
@@ -66,7 +66,7 @@ ms.locfileid: "57846462"
     let tableValues = table.getRangeBetweenHeaderAndTotal().getValues();
     ```
 
-1. Даты в таблице хранятся в виде [порядковых номеров в Excel](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487). Необходимо преобразовать эти даты в даты JavaScript для сравнения. Добавим вспомогательную функцию в наш сценарий. Добавьте следующий код вне функции `main`:
+1. Даты в таблице хранятся в виде [порядковых номеров в Excel](https://support.microsoft.com/office/e7fe7167-48a9-4b96-bb53-5612a800b487). Необходимо преобразовать эти даты в даты JavaScript для сравнения. Добавим вспомогательную функцию в наш сценарий. Добавьте следующий код вне функции `main`:
 
     ```TypeScript
     // Convert the Excel date to a JavaScript Date object.

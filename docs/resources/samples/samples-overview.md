@@ -3,12 +3,12 @@ title: Office Примеры сценариев
 description: Доступные Office сценарии и сценарии.
 ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 508c9fa61d6816faf3fbe740bdf1d587b127b064e9918aac2d789ff2d4faccff
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 042e49145285fe100cace1df2571f5aa06dab7d5
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846351"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862168"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office Примеры сценариев и сценарии
 
