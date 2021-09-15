@@ -2,13 +2,13 @@
 title: Возвращение данных из сценария в автоматически запускаемый поток Power Automate
 description: Руководство по отправке напоминаний по электронной почте путем запуска сценариев Office для Excel в Интернете с помощью Power Automate.
 ms.date: 06/29/2021
-localization_priority: Priority
-ms.openlocfilehash: 5c021a4d146fc2c0f13c7d7ab560107a1bf5c335
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.localizationpriority: high
+ms.openlocfilehash: f81f28ef6f2862608c221e2e75c2f3948a1288ed
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862224"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59335090"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>Возвращение данных из сценария в автоматически запускаемый поток Power Automate
 

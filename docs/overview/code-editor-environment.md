@@ -2,13 +2,13 @@
 title: Office Среда редактора кода скриптов
 description: Необходимые условия и сведения об среде для Office скриптов в Excel в Интернете.
 ms.date: 05/27/2021
-localization_priority: Normal
-ms.openlocfilehash: 5b2f7afa193dc71e13a3d6763c9e8ff8344ee3e8be18e7e996f8431e03510509
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: caa50904808d6f2b6941e661f899b6ae147aff50
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847095"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326879"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office Среда редактора кода скриптов
 

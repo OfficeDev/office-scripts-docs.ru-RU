@@ -2,13 +2,13 @@
 title: Преобразование CSV-файлов в Excel книги
 description: Узнайте, как использовать Office и Power Automate для создания .xlsx из .csv файлов.
 ms.date: 07/19/2021
-localization_priority: Normal
-ms.openlocfilehash: d67be06dc038fc22215426e5f7143e0af9ba9f0c
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.localizationpriority: medium
+ms.openlocfilehash: ecfc4d143cbaf10b9ea5f02881751f2c4fa28853
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862210"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59333435"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>Преобразование CSV-файлов в Excel книги
 

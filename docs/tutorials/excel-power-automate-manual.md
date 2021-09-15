@@ -2,13 +2,13 @@
 title: Вызов сценариев из активированного вручную потока Power Automate
 description: В этом руководстве рассказывается об использовании сценариев Office в Power Automate с помощью триггера с ручным срабатыванием.
 ms.date: 06/29/2021
-localization_priority: Priority
-ms.openlocfilehash: 7244e3b637e21d66bdc83fda2c0cd23b8445a3a6f38a35b0bc3c35cfa8a58440
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: high
+ms.openlocfilehash: 506481c8b5ee1ae94a4e0a7fc926abc62ba7c5f9
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847671"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330865"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>Вызов сценариев из активированного вручную потока Power Automate
 

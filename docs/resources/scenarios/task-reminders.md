@@ -2,13 +2,13 @@
 title: 'Office Пример сценария: автоматические напоминания о задачах'
 description: Пример, использующий Power Automate и адаптивные карты, автоматизирует напоминания о задачах в таблице управления проектами.
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 8e9ddebd6ab8f061a623f646000a722c3a95ba0d255fd8bac42cda6172078879
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: a2d4701fb7a42953de669c84dbb93104d199d5b8
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846370"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330050"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office Пример сценария: автоматические напоминания о задачах
 
@@ -22,9 +22,9 @@ ms.locfileid: "57846370"
 - Передачу данных скриптам
 - Возвращение данных из скриптов
 - Teams Адаптивные карты
-- таблицы;
+- Таблицы
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 В этом [сценарии используются Power Automate](https://flow.microsoft.com) и [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software). Вам потребуется как связанное с учетной записью, используемой для разработки Office скриптов. Чтобы получить бесплатный доступ к подписке microsoft Developer, чтобы узнать об этих приложениях и работать с ними, рассмотрите возможность присоединения [к программе Microsoft 365 разработчика.](https://developer.microsoft.com/microsoft-365/dev-program)
 

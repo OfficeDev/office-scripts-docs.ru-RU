@@ -2,13 +2,13 @@
 title: Добавление комментариев в Excel
 description: Узнайте, как использовать Office скрипты для добавления комментариев в таблицу.
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: b57b4112f2092dd83872f63854a8156b2a19384ac1d86a44ab2d9df4e6b7ff7e
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 3ff9d56934520a98dd1de7d31077396294bde29d
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847102"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332399"
 ---
 # <a name="add-comments-in-excel"></a>Добавление комментариев в Excel
 

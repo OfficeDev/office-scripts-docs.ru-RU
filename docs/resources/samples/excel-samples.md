@@ -2,20 +2,20 @@
 title: Основные сценарии Office скриптов в Excel в Интернете
 description: Коллекция примеров кода, которые можно использовать с Office скриптами в Excel в Интернете.
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847554"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330739"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные сценарии Office скриптов в Excel в Интернете
 
 Следующие примеры — это простые сценарии, которые можно попробовать в собственных книгах. Чтобы использовать их в Excel в Интернете:
 
 1. Откройте вкладку **Автоматизировать**.
-1. Выберите **Новый сценарий**.
+1. Выберите **Создать сценарий**.
 1. Замените весь сценарий образцом по вашему выбору.
 1. Выберите **Выполнить** в области задач редактора кода.
 

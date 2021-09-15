@@ -2,13 +2,13 @@
 title: Использование встроенных объектов JavaScript в сценариях Office
 description: Вызов встроенных API JavaScript из сценария Office в Excel в Интернете.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 6c15daf0429009d289a17e604caf51b807510442bf6e6fa6e42c85d7457f6164
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: bf12a405814bb626a72c1de4f4c75462ce0018ec
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846612"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327691"
 ---
 # <a name="use-built-in-javascript-objects-in-office-scripts"></a>Использование встроенных объектов JavaScript в Office скриптах
 
@@ -88,7 +88,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="date"></a>Date
+## <a name="date"></a>Дата
 
 Объект [Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) предоставляет стандартный способ работы с датами в скрипте. `Date.now()` создает объект с текущей датой и временем, что полезно при добавлении в запись данных скрипта.
 

@@ -2,13 +2,13 @@
 title: Перекрестные Excel файлы с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: ddbcdd25791e0c1a80fedfc36ebbfbd5dd940ec6f55ef2fe2bce0cf23b6bcb61
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: adeb84140cb9884309c9f37854a29fc4d59b17ed
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847253"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332980"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестные Excel файлы с Power Automate
 

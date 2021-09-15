@@ -2,13 +2,13 @@
 title: Ограничения TypeScript в Office скриптах
 description: Особенности компиляторов и подкладок TypeScript, используемых редактором кода Office скриптов.
 ms.date: 07/14/2021
-localization_priority: Normal
-ms.openlocfilehash: ea7b9e34b09409fbe7b4cfdab221a59d50246773167fbe6d1c64bbd61fd0b2df
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 1e63f61116bcff64ba6ad2a24a09253cccbdce10
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847050"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326886"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>Ограничения TypeScript в Office скриптах
 

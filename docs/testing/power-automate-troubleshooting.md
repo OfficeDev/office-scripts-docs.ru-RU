@@ -2,13 +2,13 @@
 title: Устранение Office скриптов, запущенных в Power Automate
 description: Советы, сведения о платформе и известные проблемы с интеграцией между Office и Power Automate.
 ms.date: 05/18/2021
-localization_priority: Normal
-ms.openlocfilehash: 1746a03022b6d1aa9fc35e1a8875add301dd6a0f2d6d45cedd64308f0738d2f8
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: aa0602720233afddd88ccfb8ee86d3934892a05f
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847209"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326851"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Устранение Office скриптов, запущенных в Power Automate
 

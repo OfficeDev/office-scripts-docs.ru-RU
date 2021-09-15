@@ -2,13 +2,13 @@
 title: Фильтр четких столбцов таблицы на основе расположения активных клеток
 description: Узнайте, как очистить фильтр столбца таблицы на основе активного расположения ячейки.
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 5815ae9f40ec1c529bbdc19575239e94712479d3db8a8c602cc33a270538811c
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: bb01292017a027e41230d786337b5bf53293a20c
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847575"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332987"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>Фильтр четких столбцов таблицы на основе расположения активных клеток
 

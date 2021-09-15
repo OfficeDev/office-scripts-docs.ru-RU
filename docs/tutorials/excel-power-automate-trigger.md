@@ -2,13 +2,13 @@
 title: Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate
 description: Учебное руководство, посвященное запуску сценариев Office для Excel в Интернете с помощью Power Automate при получении электронной почты с дальнейшей передачей данных рабочего процесса в сценарий.
 ms.date: 06/29/2021
-localization_priority: Priority
-ms.openlocfilehash: 954a7e9b48d8973310a97d7d5821341907938adde98c50fd77a36d8bd966ffb9
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: high
+ms.openlocfilehash: 333ccfc753da067111ca4dc0c3e59ce9db360e0a
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847382"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326872"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate
 

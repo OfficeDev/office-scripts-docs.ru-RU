@@ -1,14 +1,14 @@
 ---
 title: Office Примеры сценариев
 description: Доступные Office сценарии и сценарии.
-ms.date: 07/19/2021
-localization_priority: Normal
-ms.openlocfilehash: 042e49145285fe100cace1df2571f5aa06dab7d5
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.date: 09/03/2021
+ms.localizationpriority: medium
+ms.openlocfilehash: 0d11e15a7e839f33a74ca8ad7f1d09dd7711347c
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862168"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59334936"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office Примеры сценариев и сценарии
 
@@ -35,6 +35,7 @@ ms.locfileid: "58862168"
 
 | Project | Details |
 |---------|---------|
+| [Объединение электронных таблиц в одну книгу](combine-worksheets-into-single-workbook.md) | В этом примере Office скрипты и Power Automate, чтобы вытащить данные из других книг в одну книгу. |
 | [Преобразование CSV-файлов в Excel книги](convert-csv.md) | В этом примере Office скрипты и Power Automate для создания .xlsx из .csv файлов. |
 | [Перекрестные справочники](excel-cross-reference.md) | В этом примере Office скрипты и Power Automate для перекрестной ссылки и проверки сведений в различных книгах. |
 | [Подсчет пустых строк в определенном листе или во всех листах](count-blank-rows.md) | В этом примере обнаруживается, есть ли пустые строки в листах, в которых ожидается, что данные будут присутствовать, а затем сообщается о том, что количество пустых строк Power Automate потоке. |

@@ -2,13 +2,13 @@
 title: Запустите Office скрипты с Power Automate
 description: Как получить Office скрипты для Excel в Интернете работы с рабочим Power Automate рабочим процессом.
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 61b43904cbc46b97a0102230c9c87c1051edd1516668f42fbded63c53c958de9
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: b5bddae61961a56699f99111f71c4f152382f7c6
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846521"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327870"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Запустите Office скрипты с Power Automate
 

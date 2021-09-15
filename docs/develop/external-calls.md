@@ -2,13 +2,13 @@
 title: Поддержка внешнего вызова API в сценариях Office
 description: Поддержка и руководство по принятию внешних вызовов API в Office скрипта.
 ms.date: 05/21/2021
-localization_priority: Normal
-ms.openlocfilehash: ece8c13bd2c665734e35d16c046ca58e52df564465a4df8989d90d887d897307
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 14b98e49907ff989684eceb9509edf56a1a72d9e
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846626"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332054"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Поддержка внешнего вызова API в сценариях Office
 
