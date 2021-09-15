@@ -69,6 +69,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: Более сложные действия
             items:
+              - name: Объединение нескольких книг в одну
+                href: resources/samples/combine-worksheets-into-single-workbook.md
               - name: Преобразование CSV-файлов
                 href: resources/samples/convert-csv.md
               - name: Перекрестные справочные таблицы
