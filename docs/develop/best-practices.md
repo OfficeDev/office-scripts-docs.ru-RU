@@ -3,12 +3,12 @@ title: Рекомендации по сценариям Office
 description: Предотвращение распространенных проблем и написание надежных Office скриптов, которые могут обрабатывать неожиданные входные данные или данные.
 ms.date: 05/10/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 49075d52587a1d2c4ed06fc2939aebc7081d4ddb
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: c37559c978a04bd99fff044674b2f64b7758438b
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327842"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447465"
 ---
 # <a name="best-practices-in-office-scripts"></a>Рекомендации по сценариям Office
 
@@ -60,7 +60,7 @@ function main(workbook: ExcelScript.Workbook) {
     return;
   }
 
-  // Continue....
+  // Continue...
 }
 ```
 
@@ -76,7 +76,7 @@ function main(workbook: ExcelScript.Workbook) {
     return;
   }
 
-  // Continue....
+  // Continue...
 }
 
 function inputPresent(workbook: ExcelScript.Workbook): boolean {

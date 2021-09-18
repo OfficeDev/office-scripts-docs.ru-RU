@@ -5,12 +5,12 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: e0d14951a9e4b2a8666a516cece87deaad7cf8fd
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 4f8840404d13da483e40d719fa96b5ed154d80fa
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326900"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447515"
 ---
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
@@ -134,22 +134,6 @@ ms.locfileid: "59326900"
                     </div>
                     <div class="cardText">
                         <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Задать вопрос</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
-                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>Предложить функцию</h3></a>
                     </div>
                 </div>
             </div>

@@ -3,12 +3,12 @@ title: Преобразование CSV-файлов в Excel книги
 description: Узнайте, как использовать Office и Power Automate для создания .xlsx из .csv файлов.
 ms.date: 07/19/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ecfc4d143cbaf10b9ea5f02881751f2c4fa28853
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 213c6caab1d1b20d566aa0e79630c1a9b50554f7
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333435"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447480"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>Преобразование CSV-файлов в Excel книги
 
@@ -67,7 +67,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 1. Установите поток, чтобы **повторить каждый** "1" "День" и выберите **Создать**.
 1. Получите файл Excel шаблона. Это основа для всех преобразованных .csv файлов. Добавьте новый **шаг,** использующий **соединителю OneDrive для бизнеса** и действие **контента Get.** Укай путь файла в файл "Template.xlsx".
     * **Файл**: /output/Template.xlsx
-1. Переименуй шаг **get file content,** переехав **в меню этого** шага (в верхнем правом углу соединитетеля) и выбрав параметр **Переименование.** Измените имя шага на "Получить Excel шаблон".
+1. Переименуй шаг "Получить содержимое файла", переехав в меню Меню для получения контента **файла (...)** этого шага (в правом верхнем углу соединитетеля) и выбрав параметр  **Переименование.** Измените имя шага на "Получить Excel шаблон".
 
      :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="Завершенный OneDrive для бизнеса в Power Automate, переименованный в шаблон Get Excel.":::
 1. Получите все файлы в папке "выход". Добавьте новый **шаг,** использующий **соединителю OneDrive для бизнеса** и файлы **List в действии папки.** Предостереть путь папки, содержащий .csv файлы.
