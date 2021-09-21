@@ -1,16 +1,16 @@
 ---
 title: Объединение книг в одну книгу
 description: Узнайте, как использовать Office и Power Automate для создания таблиц слияния из других книг в одну книгу.
-ms.date: 09/03/2021
+ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d2c9492e0e2164fe34cff21d92f3df4c9bee3fe
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: ffb0fd13cf587184aec87ade36e5e0e661043b94
+ms.sourcegitcommit: c23816babcc628b52f6d8aaa4b6342e04e83a5bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59337956"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "59460787"
 ---
-# <a name="combine-worksheets-into-a-single-workbook"></a>Объединение электронных таблиц в одну книгу
+# <a name="combine-worksheets-into-a-single-workbook"></a>Объединение нескольких книг в одну
 
 В этом примере показано, как вытащить данные из нескольких книг в одну централизованную книгу. Он использует два сценария: один для получения сведений из книги, а другой для создания новых таблиц с этой информацией. Он объединяет скрипты в потоке Power Automate, который действует на всей OneDrive папке.
 
@@ -101,7 +101,7 @@ interface WorksheetData {
     * **Файл:** файл
     * **Сценарий:** Добавление таблиц
     * **workbookName**: *Name* (динамическое содержимое из **файлов списка в папке)**
-    * **worksheetInformation**: *result* (динамическое содержимое из **сценария Run)**
+    * **таблицаInformation** (после выбора кнопки **Switch to input entire array** см. примечание ниже следующего изображения): результат (динамическое содержимое из сценария **Run)** 
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="Два действия скрипта Run внутри apply to each control.":::
     > [!NOTE]
