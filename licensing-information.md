@@ -4414,8 +4414,9 @@ Copyright (c) 2015 Yassine Elouafi
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.242 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.247 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
+© Корпорация Майкрософт.
 
 Лицензия MIT
 
@@ -8386,14 +8387,14 @@ Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
 
 ---------------------------------------------------------
 
-диапазон заполнения 4.0.0 — MIT https://github.com/jonschlinkert/fill-range
+диапазон заполнения 7.0.1 — MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, John Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 Лицензия MIT (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -8406,14 +8407,14 @@ Copyright (c) 2014-2017, Jon Schlinkert
 
 ---------------------------------------------------------
 
-диапазон заполнения 7.0.1 — MIT https://github.com/jonschlinkert/fill-range
+диапазон заполнения 4.0.0 — MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, John Schlinkert ( https://github.com/jonschlinkert) .
 
 Лицензия MIT (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -11484,7 +11485,7 @@ Copyright 2010 James Halliday (mail@substack.net)
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -11510,7 +11511,7 @@ Copyright (c) 2016 — настоящее время Корпорация Май
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -13508,7 +13509,7 @@ Copyright (c) 2017 Maxime Thirouin
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 — MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
 
 Авторское право (c) Бен Бриггс <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13525,7 +13526,7 @@ postcss-selector-parser 6.0.2 — MIT https://github.com/postcss/postcss-selecto
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 6.0.2 — MIT https://github.com/postcss/postcss-selector-parser
 
 Авторское право (c) Бен Бриггс <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13920,7 +13921,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.3.2 — MIT https://mths.be/punycode
+punycode 1.4.1 — MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -13937,7 +13938,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.4.1 — MIT https://mths.be/punycode
+punycode 1.3.2 — MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -14320,13 +14321,13 @@ Node.js лицензируется для использования следу�
 
 ---------------------------------------------------------
 
-readdirp 2.2.1 — MIT https://github.com/paulmillr/readdirp
+readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
 
-Copyright (c) 2012-2015 Thorsten Lorenz
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
 
-Это программное обеспечение выпущено в соответствии с лицензией MIT:
+Лицензия MIT
 
-Copyright (c) 2012-2015 Thorsten Lorenz
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -14339,13 +14340,13 @@ Copyright (c) 2012-2015 Thorsten Lorenz
 
 ---------------------------------------------------------
 
-readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
+readdirp 2.2.1 — MIT https://github.com/paulmillr/readdirp
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
+Copyright (c) 2012-2015 Thorsten Lorenz
 
-Лицензия MIT
+Это программное обеспечение выпущено в соответствии с лицензией MIT:
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
+Copyright (c) 2012-2015 Thorsten Lorenz
 
 Настоящим на безвозмездной основе подтверждается право любого лица, получившего копию данного программного обеспечения с сопутствующей документацией ("Программное обеспечение"), иметь неограниченный доступ, включая право на использование, копирование, изменение, добавление, публикацию, распространение, предоставление сублицензий и/или продажу копий Программного обеспечения, а также разрешить подобные действия лицам, в чье распоряжение оно передано, на следующих условиях:
 
@@ -15035,7 +15036,7 @@ Copyright JS Foundation и другие участники
 
 ---------------------------------------------------------
 
-схемы-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+схемы-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
 
 Copyright JS Foundation и другие участники
 
@@ -15053,7 +15054,7 @@ Copyright JS Foundation и другие участники
 
 ---------------------------------------------------------
 
-схемы-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
+схемы-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation и другие участники
 
@@ -15654,7 +15655,7 @@ Copyright (c) 2017 Khaled Al-Ansari
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 — MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 — MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. и другие вкладчики node.
 
@@ -15685,7 +15686,7 @@ Node.js лицензируется для использования следу�
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 — MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 — MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. и другие вкладчики node.
 
