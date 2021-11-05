@@ -1,14 +1,14 @@
 ---
 title: Преобразование CSV-файлов в Excel книги
 description: Узнайте, как использовать Office и Power Automate для создания .xlsx из .csv файлов.
-ms.date: 07/19/2021
+ms.date: 11/02/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 213c6caab1d1b20d566aa0e79630c1a9b50554f7
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 203174aec099e426b75d1c816fb3f849b4f13152
+ms.sourcegitcommit: 8df930d9ad90001dbed7cb9bd9015ebe7bc9854e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447480"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "60793267"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>Преобразование CSV-файлов в Excel книги
 
@@ -99,3 +99,43 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="Завершенный соедините Excel Online (Бизнес) в Power Automate.":::
 1. Сохраните поток. Используйте **кнопку Test** на странице редактора потока или запустите поток через вкладку **Мои потоки.** Не забудьте разрешить доступ при запросе.
 1. Необходимо найти новые .xlsx в папке "выход", а также исходные .csv файлы. Новые книги содержат те же данные, что и файлы CSV.
+
+## <a name="troubleshooting"></a>Устранение неполадок
+
+Сценарий предполагает, что разделенные запятой значения сделают прямоугольный диапазон. Если .csv файл содержит строки с разным числом столбцов, вы получите ошибку, которая гласит: "Количество строк или столбцов в массиве ввода не соответствует размеру или размерам диапазона". Если данные не могут соответствовать прямоугольной форме, используйте следующий сценарий. Этот скрипт добавляет данные по одной строке одновременно, а не в качестве одного диапазона. Этот скрипт менее эффективен и заметно медленнее с большими наборами данных.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook, csv: string) {
+  let sheet = workbook.getWorksheet("Sheet1");
+
+  /* Convert the CSV data into a 2D array. */
+  // Trim the trailing new line.
+  csv = csv.trim();
+
+  // Split each line into a row.
+  let rows = csv.split("\r\n");
+  rows.forEach((value, index) => {
+    /*
+     * For each row, match the comma-separated sections.
+     * For more information on how to use regular expressions to parse CSV files,
+     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+     */
+    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
+
+    // Remove the preceding comma.
+    row.forEach((cell, index) => {
+      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+    });
+
+    // Create a 2D-array with one row.
+    let data: string[][] = [];
+    data.push(row);
+
+    // Put the data in the worksheet.
+    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+    range.setValues(data);
+  });
+
+  // Add any formatting or table creation that you want.
+}
+```
