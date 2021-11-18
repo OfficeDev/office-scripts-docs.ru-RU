@@ -1,4 +1,4 @@
-# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office Скрипты в Excel в Интернете документации
+# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office скрипты в Excel в Интернете документации
 
 Добро пожаловать в репозиторий документации Office скриптов. В этом репо можно найти исходные файлы документации для Office скриптов и инструкций. Рекомендуем просматривать эти материалы на сайте [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts).
 
@@ -25,7 +25,6 @@
 
 - Чтобы задать вопрос о разработке Office или API Office.js, который выполняется Office Скрипты, раздайте свой вопрос в Stack Overflow и пометите его тегом "Office-scripts" ( https://stackoverflow.com/questions/tagged/office-scripts) .
 - Чтобы сообщить о проблеме с API Office.js, создайте проблему в репозитории [OfficeDev/office-js,](https://github.com/OfficeDev/office-js)который члены группы продуктов отслеживают для проблем, о которых сообщает клиент.
-- Чтобы отправить запрос на Office скрипты, используйте кнопку обратной связи в редакторе кода. В меню Дополнительные параметры **(...)** в области задач редактора кода выберите кнопку **Отправка** отзывов, чтобы поделиться своими потребностями в функциях и другими впечатлениями.
 
 ## <a name="copyright"></a>Авторское право
 

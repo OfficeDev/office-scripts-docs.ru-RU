@@ -5,18 +5,18 @@ title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Microsoft Excel в Интернете, включая учебные пособия, концептуальные статьи и примеры кода.
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 4f8840404d13da483e40d719fa96b5ed154d80fa
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: c3e1c95886ebef3bf34a73a374372e84be91117d
+ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447515"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064195"
 ---
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
 Используйте сценарии Office в Excel в Интернете для автоматизации ваших общих задач. Изучите следующие статьи, чтобы узнать, как создавать и редактировать сценарии Office, и начать автоматизацию уже сегодня.
 
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -74,7 +74,7 @@ ms.locfileid: "59447515"
 
 <h2>Другие ресурсы</h2>
 <p>Используйте следующие ресурсы, чтобы узнать об API-интерфейсах, которые используются сценариями Office для взаимодействия с рабочими книгами в Excel в Интернете, задать вопросы о сценариях Office в Excel в Интернете или запросить функции для сценариев Office в Excel в Интернете.</p>
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -113,6 +113,22 @@ ms.locfileid: "59447515"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Интеграция с Power Automate</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
                         </div>
                     </div>
@@ -129,11 +145,11 @@ ms.locfileid: "59447515"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Задать вопрос</h3></a>
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Сведения о лицензировании</h3></a>
                     </div>
                 </div>
             </div>
@@ -145,11 +161,11 @@ ms.locfileid: "59447515"
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>Сведения о лицензировании</h3></a>
+                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>Задать вопрос</h3></a>
                     </div>
                 </div>
             </div>

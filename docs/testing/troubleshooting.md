@@ -1,22 +1,25 @@
 ---
 title: Устранение Office скриптов
 description: Отладка советов и методов для Office скриптов, а также ресурсов справки.
-ms.date: 09/15/2021
+ms.date: 11/11/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 5229490e2487974f751456ef63004bcb27f7b09c
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 2c43d0e4b1f4fd5675397fd79eaab1345ae39b98
+ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447487"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064204"
 ---
 # <a name="troubleshoot-office-scripts"></a>Устранение Office скриптов
 
 При разработке Office скриптов вы можете ошибаться. Всё в порядке. У вас есть средства, которые помогут найти проблемы и получить ваши сценарии работают идеально.
 
+> [!NOTE]
+> Рекомендации по устранению неполадок, Office скрипты с Power Automate см. в Office Скрипты, запущенные [в Power Automate.](power-automate-troubleshooting.md)
+
 ## <a name="types-of-errors"></a>Типы ошибок
 
-Office Ошибки скриптов подпадают под одну из двух категорий:
+Office скрипты подпадают под одну из двух категорий:
 
 * Ошибки и предупреждения по времени компиляции
 * Ошибки во время работы
@@ -76,17 +79,9 @@ console.log(myRange.getAddress());
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## <a name="troubleshoot-scripts-in-power-automate"></a>Сценарии устранения неполадок в Power Automate
-
-Сведения, специфические для запуска сценариев Power Automate, см. в Office сценариев, [запущенных в Power Automate.](power-automate-troubleshooting.md)
-
 ## <a name="help-resources"></a>Ресурсы справки
 
 [Переполнение стека](https://stackoverflow.com/questions/tagged/office-scripts) — это сообщество разработчиков, готовых помочь с проблемами кодирования. Часто вы сможете найти решение проблемы с помощью быстрого поиска переполнения стека. Если нет, задайте свой вопрос и пометите его тегом "Office-scripts". Не забудьте упомянуть, что вы создаете сценарий *Office,* а не Office *надстройки.*
-
-Чтобы отправить запрос на Office скрипты или сообщить о проблеме с этой функцией, используйте кнопку обратной связи в редакторе кода. В меню Дополнительные параметры  **(...)** в области задач редактора кода выберите кнопку **Отправка** отзывов, чтобы поделиться своими потребностями в функциях и другими впечатлениями.
-
-:::image type="content" source="../images/code-editor-feedback.png" alt-text="Меню редактора кода переполнено кнопкой &quot;Отправить обратную связь&quot;.":::
 
 ## <a name="see-also"></a>См. также
 
