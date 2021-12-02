@@ -27,10 +27,6 @@ items:
             href: develop/javascript-objects.md
           - name: Среда редактора кода
             href: overview/code-editor-environment.md
-          - name: Различия между сценариями Office и макросами VBA
-            href: resources/vba-differences.md
-          - name: Различия между сценариями Office и надстройками Office
-            href: resources/add-ins-differences.md
           - name: Поддержка внешнего вызова API в сценариях Office
             href: develop/external-calls.md
           - name: Хранилище файлов и владение ими
@@ -111,3 +107,11 @@ items:
             items:
               - name: Праздничные приветствия
                 href: resources/samples/community-seasons-greetings.md
+      - name: Сценарии Office и другие платформы
+        items:
+          - name: Различия между сценариями Office и макросами VBA
+            href: resources/vba-differences.md
+          - name: Различия между сценариями Office и надстройками Office
+            href: resources/add-ins-differences.md
+          - name: Когда использовать Power Query или сценарии Office
+            href: resources/power-query-differences.md
