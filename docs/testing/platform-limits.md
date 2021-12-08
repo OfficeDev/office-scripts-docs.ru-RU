@@ -3,12 +3,12 @@ title: Ограничения и требования платформы с Offi
 description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2140ebf249af76447f64efae7fd2008e781bf815
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
+ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327877"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61333493"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Ограничения и требования платформы с Office скриптами
 
@@ -16,7 +16,7 @@ ms.locfileid: "59327877"
 
 ## <a name="browser-support"></a>Поддержка браузеров
 
-Office Скрипты работают в любом [браузере, который поддерживает Office для Интернета.](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или](https://www.w3schools.com/Js/js_es6.asp) более поздней, не будут работать с IE 11. Если люди в организации по-прежнему используют этот браузер, обязательно проверьте свои скрипты в этой среде при их совместном использовании.
+Office скрипты работают в любом [браузере, который поддерживает Office для Интернета](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452). Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или](https://www.w3schools.com/Js/js_es6.asp) более поздней, не будут работать с IE 11. Если люди в организации по-прежнему используют этот браузер, обязательно проверьте свои скрипты в этой среде при их совместном использовании.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -49,7 +49,7 @@ Excel для Интернета имеет следующие ограничен
 
 ### <a name="power-automate"></a>Power Automate
 
-При использовании Office скриптов с Power Automate каждый пользователь может использовать **400** вызовов к действию Run Script в день. Это ограничение сбрасывается в 12:00 утра по UTC.
+При использовании Office скриптов с Power Automate каждый пользователь может использовать **800** вызовов к действию Run Script в день. Это ограничение сбрасывается в 12:00 утра по UTC.
 
 Платформа Power Automate также имеет ограничения использования, которые можно найти в следующих статьях:
 
