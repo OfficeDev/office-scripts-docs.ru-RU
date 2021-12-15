@@ -1,14 +1,14 @@
 ---
 title: Ограничения и требования платформы с Office скриптами
 description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете
-ms.date: 05/17/2021
+ms.date: 12/14/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
-ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
+ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
+ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61333493"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61513631"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Ограничения и требования платформы с Office скриптами
 
@@ -51,10 +51,13 @@ Excel для Интернета имеет следующие ограничен
 
 При использовании Office скриптов с Power Automate каждый пользователь может использовать **800** вызовов к действию Run Script в день. Это ограничение сбрасывается в 12:00 утра по UTC.
 
-Платформа Power Automate также имеет ограничения использования, которые можно найти в следующих статьях:
+Платформа Power Automate также имеет ограничения использования, которые можно найти в следующих статьях.
 
 - [Ограничения и конфигурация в Power Automate](/power-automate/limits-and-config)
 - [Известные проблемы и ограничения для соединиттеля Excel Online (Бизнес)](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+
+> [!NOTE]
+> Если у вас есть долгосрочный сценарий, следует помнить о [120-секундном](/power-automate/limits-and-config#timeout)таймауте для синхронных Power Automate операций. Необходимо либо оптимизировать [](../develop/web-client-performance.md) сценарий, либо разделить Excel на несколько скриптов.
 
 ## <a name="see-also"></a>См. также
 
