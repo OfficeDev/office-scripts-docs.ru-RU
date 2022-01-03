@@ -1,18 +1,24 @@
 ---
 title: Рекомендации по сценариям Office
 description: Предотвращение распространенных проблем и написание надежных Office скриптов, которые могут обрабатывать неожиданные входные данные или данные.
-ms.date: 05/10/2021
+ms.date: 12/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c37559c978a04bd99fff044674b2f64b7758438b
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 19b10cf6ea778f109edeb74fa5995628bb8bf632
+ms.sourcegitcommit: c62567dc1188527511e4618d3e04e26580d4bb44
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447465"
+ms.lasthandoff: 01/03/2022
+ms.locfileid: "61659196"
 ---
 # <a name="best-practices-in-office-scripts"></a>Рекомендации по сценариям Office
 
 Эти шаблоны и методы предназначены для успешного запуска скриптов каждый раз. Используйте их, чтобы избежать распространенных ошибок, когда вы начинаете Excel рабочий процесс.
+
+## <a name="use-the-action-recorder-to-learn-new-features"></a>Использование регистратора действий, чтобы узнать новые функции
+
+Excel многое делает. Большинство из них можно сценарии. Регистратор действий записи ваших Excel и преобразует их в код. Это самый простой способ узнать, как различные функции работают с Office скриптами. Если вам нужен код для определенного действия, переключите на регистратор действий, выполните действия, выберите **скопируйте** в виде кода и включите в скрипт результативный код.
+
+:::image type="content" source="../images/action-recorder-copy-code.png" alt-text="Области задач регистратора действий с выделенной кнопкой &quot;Скопируйте как код&quot;.":::
 
 ## <a name="verify-an-object-is-present"></a>Проверка на подлинность объекта
 
