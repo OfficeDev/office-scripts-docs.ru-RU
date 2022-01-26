@@ -4,12 +4,12 @@ description: Краткое введение в регистратор дейс�
 ms.topic: overview
 ms.date: 12/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: baf1957fc476279e1c1e53ebe568dabe1498a4ee
-ms.sourcegitcommit: c62567dc1188527511e4618d3e04e26580d4bb44
+ms.openlocfilehash: 0d06bbc386f0a9189fe1abd3b25b72a43c2ac7bd
+ms.sourcegitcommit: 161229492c85f3519c899573cf5022140026e7b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2022
-ms.locfileid: "61659187"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62220381"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Сценарии Office в Excel для Интернета
 
