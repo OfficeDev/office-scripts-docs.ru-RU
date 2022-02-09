@@ -1,14 +1,14 @@
 ---
 title: Ограничения и требования платформы с Office скриптами
-description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете
-ms.date: 12/14/2021
+description: Ограничения ресурсов и поддержка браузера для Office скриптов при Excel в Интернете.
+ms.date: 01/31/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
-ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
+ms.openlocfilehash: 385248e5c62ed3dbf2827105b3097ef27e5187a7
+ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61513631"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62462504"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Ограничения и требования платформы с Office скриптами
 
@@ -16,13 +16,13 @@ ms.locfileid: "61513631"
 
 ## <a name="browser-support"></a>Поддержка браузеров
 
-Office скрипты работают в любом [браузере, который поддерживает Office для Интернета](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452). Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или](https://www.w3schools.com/Js/js_es6.asp) более поздней, не будут работать с IE 11. Если люди в организации по-прежнему используют этот браузер, обязательно проверьте свои скрипты в этой среде при их совместном использовании.
+Office скрипты работают в любом браузере[, который поддерживает Office для Интернета](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452). Однако некоторые функции JavaScript не поддерживаются в Internet Explorer 11 (IE 11). Любые функции, [введенные в ES6 или](https://www.w3schools.com/Js/js_es6.asp) более поздней, не будут работать с IE 11. Если люди в организации по-прежнему используют этот браузер, обязательно проверьте свои скрипты в этой среде при их совместном использовании.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ### <a name="third-party-cookies"></a>Сторонние файлы cookie
 
-Вашему браузеру нужны сторонние файлы cookie, включенные для показа вкладки **Automate** в Excel в Интернете. Проверьте параметры браузера, если вкладка не отображается. При использовании закрытого сеанса браузера может потребоваться каждый раз повторно включить этот параметр.
+Вашему браузеру необходимы сторонние файлы cookie, включенные для показа вкладки **Automate** в Excel в Интернете. Проверьте параметры браузера, если вкладка не отображается. При использовании закрытого сеанса браузера может потребоваться каждый раз повторно включить этот параметр.
 
 > [!NOTE]
 > Некоторые браузеры ссылаются на этот параметр как на "все файлы cookie", а не на "сторонние файлы cookie".
@@ -42,14 +42,14 @@ Office скрипты работают в любом [браузере, кото
 
 Excel для Интернета имеет следующие ограничения при вызове в книгу с помощью скрипта:
 
-- Запросы и ответы ограничены **5МБ.**
-- Диапазон ограничен пятью **миллионами ячеек.**
+- Количество запросов и ответов ограничено **5 МБ**.
+- Диапазон ограничен пятью **миллионами ячеек**.
 
-Если вы сталкиваетесь с ошибками при работе с большими наборами данных, попробуйте использовать несколько меньших диапазонов вместо больших диапазонов. Пример см. в [примере Write a large dataset](../resources/samples/write-large-dataset.md) sample. Вы также можете использовать API, такие как [Range.getSpecialCells,](/javascript/api/office-scripts/excelscript/excelscript.range#getSpecialCells_cellType__cellValueType_) чтобы нацелить определенные ячейки вместо больших диапазонов.
+Если вы сталкиваетесь с ошибками при работе с большими наборами данных, попробуйте использовать несколько меньших диапазонов вместо больших диапазонов. Пример см. в [примере Write a large dataset](../resources/samples/write-large-dataset.md) sample. Вы также можете использовать API, такие как [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) , чтобы нацелить определенные ячейки вместо больших диапазонов.
 
 ### <a name="power-automate"></a>Power Automate
 
-При использовании Office скриптов с Power Automate каждый пользователь может использовать **800** вызовов к действию Run Script в день. Это ограничение сбрасывается в 12:00 утра по UTC.
+При использовании Office скриптов с Power Automate каждый пользователь может использовать **1600 вызовов для действия Run Script в день**. Это ограничение сбрасывается в 12:00 утра по UTC.
 
 Платформа Power Automate также имеет ограничения использования, которые можно найти в следующих статьях.
 
@@ -57,7 +57,7 @@ Excel для Интернета имеет следующие ограничен
 - [Известные проблемы и ограничения для соединиттеля Excel Online (Бизнес)](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 > [!NOTE]
-> Если у вас есть долгосрочный сценарий, следует помнить о [120-секундном](/power-automate/limits-and-config#timeout)таймауте для синхронных Power Automate операций. Необходимо либо оптимизировать [](../develop/web-client-performance.md) сценарий, либо разделить Excel на несколько скриптов.
+> Если у вас есть длительный сценарий, следует помнить о [120-секундном](/power-automate/limits-and-config#timeout) таймауте для синхронных Power Automate операций. Необходимо либо оптимизировать сценарий[](../develop/web-client-performance.md), либо разделить Excel на несколько скриптов.
 
 ## <a name="see-also"></a>См. также
 
