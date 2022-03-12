@@ -1,14 +1,14 @@
 ---
 title: Фильтр Excel таблицы и получить видимый диапазон
 description: Узнайте, как использовать Office скрипты для фильтрации таблицы Excel и получения видимого диапазона в качестве массива объектов.
-ms.date: 06/29/2021
+ms.date: 03/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 35c769ff1d5a088b652833826d41ecad2c317465
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 752566aae1f5e64748e9a7a4c33447129905be22
+ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333064"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63459656"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>Фильтр Excel таблицы и получить видимый диапазон в качестве объекта JSON
 
@@ -18,11 +18,11 @@ ms.locfileid: "59333064"
 
 * Нанесите фильтр на столбец таблицы.
 * Извлекать видимый диапазон после фильтрации.
-* Сборка и возвращение объекта с [определенной структурой JSON.](#sample-json)
+* Сборка и возвращение объекта с [определенной структурой JSON](#sample-json).
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте <a href="table-filter.xlsx">table-filter.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+<a href="table-filter.xlsx"> Скачайтеtable-filter.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 ## <a name="sample-code-filter-a-table-and-get-visible-range"></a>Пример кода: фильтруем таблицу и получаем видимый диапазон
 
@@ -60,7 +60,7 @@ function main(workbook: ExcelScript.Workbook): ReturnTemplate {
 
 // This function converts a 2D-array of values into a generic JSON object.
 function returnObjectFromValues(values: string[][]): BasicObject[] {
-  let objectArray = [];
+  let objectArray: BasicObject[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -136,6 +136,6 @@ interface ReturnTemplate {
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>Обучающее видео: фильтровать таблицу Excel и получить видимый диапазон
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>Обучающее видео. Фильтр Excel таблицу и получить видимый диапазон
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/Mv7BrvPq84A).
+[Посмотрите, как суди Рамамурти (Sudhi Ramamurthy) пройдите этот пример на YouTube](https://youtu.be/Mv7BrvPq84A).

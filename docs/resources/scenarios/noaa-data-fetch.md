@@ -1,24 +1,24 @@
 ---
-title: 'Office Пример сценария: Graph данных уровня воды из NOAA'
+title: 'Office сценарий сценариев: Graph данных уровня воды из NOAA'
 description: Пример, который извлекает данные JSON из базы данных NOAA и использует их для создания диаграммы.
-ms.date: 06/29/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f0492c79b9fc2d7d98f4433611fd8589cf52054a
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 23246185072587d292cec4e30f868c46ddc80cde
+ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327891"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63459636"
 ---
-# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office Сценарий примера сценариев: извлечение и график данных уровня воды из NOAA
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office сценария сценариев: извлечение и граф данных уровня воды из NOAA
 
-В этом сценарии необходимо совместить уровень воды на станции [National Oceanic and Atmospheric Administration's Seattle.](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130) Внешние данные используются для заполнения таблицы и создания диаграммы.
+В этом сценарии необходимо заметь уровень воды на станции Национального управления океанических и атмосферных исследований [в Сиэтле](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130). Внешние данные используются для заполнения таблицы и создания диаграммы.
 
-Вы разработает сценарий, который использует команду для запроса базы `fetch` [данных NOAA Tides и Currents.](https://tidesandcurrents.noaa.gov/) Это позволит получить уровень воды, записанный через заданный промежуток времени. Сведения будут возвращены в качестве JSON, поэтому часть сценария будет переводить их в значения диапазона. После того как данные будут в таблице, они будут использоваться для сделайте диаграмму.
+Вы разработает сценарий, который использует команду для `fetch` запроса базы [данных NOAA Tides и Currents](https://tidesandcurrents.noaa.gov/). Это позволит получить уровень воды, записанный через заданный промежуток времени. Сведения будут возвращены в качестве JSON, поэтому часть сценария будет переводить их в значения диапазона. После того как данные будут в таблице, они будут использоваться для сделайте диаграмму.
 
 ## <a name="scripting-skills-covered"></a>Навыки скриптов, охватываемых
 
-- Внешние вызовы API `fetch` ()
+- Внешние вызовы API (`fetch`)
 - Размыв JSON
 - Диаграммы
 
@@ -33,7 +33,7 @@ ms.locfileid: "59327891"
      * Gets data from the National Oceanic and Atmospheric Administration's Tides and Currents database. 
      * That data is used to make a chart.
      */
-    async function main(workbook: ExcelScript.Workbook): Promise<void> {
+    async function main(workbook: ExcelScript.Workbook) {
       // Get the current sheet.
       let currentSheet = workbook.getActiveWorksheet();
     
@@ -113,7 +113,7 @@ ms.locfileid: "59327891"
 
 ## <a name="running-the-script"></a>Выполнение скрипта
 
-На любом графике запустите сценарий **диаграммы уровня воды NOAA.** Сценарий извлекает данные уровня воды с 25 декабря 2020 г. по 27 декабря 2020 г. Переменные в начале сценария можно изменить, чтобы использовать разные даты `const` или получать различные сведения о станциях. API [CO-OPS for Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) описывает, как получить все эти данные.
+На любом графике запустите сценарий **диаграммы уровня воды NOAA** . Сценарий извлекает данные уровня воды с 25 декабря 2020 г. по 27 декабря 2020 г. Переменные `const` в начале сценария можно изменить, чтобы использовать разные даты или получать различные сведения о станциях. [API CO-OPS for Data Retrieval](https://api.tidesandcurrents.noaa.gov/api/prod/) описывает, как получить все эти данные.
 
 ### <a name="after-running-the-script"></a>После запуска скрипта
 
