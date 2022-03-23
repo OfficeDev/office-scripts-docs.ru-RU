@@ -1,41 +1,35 @@
 ---
 title: Выходные Excel как JSON
-description: Узнайте, как вывод данных Excel таблицы как JSON для использования в Power Automate.
-ms.date: 07/22/2021
+description: Узнайте, как Excel данные таблицы как JSON для использования в Power Automate.
+ms.date: 03/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b613f41618594f6f38634e4126ab8f616f1f3f4
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: d6f15b9b59a2dfe1c74caa11c748f5f52c4ef35e
+ms.sourcegitcommit: 62a62351a0a15a658f93336269f3f50767ca6b62
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332110"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746354"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Данные Excel таблицы как JSON для использования в Power Automate
 
-Excel таблицы могут быть представлены в виде массива объектов в виде JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам Power Automate потоками.
+Excel таблицы могут представляться как массив объектов в виде JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам Power Automate потоками.
 
-_Данные таблицы ввода_
+## <a name="sample-excel-file"></a>Пример Excel файла
+
+Скачайте <a href="table-data-with-hyperlinks.xlsx"> файлtable-data-with-hyperlinks.xlsx</a> для готовой к использованию книги.
 
 :::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода.":::
 
 Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет всплыть в JSON дополнительные уровни данных ячейки.
 
-_Данные таблицы ввода, включаемой гиперссылки_
-
 :::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, форматированный как гиперссылки.":::
-
-_Диалоговое окно для редактирования гиперссылки_
-
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="Диалоговое окно Редактирование гиперссылки, отображающий параметры для изменения гиперссылки.":::
-
-## <a name="sample-excel-file"></a>Пример Excel файла
-
-Скачайте <a href="table-data-with-hyperlinks.xlsx"> файлtable-data-with-hyperlinks.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 ## <a name="sample-code-return-table-data-as-json"></a>Пример кода: данные таблицы возврата в качестве JSON
 
+Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+
 > [!NOTE]
-> Вы можете изменить `interface TableData` структуру, чтобы соответствовать столбцам таблицы. Обратите внимание, что для имен столбцов с пробелами обязательно поместите ключ в кавычках, например в `"Event ID"` примере.
+> Вы можете изменить структуру `interface TableData` , чтобы соответствовать столбцам таблицы. Обратите внимание, что для имен столбцов с пробелами обязательно поместите ключ в кавычках, `"Event ID"` например в примере.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
