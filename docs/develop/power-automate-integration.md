@@ -3,12 +3,12 @@ title: Запустите Office скрипты с Power Automate
 description: Как получить Office скрипты для Excel в Интернете работы с рабочим Power Automate рабочим процессом.
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f7358b79248974ddb548b54437422670a37531bf
-ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
+ms.openlocfilehash: dbf65086e564b20ca0fc3a4dc1c527188540be6b
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63459622"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585753"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Запустите Office скрипты с Power Automate
 
@@ -16,7 +16,7 @@ ms.locfileid: "63459622"
 
 ## <a name="get-started"></a>Начало работы
 
-Если вы не Power Automate, рекомендуем посетить [Начало работы с Power Automate](/power-automate/getting-started). Здесь вы можете узнать больше обо всех доступных вам возможностях автоматизации. В этих документах основное внимание уделяется работе Office скриптов с Power Automate и как это может помочь улучшить Excel работу.
+Если вы не Power Automate, рекомендуем посетить начало работы [с Power Automate](/power-automate/getting-started). Здесь вы можете узнать больше обо всех доступных вам возможностях автоматизации. В этих документах основное внимание уделяется работе Office скриптов с Power Automate и как это может помочь улучшить Excel работу.
 
 Чтобы приступить к Power Automate и Office скриптов, следуйте учебнику Начните использовать скрипты с [Power Automate](../tutorials/excel-power-automate-manual.md). Это научит вас создавать поток, который вызывает простой сценарий. После завершения этого учебника и передачи данных [](../tutorials/excel-power-automate-trigger.md) скриптам в автоматическом руководстве Power Automate потока возвращайтесь сюда для получения подробных сведений о подключении скриптов Office к Power Automate потокам.
 

@@ -3,19 +3,19 @@ title: Подсчет пустых строк на листах
 description: Узнайте, как использовать Office скрипты, чтобы определить, есть ли пустые строки вместо данных в листах, а затем сообщить о том, сколько строк будет использоваться в потоке Power Automate.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 103d2f96c1780b47363dcb6caab82553dd556b80
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 1ae513928b885994dc7f6d1b8ad66d694b61e7b7
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332215"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585564"
 ---
 # <a name="count-blank-rows-on-sheets"></a>Подсчет пустых строк на листах
 
 Этот проект включает два сценария:
 
-* [Подсчитайте пустые строки на заданном листе:](#sample-code-count-blank-rows-on-a-given-sheet)пересекает используемый диапазон на заданном листе и возвращает количество пустых строк.
-* [Подсчитайте пустые строки](#sample-code-count-blank-rows-on-all-sheets)на всех листах: пересекает используемый диапазон на всех листах и возвращает количество пустых строк. 
+* [Подсчитайте пустые строки на заданном](#sample-code-count-blank-rows-on-a-given-sheet) листе: пересекает используемый диапазон на заданном листе и возвращает количество пустых строк.
+* [Подсчитайте пустые строки на всех листах](#sample-code-count-blank-rows-on-all-sheets): пересекает используемый  диапазон на всех листах и возвращает количество пустых строк.
 
 > [!NOTE]
 > Для нашего скрипта пустая строка — это строка, в которой нет данных. Строка может иметь форматирование.

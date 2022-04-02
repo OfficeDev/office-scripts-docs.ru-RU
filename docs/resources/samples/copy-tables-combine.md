@@ -1,16 +1,16 @@
 ---
-title: Объединяйте данные из нескольких Excel таблиц в одну таблицу
+title: Объединение данных из нескольких Excel таблиц в одну таблицу
 description: Узнайте, как использовать Office скрипты для объединения данных из нескольких Excel таблиц в одну таблицу.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 490727f39a497dd1d2e31f2fac938b6d518012a5
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: bfe2f4af579e5ee59d20e12fe4850dd9c41bcc56
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330774"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585893"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>Объединяйте данные из нескольких Excel таблиц в одну таблицу
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>Объединение данных из нескольких Excel таблиц в одну таблицу
 
 Этот пример объединяет данные из нескольких Excel таблиц в одну таблицу, которая включает все строки. Предполагается, что все используемые таблицы имеют ту же структуру.
 
@@ -21,7 +21,7 @@ ms.locfileid: "59330774"
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте <a href="tables-copy.xlsx">tables-copy.xlsx</a> для готовой к использованию книги. Добавьте следующие скрипты, чтобы попробовать пример самостоятельно!
+<a href="tables-copy.xlsx"> Скачайтеtables-copy.xlsx</a> для готовой к использованию книги. Добавьте следующие скрипты, чтобы попробовать пример самостоятельно!
 
 ## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Пример кода. Объединяйте данные из нескольких Excel таблиц в одну таблицу
 
@@ -97,4 +97,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Обучающее видео. Объединяйте данные из нескольких Excel таблиц в одну таблицу
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/di-8JukK3Lc).
+[Посмотрите, как суди Рамамурти (Sudhi Ramamurthy) пройдите этот пример на YouTube](https://youtu.be/di-8JukK3Lc).

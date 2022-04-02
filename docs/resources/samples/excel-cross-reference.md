@@ -3,16 +3,16 @@ title: Перекрестные Excel файлы с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и формата Excel файла.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: adeb84140cb9884309c9f37854a29fc4d59b17ed
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 13ba6c8ba6f9232554ea6cfd5f98c308ea981683
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332980"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585488"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестные Excel файлы с Power Automate
 
-В этом решении показано, как сравнить данные между двумя Excel файлами, чтобы найти несоответствия. Он использует Office скрипты для анализа данных и Power Automate для связи между книгами.
+В этом решении показано, как сравнить данные между двумя Excel файлами для поиска несоответствий. Он использует Office скрипты для анализа данных и Power Automate для связи между книгами.
 
 ## <a name="example-scenario"></a>Пример сценария
 
@@ -144,32 +144,32 @@ interface EventData {
 }
 ```
 
-## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate: проверка несоответствий в книгах
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate потока: проверка несоответствий в книгах
 
 Этот поток извлекает сведения о событиях из первой книги и использует эти данные для проверки второй книги.
 
-1. Вопишите [Power Automate](https://flow.microsoft.com) и создайте новый поток **мгновенных облаков.**
+1. Вопишите [Power Automate](https://flow.microsoft.com) и создайте новый **поток мгновенных облаков**.
 1. Выберите **вручную вызвать поток и** выберите **Создать**.
-1. Добавьте новый **шаг,** использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия.
+1. Добавьте новый **шаг,** **использующий соединителю Excel Online (Бизнес)** с действием **сценария Run**. Используйте следующие значения для действия.
     * **Расположение**: OneDrive для бизнеса
     * **Библиотека документов**: OneDrive
-    * **Файл**: event-data.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
-    * **Сценарий:** Получить данные событий
+    * **Файл**: event-data.xlsx ([выбранный с помощью выбора файла](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
+    * **Script**: Get event data
 
     :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Завершенный соедините Excel Online (Бизнес) для первого сценария в Power Automate.":::
 
-1. Добавьте второй **новый** шаг, использующий **соединителю Excel Online (Бизнес)** с действием **сценария Run.** Используйте следующие значения для действия.
+1. Добавьте **второй новый шаг**, **использующий соединителю Excel Online (Бизнес)** с действием **сценария Run**. Используйте следующие значения для действия.
     * **Расположение**: OneDrive для бизнеса
     * **Библиотека документов**: OneDrive
-    * **Файл**: speaker-registration.xlsx [(выбранный с помощью выбора файла)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
-    * **Сценарий:** Проверка регистрации спикера
+    * **Файл**: speaker-registration.xlsx ([выбранный с помощью выбора файла](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
+    * **Сценарий**: Проверка регистрации спикера
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Завершенный соедините Excel Online (Бизнес) для второго сценария в Power Automate.":::
-1. В этом примере Outlook как клиент электронной почты. Вы можете использовать любые соединители электронной почты Power Automate поддерживает. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие Отправка и электронная почта **(V2).** Используйте следующие значения для действия.
-    * **Чтобы:** ваша тестовая учетная запись электронной почты (или личная электронная почта)
-    * **Subject:** Результаты проверки событий
-    * **Body**: result _(динамическое содержимое из **сценария Run 2)**_
+1. В этом примере Outlook как клиент электронной почты. Вы можете использовать любые соединители электронной почты Power Automate поддерживает. Добавьте новый **шаг,** использующий **соединителю Office 365 Outlook** и действие **Отправка и** электронная почта (V2). Используйте следующие значения для действия.
+    * **To**: Ваша тестовая учетная запись электронной почты (или личная электронная почта)
+    * **Subject**. Результаты проверки событий
+    * **Body**: result (_dynamic content from **Run script 2**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Завершенный соедините Office 365 Outlook в Power Automate.":::
-1. Сохраните поток. Используйте **кнопку Test** на странице редактора потока или запустите поток через вкладку **Мои потоки.** Не забудьте разрешить доступ при запросе.
-1. Вы должны получить сообщение электронной почты с сообщением "Обнаружено несоответствие. Данные требуют проверки". Это означает, что между строками вspeaker-registrations.xlsx **и** строками вevent-data.xlsx **.** Откройте **speaker-registrations.xlsx,** чтобы увидеть несколько выделенных ячеек, где возможны проблемы с перечислениями регистрации динамиков.
+1. Сохраните поток. Используйте **кнопку Test** на странице редактора потока или запустите поток через вкладку **Мои потоки** . Не забудьте разрешить доступ при запросе.
+1. Вы должны получить сообщение электронной почты с сообщением "Обнаружено несоответствие. Данные требуют проверки". Это означает, что между строками в **speaker-registrations.xlsxи** строками в **event-data.xlsx.** Откройте **speaker-registrations.xlsx** , чтобы увидеть несколько выделенных ячеек, где возможны проблемы с перечислениями регистрации динамиков.

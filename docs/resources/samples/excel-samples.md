@@ -1,14 +1,14 @@
 ---
 title: Основные сценарии Office скриптов в Excel в Интернете
 description: Коллекция примеров кода, которые можно использовать с Office скриптами в Excel в Интернете.
-ms.date: 06/29/2021
+ms.date: 03/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 853b00349b246e74765eb2959b4926fad42f07c5
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330739"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585872"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Основные сценарии Office скриптов в Excel в Интернете
 
@@ -233,7 +233,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-В следующем примере считываю дату, храняную в Excel, и переводим ее на объект JavaScript Date. В качестве ввода [для даты](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript используется числовый серийный номер даты.
+В следующем примере считываю дату, храняную в Excel, и переводим ее на объект JavaScript Date. В качестве ввода для даты JavaScript используется числовый серийный номер даты. Этот серийный номер описан в статье [функции NOW()](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) .
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -362,7 +362,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="single-formula"></a>Единая формула
 
-Этот скрипт задает формулу ячейки, а затем отображает, как Excel хранит формулу и значение ячейки отдельно.
+Этот скрипт задает формулу ячейки, а затем отображает, Excel хранит формулу и значение ячейки отдельно.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -381,9 +381,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="handle-a-spill-error-returned-from-a-formula"></a>Обработка `#SPILL!` ошибки, возвращаемой из формулы
+### <a name="handle-a-spill-error-returned-from-a-formula"></a>Обработка ошибки `#SPILL!` , возвращаемой из формулы
 
-Этот скрипт передает диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE. Если переливание приводит к ошибке, он очищает целевой диапазон и снова `#SPILL` применяет формулу.
+Этот скрипт передает диапазон "A1:D2" на "A4:B7" с помощью функции TRANSPOSE. Если переливание приводит к ошибке `#SPILL` , он очищает целевой диапазон и снова применяет формулу.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -422,5 +422,5 @@ function main(workbook: ExcelScript.Workbook) {
 ## <a name="see-also"></a>См. также
 
 * [Sudhi Ramamurthy's "Range basics" on YouTube](https://youtu.be/4emjkOFdLBA)
-* [Office Примеры сценариев и сценарии](samples-overview.md)
+* [Office сценарии и сценарии](samples-overview.md)
 * [Запись, редактирование и создание сценариев Office в Excel в Интернете](../../tutorials/excel-tutorial.md)

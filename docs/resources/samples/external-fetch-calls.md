@@ -1,24 +1,24 @@
 ---
 title: Использование внешних вызовов Fetch в сценариях Office
-description: Узнайте, как делать внешние вызовы API в Office Скрипты.
+description: Узнайте, как делать внешние вызовы API в Office скриптах.
 ms.date: 05/14/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: d957e0536e8574681f2ec752f23f9e6ba07f5fd2
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: feff9d49f9f50f14fd83b1864568df8dab02d417
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59335750"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585529"
 ---
 # <a name="use-external-fetch-calls-in-office-scripts"></a>Использование внешних вызовов Fetch в сценариях Office
 
-Этот скрипт получает основные сведения о репозиториях GitHub пользователя. В нем показано, как `fetch` использовать в простом сценарии. Дополнительные сведения об использовании или других внешних вызовах читайте в публикации Поддержка вызовов внешнего `fetch` [API в Office Scripts](../../develop/external-calls.md)
+Этот сценарий получает основные сведения о репозиториях GitHub пользователя. В нем показано, как использовать `fetch` в простом сценарии. Дополнительные сведения об использовании или `fetch` других внешних вызовах читайте в материале Поддержка вызовов внешнего [API в Office Scripts](../../develop/external-calls.md)
 
-Дополнительные данные о API GItHub, используемых в ссылке GitHub [API.](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user) Вы также можете увидеть необработанный вывод вызова API, посетив веб-браузер (не забудьте заменить местообладатель `https://api.github.com/users/{USERNAME}/repos` {USERNAME} своим GitHub ID).
+Дополнительные данные об API GItHub можно узнать в ссылке [GitHub API](https://docs.github.com/rest/reference/repos#list-repositories-for-a-user). Вы также можете увидеть необработанный результат вызова API`https://api.github.com/users/{USERNAME}/repos`, посетив веб-браузер (обязательно замените местообладатель {USERNAME} своим GitHub ID).
 
 ![Пример получения данных репозиториев](../../images/git.png)
 
-## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>Пример кода. Получите базовую информацию о GitHub хранилищах пользователя
+## <a name="sample-code-get-basic-information-about-users-github-repositories"></a>Пример кода. Получите основные сведения о репозиториях GitHub пользователя
 
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
@@ -57,4 +57,4 @@ interface License {
 
 ## <a name="training-video-how-to-make-external-api-calls"></a>Обучающее видео: как сделать внешние вызовы API
 
-[Смотреть Sudhi Ramamurthy ходить через этот пример на YouTube](https://youtu.be/fulP29J418E).
+[Посмотрите, как суди Рамамурти (Sudhi Ramamurthy) пройдите этот пример на YouTube](https://youtu.be/fulP29J418E).

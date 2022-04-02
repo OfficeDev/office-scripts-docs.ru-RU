@@ -1,14 +1,14 @@
 ---
 title: Преобразование CSV-файлов в Excel книги
 description: Узнайте, как использовать Office и Power Automate для создания .xlsx из .csv файлов.
-ms.date: 02/25/2022
+ms.date: 03/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e501368015840d4181c5565662638b65e213fed
-ms.sourcegitcommit: 49f527a7f54aba00e843ad4a92385af59c1d7bfa
+ms.openlocfilehash: 52619c1867b654fae3fce1a383a612f81f80d868
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63352127"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585592"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>Преобразование CSV-файлов в Excel книги
 
@@ -29,38 +29,46 @@ ms.locfileid: "63352127"
 ## <a name="sample-code-insert-comma-separated-values-into-a-workbook"></a>Пример кода: Вставьте разделенные запятой значения в книгу
 
 ```TypeScript
+/**
+ * Convert incoming CSV data into a range and add it to the workbook.
+ */
 function main(workbook: ExcelScript.Workbook, csv: string) {
-  /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
+  let sheet = workbook.getWorksheet("Sheet1");
+
+  // Remove any Windows \r characters.
+  csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
-  let rows = csv.split("\r\n");
-  let data : string[][] = [];
-  rows.forEach((value) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
+  let rows = csv.split("\n");
+  /*
+   * For each row, match the comma-separated sections.
+   * For more information on how to use regular expressions to parse CSV files,
+   * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+   */
+  const csvMatchRegex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g
+  rows.forEach((value, index) => {
+    if (value.length > 0) {
+        let row = value.match(csvMatchRegex);
     
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-    data.push(row);
+        // Check for blanks at the start of the row.
+        if (row[0].charAt(0) === ',') {
+          row.unshift("");
+        }
+    
+        // Remove the preceding comma.
+        row.forEach((cell, index) => {
+          row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+        });
+    
+        // Create a 2D array with one row.
+        let data: string[][] = [];
+        data.push(row);
+    
+        // Put the data in the worksheet.
+        let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+        range.setValues(data);
+    }
   });
-
-  // Put the data in the worksheet.
-  let sheet = workbook.getWorksheet("Sheet1");
-  let range = sheet.getRangeByIndexes(0, 0, data.length, data[0].length);
-  range.setValues(data);
 
   // Add any formatting or table creation that you want.
 }
@@ -107,45 +115,59 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-Сценарий предполагает, что разделенные запятой значения сделают прямоугольный диапазон. Если .csv файл содержит строки с разным числом столбцов, вы получите ошибку, которая гласит: "Количество строк или столбцов в массиве ввода не соответствует размеру или размерам диапазона". Если данные не могут соответствовать прямоугольной форме, используйте следующий сценарий. Этот скрипт добавляет данные по одной строке одновременно, а не в качестве одного диапазона. Этот скрипт менее эффективен и заметно медленнее с большими наборами данных.
+### <a name="script-testing"></a>Тестирование скриптов
+
+Чтобы проверить сценарий без Power Automate, назначьте `csv` значение перед его использованием. Попробуйте добавить следующий код в качестве первой строки `main` функции и нажатия **run**.
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, csv: string) {
-  let sheet = workbook.getWorksheet("Sheet1");
-
-  /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
-
-  // Split each line into a row.
-  let rows = csv.split("\r\n");
-  rows.forEach((value, index) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
-
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-
-    // Create a 2D-array with one row.
-    let data: string[][] = [];
-    data.push(row);
-
-    // Put the data in the worksheet.
-    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
-    range.setValues(data);
-  });
-
-  // Add any formatting or table creation that you want.
-}
+  csv = `1, 2, 3
+         4, 5, 6
+         7, 8, 9`;
 ```
+
+### <a name="semicolon-separated-files-and-other-alternative-separators"></a>Разделенные за полуколоном файлы и другие альтернативные разделиторы
+
+В некоторых регионах для раздельного (';') значения ячейки вместо запятых используются запятые. В этом случае необходимо изменить следующие строки в скрипте.
+
+1. Замените запятые на запятые в обычном выражении. Это начинается с `let row = value.match`.
+
+    ```TypeScript
+    let row = value.match(/(?:;|\n|^)("(?:(?:"")*[^"]*)*"|[^";\n]*|(?:\n|$))/g);
+    ```
+
+1. Замените запятую полуколоном в чеке для пустой первой ячейки. Это начинается с `if (row[0].charAt(0)`.
+
+    ```TypeScript
+    if (row[0].charAt(0) === ';') {
+    ```
+
+1. Замените запятую полуколоном в строке, которая удаляет символ разделения из отображаемой строки. Это начинается с `row[index] = cell.indexOf`.
+
+   ```TypeScript
+      row[index] = cell.indexOf(";") === 0 ? cell.substr(1) : cell;
+    ```
+
+> [!NOTE]
+> Если в файле используются вкладки или любой другой символ для раздельного использования значений, `;` `\t` замените вышеуказанные замены или любой используемый символ.
+
+### <a name="large-csv-files"></a>Большие CSV-файлы
+
+Если в вашем файле сотни тысяч ячеек, можно достичь Excel [передачи данных](../../testing/platform-limits.md#excel). Вам потребуется периодически принудить сценарий синхронизироваться с Excel. Самый простой способ сделать это — вызвать после `console.log` обработки пакета строк. Добавьте следующие строки кода, чтобы это произошло.
+
+1. Прежде `rows.forEach((value, index) => {`чем добавить следующую строку.
+
+    ```TypeScript
+      let rowCount = 0;
+    ```
+
+1. После `range.setValues(data);`этого добавьте следующий код. Обратите внимание, что в зависимости от количества столбцов может потребоваться `5000` уменьшить число столбцов.
+
+    ```TypeScript
+      rowCount++;
+      if (rowCount % 5000 === 0) {
+        console.log("Syncing 5000 rows.");
+      }
+    ```
+
+> [!WARNING]
+> Если ваш CSV-файл очень большой, у вас могут возникнуть проблемы с [синхронизацией Power Automate](../../testing/platform-limits.md#power-automate). Необходимо разделить данные CSV на несколько файлов, прежде чем преобразовывать их в Excel книги.

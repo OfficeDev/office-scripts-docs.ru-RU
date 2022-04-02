@@ -1,16 +1,16 @@
 ---
-title: Создание таблицы содержимого книги
+title: Создание оглавления книги
 description: Узнайте, как создать таблицу контента со ссылками на каждый таблицу.
 ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 658143e9e1e6a43cff19eac36abeec88310cda25
-ms.sourcegitcommit: 161229492c85f3519c899573cf5022140026e7b8
+ms.openlocfilehash: b2d69609514c2e1e87f9c0590ea10152fc7d5e7d
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2022
-ms.locfileid: "62220425"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585522"
 ---
-# <a name="create-a-workbook-table-of-contents"></a>Создание таблицы содержимого книги
+# <a name="create-a-workbook-table-of-contents"></a>Создание оглавления книги
 
 В этом примере показано, как создать таблицу содержимого для книги. Каждая запись в таблице содержимого — это гиперссылка к одному из таблиц в книге.
 
@@ -18,7 +18,7 @@ ms.locfileid: "62220425"
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 
-Скачайте <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт и попробуйте пример самостоятельно!
+<a href="table-of-contents.xlsx"> Скачайтеtable-of-contents.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт и попробуйте пример самостоятельно!
 
 ## <a name="sample-code-create-a-workbook-table-of-contents"></a>Пример кода. Создание таблицы содержимого книги
 

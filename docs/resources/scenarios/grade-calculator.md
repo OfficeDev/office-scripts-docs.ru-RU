@@ -1,16 +1,16 @@
 ---
-title: 'Office Пример сценария: калькулятор оценки'
+title: 'Office сценарий скриптов: калькулятор класса'
 description: Пример, определяя процент и оценки букв для класса учащихся.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9036c12cd05e96932171cc0aefdce8eed1cc988e
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: fd9009633e4a89e3b236f765543123b3995b9f47
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59334212"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585445"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office Пример сценария: калькулятор оценки
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office сценарий скриптов: калькулятор класса
 
 В этом сценарии вы будете инструктором, который подытвет оценки каждого учащегося по окончании срока обучения. Вы вводя оценки для их назначений и тестов, как вы идете. Теперь настало время определить судьбы учащихся.
 
@@ -25,7 +25,7 @@ ms.locfileid: "59334212"
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 
-1. Скачайте <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> в OneDrive.
+1. <a href="grade-calculator.xlsx"> Скачайтеgrade-calculator.xlsx</a> в OneDrive.
 
 1. Откройте книгу с помощью Excel для Интернета.
 
