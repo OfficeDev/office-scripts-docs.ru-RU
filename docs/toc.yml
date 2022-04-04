@@ -35,7 +35,7 @@ items:
             href: develop/script-buttons.md
           - name: Выполнение сценариев с помощью Power Automate
             href: develop/power-automate-integration.md
-          - name: Использование файлов макроса в потоках Power Automate
+          - name: Использование файлов XLSM в потоках Power Automate
             href: develop/macros-power-automate.md
       - name: Устранение неполадок
         items:
