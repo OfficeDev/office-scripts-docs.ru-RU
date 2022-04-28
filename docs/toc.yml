@@ -37,6 +37,8 @@ items:
             href: develop/power-automate-integration.md
           - name: Использование файлов XLSM в потоках Power Automate
             href: develop/macros-power-automate.md
+          - name: Работа со сводными таблицами
+            href: develop/pivottables.md
       - name: Устранение неполадок
         items:
           - name: Основы устранения неполадок
@@ -109,6 +111,8 @@ items:
                 href: resources/scenarios/task-reminders.md
           - name: Вклад сообщества
             items:
+              - name: Кнопка отметки времени
+                href: resources/scenarios/punch-clock.md
               - name: Праздничные приветствия
                 href: resources/samples/community-seasons-greetings.md
       - name: Сценарии Office и другие платформы
