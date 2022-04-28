@@ -3,12 +3,12 @@ title: Основные сведения о сценариях Office в Excel �
 description: Информация об объектной модели и другие основы для изучения перед написанием сценариев Office.
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: e2ba7eaa956f2009c9017bbfd1f390f56eb9008e
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 633772655ca9346055d33682c36f35a5a8610cc8
+ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585725"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077045"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Основные сведения о сценариях Office в Excel для Интернета
 
@@ -319,11 +319,14 @@ function main(workbook: ExcelScript.Workbook) {
 - [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook)
 - [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet)
 
+Сведения, относящиеся к объектной модели сводной таблицы, см. в разделе ["Работа со сводными таблицами в сценариях Office"](pivottables.md).
+
 ## <a name="see-also"></a>См. также
 
 - [Запись, редактирование и создание сценариев Office в Excel в Интернете](../tutorials/excel-tutorial.md)
 - [Чтение данных рабочей книги с помощью сценариев Office в Excel в Интернете](../tutorials/excel-read-tutorial.md)
 - [Справочник API для сценариев Office](/javascript/api/office-scripts/overview)
+- [Работа со сводными таблицами в сценариях Office](pivottables.md)
 - [Использование встроенных объектов JavaScript в сценариях Office](javascript-objects.md)
 - [Рекомендации по сценариям Office](best-practices.md)
 - [Центр разработчиков сценариев Office](https://developer.microsoft.com/office-scripts)
