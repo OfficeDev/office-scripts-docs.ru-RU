@@ -1,7 +1,7 @@
 items:
   - name: Документация по сценариям Office
     href: index.md
-  - name: Сценарии Office в Excel в Интернете
+  - name: Сценарии Office в Excel
     items:
       - name: Обзор
         href: overview/excel.md
