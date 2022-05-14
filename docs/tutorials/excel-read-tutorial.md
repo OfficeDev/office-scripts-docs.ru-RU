@@ -3,12 +3,12 @@ title: Чтение данных книги с помощью сценариев
 description: Учебник по сценариям Office о чтении данных из книг и их оценке в сценарии.
 ms.date: 01/06/2021
 ms.localizationpriority: high
-ms.openlocfilehash: c1bc867b6df91a7dedde4020177ed87682d060f9
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: d4378e1b4c851a1a2cf072b0eabb3d3d765bc234
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586040"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393644"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Чтение данных книги с помощью сценариев Office в Excel в Интернете
 
@@ -147,6 +147,6 @@ ms.locfileid: "64586040"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Откройте редактор кода и попробуйте некоторые [примеры сценариев Office в Excel в Интернете](../resources/samples/excel-samples.md). Дополнительные сведения о создании сценариев Office доступны в статье [Основные сведения о сценариях Office в Excel в Интернете](../develop/scripting-fundamentals.md).
+Откройте редактор кода и попробуйте некоторые [образцы сценариев для сценариев Office в Excel](../resources/samples/excel-samples.md). Дополнительные сведения о создании сценариев Office доступны в статье [Основные сведения о сценариях Office в Excel в Интернете](../develop/scripting-fundamentals.md).
 
 В следующем наборе учебников по сценариям Office рассматривается использование сценариев Office с помощью Power Automate. Узнайте больше о преимуществах сочетания двух платформ в статье [Выполнение сценариев Office с помощью Power Automate](../develop/power-automate-integration.md) или ознакомьтесь с учебником [Вызов сценариев из активированного вручную потока Power Automate](excel-power-automate-manual.md), чтобы создать поток Power Automate, использующий сценарий Office.
