@@ -1,35 +1,35 @@
 ---
-title: Выходные Excel как JSON
-description: Узнайте, как Excel данные таблицы как JSON для использования в Power Automate.
-ms.date: 03/18/2022
+title: Вывод данных Excel в формате JSON
+description: Узнайте, как вы выводить данные таблицы Excel в формате JSON для использования в Power Automate.
+ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d6f15b9b59a2dfe1c74caa11c748f5f52c4ef35e
-ms.sourcegitcommit: 62a62351a0a15a658f93336269f3f50767ca6b62
+ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
+ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746354"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65895043"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Данные Excel таблицы как JSON для использования в Power Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Вывод данных таблицы Excel в формате JSON для использования в Power Automate
 
-Excel таблицы могут представляться как массив объектов в виде JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам Power Automate потоками.
+Данные таблицы Excel могут быть представлены в виде массива объектов в формате JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть предоставлены другим системам через потоки Power Automate.
 
-## <a name="sample-excel-file"></a>Пример Excel файла
+## <a name="sample-excel-file"></a>Пример файла Excel
 
-Скачайте <a href="table-data-with-hyperlinks.xlsx"> файлtable-data-with-hyperlinks.xlsx</a> для готовой к использованию книги.
+Скачайте файл <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> для готовой к использованию книги.
 
-:::image type="content" source="../../images/table-input.png" alt-text="Таблица, показывающая данные таблицы ввода.":::
+:::image type="content" source="../../images/table-input.png" alt-text="Лист с входными данными таблицы.":::
 
-Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет всплыть в JSON дополнительные уровни данных ячейки.
+Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет отображать в JSON дополнительные уровни данных ячеек.
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Таблица, показывающая столбец данных таблицы, форматированный как гиперссылки.":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Лист, на котором показан столбец табличных данных, отформатированных как гиперссылки.":::
 
-## <a name="sample-code-return-table-data-as-json"></a>Пример кода: данные таблицы возврата в качестве JSON
+## <a name="sample-code-return-table-data-as-json"></a>Пример кода: возврат данных таблицы в формате JSON
 
 Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 > [!NOTE]
-> Вы можете изменить структуру `interface TableData` , чтобы соответствовать столбцам таблицы. Обратите внимание, что для имен столбцов с пробелами обязательно поместите ключ в кавычках, `"Event ID"` например в примере.
+> Структуру можно изменить `interface TableData` в соответствии со столбцами таблицы. Обратите внимание, что для имен столбцов с пробелами не забудьте поместить ключ в кавычки, `"Event ID"` например в примере.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -62,12 +62,12 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       continue;
     }
 
-    let object = {}
+    let object: {[key: string]: string} = {}
     for (let j = 0; j < values[i].length; j++) {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object as TableData);
+    objectArray.push(object as unknown as TableData);
   }
 
   return objectArray;
@@ -82,7 +82,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a>Пример вывода из таблицы "PlainTable"
+### <a name="sample-output-from-the-plaintable-worksheet"></a>Пример выходных данных листа PlainTable
 
 ```json
 [{
@@ -136,10 +136,10 @@ interface TableData {
 }]
 ```
 
-## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>Пример кода. Возвращаем данные таблицы как JSON с текстом гиперссылки
+## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>Пример кода: возврат данных таблицы в формате JSON с текстом гиперссылки
 
 > [!NOTE]
-> Сценарий всегда извлекает гиперссылки из 4-го столбца (индекс 0) таблицы. Вы можете изменить этот порядок или включить несколько столбцов в качестве данных гиперссылки, изменяя код под комментарием `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> Скрипт всегда извлекает гиперссылки из 4-го столбца (0 индекса) таблицы. Вы можете изменить этот порядок или включить несколько столбцов в качестве данных гиперссылки, изменив код в комментарии. `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>Пример вывода из таблицы "WithHyperLink"
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>Пример выходных данных листа WithHyperLink
 
 ```json
 [{
@@ -260,4 +260,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>Использование в Power Automate
 
-О том, как использовать такой сценарий в Power Automate, см. в [Power Automate.](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
+Сведения о том, как использовать такой сценарий в Power Automate, см. в статье "Создание автоматизированного рабочего процесса [с помощью Power Automate"](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
