@@ -3,16 +3,18 @@ title: Перекрестная ссылка Excel с Power Automate
 description: Узнайте, как использовать Office и Power Automate для перекрестной ссылки и форматирования Excel файла.
 ms.date: 06/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c06b6376d3726b3e1b44255df14aa64be196ea
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: a470ee4c59d0fc0a5612a54326a0dec3ab3a59d6
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038674"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088122"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Перекрестная ссылка Excel с Power Automate
 
 В этом решении показано, как сравнить данные между двумя Excel файлов для поиска несоответствий. Он использует Office скрипты для анализа данных и Power Automate для обмена данными между книгами.
+
+Этот пример передает данные между книгами с помощью объектов [JSON](https://www.w3schools.com/whatis/whatis_json.asp) . Дополнительные сведения о работе с JSON см. в статье "Использование JSON для передачи данных в Office [скрипты и из них"](../../develop/use-json.md).
 
 ## <a name="example-scenario"></a>Пример сценария
 

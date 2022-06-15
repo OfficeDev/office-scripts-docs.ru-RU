@@ -1,30 +1,30 @@
 ---
-title: Фильтр Excel таблицы и получить видимый диапазон
-description: Узнайте, как использовать Office скрипты для фильтрации таблицы Excel и получения видимого диапазона в качестве массива объектов.
+title: Фильтрация Excel таблицы и получение видимого диапазона
+description: Узнайте, как использовать Office скрипты для фильтрации Excel таблицы и получения видимого диапазона в виде массива объектов.
 ms.date: 03/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 09adbdabb64f9cf15b8219cfd3ef2dfa35d30fe2
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 103ec97111720ab872c0be843aa0573781d98c44
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585837"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088087"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>Фильтр Excel таблицы и получить видимый диапазон в качестве объекта JSON
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>Фильтрация Excel таблицы и получение видимого диапазона в виде объекта JSON
 
-Этот пример фильтрует таблицу Excel и возвращает видимый диапазон в качестве объекта JSON. Этот JSON может быть предоставлен потоку Power Automate как часть более крупного решения.
+Этот пример фильтрует Excel таблицу и возвращает видимый диапазон в виде [объекта JSON](https://www.w3schools.com/whatis/whatis_json.asp). Этот JSON может быть предоставлен Power Automate как часть более крупного решения.
 
 ## <a name="example-scenario"></a>Пример сценария
 
-* Нанесите фильтр на столбец таблицы.
-* Извлекать видимый диапазон после фильтрации.
-* Сборка и возвращение объекта с [определенной структурой JSON](#sample-json).
+* Применение фильтра к столбцу таблицы.
+* Извлеките видимый диапазон после фильтрации.
+* Соберите и вернитесь к объекту с [определенной структурой JSON](#sample-json).
 
 ## <a name="sample-excel-file"></a>Пример Excel файла
 
 <a href="table-filter.xlsx"> Скачайтеtable-filter.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
-## <a name="sample-code-filter-a-table-and-get-visible-range"></a>Пример кода: фильтруем таблицу и получаем видимый диапазон
+## <a name="sample-code-filter-a-table-and-get-visible-range"></a>Пример кода: фильтрация таблицы и получение видимого диапазона
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
@@ -90,7 +90,7 @@ interface ReturnTemplate {
 
 ### <a name="sample-json"></a>Пример JSON
 
-Каждый ключ представляет уникальное значение таблицы. Каждый экземпляр массива представляет строку, которая видна при применении соответствующего фильтра.
+Каждый ключ представляет уникальное значение таблицы. Каждый экземпляр массива представляет строку, видимую при применении соответствующего фильтра. Дополнительные сведения о работе с JSON см. в статье "Использование JSON для передачи данных в Office [скрипты и из них"](../../develop/use-json.md).
 
 ```json
 {
@@ -99,43 +99,43 @@ interface ReturnTemplate {
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Debra Berger",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "27-Oct-20",
     "Responsible": "Delia Dennis",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Lidia Holloway",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }],
   "Station-2": [{
     "Station": "Station-2",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Gerhart Moller",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }, {
     "Station": "Station-2",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Grady Archie",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }],
   "Station-3": [{
     "Station": "Station-3",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Isaiah Langer",
-    "Reason&quot;: &quot;"
+    "Reason": ""
   }]
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>Обучающее видео. Фильтр Excel таблицу и получить видимый диапазон
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>Обучающее видео. Фильтрация Excel таблицы и получение видимого диапазона
 
-[Посмотрите, как суди Рамамурти (Sudhi Ramamurthy) пройдите этот пример на YouTube](https://youtu.be/Mv7BrvPq84A).
+[Просмотрите этот пример на YouTube](https://youtu.be/Mv7BrvPq84A), чтобы просмотреть этот пример.

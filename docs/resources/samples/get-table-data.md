@@ -1,20 +1,20 @@
 ---
-title: Вывод данных Excel в формате JSON
-description: Узнайте, как вы выводить данные таблицы Excel в формате JSON для использования в Power Automate.
+title: Выходные Excel данных в формате JSON
+description: Узнайте, как Excel данные таблицы в формате JSON для использования в Power Automate.
 ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
-ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
+ms.openlocfilehash: bf7e8ceb7bec5a7362b1894cdfe13d9e01576a66
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65895043"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088108"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Вывод данных таблицы Excel в формате JSON для использования в Power Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Выходные Excel в виде JSON для использования в Power Automate
 
-Данные таблицы Excel могут быть представлены в виде массива объектов в формате JSON. Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть предоставлены другим системам через потоки Power Automate.
+Excel данных таблицы можно представить в виде массива объектов в формате [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть предоставлены другим системам с помощью Power Automate потоков. 
 
-## <a name="sample-excel-file"></a>Пример файла Excel
+## <a name="sample-excel-file"></a>Пример Excel файла
 
 Скачайте файл <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> для готовой к использованию книги.
 
@@ -29,7 +29,7 @@ ms.locfileid: "65895043"
 Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 > [!NOTE]
-> Структуру можно изменить `interface TableData` в соответствии со столбцами таблицы. Обратите внимание, что для имен столбцов с пробелами не забудьте поместить ключ в кавычки, `"Event ID"` например в примере.
+> Структуру можно изменить `interface TableData` в соответствии со столбцами таблицы. Обратите внимание, что для имен столбцов с пробелами не забудьте поместить ключ в кавычки, `"Event ID"` например в примере. Дополнительные сведения о работе с JSON см. в статье "Использование JSON для передачи данных в Office [скрипты и из них"](../../develop/use-json.md).
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -260,4 +260,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>Использование в Power Automate
 
-Сведения о том, как использовать такой сценарий в Power Automate, см. в статье "Создание автоматизированного рабочего процесса [с помощью Power Automate"](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
+Сведения о том, как использовать такой сценарий в Power Automate, см. в статье "Создание автоматизированного рабочего процесса с Power Automate["](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
