@@ -1,14 +1,14 @@
 ---
 title: Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate
 description: Учебное руководство, посвященное запуску сценариев Office для Excel в Интернете с помощью Power Automate при получении электронной почты с дальнейшей передачей данных рабочего процесса в сценарий.
-ms.date: 06/29/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
-ms.openlocfilehash: ae57bb52b07df0822f1fac8c931c90de8614a770
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 73a551df09eadba1f6e75de35e17e1c5a93498e9
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586061"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088141"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>Передача данных сценариям в автоматически запускаемых рабочих процессах Power Automate
 
@@ -210,6 +210,18 @@ function main(
 :::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="Лист с таблицей электронной почты после трех запусков потока.":::
 
 :::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="Лист со сводной таблицей после трех запусков потока.":::
+
+## <a name="troubleshooting"></a>Устранение неполадок
+
+Одновременное получение нескольких сообщений электронной почты может привести к конфликтам слияния в Excel. Этот риск устраняется путем настройки соединителя электронной почты для выполнения действий только с одним сообщением электронной почты за раз. Выполните следующие действия:
+
+1. Нажмите копку **Меню (...)** в соединителе электронной почты, а затем выберите пункт **Параметры**.
+
+    :::image type="content" source="../images/outlook-connector-settings-1.png" alt-text="Вариант параметра, выделенный в меню соединителя.":::
+
+1. Во всплывающих вариантах выбора **Параметры** переведите элемент управления **Параллелизм** в положение **Включено**. Затем для параметра **Степень параллелизма** установите значение **1**.
+
+    :::image type="content" source="../images/outlook-connector-settings-2.png" alt-text="Параметры параллелизма в меню параметров.":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
