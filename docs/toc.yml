@@ -35,6 +35,8 @@ items:
             href: develop/script-buttons.md
           - name: Выполнение сценариев с помощью Power Automate
             href: develop/power-automate-integration.md
+          - name: Использование JSON для передачи данных
+            href: develop/use-json.md
           - name: Использование файлов XLSM в потоках Power Automate
             href: develop/macros-power-automate.md
           - name: Работа со сводными таблицами
