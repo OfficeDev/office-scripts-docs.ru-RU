@@ -4,12 +4,12 @@ description: Добавьте кнопки в книги, которые Office 
 ms.topic: overview
 ms.date: 05/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: fde34d62f9abe897a8b93195ab37a75cfc73f619
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: cc19a13a97d4d11f73cb91bc46b70afff3eadf03
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393686"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128218"
 ---
 # <a name="run-office-scripts-in-excel-with-buttons"></a>Запуск Office сценариев в Excel с помощью кнопок
 
@@ -36,4 +36,4 @@ ms.locfileid: "65393686"
 Некоторые Office скриптов могут не поддерживаться Excel в Windows, особенно в более старых сборках. К ним относятся новые API и API для функций, доступных только в Интернете. Если скрипт содержит неподдерживаемые API, скрипт не выполняется, а вместо этого в области задач  "Состояние выполнения скрипта" отображается предупреждающее сообщение: "Этот сценарий в настоящее время должен выполняться в Excel для Интернета. Откройте книгу в браузере и повторите попытку или обратитесь за помощью к владельцу скрипта".  
 
 > [!IMPORTANT]
-> Для работы с [кнопками сценариев требуется webView2](/deployoffice/webview2-install) Excel на Windows. Он устанавливается по умолчанию с последними версиями Excel desktop, но если вы не можете нажать кнопки сценариев, перейдите на страницу скачивания среды [выполнения WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) и скачайте подсистему браузера.
+> Для работы с [кнопками сценариев требуется webView2](/deployoffice/webview2-install) Excel на Windows. Он устанавливается по умолчанию с последними версиями Excel desktop, но если вы не можете нажать кнопки сценариев, перейдите на страницу скачивания среды [выполнения WebView2](https://developer.microsoft.com/microsoft-edge/webview2/#download-section) и скачайте подсистему браузера.

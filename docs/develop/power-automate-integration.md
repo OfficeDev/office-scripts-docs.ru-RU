@@ -1,14 +1,14 @@
 ---
 title: Выполнение Office с помощью Power Automate
 description: Как получить Office скрипты для Excel в Интернете с рабочим Power Automate рабочим процессом.
-ms.date: 03/08/2022
+ms.date: 05/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 67e48d297a8db16661ce394a11f2e425bc0a33be
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 85c335eeb736ec544eccb2fbdbe819bdbef6848c
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393679"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128232"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Выполнение Office с помощью Power Automate
 
@@ -26,6 +26,9 @@ ms.locfileid: "65393679"
 
 > [!IMPORTANT]
 > Действие "Запуск скрипта" предоставляет пользователям, использующим Excel соединителя, значительный доступ к книге и ее данным. Кроме того, существуют риски безопасности со скриптами, которые выполняют внешние вызовы API, как описано во внешних вызовах [Power Automate](external-calls.md). Если администратора беспокоит раскрытие конфиденциальных данных, он может либо отключить соединитель Excel Online, либо ограничить доступ к Office Scripts с помощью элементов управления [Office Scripts](/microsoft-365/admin/manage/manage-office-scripts-settings).
+
+> [!IMPORTANT]
+> Power Automate **не поддерживает** сценарии, хранящиеся SharePoint в данный момент.
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>Передача данных в потоках для сценариев
 
