@@ -1,28 +1,28 @@
 ---
-title: Базовые скрипты для Office скриптов в Excel
-description: Коллекция примеров кода для использования с Office скриптами в Excel.
-ms.date: 03/24/2022
+title: Основные сценарии для сценариев Office в Excel
+description: Коллекция примеров кода для использования со скриптами Office в Excel.
+ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e28026b7a3498d477cce8b6dc5940da33a30f53
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 071329e35a1a3fe6197896afe3acaf11d3a53fd5
+ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393658"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66241846"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel"></a>Базовые скрипты для Office скриптов в Excel
+# <a name="basic-scripts-for-office-scripts-in-excel"></a>Основные сценарии для сценариев Office в Excel
 
-Приведенные ниже примеры — это простые сценарии, которые позволяют опробовать собственные книги. Чтобы использовать их в Excel:
+Приведенные ниже примеры — это простые сценарии, которые позволяют опробовать собственные книги. Чтобы использовать их в Excel, выполните следующие действия.
 
 1. Откройте книгу в Excel в Интернете.
 1. Откройте вкладку **Автоматизировать**.
-1. Выберите **Новый сценарий**.
+1. Выберите **Создать сценарий**.
 1. Замените весь скрипт примером по вашему выбору.
 1. Выберите **"Выполнить** " в области задач редактора кода.
 
 ## <a name="script-basics"></a>Основные сведения о скриптах
 
-В этих примерах демонстрируются основные стандартные блоки для Office скриптов. Разверните эти скрипты, чтобы расширить решение и решить распространенные проблемы.
+В этих примерах демонстрируются основные стандартные блоки для сценариев Office. Разверните эти скрипты, чтобы расширить решение и решить распространенные проблемы.
 
 ### <a name="read-and-log-one-cell"></a>Чтение и запись в журнал одной ячейки
 
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-Следующий пример считывает дату, которая хранится в Excel и преобразует ее в объект даты JavaScript. Он использует числовой серийный номер даты в качестве входных данных для даты JavaScript. Этот серийный номер описан в статье о [функции NOW(](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) ).
+В следующем примере считываются даты, хранящиеся в Excel, и преобразуется в объект даты JavaScript. Он использует числовой серийный номер даты в качестве входных данных для даты JavaScript. Этот серийный номер описан в статье о [функции NOW(](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) ).
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -359,11 +359,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="formulas"></a>Формулы
 
-В этих примерах Excel формулы и показано, как работать с ними в скриптах.
+В этих примерах используются формулы Excel и показано, как работать с ними в скриптах.
 
 ### <a name="single-formula"></a>Одна формула
 
-Этот скрипт задает формулу ячейки, а затем показывает, Excel хранит формулу и значение ячейки отдельно.
+Этот скрипт задает формулу ячейки, а затем показывает, как Excel хранит формулу и значение ячейки отдельно.
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,6 +416,27 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="replace-all-formulas-with-their-result-values"></a>Замените все формулы значениями результатов.
+
+Этот скрипт заменяет каждую ячейку текущего листа, содержащую формулу, на результат этой формулы. Это означает, что после выполнения скрипта не будут использоваться формулы, а только значения.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the ranges with formulas.
+    let sheet = workbook.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaCells = usedRange.getSpecialCells(ExcelScript.SpecialCellType.formulas);
+
+    // In each formula range: get the current value, clear the contents, and set the value as the old one.
+    // This removes the formula but keeps the result.
+    formulaCells.getAreas().forEach((range) => {
+      let currentValues = range.getValues();
+      range.clear(ExcelScript.ClearApplyTo.contents);
+      range.setValues(currentValues);
+    });
+}
+```
+
 ## <a name="suggest-new-samples"></a>Предложить новые примеры
 
 Мы будем рады новым примерам. Если существует распространенный сценарий, который может помочь другим разработчикам скриптов, сообщите нам об этом в разделе отзывов в нижней части страницы.
@@ -423,5 +444,5 @@ function main(workbook: ExcelScript.Workbook) {
 ## <a name="see-also"></a>См. также
 
 * [Основные сведения о диапазоне sudhi Мхи Химсти (Sudhi Мхайтхи) на YouTube](https://youtu.be/4emjkOFdLBA)
-* [Office скриптов и сценариев](samples-overview.md)
+* [Примеры и сценарии сценариев Office](samples-overview.md)
 * [Запись, редактирование и создание сценариев Office в Excel в Интернете](../../tutorials/excel-tutorial.md)
