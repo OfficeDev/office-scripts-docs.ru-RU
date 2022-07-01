@@ -3,12 +3,12 @@ title: Основные сценарии для сценариев Office в Exc
 description: Коллекция примеров кода для использования со скриптами Office в Excel.
 ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 071329e35a1a3fe6197896afe3acaf11d3a53fd5
-ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
+ms.openlocfilehash: b6588dc4109799a7d615d0bee38c82a2bcd16743
+ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66241846"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66572351"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel"></a>Основные сценарии для сценариев Office в Excel
 
@@ -291,6 +291,31 @@ function main(workbook: ExcelScript.Workbook) {
   newTable.getSort().apply([{ key: 0, ascending: true }]);
 }
 ```
+
+### <a name="filter-a-table"></a>Фильтрация таблицы
+
+Этот пример фильтрует существующую таблицу, используя значения в одном из столбцов.
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the table in the workbook named "StationTable".
+  const table = workbook.getTable("StationTable");
+
+  // Get the "Station" table column for the filter.
+  const stationColumn = table.getColumnByName("Station");
+
+  // Apply a filter to the table that will only show rows 
+  // with a value of "Station-1" in the "Station" column.
+  stationColumn.getFilter().applyValuesFilter(["Station-1"]);
+}
+```
+
+> [!TIP]
+> Скопируйте отфильтрованную информацию в книге с помощью `Range.copyFrom`. Добавьте следующую строку в конец скрипта, чтобы создать лист с отфильтрованными данными.
+>
+> ```typescript
+>   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
+> ```
 
 ### <a name="log-the-grand-total-values-from-a-pivottable"></a>Занося в журнал значения "Общий итог" из сводная таблица
 

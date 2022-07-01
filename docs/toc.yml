@@ -83,8 +83,6 @@ items:
                 href: resources/samples/count-blank-rows.md
               - name: Отправка по почте изображений диаграмм и таблиц
                 href: resources/samples/email-images-chart-table.md
-              - name: Фильтрация таблицы и получение видимого диапазона
-                href: resources/samples/filter-table-get-visible-range.md
               - name: Управление режимом вычислений
                 href: resources/samples/excel-calculation.md
               - name: Перемещение выбранных строк между таблицами
