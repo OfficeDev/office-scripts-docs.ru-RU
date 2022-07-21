@@ -71,6 +71,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
               - name: Создание оглавления книги
                 href: resources/samples/table-of-contents.md
+              - name: Удалить фильтры столбцов таблицы
+                href: resources/samples/clear-table-filter-for-active-cell.md
           - name: Более сложные действия
             items:
               - name: Объединение нескольких книг в одну
