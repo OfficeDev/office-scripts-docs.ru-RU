@@ -3,12 +3,12 @@ title: Чтение данных книги с помощью сценариев
 description: Учебник по сценариям Office о чтении данных из книг и их оценке в сценарии.
 ms.date: 01/06/2021
 ms.localizationpriority: high
-ms.openlocfilehash: d4378e1b4c851a1a2cf072b0eabb3d3d765bc234
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 341bee17c22234e187377d84eb4983438bf52ad8
+ms.sourcegitcommit: 33fe0f6807daefb16b148fd73c863de101f47cea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393644"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "67281919"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Чтение данных книги с помощью сценариев Office в Excel в Интернете
 
@@ -82,7 +82,7 @@ ms.locfileid: "65393644"
 1. Мы будем использовать методы `getValue` и `setValue`, чтобы изменить значение ячейки. Эти методы применимы к одной ячейке. При обработке диапазонов, включающих несколько ячеек, нужно использовать `getValues` и `setValues`. Добавьте следующий код в конце сценария:
 
     ```TypeScript
-    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    // Run the `Math.abs` method with the value at D2 and apply that value back to D2.
     let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```

@@ -3,12 +3,12 @@ title: Основные сценарии для сценариев Office в Exc
 description: Коллекция примеров кода для использования со скриптами Office в Excel.
 ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: eea455cbaa2cbc96556e71deec1a9fbd4cdbeea7
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: 3d17e2cf2314ccd6c07d81e53337fcd63a474fd8
+ms.sourcegitcommit: 33fe0f6807daefb16b148fd73c863de101f47cea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918820"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "67281905"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel"></a>Основные сценарии для сценариев Office в Excel
 
@@ -183,12 +183,13 @@ function main(workbook: ExcelScript.Workbook) {
       range.setRowHidden(false);
     }
 }
+```
 
-### Freeze Currently Selected Cells
+### <a name="freeze-currently-selected-cells"></a>Закрепление выделенных ячеек
 
-This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
+Этот сценарий проверяет, какие ячейки выделены в данный момент, и закрепляет выделение, чтобы эти ячейки всегда были видимыми.
 
-```Typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the currently selected sheet.
     const selectedSheet = workbook.getActiveWorksheet();
@@ -376,11 +377,11 @@ function main(workbook: ExcelScript.Workbook) {
 >   workbook.addWorksheet().getRange("A1").copyFrom(table.getRange());
 > ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a>Занося в журнал значения "Общий итог" из сводная таблица
+### <a name="log-the-grand-total-values-from-a-pivottable"></a>Запись в журнал значений "Общий итог" из сводной таблицы
 
-Этот пример находит первый сводная таблица в книге и регистрирует значения в ячейках "Общий итог" (как выделено зеленым цветом на рисунке ниже).
+Этот пример находит первую сводную таблицу в книге и регистрирует значения в ячейках "Общий итог" (как выделено зеленым цветом на рисунке ниже).
 
-:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="В сводная таблица показана продажа цветов с выделенной зеленой строкой &quot;Общий итог&quot;.":::
+:::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="Сводная таблица, показывающая продажи цветов с выделенной зеленым цветом строкой &quot;Общий итог&quot;.":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
