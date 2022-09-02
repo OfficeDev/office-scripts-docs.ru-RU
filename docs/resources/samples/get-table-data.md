@@ -3,12 +3,12 @@ title: Вывод данных Excel в формате JSON
 description: Узнайте, как вы выводить данные таблицы Excel в формате JSON для использования в Power Automate.
 ms.date: 06/27/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6453d9f0e92f9b3fcccc6e3ec9c1b6c9af49859c
-ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
+ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66572344"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572670"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Вывод данных таблицы Excel в формате JSON для использования в Power Automate
 
@@ -16,7 +16,7 @@ ms.locfileid: "66572344"
 
 ## <a name="sample-excel-file"></a>Пример файла Excel
 
-Скачайте файл <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> для готовой к использованию книги.
+Скачайте файл [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) для готовой к использованию книги.
 
 :::image type="content" source="../../images/table-input.png" alt-text="Лист с входными данными таблицы.":::
 

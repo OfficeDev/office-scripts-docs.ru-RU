@@ -1,37 +1,37 @@
 ---
-title: Работа с сводными таблицами в Office скриптах
-description: Сведения об объектной модели для сводных таблиц в API JavaScript Office скриптов.
+title: Работа со сводными таблицами в сценариях Office
+description: Сведения об объектной модели для сводных таблиц в API JavaScript для сценариев Office.
 ms.date: 04/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 579f94140214674912c9610e707123924e4aef18
-ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
+ms.openlocfilehash: a457c41bd1205f4e17636c43d7ba78addc80d0e4
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077092"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572586"
 ---
-# <a name="work-with-pivottables-in-office-scripts"></a>Работа с сводными таблицами в Office скриптах
+# <a name="work-with-pivottables-in-office-scripts"></a>Работа со сводными таблицами в сценариях Office
 
-Сводные таблицы позволяют быстро анализировать большие коллекции данных. Благодаря их возможности усложняется. API Office скриптов позволяют настраивать сводную таблицу в соответствии со своими потребностями, но область набора API усложняет начало работы. В этой статье показано, как выполнять общие задачи сводной таблицы, а также описываются важные классы и методы.
+Сводные таблицы позволяют быстро анализировать большие коллекции данных. Благодаря их возможности усложняется. API-интерфейсы сценариев Office позволяют настраивать сводную таблицу в соответствии со своими потребностями, но область набора API усложняет начало работы. В этой статье показано, как выполнять общие задачи сводной таблицы, а также описываются важные классы и методы.
 
 > [!NOTE]
-> Чтобы лучше понять контекст терминов, используемых интерфейсами API, сначала ознакомьтесь Excel сводной таблицы. Начните [с создания сводной таблицы для анализа данных листа](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
+> Чтобы лучше понять контекст терминов, используемых интерфейсами API, сначала ознакомьтесь с документацией по сводной таблице Excel. Начните [с создания сводной таблицы для анализа данных листа](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576).
 
 ## <a name="object-model"></a>Объектная модель
 
 :::image type="content" source="../images/pivottable-object-model.png" alt-text="Упрощенное изображение классов, методов и свойств, используемых при работе со сводными таблицами.":::
 
-[Сводная таблица](/javascript/api/office-scripts/excelscript/excelscript.pivottable) — это центральный объект для сводных таблиц в API Office скриптов.
+[Сводная таблица](/javascript/api/office-scripts/excelscript/excelscript.pivottable) — это центральный объект сводных таблиц в API сценариев Office.
 
 - Объект [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) содержит коллекцию всех сводных [таблиц](/javascript/api/office-scripts/excelscript/excelscript.pivottable). [Каждый лист также](/javascript/api/office-scripts/excelscript/excelscript.worksheet) содержит коллекцию сводных таблиц, которая является локальной для этого листа.
 - [Сводная таблица](/javascript/api/office-scripts/excelscript/excelscript.pivottable) содержит [pivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy). Иерархию можно рассматривать как столбец в таблице.
 - [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) можно добавить в виде строк или столбцов ([RowColumnPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.rowcolumnpivothierarchy)), данных ([DataPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.datapivothierarchy)) или фильтров ([FilterPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)).
-- [Каждый элемент PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) содержит ровно одно [pivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield). Структуры сводных таблиц за пределами Excel могут содержать несколько полей для каждой иерархии, поэтому такая структура существует для поддержки будущих параметров. Для Office, поля и иерархии сопоставляются с одной и той же информацией.
+- [Каждый элемент PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) содержит ровно одно [pivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield). Структуры сводных таблиц за пределами Excel могут содержать несколько полей для каждой иерархии, поэтому такая структура существует для поддержки будущих параметров. Для сценариев Office поля и иерархии сопоставляются с одной и той же информацией.
 - [PivotField содержит](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) несколько [элементов pivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem). Каждый элемент PivotItem является уникальным значением в поле. Каждый элемент можно рассматривать как значение в столбце таблицы. Элементы также могут быть агрегируемыми значениями, например суммами, если поле используется для данных.
 - [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) определяет, как [отображаются pivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) и [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem).
 - [PivotFilters](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) фильтрует [данные из](/javascript/api/office-scripts/excelscript/excelscript.pivottable) сводной таблицы, используя разные критерии.
 
-Посмотрите, как эти связи работают на практике. В следующих данных описываются продажи деревьев из разных ферм. Это основа для всех примеров в этой статье. Используйте <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a> для выполнения.
+Посмотрите, как эти связи работают на практике. В следующих данных описываются продажи деревьев из разных ферм. Это основа для всех примеров в этой статье. Используйте [pivottable-sample.xlsx](pivottable-sample.xlsx) для выполнения.
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="Коллекция продаж деревьев различных типов из разных ферм.":::
 
@@ -75,7 +75,7 @@ ms.locfileid: "65077092"
 
 ## <a name="layout-ranges"></a>Диапазоны макетов
 
-Каждая часть сводной таблицы сопоставляется с диапазоном. Это позволяет скрипту получать данные из сводной таблицы для последующего использования в скрипте или для возврата в [Power Automate потоке](power-automate-integration.md). Доступ к этим диапазонам осуществляется через объект [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) , полученный из `PivotTable.getLayout()`. На следующей схеме показаны диапазоны, возвращаемые методами в `PivotLayout`.
+Каждая часть сводной таблицы сопоставляется с диапазоном. Это позволяет скрипту получать данные из сводной таблицы для последующего использования в скрипте или для возврата в [потоке Power Automate](power-automate-integration.md). Доступ к этим диапазонам осуществляется через объект [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) , полученный из `PivotTable.getLayout()`. На следующей схеме показаны диапазоны, возвращаемые методами в `PivotLayout`.
 
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="Схема, показывающая, какие разделы сводной таблицы возвращаются функциями получения диапазона макета.":::
 

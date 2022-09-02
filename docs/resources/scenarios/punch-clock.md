@@ -1,26 +1,26 @@
 ---
-title: 'Office сценарий сценариев: кнопка "Отсветь часов"'
+title: 'Пример сценария сценариев Office: кнопка "Часы"'
 description: В этом примере добавляется кнопка "Часы" и пользователь может выполнять тактовую синхронизацию с использованием текущего времени.
 ms.date: 04/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: de56fb651d6f6088620678cfd72ce662875eafa7
-ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
+ms.openlocfilehash: ac128a33b653506b6168bd4acfe1713bf6d26759
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65109301"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572684"
 ---
-# <a name="office-scripts-sample-scenario-punch-clock-button"></a>Office сценарий сценариев: кнопка "Отсветь часов"
+# <a name="office-scripts-sample-scenario-punch-clock-button"></a>Пример сценария сценариев Office: кнопка "Часы"
 
-Идея сценария и сценарий, используемые в этом примере, были предоставлены Office Scripts ( Сценарии) [Брайана Gonzalez (Brian Gonzalez](https://github.com/b-gonzalez)).
+Идея сценария и сценарий, используемые в этом примере, были предоставлены членом сообщества сценариев Office [Брайаном Gonzalez](https://github.com/b-gonzalez).
 
-В этом сценарии вы создадите лист времени для сотрудника, который позволяет ему записывать время начала и окончания с помощью нажатия [кнопки](../../develop/script-buttons.md). В зависимости от того, что было записано ранее, нажатие кнопки будет начинаться с их дня (часы в) или завершить свой день (время ожидания). Пример работает как для Excel в Интернете, так и для Windows.
+В этом сценарии вы создадите лист времени для сотрудника, который позволяет ему записывать время начала и окончания с помощью нажатия [кнопки](../../develop/script-buttons.md). В зависимости от того, что было записано ранее, нажатие кнопки будет начинаться с их дня (часы в) или завершить свой день (время ожидания). Этот пример работает как для Excel в Интернете, так и для Windows.
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="Таблица с тремя столбцами (&quot;Часы в&quot;, &quot;Время ожидания&quot; и &quot;Длительность&quot;) и кнопкой &quot;Часы по часам&quot; в книге.":::
 
 ## <a name="setup-instructions"></a>Инструкции по настройке
 
-1. <a href="punch-clock-sample.xlsx"> Скачайтеpunch-clock-sample.xlsx</a> на OneDrive.
+1. [ Скачайтеpunch-clock-sample.xlsx](punch-clock-sample.xlsx) в OneDrive.
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="Таблица с тремя столбцами: &quot;Clock In&quot;, &quot;Clock Out&quot; и &quot;Duration&quot;.":::
 
@@ -131,7 +131,7 @@ ms.locfileid: "65109301"
 
 1. Сохраните книгу.
 
-## <a name="run-the-script"></a>Запуск скрипта
+## <a name="run-the-script"></a>Запустите сценарий
 
 Нажмите **кнопку "Часы"** , чтобы запустить сценарий. Оно регистрирует текущее время в разделе "В часах" или "Время ожидания" в зависимости от того, что было введено ранее.
 

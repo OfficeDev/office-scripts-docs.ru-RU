@@ -73,6 +73,8 @@ items:
                 href: resources/samples/table-of-contents.md
               - name: Удалить фильтры столбцов таблицы
                 href: resources/samples/clear-table-filter-for-active-cell.md
+              - name: Отчет о повседневных изменениях в Power Automate
+                href: resources/samples/report-day-to-day-changes.md
           - name: Более сложные действия
             items:
               - name: Объединение нескольких книг в одну

@@ -1,16 +1,16 @@
 ---
-title: Удаление фильтров столбцов таблицы
+title: Удалить фильтры столбцов таблицы
 description: Узнайте, как очистить фильтр столбцов таблицы на основе активного расположения ячейки.
 ms.date: 07/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a79abfdd4aeac79af4a0f9ea4a581d45b9706b
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: e016f7f2af9e7553229f3b3b19007e011879de8e
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918813"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572523"
 ---
-# <a name="remove-table-column-filters"></a>Удаление фильтров столбцов таблицы
+# <a name="remove-table-column-filters"></a>Удалить фильтры столбцов таблицы
 
 В этом примере фильтры удаляются из столбца таблицы в зависимости от расположения активной ячейки. Скрипт определяет, является ли ячейка частью таблицы, определяет столбец таблицы и очищает все примененные к ней фильтры.
 
@@ -18,7 +18,7 @@ ms.locfileid: "66918813"
 
 ## <a name="sample-excel-file"></a>Пример файла Excel
 
-<a href="table-with-filter.xlsx"> Скачайтеtable-with-filter.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+[ Скачайтеtable-with-filter.xlsx](table-with-filter.xlsx) для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>Пример кода: очистка фильтра столбцов таблицы на основе активной ячейки
 

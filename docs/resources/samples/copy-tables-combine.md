@@ -1,29 +1,29 @@
 ---
-title: Объединение данных из нескольких Excel таблиц в одну таблицу
-description: Узнайте, как использовать Office скрипты для объединения данных из нескольких Excel таблиц в одну таблицу.
+title: Объединение данных из нескольких таблиц Excel в одну таблицу
+description: Узнайте, как использовать сценарии Office для объединения данных из нескольких таблиц Excel в одну таблицу.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bfe2f4af579e5ee59d20e12fe4850dd9c41bcc56
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 3db510514c676b9012fd47abc2a7e92492a9cf87
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585893"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572453"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>Объединение данных из нескольких Excel таблиц в одну таблицу
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>Объединение данных из нескольких таблиц Excel в одну таблицу
 
-Этот пример объединяет данные из нескольких Excel таблиц в одну таблицу, которая включает все строки. Предполагается, что все используемые таблицы имеют ту же структуру.
+В этом примере данные из нескольких таблиц Excel объединяются в одну таблицу, включаемую все строки. Предполагается, что все используемые таблицы имеют одинаковые структуры.
 
-Существует два варианта этого сценария:
+Существует два варианта этого скрипта:
 
-1. Первый [скрипт объединяет](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) все таблицы в Excel файле.
-1. Второй [сценарий](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) выборочно получает таблицы в наборе таблиц.
+1. Первый [сценарий объединяет](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table) все таблицы в файле Excel.
+1. Второй [сценарий](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table) выборочно получает таблицы в наборе листов.
 
-## <a name="sample-excel-file"></a>Пример Excel файла
+## <a name="sample-excel-file"></a>Пример файла Excel
 
-<a href="tables-copy.xlsx"> Скачайтеtables-copy.xlsx</a> для готовой к использованию книги. Добавьте следующие скрипты, чтобы попробовать пример самостоятельно!
+[ Скачайтеtables-copy.xlsx](tables-copy.xlsx) для готовой к использованию книги. Добавьте следующие скрипты, чтобы попробовать пример самостоятельно!
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Пример кода. Объединяйте данные из нескольких Excel таблиц в одну таблицу
+## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Пример кода: объединение данных из нескольких таблиц Excel в одну таблицу
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -57,9 +57,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>Пример кода. Объединяйте данные из нескольких Excel таблиц в отдельных таблицах в одну таблицу
+## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>Пример кода: объединение данных из нескольких таблиц Excel в выбранных листах в одну таблицу
 
-Скачайте пример файла <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> и используйте его со следующим скриптом, чтобы попробовать его самостоятельно!
+Скачайте пример файла [tables-select-copy.xlsx](tables-select-copy.xlsx) и используйте его со следующим скриптом, чтобы попробовать его самостоятельно!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -95,6 +95,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Обучающее видео. Объединяйте данные из нескольких Excel таблиц в одну таблицу
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>Обучающее видео: объединение данных из нескольких таблиц Excel в одну таблицу
 
-[Посмотрите, как суди Рамамурти (Sudhi Ramamurthy) пройдите этот пример на YouTube](https://youtu.be/di-8JukK3Lc).
+[Просмотрите этот пример на YouTube](https://youtu.be/di-8JukK3Lc), чтобы просмотреть этот пример.

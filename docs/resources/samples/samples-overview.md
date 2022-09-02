@@ -1,14 +1,14 @@
 ---
 title: Примеры сценариев Office
 description: Доступные примеры и сценарии сценариев Office.
-ms.date: 06/14/2022
+ms.date: 08/25/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5959bc472dbec04526dcf912a8bd67e2554aa251
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: 5798da37bd4166d18b41c005c4d8cc8a4b6c401d
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918827"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572488"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Примеры и сценарии сценариев Office
 
@@ -32,7 +32,8 @@ ms.locfileid: "66918827"
 | [Добавление изображений в книгу](add-image-to-workbook.md) | В этом примере изображение добавляется в книгу и копируется на листы.|
 | [Копирование нескольких таблиц Excel в одну таблицу](copy-tables-combine.md) | В этом примере данные из нескольких таблиц Excel объединяются в одну таблицу, включаемую все строки. |
 | [Создание оглавления книги](table-of-contents.md) | В этом примере создается оглавка со ссылками на каждый лист. |
-| [Удаление фильтров столбцов таблицы](clear-table-filter-for-active-cell.md) | Этот пример удаляет все фильтры из столбца таблицы. |
+| [Удалить фильтры столбцов таблицы](clear-table-filter-for-active-cell.md) | Этот пример удаляет все фильтры из столбца таблицы. |
+| [Запись повседневных изменений в Excel и создание отчетов о них с помощью потока Power Automate](report-day-to-day-changes.md) | В этом примере используется запланированный поток Power Automate для записи ежедневных операций чтения и создания отчетов об изменениях. |
 
 ## <a name="beyond-the-basics"></a>Более сложные действия
 

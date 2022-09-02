@@ -1,26 +1,26 @@
 ---
 title: Праздничные приветствия
-description: Узнайте, как использовать Office скрипты, чтобы показать дерево пения в Excel в Интернете.
+description: Узнайте, как использовать сценарии Office для отображения дерева деревьев в Excel в Интернете.
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 56d3bb758edf1b9416a67bc8e806034d086c88ef
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: aee953bd3f92912b6b3bcf55c3a3da110ff38528
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585578"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572446"
 ---
 # <a name="seasons-greetings"></a>Праздничные приветствия
 
-Этот сценарий был предоставлен [Лесли Блэк](https://www.linkedin.com/in/lesblackconsultant/) в духе курортного сезона! Это забавный сценарий, который показывает дерево пения в Excel в Интернете с Office скриптами.
+Этот сценарий был создан [Лесли Черная](https://www.linkedin.com/in/lesblackconsultant/) в период праздников! Это интересный сценарий, который показывает дерево деревьев в Excel в Интернете с помощью сценариев Office.
 
-Наслаждайтесь!
+Наслаждаться!
 
-[Просмотрите сценарий приветствий Seasons в действии на youTube-канале "ИТ-блог Лес"](https://youtu.be/HBiGEkzmkgo).
+[Просмотрите сценарий приветствий Seasons в действии на канале YouTube "ИТ-блог Леса"](https://youtu.be/HBiGEkzmkgo).
 
 ## <a name="script"></a>Script
 
-<a href="happy-tree.xlsx"> Скачайтеhappy-tree.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
+[ Скачайтеhappy-tree.xlsx](happy-tree.xlsx) для готовой к использованию книги. Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 ```TypeScript
 /* Original version by Leslie Black.  */

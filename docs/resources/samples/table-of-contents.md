@@ -1,26 +1,26 @@
 ---
 title: Создание оглавления книги
-description: Узнайте, как создать таблицу контента со ссылками на каждый таблицу.
+description: Узнайте, как создать оглавь со ссылками на каждый лист.
 ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d69609514c2e1e87f9c0590ea10152fc7d5e7d
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 5b158160ecb9ac29df547c6da6552e21c9875be3
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585522"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572516"
 ---
 # <a name="create-a-workbook-table-of-contents"></a>Создание оглавления книги
 
-В этом примере показано, как создать таблицу содержимого для книги. Каждая запись в таблице содержимого — это гиперссылка к одному из таблиц в книге.
+В этом примере показано, как создать оглавь для книги. Каждая запись в оглавке является гиперссылкой на один из листов книги.
 
-:::image type="content" source="../../images/table-of-contents-sample.png" alt-text="Таблица таблицы содержимого, показывающая ссылки на другие таблицы.":::
+:::image type="content" source="../../images/table-of-contents-sample.png" alt-text="Оглавлющий лист со ссылками на другие листы.":::
 
-## <a name="sample-excel-file"></a>Пример Excel файла
+## <a name="sample-excel-file"></a>Пример файла Excel
 
-<a href="table-of-contents.xlsx"> Скачайтеtable-of-contents.xlsx</a> для готовой к использованию книги. Добавьте следующий скрипт и попробуйте пример самостоятельно!
+[ Скачайтеtable-of-contents.xlsx](table-of-contents.xlsx) для готовой к использованию книги. Добавьте следующий скрипт и попробуйте пример самостоятельно!
 
-## <a name="sample-code-create-a-workbook-table-of-contents"></a>Пример кода. Создание таблицы содержимого книги
+## <a name="sample-code-create-a-workbook-table-of-contents"></a>Пример кода. Создание оглавливной таблицы книги
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
