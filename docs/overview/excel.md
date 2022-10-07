@@ -2,14 +2,14 @@
 title: Сценарии Office в Excel
 description: Краткое введение в регистратор действий и редактор кода для сценариев Office.
 ms.topic: overview
-ms.date: 02/25/2022
+ms.date: 10/05/2022
 ms.localizationpriority: high
-ms.openlocfilehash: a85e8dad8d6e99ee3b4c5558cd2c1b8417956fb3
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
-ms.translationtype: HT
+ms.openlocfilehash: 02a45e5aae468cff2c61e18b35c54ba656d0484b
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393637"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495476"
 ---
 # <a name="office-scripts-in-excel"></a>Сценарии Office в Excel
 
@@ -25,7 +25,11 @@ ms.locfileid: "65393637"
 
 Для использования сценариев Office вам потребуются следующие компоненты.
 
-1. [Excel в Интернете](https://www.office.com/launch/excel) (Excel для Windows может использовать только сценарии Office с [кнопками скриптов](../develop/script-buttons.md)).
+1. [Excel в Интернете](https://www.office.com/launch/excel) (Excel в Windows может использовать только скрипты Office с [кнопками сценариев](../develop/script-buttons.md)).
+
+    > [!TIP]
+    > Сценарии Office теперь доступны в Office для Windows и Mac для [участников программы предварительной оценки Office](https://insider.office.com/).
+
 1. OneDrive для бизнеса.
 1. Любая коммерческая или образовательная лицензия Microsoft 365 с доступом к классическим приложениям Microsoft 365 Office, таким как:
 

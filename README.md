@@ -1,6 +1,6 @@
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
-Добро пожаловать в репозиторий документации по сценариям Office. В этом репозитории можно найти исходные файлы документации для учебников по сценариям Office и инструкции. Для оптимальной работы рекомендуется просмотреть это содержимое [на Документация Майкрософт.](https://docs.microsoft.com/office/dev/scripts)
+Добро пожаловать в репозиторий документации по сценариям Office. В этом репозитории можно найти исходные файлы документации для учебников по сценариям Office и инструкции. Для оптимальной работы рекомендуется просмотреть это содержимое в [Microsoft Learn](https://learn.microsoft.com/office/dev/scripts).
 
 > **ПРИМЕЧАНИЕ**. Исходные файлы справочной документации по API сценариев Office можно найти в репозитории [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) . Эти API содержат все возможные операции для скриптов.
 
@@ -19,7 +19,7 @@
 - Действия по воспроизведению проблемы.
 - Выходные данные консоли и сообщения об ошибках.
 
-Мы также рекомендуем создать вилку проекта, внести исправление и отправить запрос на включение своих изменений. Подробные сведения см. в разделе [Внесите свой вклад в документацию](Contributing.md).
+We also encourage you to fork, make the fix, and do a pull request of your proposed changes. For details, see [Contribute to this documentation](Contributing.md).
 
 Если проблема не связана с документацией по сценариям Office, опубликуйте ее на одном из следующих каналов:
 
@@ -30,6 +30,7 @@
 
 Авторские права (c) Корпорация Майкрософт 2019. Все права защищены.
 
-## <a name="microsoft-open-source-code-of-conduct"></a>Правила поведения Майкрософт, касающиеся обращения с открытым кодом
+## <a name="microsoft-open-source-code-of-conduct"></a>Правила обращения с открытым исходным кодом Майкрософт
 
-Этот проект соответствует [правилам поведения Майкрософт, касающимся обращения с открытым кодом](https://opensource.microsoft.com/codeofconduct/). Читайте дополнительные сведения в [разделе вопросов и ответов по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/) или отправляйте новые вопросы и замечания по адресу [opencode@microsoft.com](mailto:opencode@microsoft.com).
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

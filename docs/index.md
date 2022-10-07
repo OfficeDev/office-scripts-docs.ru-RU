@@ -3,14 +3,14 @@ layout: LandingPage
 ms.topic: landing-page
 title: Документация по сценариям Office
 description: Ресурсы для изучения сценариев Office в Excel, включая учебники, концептуальные статьи и примеры кода.
-ms.date: 05/24/2021
+ms.date: 09/12/2022
 ms.localizationpriority: high
-ms.openlocfilehash: b98c746ec89b61f05c3a6ded04100c0a1efc20bc
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
-ms.translationtype: HT
+ms.openlocfilehash: 3219d7c508381ab34615c5f6cc5a16507a9b021a
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393693"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495483"
 ---
 # <a name="office-scripts-documentation"></a>Документация по сценариям Office
 
@@ -73,7 +73,7 @@ ms.locfileid: "65393693"
 ---
 
 <h2>Другие ресурсы</h2>
-<p>Используйте следующие ресурсы, чтобы узнать об API-интерфейсах, которые используются сценариями Office, задать вопросы о сценариях Office или запросить функции для сценариев Office.</p>
+<p>Используйте следующие ресурсы, чтобы узнать об API-интерфейсах сценариев Office, задать вопросы о скриптах Office или запросить функции для сценариев Office.</p>
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">

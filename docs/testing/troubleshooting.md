@@ -1,25 +1,25 @@
 ---
-title: Устранение неполадок Office скриптов
-description: Советы и методы отладки для Office скриптов, а также справочных ресурсов.
-ms.date: 11/11/2021
+title: Устранение неполадок со скриптами Office
+description: Советы и методы отладки для сценариев Office, а также справочные ресурсы.
+ms.date: 10/05/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e673d39b6249ccc7598b832d6478cc8dc0751f6
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: 4fe4a9b17d51d078403d1a46abed774d38eeaa80
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038681"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495469"
 ---
-# <a name="troubleshoot-office-scripts"></a>Устранение неполадок Office скриптов
+# <a name="troubleshoot-office-scripts"></a>Устранение неполадок со скриптами Office
 
-При разработке Office сценариев могут быть допущены ошибки. Всё в порядке. У вас есть средства для поиска проблем и идеальной работы скриптов.
+При разработке сценариев Office вы можете ошибок. Всё в порядке. У вас есть средства для поиска проблем и идеальной работы скриптов.
 
 > [!NOTE]
-> Рекомендации по устранению неполадок, относящиеся к Office скриптам с Power Automate, см. в статье Office сценарии, выполняемые [в](power-automate-troubleshooting.md) Power Automate.
+> Рекомендации по устранению неполадок, связанных со сценариями Office с помощью Power Automate, см. в разделе "Устранение неполадок сценариев Office, выполняемых [в Power Automate"](power-automate-troubleshooting.md).
 
 ## <a name="types-of-errors"></a>Типы ошибок
 
-Office скриптов делятся на одну из двух категорий:
+Ошибки сценариев Office делятся на одну из двух категорий:
 
 * Ошибки или предупреждения во время компиляции
 * Ошибки среды выполнения
@@ -68,26 +68,29 @@ console.log(myRange.getAddress());
 
 Журналы не влияют на книгу.
 
-## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>Вкладка "Автоматизация" не отображается или Office сценарии недоступны
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>Вкладка "Автоматизация" не отображается или сценарии Office недоступны
 
 Следующие действия помогут устранить проблемы, связанные с тем, что вкладка **"** Автоматизация" не отображается в Excel в Интернете.
 
-1. [Убедитесь, что Microsoft 365 лицензия включает Office скриптов](../overview/excel.md#requirements).
+1. [Убедитесь, что лицензия Microsoft 365 содержит скрипты Office](../overview/excel.md#requirements).
 1. [Убедитесь, что браузер поддерживается](platform-limits.md#browser-support).
 1. [Убедитесь, что сторонние файлы cookie включены](platform-limits.md#third-party-cookies).
-1. [Убедитесь, что администратор не отключает Office скрипты в Центр администрирования Microsoft 365](/microsoft-365/admin/manage/manage-office-scripts-settings).
+1. [Убедитесь, что администратор не отключает сценарии Office в Центр администрирования Microsoft 365](/microsoft-365/admin/manage/manage-office-scripts-settings).
 1. Убедитесь, что вы не вошли в клиент как внешний или гостевой пользователь.
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
+> [!NOTE]
+> Существует известная проблема, которая не позволяет сценариям, хранящимся в SharePoint, всегда отображаться в списке недавно использовавшихся. Это происходит, когда администратор отключает веб-службы Exchange (EWS). Сценарии на основе SharePoint по-прежнему доступны и доступны в диалоговом окне файла.
+
 ## <a name="help-resources"></a>Справочные ресурсы
 
-[Stack Overflow —](https://stackoverflow.com/questions/tagged/office-scripts) это сообщество разработчиков, готовых помочь в написании кода. Часто вы сможете найти решение проблемы с помощью быстрого поиска Stack Overflow. В противном случае задайте свой вопрос и пометите его тегом office-scripts. Не забудьте упомянуть, что вы создаете Office *,* а не Office *надстройку*.
+[Stack Overflow —](https://stackoverflow.com/questions/tagged/office-scripts) это сообщество разработчиков, готовых помочь в написании кода. Часто вы сможете найти решение проблемы с помощью быстрого поиска Stack Overflow. В противном случае задайте свой вопрос и пометите его тегом office-scripts. Не забудьте упомянуть, что вы создаете *скрипт Office*, а не *надстройку* Office.
 
 ## <a name="see-also"></a>См. также
 
 - [Рекомендации по сценариям Office](../develop/best-practices.md)
-- [Ограничения платформы с помощью Office скриптов](platform-limits.md)
-- [Повышение производительности Office сценариев](../develop/web-client-performance.md)
-- [Устранение неполадок Office сценариев, выполняемых в PowerAutomate](power-automate-troubleshooting.md)
+- [Ограничения платформы с помощью сценариев Office](platform-limits.md)
+- [Повышение производительности сценариев Office](../develop/web-client-performance.md)
+- [Устранение неполадок сценариев Office, выполняемых в PowerAutomate](power-automate-troubleshooting.md)
 - [Отмена эффектов сценариев Office](undo.md)
