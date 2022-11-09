@@ -39,6 +39,8 @@ items:
             href: develop/use-json.md
           - name: Использование файлов XLSM в потоках Power Automate
             href: develop/macros-power-automate.md
+          - name: VS Code для сценариев Office (предварительная версия)
+            href: develop/vscode-for-scripts.md
           - name: Работа со сводными таблицами
             href: develop/pivottables.md
       - name: Устранение неполадок

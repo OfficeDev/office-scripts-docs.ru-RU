@@ -1,35 +1,35 @@
 ---
 title: Вывод данных Excel в формате JSON
-description: Узнайте, как вы выводить данные таблицы Excel в формате JSON для использования в Power Automate.
-ms.date: 06/27/2022
+description: Узнайте, как выводить данные таблицы Excel в виде JSON для использования в Power Automate.
+ms.date: 11/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
-ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
+ms.openlocfilehash: 96883bb1f74f66065e8f45760858e960ece90e30
+ms.sourcegitcommit: 7cadf2b637bf62874e43b6e595286101816662aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67572670"
+ms.lasthandoff: 11/09/2022
+ms.locfileid: "68891241"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Вывод данных таблицы Excel в формате JSON для использования в Power Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Вывод табличных данных Excel в виде JSON для использования в Power Automate
 
-Данные таблицы Excel могут быть представлены в виде массива объектов в формате [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть предоставлены другим системам через потоки Power Automate.
+Данные таблицы Excel можно представить в виде массива объектов в формате [JSON](https://www.w3schools.com/whatis/whatis_json.asp). Каждый объект представляет строку в таблице. Это помогает извлекать данные из Excel в согласованном формате, который виден пользователю. Затем данные могут быть переданы другим системам с помощью потоков Power Automate.
 
 ## <a name="sample-excel-file"></a>Пример файла Excel
 
-Скачайте файл [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) для готовой к использованию книги.
+Скачайте [ файлtable-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) для готовой к использованию книги.
 
-:::image type="content" source="../../images/table-input.png" alt-text="Лист с входными данными таблицы.":::
+:::image type="content" source="../../images/table-input.png" alt-text="Лист с входной таблицей.":::
 
-Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет отображать в JSON дополнительные уровни данных ячеек.
+Вариант этого примера также включает гиперссылки в одном из столбцов таблицы. Это позволяет отображать дополнительные уровни данных ячейки в ФОРМАТЕ JSON.
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Лист, на котором показан столбец табличных данных, отформатированных как гиперссылки.":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="Лист со столбцом данных таблицы, отформатированными в виде гиперссылок.":::
 
 ## <a name="sample-code-return-table-data-as-json"></a>Пример кода: возврат данных таблицы в формате JSON
 
 Добавьте следующий скрипт, чтобы попробовать пример самостоятельно!
 
 > [!NOTE]
-> Структуру можно изменить `interface TableData` в соответствии со столбцами таблицы. Обратите внимание, что для имен столбцов с пробелами не забудьте поместить ключ в кавычки, `"Event ID"` например в примере. Дополнительные сведения о работе с JSON см. в статье "Использование JSON для передачи данных в скрипты [Office и из них"](../../develop/use-json.md).
+> Структуру можно изменить в `interface TableData` соответствии со столбцами таблицы. Обратите внимание, что для имен столбцов с пробелами обязательно поместите ключ в кавычки, например в `"Event ID"` примере. Дополнительные сведения о работе с JSON см. в статье [Использование JSON для передачи данных в скрипты Office и из нее](../../develop/use-json.md).
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -82,7 +82,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a>Пример выходных данных листа PlainTable
+### <a name="sample-output-from-the-plaintable-worksheet"></a>Пример выходных данных на листе PlainTable
 
 ```json
 [{
@@ -139,7 +139,7 @@ interface TableData {
 ## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>Пример кода: возврат данных таблицы в формате JSON с текстом гиперссылки
 
 > [!NOTE]
-> Скрипт всегда извлекает гиперссылки из 4-го столбца (0 индекса) таблицы. Вы можете изменить этот порядок или включить несколько столбцов в качестве данных гиперссылки, изменив код в комментарии. `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> Скрипт всегда извлекает гиперссылки из 4-го столбца (индекс 0) таблицы. Вы можете изменить этот порядок или включить несколько столбцов в качестве данных гиперссылки, изменив код в примечании. `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>Пример выходных данных листа WithHyperLink
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>Пример выходных данных на листе WithHyperLink
 
 ```json
 [{
@@ -260,4 +260,4 @@ interface TableData {
 
 ## <a name="use-in-power-automate"></a>Использование в Power Automate
 
-Сведения о том, как использовать такой сценарий в Power Automate, см. в статье "Создание автоматизированного рабочего процесса [с помощью Power Automate"](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
+Сведения об использовании такого сценария в Power Automate см. в статье [Создание автоматизированного рабочего процесса с помощью Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).
